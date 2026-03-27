@@ -55,6 +55,7 @@ You can decide to implement `renv` or not. This can happen at any stage, though 
 
 If you plan to use `renv`, start by reading [the introduction to `renv` article](https://rstudio.github.io/renv/articles/renv.html) so you know how to use it.
 
+Also, if you decide to use renv, **make sure to add the renv folder to .gitignore.** The renv folder tends to be very large and checking it into GitHub is therefore not a good idea.
 
 # Getting started
 
