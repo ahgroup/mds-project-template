@@ -14,6 +14,11 @@ Similarly, it is common to make posters to present at conferences. Those can go 
 
 Often you need a library of references in BibTeX format, as well as a CSL style file that determines reference formatting. Those files might be used by several of the products. They should be placed into the `assets` folder, or for presentations and posters, separately into their respective `media` folders.
 
-You can add further folders. For instance, if you have multiple presentations or posters, you might want to create subfolders for each. 
-Or you could have a `blog-post` folder if you plan to write a blog-post. It's up to you how to structure/organize, as long as it is somewhat logical and you document it. Ideally, put a readme file in each folder to orient others/your future self on what is going on.  
+You can add further folders. For instance, if you have multiple presentations or posters, you might want to create subfolders for each.
+Or you could have a `blog-post` folder if you plan to write a blog-post. It's up to you how to structure/organize, as long as it is somewhat logical and you document it. Ideally, put a readme file in each folder to orient others/your future self on what is going on.
+
+AI tools can help draft and edit products, but all scientific claims,
+interpretations, and citations need human review. Products should pull figures,
+tables, and computed quantities from `results/` or documented product-specific
+media folders rather than copying numbers by hand.
 

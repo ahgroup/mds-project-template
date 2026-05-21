@@ -36,6 +36,8 @@ print(lmtable1)
 # save fit results table  
 table_file1 = here("results", "tables", "resulttable1.rds")
 saveRDS(lmtable1, file = table_file1)
+table_csv_file1 = here("results", "tables", "resulttable1.csv")
+utils::write.csv(lmtable1, file = table_csv_file1, row.names = FALSE)
 
 ############################
 #### Second model fit
@@ -52,5 +54,5 @@ print(lmtable2)
 # save fit results table  
 table_file2 = here("results", "tables", "resulttable2.rds")
 saveRDS(lmtable2, file = table_file2)
-
-  
+table_csv_file2 = here("results", "tables", "resulttable2.csv")
+utils::write.csv(lmtable2, file = table_csv_file2, row.names = FALSE)

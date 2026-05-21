@@ -1,0 +1,4 @@
+"skim_type","skim_variable","n_missing","complete_rate","factor.ordered","factor.n_unique","factor.top_counts","numeric.mean","numeric.sd","numeric.p0","numeric.p25","numeric.p50","numeric.p75","numeric.p100"
+"factor","Gender",0,1,FALSE,3,"M: 4, F: 3, O: 2",NA,NA,NA,NA,NA,NA,NA
+"numeric","Height",0,1,NA,NA,NA,165.666666666667,15.9765453086705,133,156,166,178,183
+"numeric","Weight",0,1,NA,NA,NA,70.1111111111111,21.2452609094619,45,55,70,80,110

@@ -1,0 +1,23 @@
+# Prompt: Draft an Analysis Plan
+
+Use this prompt when drafting or reviewing an analysis plan.
+
+```text
+Please help draft an analysis plan for this R/Quarto project.
+
+Use the repository structure and data-use notes as context. The plan should
+include:
+
+- research question or assignment goal;
+- data sources and data limitations;
+- required cleaning and processing steps;
+- exploratory analyses;
+- primary statistical or modeling approach;
+- sensitivity or robustness checks;
+- expected figures, tables, and products;
+- reproducibility checks;
+- assumptions that require human confirmation.
+
+Do not claim that a method is appropriate just because it is common. Explain why
+each major analysis choice fits the question and data.
+```

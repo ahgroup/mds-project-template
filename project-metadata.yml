@@ -1,0 +1,47 @@
+# Project metadata for humans and AI assistants.
+#
+# Replace the example values below when creating a new project from this
+# template. Keep this file concise; detailed methods belong in the code,
+# manuscript/report, supplement, or data-use notes.
+
+project:
+  title: "Example data analysis project"
+  short_name: "example-project"
+  project_type: "teaching-template" # teaching-template, class-project, research-project
+  status: "template"
+  primary_language: "R"
+  primary_outputs:
+    - "products/report/report.qmd"
+    - "products/manuscript/Manuscript.qmd"
+    - "products/presentation/presentation.qmd"
+
+people:
+  project_owner: "NAME"
+  contributors:
+    - "NAME"
+
+data:
+  raw_data_location: "data/raw-data/"
+  processed_data_location: "data/processed-data/"
+  sensitivity: "example-data" # example-data, public, internal, sensitive, regulated
+  ai_may_inspect_raw_data: false
+  ai_may_inspect_processed_data: false
+  data_use_notes: "data/data-use-notes.md"
+
+reproducibility:
+  main_run_command: "Rscript code/run-all.R"
+  check_command: "Rscript code/check-project.R"
+  render_products_command: "Rscript code/run-all.R --render-products"
+  package_management: "manual" # manual, renv, container, other
+  renv_enabled_by_default: false
+
+ai_assistance:
+  allowed: true
+  log_file: "ai/ai-use-log.md"
+  guidance_file: "AGENTS.md"
+  human_review_required: true
+  full_chat_transcripts_required: false
+
+optional_tools:
+  renv: "recommended for research projects, optional for this template"
+  github_actions: "recommended for advanced users, not enabled by default"

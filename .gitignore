@@ -27,6 +27,7 @@
 # Temporary files created by R markdown
 *.utf8.md
 *.knit.md
+Rplots.pdf
 
 # MacOS specific .DS_Store files
 .DS_Store
@@ -35,4 +36,27 @@
 results/large-files/*
 
 # But we want to commit the folder and the readme!
-!results/large-files/readme.md
+!results/large-files/README.md
+
+# Local environment files and secrets
+.Renviron
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local/private data files
+data/private-data/*
+!data/private-data/README.md
+data/large-files/*
+!data/large-files/README.md
+
+# Local AI/tool state and scratch files
+.ai-local/
+.ai-cache/
+.codex/
+.claude/settings.local.json
+.aider*
