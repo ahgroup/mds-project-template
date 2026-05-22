@@ -18,8 +18,8 @@ Use this checklist before accepting AI-assisted changes.
 - [ ] Generated outputs are saved under `results/` or the relevant product
       folder.
 - [ ] Generated outputs can be recreated from code.
-- [ ] `Rscript code/check-project.R` was run, or a reason is documented.
-- [ ] `Rscript code/run-all.R` was run after code changes that affect outputs,
+- [ ] `quarto render code/check-project.qmd` was run, or a reason is documented.
+- [ ] `quarto render code/run-all.qmd` was run after code changes that affect outputs,
       or a reason is documented.
 
 ## Scientific and Statistical Review

@@ -100,7 +100,7 @@ _As applicable, explain where and how you got the data. If you directly import t
 
 
 ## Data import and cleaning
-_Write code that reads in the file and cleans it so it's ready for analysis. Since this will be fairly long code for most datasets, it might be a good idea to have it in one or several R scripts. If that is the case, explain here briefly what kind of cleaning/processing you do, and provide more details and well documented code somewhere (e.g. as supplement in a paper). All materials, including files that contain code, should be commented well so everyone can follow along._
+_Write code that reads in the file and cleans it so it's ready for analysis. Since this will be fairly long code for most datasets, it might be a good idea to have it in one or several scripts. If that is the case, explain here briefly what kind of cleaning/processing you do, and provide more details and well documented code somewhere (e.g. as supplement in a paper). All materials, including files that contain code, should be commented well so everyone can follow along._
 
 
 ## Statistical analysis
@@ -114,7 +114,7 @@ _Explain anything related to your statistical analyses._
 
 ## Exploratory/Descriptive analysis
 
-_Use a combination of text/tables/figures to explore and describe your data. Show the most important descriptive results here. Additional ones should go in the supplement. Even more can be in the R and Quarto files that are part of your project._
+_Use a combination of text/tables/figures to explore and describe your data. Show the most important descriptive results here. Additional ones should go in the supplement. Even more can be in the scripts and Quarto files that are part of your project._
 
 
 @tbl-summarytable shows a summary of the data.
@@ -136,7 +136,7 @@ knitr::kable(resulttable)
 _To get some further insight into your data, if reasonable you could compute simple statistics (e.g. simple models with 1 predictor) to look for associations between your outcome(s) and each individual predictor variable. Though note that unless you pre-specified the outcome and main exposure, any "p<0.05 means statistical significance" interpretation is not valid._
 
 
-@fig-result shows a scatterplot figure produced by one of the R scripts.
+@fig-result shows a scatterplot figure produced by one of the analysis scripts.
 
 ```{r}
 #| label: fig-result
@@ -148,7 +148,7 @@ knitr::include_graphics(here("results","figures","height-weight-stratified.png")
 
 ## Full analysis
 
-_Use one or several suitable statistical/machine learning methods to analyze your data and to produce meaningful figures, tables, etc. This might again be code that is best placed in one or several separate R scripts that need to be well documented. You want the code to produce figures and data ready for display as tables, and save those. Then you load them here._
+_Use one or several suitable statistical/machine learning methods to analyze your data and to produce meaningful figures, tables, etc. This might again be code that is best placed in one or several separate scripts that need to be well documented. You want the code to produce figures and data ready for display as tables, and save those. Then you load them here._
 
 Example @tbl-resulttable2 shows a summary of a linear model fit.
 

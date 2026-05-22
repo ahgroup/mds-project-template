@@ -1,8 +1,9 @@
 # Overview
 
 A template file and folder structure for a reproducible data analysis
-project/paper done with R/Quarto/GitHub. Other components (e.g., other
-programming languages) can be added as needed.
+project/paper. The default example uses R, Quarto, Git, and GitHub, but the
+structure is workflow-first so projects can add Python, Julia, shell scripts, or
+other tools without major reorganization.
 
 This template also includes lightweight guidance for AI-supported work. The goal
 is not to make AI do the project for you. The goal is to make AI tools useful
@@ -11,7 +12,13 @@ transparent, reproducible, and human-reviewed.
 
 # Pre-requisites
 
-This is a template for a data analysis project using R, Quarto, GitHub and a reference manager that can handle BibTeX. Our recommendation for the reference manager is Zotero, with the Better BibTeX plugin/extension. It is also assumed that you have a word processor installed (e.g. MS Word or [LibreOffice](https://www.libreoffice.org/)). You need that software stack to make use of this template. To produce PDF output, you need a TeX distribution installed. You can use TinyTeX, following [these instructions.](https://quarto.org/docs/output-formats/pdf-basics.html)
+This is a template for a data analysis project using Quarto, GitHub, and a
+reference manager that can handle BibTeX. The default example uses R. Our
+recommendation for the reference manager is Zotero, with the Better BibTeX
+plugin/extension. It is also assumed that you have a word processor installed
+(e.g. MS Word or [LibreOffice](https://www.libreoffice.org/)). To produce PDF
+output, you need a TeX distribution installed. You can use TinyTeX, following
+[these instructions.](https://quarto.org/docs/output-formats/pdf-basics.html)
 
 The example files use these R packages: `broom`, `dplyr`, `ggplot2`, `here`,
 `knitr`, `readxl`, `skimr`, and `tidyr`. Install them before running the example
@@ -34,21 +41,26 @@ used and what human checks were performed.
 
 * The `assets` folder contains files that are manually generated schematics/diagrams, BibTeX files, CSL style files, PDFs of references, and other such content. Basically add anything that needs to be part of your project but that doesn't fit into the other categories.
 
-* All code goes into the `code` folder and subfolders. Currently, there are 3 sub-folders that do different parts of an analysis. You can re-organize such that it makes most sense for your project. The folders contain small example files that do some data cleaning and analysis to illustrate the overall setup and workflow. See the readme files in those folders for details.
+* All code goes into the `code` folder and subfolders. The default subfolders
+are organized by workflow stage: `processing`, `exploration`, and `analysis`.
+The folders contain small R/Quarto example files that do data cleaning and
+analysis to illustrate the overall setup and workflow. You can add scripts in
+other languages to the same workflow-stage folders as needed. See the readme
+files in those folders and `code/workflow.md` for details.
 
 * All data goes into the `data` folder and subfolders. The example project has
 raw and processed data folders, plus ignored placeholders for private or large
 local-only data. You can re-organize such that it makes most sense for your
 project.
 
-* The `products` folder and its subfolders should contain all _deliverables_, such as reports, manuscripts, presentations, posters, Shiny web apps, etc. Those should generally be made with Quarto/R. As needed, other formats can be used. A few examples are provided.
+* The `products` folder and its subfolders should contain all _deliverables_, such as reports, manuscripts, presentations, posters, Shiny web apps, etc. Those should generally be made with Quarto when possible. As needed, other formats can be used. A few examples are provided.
   - The  `manuscript` subfolder contains a template for a report written as Quarto file. If you access this repository as part of the [Modern Applied Data Science course](https://andreashandel.github.io/MADAcourse/), the sections are guides for your project. If you found your way to this repository outside the course, you might only be interested in seeing how the file pulls in results and references and generates a word document as output, without paying attention to the detailed structure. There is also a sub-folder containing an example for a supplementary material file.
   - The `poster` subfolder is a placeholder for a future Quarto based poster. See more comments in that readme. 
   - The `report` subfolder contains an example of an HTML-formatted report. It's basically the same as the manuscript, but a different output format.
   - The `presentation` subfolder contains a basic example of slides made with Quarto.
   
 
-* The `results` folder should contain all automatically/code generated output. This includes figures, tables, results from analyses that are later used in figures or tables, and other outputs. It is generally recommended to save objects, including tables, as serialized R data (`.Rds`) files. Other formats, e.g. `.csv` for tables, can be useful for use downstream and should be used as needed. All content in these folders should be automatically generated by code. Manually generated results should be avoided as much as possible. If absolutely necessary, they go into the `assets` folder.
+* The `results` folder should contain all automatically/code generated output. This includes figures, tables, results from analyses that are later used in figures or tables, and other outputs. Use open, language-neutral formats such as `.csv`, `.tsv`, `.json`, `.png`, `.svg`, or `.pdf` when outputs need to be shared across tools. Language-specific serialized objects such as `.rds`, `.pkl`, or `.jld2` are fine when they are useful, but consider also saving a plain-text or widely readable version. All content in these folders should be automatically generated by code. Manually generated results should be avoided as much as possible. If absolutely necessary, they go into the `assets` folder.
 
 
 * There are multiple special files in the repo.
@@ -60,10 +72,12 @@ project.
   human collaborators who use AI tools.
   * `project-metadata.yml` contains concise project metadata that helps humans
   and AI assistants orient themselves quickly.
-  * `code/run-all.R` runs the example processing, EDA, and analysis scripts in
-  order.
-  * `code/check-project.R` runs lightweight local checks for reproducibility,
+  * `code/run-all.qmd` runs the example processing, exploration, and analysis
+  scripts in order. Because it is a Quarto document, it can include explanatory
+  text and code chunks for multiple languages.
+  * `code/check-project.qmd` runs lightweight local checks for reproducibility,
   expected files, package availability, and privacy-related ignore rules.
+  * `code/workflow.md` summarizes the workflow steps, inputs, and outputs.
   * a few "hidden" files and folders (they start with a `.` and depending on how your OS is configured, you might not see them). You can probably ignore them.
 
 
@@ -76,12 +90,19 @@ We try to follow these naming conventions for folders and files:
 * Somewhat descriptive and easy to understand names.
 * Only lower-case letters (and numbers if needed). Words separated by a `-`. 
 
-For instance there is a folder called `analysis-code` with a file called `statistical-analysis.R` in it. We don't use `_` or blank spaces for separators. We also don't use CamelCase, only lower-case. Exceptions are made for standard file names or endings, for instance R scripts end in `.R` (instead of `.r`).
+For instance there is a folder called `analysis` with a file called `statistical-analysis.R` in it. We don't use `_` or blank spaces for separators. We also don't use CamelCase, only lower-case. Exceptions are made for standard file names or endings, for instance R scripts end in `.R` (instead of `.r`).
 
 
-# Package management
+# Software and package management
 
-The package [renv](https://rstudio.github.io/renv/index.html) helps to  manage R packages and increase chances of future reproducibility. Unfortunately, it creates some extra complexity and causes sometimes problems, especially for packages that are not on CRAN.
+Document the software and package setup your project needs. The default example
+uses manually installed R packages because that is approachable for students and
+short projects.
+
+For R projects, the package [renv](https://rstudio.github.io/renv/index.html)
+helps manage R packages and increase chances of future reproducibility.
+Unfortunately, it creates some extra complexity and sometimes causes problems,
+especially for packages that are not on CRAN.
 
 This template does not enable `renv` by default. You can decide to implement
 `renv` or not. This can happen at any stage, though earlier in the project is
@@ -91,8 +112,11 @@ If you plan to use `renv`, start by reading [the introduction to `renv` article]
 
 If you decide to use `renv`, commit the lockfile (`renv.lock`) and the files
 needed to activate the environment, but do not commit the local package library.
-Document the decision in this README or in `project-metadata.yml` so
-collaborators know how to restore the package environment.
+
+For Python, Julia, or other languages, document the chosen environment manager
+in this README or in `project-metadata.yml`. Examples include virtual
+environments, Conda, Poetry, Julia project files, or containers. These are
+optional; use them when they solve a real project need.
 
 # AI-supported workflow
 
@@ -109,8 +133,8 @@ When using AI tools:
 * Do not paste sensitive, private, regulated, or identifiable data into external
   AI tools unless the project owner has explicitly approved that workflow.
 * Ask for small, reviewable changes.
-* Run `Rscript code/check-project.R` after meaningful changes.
-* Run `Rscript code/run-all.R` after code changes that affect generated outputs.
+* Run `quarto render code/check-project.qmd` after meaningful changes.
+* Run `quarto render code/run-all.qmd` after code changes that affect generated outputs.
 * Add a short entry to `ai/ai-use-log.md` for meaningful AI-assisted work.
 
 The `ai/prompts` folder contains starting prompts for common tasks such as
@@ -124,29 +148,29 @@ users will be new to Git/GitHub.
 
 This is a GitHub template repository. The best way to get it and start using it is [by following these steps.](https://help.github.com/en/articles/creating-a-repository-from-a-template)
 
-Once you got the repository, you can check out the examples by executing them in order. First run the processing code, which will produce the processed data. Then run the EDA scripts and analysis scripts, which will take the processed data and produce some results. You can run those steps manually, or run the full example workflow with:
+Once you got the repository, you can check out the examples by executing them in order. First run the processing code, which will produce the processed data. Then run the exploration scripts and analysis scripts, which will take the processed data and produce some results. You can run those steps manually, or run the full example workflow with:
 
 ```sh
-Rscript code/run-all.R
+quarto render code/run-all.qmd
 ```
 
 To also render the report, manuscript, and presentation, use:
 
 ```sh
-Rscript code/run-all.R --render-products
+quarto render code/run-all.qmd -P render_products:true
 ```
 
 The supplementary material renders to PDF and requires a TeX installation. To
 render it too, use:
 
 ```sh
-Rscript code/run-all.R --render-products --render-supplement
+quarto render code/run-all.qmd -P render_products:true -P render_supplement:true
 ```
 
 You can run local project checks with:
 
 ```sh
-Rscript code/check-project.R
+quarto render code/check-project.qmd
 ```
 
 Once you (re-)generated the results, you can explore the products. Those Quarto files pull in the generated results and display them. These files also pull in references from the `BibTeX` file and format them according to the CSL style.

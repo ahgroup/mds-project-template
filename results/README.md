@@ -8,6 +8,10 @@ Structure the folders inside `results` such that they make sense for your specif
 
 Files in this folder should be reproducible from code. If an AI tool helps
 generate or revise analysis code, rerun the relevant scripts and make sure the
-updated outputs here match the code. For tables that need to be reviewed outside
-R, consider saving both an `.rds` version and a plain-text `.csv` or `.md`
-version.
+updated outputs here match the code.
+
+For outputs that need to move across languages or be reviewed outside the tool
+that created them, prefer widely readable formats such as `.csv`, `.tsv`,
+`.json`, `.png`, `.svg`, `.pdf`, or `.md`. Language-specific serialized objects
+such as `.rds`, `.pkl`, or `.jld2` are fine when they are useful, but consider
+also saving a plain-text or widely readable companion file.

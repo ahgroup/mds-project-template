@@ -10,7 +10,7 @@ Use AI tools for tasks such as:
 
 - explaining unfamiliar code or project structure;
 - drafting analysis plans or checklists;
-- writing first-pass R/Quarto code;
+- writing first-pass R, Quarto, Python, Julia, or other project code;
 - improving documentation;
 - finding likely bugs or reproducibility gaps;
 - checking whether outputs are traceable to code.
@@ -53,7 +53,7 @@ Do not add full chat transcripts by default.
 1. Read `README.md`, `project-metadata.yml`, and `AGENTS.md`.
 2. Check `data/data-use-notes.md` before exposing data to an AI tool.
 3. Ask for small, reviewable changes.
-4. Run `Rscript code/check-project.R`.
-5. If code changed generated outputs, run `Rscript code/run-all.R`.
+4. Run `quarto render code/check-project.qmd`.
+5. If code changed generated outputs, run `quarto render code/run-all.qmd`.
 6. Review the changes manually.
 7. Add a concise entry to `ai/ai-use-log.md`.

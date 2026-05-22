@@ -1,34 +1,28 @@
 # TODO
 
-## Future: Language-Agnostic / Multi-Language Project Setup
+## Completed: Language-Agnostic / Multi-Language Project Setup
 
-Next time this template is revisited, discuss how to make the project structure
-more language agnostic and better suited for projects that use multiple
-programming languages in the same repository, such as R, Python, and Julia.
+The template now keeps the default example simple and R-based, while documenting
+a clear extension pattern for multi-language projects.
 
-Questions to address:
+Implemented decisions:
 
-- Should `code/` stay organized by workflow stage (`processing-code`,
-  `eda-code`, `analysis-code`) or shift toward language-neutral names such as
-  `processing/`, `exploration/`, `analysis/`, and `utilities/`?
-- Should language-specific code live in subfolders like `code/r/`,
-  `code/python/`, and `code/julia/`, or should workflow-stage folders contain
-  mixed-language scripts?
-- How should `run-all` be made language agnostic?
-  Possibilities include a simple `Makefile`, a `justfile`, Quarto project
-  commands, or a small cross-language driver script.
-- How should package/environment guidance be documented for each language while
-  keeping `renv`, virtual environments, Conda, Poetry, Julia environments, and
-  containers optional rather than mandatory?
-- How should generated outputs stay standardized across languages, especially
-  tables, figures, model outputs, and logs?
-- How should `AGENTS.md`, `project-metadata.yml`, and local checks describe
-  multi-language workflows clearly enough for AI assistants and novice users?
-- Should examples include a minimal Python or Julia script, or should the
-  default template remain R-only with documented extension patterns?
-
-Preferred direction for now: keep the default template simple and approachable,
-but document a clear extension pattern for multi-language projects.
+- `code/` is organized by workflow stage with language-neutral folders:
+  `processing/`, `exploration/`, and `analysis/`.
+- Mixed-language scripts can live together in the relevant workflow-stage
+  folder. Language-specific subfolders are optional for larger projects.
+- `code/run-all.qmd` is the main reproducibility entry point. It combines
+  explanatory text with executable workflow code and can be extended to run
+  other languages.
+- `code/check-project.qmd` replaces the R-only check script and leaves space for
+  optional Python, Julia, or other language checks.
+- `code/workflow.md` provides a compact workflow inventory with steps, inputs,
+  outputs, language, and command/file information.
+- README, AGENTS, project metadata, AI guidance, and result/data documentation
+  now describe the default R/Quarto example as one supported path rather than
+  the only possible path.
+- The default template remains R-only at runtime. Python and Julia are documented
+  as extension patterns rather than required examples.
 
 ## Future: Other Loose Ends
 
@@ -39,9 +33,8 @@ These are not urgent, but they would be useful future improvements.
   `results/tables/*.rds`, and `results/tables/*.csv`. Committing them helps
   novice users see expected outputs; not committing them makes the repository
   cleaner and emphasizes full regeneration from code.
-- Revisit naming conventions. The template currently uses names like
-  `processing-code` and `eda-code`; future versions might use simpler,
-  language-neutral names such as `processing`, `exploration`, and `analysis`.
+- Consider adding a small helper-function example under `code/utilities/` if
+  future users need a concrete pattern for shared code.
 - Consider adding a short `CHANGELOG.md` or `template-notes.md` so users can
   see what changed in the template over time without reading the full Git
   history.
@@ -51,7 +44,7 @@ These are not urgent, but they would be useful future improvements.
   group members after creating a repository from the template.
 - Add optional guidance for GitHub issue templates, pull-request checklists, and
   GitHub Actions, while keeping those features disabled by default.
-- Revisit whether `code/check-project.R` should check for unresolved template
+- Revisit whether `code/check-project.qmd` should check for unresolved template
   placeholders such as `NAME`, `LINK-GOES-HERE`, and example author details.
 - Consider adding optional session/software reporting to products, for example
   an appendix chunk with `sessionInfo()` or `sessioninfo::session_info()`.

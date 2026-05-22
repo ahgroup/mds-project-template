@@ -74,7 +74,7 @@ knitr::kable(resulttable1)
 
 
 
-@fig-result2 shows a scatterplot figure produced by one of the R scripts.
+@fig-result2 shows a scatterplot figure produced by one of the analysis scripts.
 
 
 ```{r}

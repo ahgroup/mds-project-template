@@ -1,0 +1,384 @@
+---
+title: "Check the project"
+format:
+  html:
+    toc: true
+    embed-resources: true
+execute:
+  echo: true
+  message: true
+  warning: true
+params:
+  strict: false
+---
+
+This Quarto document runs lightweight local checks for the template structure,
+required software packages, generated outputs, privacy-related ignore rules, and
+obvious local path references.
+
+The checks are intentionally simple and editable. The default example uses R,
+but projects that add Python, Julia, or other languages can add extra code
+chunks below without changing the project layout.
+
+Run from the project root with:
+
+```sh
+quarto render code/check-project.qmd
+```
+
+Use strict mode to treat warnings as failures:
+
+```sh
+quarto render code/check-project.qmd -P strict:true
+```
+
+```{r}
+#| label: setup
+find_project_root <- function(start = getwd()) {
+  current <- normalizePath(start, mustWork = TRUE)
+
+  repeat {
+    if (
+      file.exists(file.path(current, "README.md")) &&
+        file.exists(file.path(current, "project-metadata.yml"))
+    ) {
+      return(current)
+    }
+
+    parent <- dirname(current)
+    if (identical(parent, current)) {
+      stop("Could not find the project root.", call. = FALSE)
+    }
+    current <- parent
+  }
+}
+
+project_root <- find_project_root()
+knitr::opts_knit$set(root.dir = project_root)
+
+is_true <- function(value) {
+  identical(value, TRUE) || identical(tolower(as.character(value)), "true")
+}
+
+strict <- is_true(params$strict)
+failures <- character()
+check_warnings <- character()
+
+add_failure <- function(message) {
+  failures <<- c(failures, message)
+}
+
+add_warning <- function(message) {
+  check_warnings <<- c(check_warnings, message)
+}
+
+check_files_exist <- function(paths, label) {
+  missing <- paths[!file.exists(paths)]
+  if (length(missing) > 0) {
+    add_failure(paste0("Missing ", label, ": ", paste(missing, collapse = ", ")))
+  }
+}
+
+check_dirs_exist <- function(paths, label) {
+  missing <- paths[!dir.exists(paths)]
+  if (length(missing) > 0) {
+    add_failure(paste0("Missing ", label, ": ", paste(missing, collapse = ", ")))
+  }
+}
+```
+
+## Required Structure
+
+```{r}
+#| label: required-structure
+required_dirs <- c(
+  "assets",
+  "code",
+  "code/analysis",
+  "code/exploration",
+  "code/processing",
+  "code/utilities",
+  "data",
+  "data/raw-data",
+  "data/processed-data",
+  "data/private-data",
+  "data/large-files",
+  "products",
+  "results",
+  "results/figures",
+  "results/tables",
+  "ai"
+)
+
+required_files <- c(
+  "README.md",
+  "AGENTS.md",
+  "project-metadata.yml",
+  "data/data-use-notes.md",
+  "ai/README.md",
+  "ai/ai-use-log.md",
+  "ai/review-checklist.md",
+  "code/run-all.qmd",
+  "code/check-project.qmd",
+  "code/workflow.md",
+  "code/processing/processingcode.R",
+  "code/exploration/edacode.R",
+  "code/analysis/statistical-analysis.R",
+  "code/utilities/README.md",
+  "products/report/report.qmd",
+  "products/manuscript/Manuscript.qmd",
+  "products/presentation/presentation.qmd"
+)
+
+check_dirs_exist(required_dirs, "required folder(s)")
+check_files_exist(required_files, "required file(s)")
+
+structure_table <- data.frame(
+  path = c(required_dirs, required_files),
+  type = c(rep("folder", length(required_dirs)), rep("file", length(required_files))),
+  present = c(dir.exists(required_dirs), file.exists(required_files))
+)
+
+knitr::kable(structure_table)
+```
+
+## Required R Packages
+
+The example workflow uses these R packages. Do not silently install missing
+packages; report them so the project owner or student can install them
+deliberately.
+
+```{r}
+#| label: package-checks
+required_packages <- c(
+  "broom",
+  "dplyr",
+  "ggplot2",
+  "here",
+  "knitr",
+  "readxl",
+  "skimr",
+  "tidyr"
+)
+
+missing_packages <- required_packages[
+  !vapply(required_packages, requireNamespace, logical(1), quietly = TRUE)
+]
+
+if (length(missing_packages) > 0) {
+  add_failure(
+    paste0(
+      "Missing required R package(s): ",
+      paste(missing_packages, collapse = ", "),
+      ". Install them before running the example workflow."
+    )
+  )
+}
+
+package_table <- data.frame(
+  package = required_packages,
+  available = !(required_packages %in% missing_packages)
+)
+
+knitr::kable(package_table)
+```
+
+## Generated Outputs
+
+```{r}
+#| label: output-checks
+example_outputs <- c(
+  "data/processed-data/processeddata.rds",
+  "results/tables/summarytable.rds",
+  "results/tables/summarytable.csv",
+  "results/tables/resulttable1.rds",
+  "results/tables/resulttable1.csv",
+  "results/tables/resulttable2.rds",
+  "results/tables/resulttable2.csv",
+  "results/figures/height-distribution.png",
+  "results/figures/weight-distribution.png",
+  "results/figures/height-weight.png",
+  "results/figures/height-weight-stratified.png"
+)
+
+missing_outputs <- example_outputs[!file.exists(example_outputs)]
+if (length(missing_outputs) > 0) {
+  add_warning(
+    paste0(
+      "Example generated output(s) are missing: ",
+      paste(missing_outputs, collapse = ", "),
+      ". Run quarto render code/run-all.qmd or adjust this check for your project."
+    )
+  )
+}
+
+output_table <- data.frame(
+  output = example_outputs,
+  present = file.exists(example_outputs)
+)
+
+knitr::kable(output_table)
+```
+
+## Privacy and Local Files
+
+```{r}
+#| label: privacy-checks
+if (file.exists(".gitignore")) {
+  gitignore <- readLines(".gitignore", warn = FALSE)
+  expected_ignore_rules <- c(
+    ".Renviron",
+    ".env",
+    "data/private-data/*",
+    "data/large-files/*"
+  )
+  missing_rules <- expected_ignore_rules[
+    !vapply(
+      expected_ignore_rules,
+      function(rule) any(trimws(gitignore) == rule),
+      logical(1)
+    )
+  ]
+
+  if (length(missing_rules) > 0) {
+    add_warning(
+      paste0(
+        ".gitignore is missing recommended privacy/local-data rule(s): ",
+        paste(missing_rules, collapse = ", ")
+      )
+    )
+  }
+} else {
+  add_failure("Missing .gitignore.")
+}
+
+local_secret_files <- c(".Renviron", ".env")
+present_secret_files <- local_secret_files[file.exists(local_secret_files)]
+if (length(present_secret_files) > 0) {
+  add_warning(
+    paste0(
+      "Local secret/environment file(s) are present: ",
+      paste(present_secret_files, collapse = ", "),
+      ". Confirm they are ignored and do not commit them."
+    )
+  )
+}
+```
+
+## Local Path Scan
+
+```{r}
+#| label: local-path-scan
+root_text_files <- c("README.md", "AGENTS.md", "project-metadata.yml")
+root_text_files <- root_text_files[file.exists(root_text_files)]
+
+text_files <- c(
+  root_text_files,
+  list.files(
+  c("code", "products", "ai", "data", "results"),
+  pattern = "\\.(R|qmd|md|py|jl|yml|yaml)$",
+  recursive = TRUE,
+  full.names = TRUE,
+  ignore.case = TRUE
+  )
+)
+
+text_files <- setdiff(
+  text_files,
+  c(file.path("code", "check-project.qmd"))
+)
+
+absolute_path_pattern <- "[A-Za-z]:\\\\|/Users/|/home/"
+path_hits <- character()
+
+for (path in text_files) {
+  lines <- readLines(path, warn = FALSE)
+  hit_index <- grep(absolute_path_pattern, lines)
+
+  if (length(hit_index) > 0) {
+    hit_lines <- lines[hit_index]
+    explanatory <- grepl(
+      "absolute path|you never want|C:\\\\yourname|C:\\\\ahandel",
+      hit_lines,
+      ignore.case = TRUE
+    )
+    hit_index <- hit_index[!explanatory]
+  }
+
+  if (length(hit_index) > 0) {
+    path_hits <- c(path_hits, paste0(path, ":", hit_index))
+  }
+}
+
+if (length(path_hits) > 0) {
+  add_warning(
+    paste0(
+      "Potential absolute local path reference(s): ",
+      paste(path_hits, collapse = ", ")
+    )
+  )
+}
+
+if (length(path_hits) == 0) {
+  message("No unexpected absolute local path references found.")
+}
+```
+
+## Optional Multi-Language Checks
+
+If the project adds other languages, add small checks here. Keep them explicit
+and local rather than silently installing software or packages. The examples
+below are plain fenced code blocks so the base template does not require Python,
+Julia, or extra Quarto engines. Once a project uses those languages, convert the
+relevant example into an executable Quarto chunk.
+
+```python
+# Example Python package check:
+import importlib.util
+
+missing = [
+    package for package in ["pandas", "numpy"]
+    if importlib.util.find_spec(package) is None
+]
+
+if missing:
+    raise SystemExit(f"Missing Python package(s): {', '.join(missing)}")
+```
+
+```julia
+# Example Julia environment check:
+import Pkg
+Pkg.status()
+```
+
+## Summary
+
+```{r}
+#| label: summary
+if (strict && length(check_warnings) > 0) {
+  failures <- c(failures, paste0("Strict-mode warning: ", check_warnings))
+}
+
+cat("Project check\n")
+cat("Working directory: ", project_root, "\n", sep = "")
+
+if (length(check_warnings) > 0) {
+  cat("\nWarnings:\n")
+  for (warning in check_warnings) {
+    cat("- ", warning, "\n", sep = "")
+  }
+}
+
+if (length(failures) > 0) {
+  cat("\nFailures:\n")
+  for (failure in failures) {
+    cat("- ", failure, "\n", sep = "")
+  }
+  stop(
+    paste(c("Project checks failed:", paste0("- ", failures)), collapse = "\n"),
+    call. = FALSE
+  )
+}
+
+cat("\nOK: project checks passed.\n")
+```

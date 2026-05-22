@@ -3,7 +3,9 @@
 Use this prompt when drafting or reviewing an analysis plan.
 
 ```text
-Please help draft an analysis plan for this R/Quarto project.
+Please help draft an analysis plan for this reproducible data-analysis project.
+The default example uses R and Quarto, but the project may use other languages
+where appropriate.
 
 Use the repository structure and data-use notes as context. The plan should
 include:

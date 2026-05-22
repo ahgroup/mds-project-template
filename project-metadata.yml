@@ -9,11 +9,29 @@ project:
   short_name: "example-project"
   project_type: "teaching-template" # teaching-template, class-project, research-project
   status: "template"
-  primary_language: "R"
   primary_outputs:
     - "products/report/report.qmd"
     - "products/manuscript/Manuscript.qmd"
     - "products/presentation/presentation.qmd"
+
+software:
+  primary_language: "R"
+  additional_languages: [] # e.g., Python, Julia
+  workflow_style: "workflow-stage folders with optional mixed-language scripts"
+  quarto_required: true
+  languages:
+    - name: "R"
+      role: "default example workflow"
+      package_management: "manual" # manual, renv, container, other
+      required_packages:
+        - "broom"
+        - "dplyr"
+        - "ggplot2"
+        - "here"
+        - "knitr"
+        - "readxl"
+        - "skimr"
+        - "tidyr"
 
 people:
   project_owner: "NAME"
@@ -29,11 +47,11 @@ data:
   data_use_notes: "data/data-use-notes.md"
 
 reproducibility:
-  main_run_command: "Rscript code/run-all.R"
-  check_command: "Rscript code/check-project.R"
-  render_products_command: "Rscript code/run-all.R --render-products"
-  package_management: "manual" # manual, renv, container, other
-  renv_enabled_by_default: false
+  main_run_command: "quarto render code/run-all.qmd"
+  check_command: "quarto render code/check-project.qmd"
+  render_products_command: "quarto render code/run-all.qmd -P render_products:true"
+  render_supplement_command: "quarto render code/run-all.qmd -P render_products:true -P render_supplement:true"
+  workflow_inventory: "code/workflow.md"
 
 ai_assistance:
   allowed: true
@@ -44,4 +62,8 @@ ai_assistance:
 
 optional_tools:
   renv: "recommended for research projects, optional for this template"
+  python_virtualenv_or_conda: "recommended for Python-heavy projects, optional"
+  poetry: "optional for Python package-style projects"
+  julia_project: "recommended for Julia-heavy projects, optional"
+  containers: "recommended for complex multi-language research projects, optional"
   github_actions: "recommended for advanced users, not enabled by default"

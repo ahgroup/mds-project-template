@@ -1,7 +1,9 @@
 # AGENTS.md
 
-This repository is a template for reproducible data analysis projects using R,
-Quarto, Git, and GitHub. It is used for research group projects and for teaching
+This repository is a template for reproducible data analysis projects. The
+default example uses R, Quarto, Git, and GitHub, but the structure is meant to
+support additional languages such as Python or Julia without major
+reorganization. It is used for research group projects and for teaching
 modeling/data science workflows.
 
 These instructions are for AI coding agents and human collaborators who use AI
@@ -20,8 +22,8 @@ tools in this repository.
 
 - `assets/`: static non-code project materials, including references, CSL files,
   manually created schematics, PDFs, and other supporting files.
-- `code/`: all analysis code. The example project is split into processing,
-  exploratory analysis, and statistical analysis code.
+- `code/`: all analysis code. The example project is split into workflow-stage
+  folders: `processing/`, `exploration/`, and `analysis/`.
 - `data/`: data at different stages. Raw data should not be edited by hand.
 - `products/`: final or near-final deliverables such as reports, manuscripts,
   supplements, presentations, posters, and apps.
@@ -35,7 +37,8 @@ tools in this repository.
   the immutable source.
 - Do not place manually edited results in `results/`. If a manually created file
   is needed, place it in `assets/` and document its source.
-- Use project-relative paths. Prefer `here::here()` in R code.
+- Use project-relative paths. Prefer `here::here()` in R code and comparable
+  project-root helpers in other languages.
 - Keep code and outputs synchronized. If code changes generated results, rerun
   the affected scripts and update generated outputs when appropriate.
 - Keep edits scoped to the task. Avoid unrelated cleanup in template files.
@@ -59,36 +62,38 @@ tools in this repository.
 
 ## Reproducibility Workflow
 
-From a clean R session, the example project should be reproducible with:
+From a clean Quarto render, the example project should be reproducible with:
 
 ```sh
-Rscript code/run-all.R
+quarto render code/run-all.qmd
 ```
 
 To also render Quarto products when Quarto is installed:
 
 ```sh
-Rscript code/run-all.R --render-products
+quarto render code/run-all.qmd -P render_products:true
 ```
 
 To run local project checks:
 
 ```sh
-Rscript code/check-project.R
+quarto render code/check-project.qmd
 ```
 
-If a required R package is missing, report it clearly. Do not silently install
-packages.
+If required software or packages are missing, report that clearly. Do not
+silently install packages.
 
 ## Dependency Policy
 
-The template does not enable `renv` by default. `renv` is recommended for
-research projects that need stronger long-term reproducibility, but it remains
-optional because it adds complexity for new users and classroom settings.
+The template does not enable `renv`, virtual environments, Conda, Poetry, Julia
+environments, or containers by default. Environment managers are recommended for
+research projects that need stronger long-term reproducibility, but they remain
+optional because they add complexity for new users and classroom settings.
 
-If a project chooses to use `renv`, document that decision in the README or
-`project-metadata.yml`, commit the lockfile, and make sure the package library
-itself is not committed.
+If a project chooses to use an environment manager, document that decision in
+the README or `project-metadata.yml`, commit the appropriate lock or project
+files, and make sure local package libraries or virtual environments are not
+committed.
 
 ## AI Assistance Documentation
 
@@ -102,8 +107,8 @@ checked.
 
 Before handing work back to a human collaborator:
 
-- Run `Rscript code/check-project.R` when R is available.
-- Run `Rscript code/run-all.R` if code or generated outputs changed.
+- Run `quarto render code/check-project.qmd` when Quarto is available.
+- Run `quarto render code/run-all.qmd` if code or generated outputs changed.
 - Mention any checks that could not be run.
 - Verify that raw data was not edited.
 - Verify that generated outputs are traceable to code.

@@ -29,6 +29,12 @@
 *.knit.md
 Rplots.pdf
 
+# Local render logs for workflow/check Quarto documents
+code/run-all.html
+code/check-project.html
+code/run-all_files/
+code/check-project_files/
+
 # MacOS specific .DS_Store files
 .DS_Store
 

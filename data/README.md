@@ -2,7 +2,7 @@
 
 The folders inside this folder should contain all data at various stages.
 
-This data is being loaded/manipulated/changed/saved with code from the `code` folders.
+This data is loaded, manipulated, changed, and saved with code from the `code` folders.
 
 You should place the raw data in the `raw-data` folder and not edit it. Ever!
 
@@ -12,14 +12,13 @@ until the project owner documents otherwise. Do not paste private, regulated, or
 identifiable data into external AI tools unless that workflow has been
 explicitly approved.
 
-Ideally, load the raw data into R and do all changes there with code, so everything is automatically reproducible and documented.
+Ideally, load the raw data into your analysis language and do all changes there with code, so everything is automatically reproducible and documented.
 
 Sometimes, you need to edit the files in the format you got. For instance, Excel files are sometimes so poorly formatted that it's close to impossible to read them into R, or the persons you got the data from used color to code some information, which of course won't import into R. In those cases, you might have to make modifications in a software other than R. If you need to make edits in whatever format you got the data (e.g. Excel), make a copy and place those copies in a separate folder, AND ONLY EDIT THOSE COPIES. Also, write down somewhere the edits you made.
 
 Add as many sub-folders as suitable. If you only have a single processing step, one sub-folder for processed data is enough. If you have multiple stages of cleaning and processing, additional sub-folders might be useful. Adjust based on the complexity of your project.
 
-I suggest you save your processed and cleaned data as RDS or RDA/Rdata files. This preserves coding like factors, characters, numeric, etc. If you save as CSV, that information would get lost.
-However, CSV is better for sharing with others since it's plain text. If you do CSV, you might want to write down somewhere what each variable is.
+For R-only projects, RDS or RDA/Rdata files can preserve information like factors, characters, and numeric types. For multi-language projects, consider also saving processed data in a language-neutral format such as CSV, TSV, JSON, Parquet, or Feather. CSV is easy to inspect and share, but it can lose type information. If you save CSV files, document what each variable is.
 
 For sensitive or large local-only files, use ignored folders such as
 `data/private-data/` or `data/large-files/`. Add enough documentation so
