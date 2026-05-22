@@ -12,4 +12,4 @@ unless the project owner explicitly asks for that.
 
 | Date | Person | AI tool | Purpose | Files changed or reviewed | Checks run | Human review notes |
 | --- | --- | --- | --- | --- | --- | --- |
-| 2026-05-20 | NAME | ChatGPT/Codex | Drafted a first version of a data-cleaning function and suggested review checks. | `code/processing/processingcode.R` | Reran affected processing and analysis scripts listed in `USAGE.md` | Verified cleaning logic against codebook; confirmed raw data was unchanged. |
+| 2026-05-20 | NAME | ChatGPT/Codex | Drafted a first version of a data-cleaning function and suggested review checks. | `code/processing/processingcode.R` | Reran affected processing and analysis scripts listed in `usage.md` | Verified cleaning logic against codebook; confirmed raw data was unchanged. |

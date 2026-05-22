@@ -13,9 +13,9 @@ Implemented decisions:
   folder. Language-specific subfolders are optional for larger projects.
 - The project no longer has a `run-all` or `check-project` script. Users run
   workflow steps manually.
-- `USAGE.md` provides the practical workflow inventory with steps, inputs,
+- `usage.md` provides the practical workflow inventory with steps, inputs,
   outputs, language, and run-order information.
-- README, AGENTS, project metadata, AI guidance, and result/data documentation
+- readme files, AGENTS, project metadata, AI guidance, and result/data documentation
   now describe the default R/Quarto example as one supported path rather than
   the only possible path.
 - The default template remains R-only at runtime. Python and Julia are documented
@@ -41,7 +41,7 @@ These are not urgent, but they would be useful future improvements.
   group members after creating a repository from the template.
 - Add optional guidance for GitHub issue templates, pull-request checklists, and
   GitHub Actions, while keeping those features disabled by default.
-- Consider adding guidance to `USAGE.md` or the AI review checklist for checking
+- Consider adding guidance to `readme.md` or the AI review checklist for checking
   unresolved template placeholders such as `NAME`, `LINK-GOES-HERE`, and
   example author details.
 - Consider adding optional session/software reporting to products, for example

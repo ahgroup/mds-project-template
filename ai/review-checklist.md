@@ -6,7 +6,7 @@ Use this checklist before accepting AI-assisted changes.
 
 - [ ] Raw data in `data/raw-data/` was not edited.
 - [ ] Sensitive or private data was not pasted into an external AI tool.
-- [ ] Data-use limits in `data/data-use-notes.md` were followed.
+- [ ] Data-use limits in `data/readme-data.md` were followed.
 - [ ] No credentials, tokens, API keys, or private paths were added.
 - [ ] New local-only data belongs in an ignored folder such as
       `data/private-data/` or `data/large-files/`.
@@ -18,7 +18,7 @@ Use this checklist before accepting AI-assisted changes.
 - [ ] Generated outputs are saved under `results/` or the relevant product
       folder.
 - [ ] Generated outputs can be recreated from code.
-- [ ] Affected scripts listed in `USAGE.md` were rerun after code changes that
+- [ ] Affected scripts listed in `usage.md` were rerun after code changes that
       affect outputs, or a reason is documented.
 - [ ] Affected Quarto products were rerendered after source or result changes,
       or a reason is documented.

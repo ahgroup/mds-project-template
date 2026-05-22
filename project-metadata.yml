@@ -2,7 +2,7 @@
 #
 # Replace the example values below when creating a new project from this
 # template. Keep this file concise; detailed methods belong in the code,
-# manuscript/report, supplement, or data-use notes.
+# manuscript/report, supplement, or folder-specific readmes.
 
 project:
   title: "Example data analysis project"
@@ -44,11 +44,11 @@ data:
   sensitivity: "example-data" # example-data, public, internal, sensitive, regulated
   ai_may_inspect_raw_data: false
   ai_may_inspect_processed_data: false
-  data_use_notes: "data/data-use-notes.md"
+  data_use_notes: "data/readme-data.md"
 
 reproducibility:
   workflow_mode: "manual"
-  usage_file: "USAGE.md"
+  workflow_instructions: "usage.md"
   example_steps:
     - "code/processing/processingcode.R"
     - "code/exploration/edacode.R"

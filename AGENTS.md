@@ -20,7 +20,8 @@ tools in this repository.
 
 ## Repository Structure
 
-- `USAGE.md`: human-facing instructions for manually running the example
+- `readme.md`: human-facing project overview and getting-started notes.
+- `usage.md`: human-facing instructions for manually running the example
   workflow, rendering products, and reviewing reproducibility.
 - `assets/`: static non-code project materials, including references, CSL files,
   manually created schematics, PDFs, and other supporting files.
@@ -57,7 +58,7 @@ tools in this repository.
 - Do not upload private data, API keys, credentials, IRB materials, DUAs, or
   unpublished identifiable data to third-party services unless the project owner
   has explicitly approved that workflow.
-- Use `data/data-use-notes.md` to document data source, sensitivity, access
+- Use `data/readme-data.md` to document data source, sensitivity, access
   limits, and whether AI tools may inspect the data.
 - Use ignored folders such as `data/private-data/` or `data/large-files/` for
   local-only files that should not be committed.
@@ -65,7 +66,7 @@ tools in this repository.
 ## Reproducibility Workflow
 
 This template uses a manual, human-run workflow. Do not assume there is a single
-run-all script. Use `USAGE.md` to understand which scripts to run and in what
+run-all script. Use `usage.md` to understand which scripts to run and in what
 order.
 
 For the example project, the intended order is:
@@ -86,7 +87,7 @@ research projects that need stronger long-term reproducibility, but they remain
 optional because they add complexity for new users and classroom settings.
 
 If a project chooses to use an environment manager, document that decision in
-the README or `project-metadata.yml`, commit the appropriate lock or project
+`readme.md` or `project-metadata.yml`, commit the appropriate lock or project
 files, and make sure local package libraries or virtual environments are not
 committed.
 
@@ -102,7 +103,7 @@ checked.
 
 Before handing work back to a human collaborator:
 
-- Follow `USAGE.md` to rerun affected scripts when code or generated outputs
+- Follow `usage.md` to rerun affected scripts when code or generated outputs
   changed.
 - Render affected Quarto products when product source files or generated results
   changed.

@@ -7,7 +7,8 @@ Please help draft an analysis plan for this reproducible data-analysis project.
 The default example uses R and Quarto, but the project may use other languages
 where appropriate.
 
-Use the repository structure, USAGE.md, and data-use notes as context. The plan should
+Use the repository structure, usage.md, code/readme-code.md, and
+data/readme-data.md as context. The plan should
 include:
 
 - research question or assignment goal;

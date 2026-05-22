@@ -36,7 +36,7 @@ Rplots.pdf
 results/large-files/*
 
 # But we want to commit the folder and the readme!
-!results/large-files/README.md
+!results/large-files/readme-large-files.md
 
 # Local environment files and secrets
 .Renviron
@@ -50,9 +50,9 @@ results/large-files/*
 
 # Local/private data files
 data/private-data/*
-!data/private-data/README.md
+!data/private-data/readme-private-data.md
 data/large-files/*
-!data/large-files/README.md
+!data/large-files/readme-large-files.md
 
 # Local AI/tool state and scratch files
 .ai-local/

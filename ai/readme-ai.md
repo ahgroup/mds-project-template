@@ -1,4 +1,4 @@
-# AI-supported workflow
+# AI-Supported Workflow
 
 This folder contains lightweight guidance for using AI tools in this project.
 The goal is to make AI assistance useful without weakening reproducibility,
@@ -29,7 +29,7 @@ Those need human review.
 
 - Do not paste sensitive, private, regulated, or identifiable data into external
   AI tools.
-- Check `data/data-use-notes.md` before asking an AI tool to inspect data.
+- Check `../data/readme-data.md` before asking an AI tool to inspect data.
 - If in doubt, ask the project owner before sharing raw data, unpublished
   analysis details, credentials, IRB materials, or DUA-covered files.
 - Prefer asking AI about code structure, synthetic examples, or summarized
@@ -37,7 +37,7 @@ Those need human review.
 
 ## Logging AI Use
 
-For meaningful project work, add a short entry to `ai/ai-use-log.md`. Keep the
+For meaningful project work, add a short entry to `ai-use-log.md`. Keep the
 entry practical:
 
 - what AI tool was used;
@@ -50,10 +50,11 @@ Do not add full chat transcripts by default.
 
 ## Suggested Workflow
 
-1. Read `README.md`, `USAGE.md`, `project-metadata.yml`, and `AGENTS.md`.
-2. Check `data/data-use-notes.md` before exposing data to an AI tool.
+1. Read `../readme.md`, `../usage.md`, `../project-metadata.yml`,
+   `../AGENTS.md`, and `../data/readme-data.md`.
+2. Check data-use limits before exposing data to an AI tool.
 3. Ask for small, reviewable changes.
-4. Follow `USAGE.md` to rerun affected scripts or rerender affected products.
+4. Rerun affected scripts or rerender affected products.
 5. Confirm generated outputs are traceable to code.
 6. Review the changes manually.
-7. Add a concise entry to `ai/ai-use-log.md`.
+7. Add a concise entry to `ai-use-log.md`.

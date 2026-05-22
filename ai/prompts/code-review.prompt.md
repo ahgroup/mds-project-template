@@ -11,7 +11,7 @@ Focus on:
 - generated outputs that are not saved or documented;
 - missing package dependencies;
 - code that depends on an interactive session state;
-- inconsistencies with the manual run order in USAGE.md;
+- inconsistencies with the manual run order in usage.md;
 - statistical or data-cleaning choices that need human review;
 - outputs that should be regenerated.
 
