@@ -11,13 +11,10 @@ Implemented decisions:
   `processing/`, `exploration/`, and `analysis/`.
 - Mixed-language scripts can live together in the relevant workflow-stage
   folder. Language-specific subfolders are optional for larger projects.
-- `code/run-all.qmd` is the main reproducibility entry point. It combines
-  explanatory text with executable workflow code and can be extended to run
-  other languages.
-- `code/check-project.qmd` replaces the R-only check script and leaves space for
-  optional Python, Julia, or other language checks.
-- `code/workflow.md` provides a compact workflow inventory with steps, inputs,
-  outputs, language, and command/file information.
+- The project no longer has a `run-all` or `check-project` script. Users run
+  workflow steps manually.
+- `USAGE.md` provides the practical workflow inventory with steps, inputs,
+  outputs, language, and run-order information.
 - README, AGENTS, project metadata, AI guidance, and result/data documentation
   now describe the default R/Quarto example as one supported path rather than
   the only possible path.
@@ -44,8 +41,9 @@ These are not urgent, but they would be useful future improvements.
   group members after creating a repository from the template.
 - Add optional guidance for GitHub issue templates, pull-request checklists, and
   GitHub Actions, while keeping those features disabled by default.
-- Revisit whether `code/check-project.qmd` should check for unresolved template
-  placeholders such as `NAME`, `LINK-GOES-HERE`, and example author details.
+- Consider adding guidance to `USAGE.md` or the AI review checklist for checking
+  unresolved template placeholders such as `NAME`, `LINK-GOES-HERE`, and
+  example author details.
 - Consider adding optional session/software reporting to products, for example
   an appendix chunk with `sessionInfo()` or `sessioninfo::session_info()`.
 - Decide how much AI-use documentation is appropriate for class assignments

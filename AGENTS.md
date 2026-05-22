@@ -20,6 +20,8 @@ tools in this repository.
 
 ## Repository Structure
 
+- `USAGE.md`: human-facing instructions for manually running the example
+  workflow, rendering products, and reviewing reproducibility.
 - `assets/`: static non-code project materials, including references, CSL files,
   manually created schematics, PDFs, and other supporting files.
 - `code/`: all analysis code. The example project is split into workflow-stage
@@ -62,23 +64,16 @@ tools in this repository.
 
 ## Reproducibility Workflow
 
-From a clean Quarto render, the example project should be reproducible with:
+This template uses a manual, human-run workflow. Do not assume there is a single
+run-all script. Use `USAGE.md` to understand which scripts to run and in what
+order.
 
-```sh
-quarto render code/run-all.qmd
-```
+For the example project, the intended order is:
 
-To also render Quarto products when Quarto is installed:
-
-```sh
-quarto render code/run-all.qmd -P render_products:true
-```
-
-To run local project checks:
-
-```sh
-quarto render code/check-project.qmd
-```
+- run `code/processing/processingcode.R`;
+- run `code/exploration/edacode.R`;
+- run `code/analysis/statistical-analysis.R`;
+- render only the products that need to be updated.
 
 If required software or packages are missing, report that clearly. Do not
 silently install packages.
@@ -107,12 +102,34 @@ checked.
 
 Before handing work back to a human collaborator:
 
-- Run `quarto render code/check-project.qmd` when Quarto is available.
-- Run `quarto render code/run-all.qmd` if code or generated outputs changed.
+- Follow `USAGE.md` to rerun affected scripts when code or generated outputs
+  changed.
+- Render affected Quarto products when product source files or generated results
+  changed.
 - Mention any checks that could not be run.
 - Verify that raw data was not edited.
 - Verify that generated outputs are traceable to code.
 - Verify that no obvious secrets, local paths, or private data were added.
+
+## Git Commit and Push Suggestions
+
+When a coherent set of changes is complete, the AI assistant should propose a
+Git commit and push to the user if that would help preserve the work or share it
+with collaborators. This is especially appropriate after reproducibility
+updates, documentation changes, analysis-code changes, regenerated outputs, or
+reviewed fixes.
+
+Before proposing a commit and push:
+
+- Check `git status` and summarize the changed files.
+- Confirm that checks were run, or clearly state why they were not.
+- Confirm that raw data, private data, credentials, and local-only files were
+  not added.
+- Suggest a concise commit message.
+
+Do not commit or push automatically unless the user explicitly asks for it or
+approves the proposal. If the user approves, commit only the intended changes
+and push to the appropriate GitHub remote/branch.
 
 ## Optional Future Enhancements
 

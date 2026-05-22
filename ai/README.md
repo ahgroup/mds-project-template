@@ -50,10 +50,10 @@ Do not add full chat transcripts by default.
 
 ## Suggested Workflow
 
-1. Read `README.md`, `project-metadata.yml`, and `AGENTS.md`.
+1. Read `README.md`, `USAGE.md`, `project-metadata.yml`, and `AGENTS.md`.
 2. Check `data/data-use-notes.md` before exposing data to an AI tool.
 3. Ask for small, reviewable changes.
-4. Run `quarto render code/check-project.qmd`.
-5. If code changed generated outputs, run `quarto render code/run-all.qmd`.
+4. Follow `USAGE.md` to rerun affected scripts or rerender affected products.
+5. Confirm generated outputs are traceable to code.
 6. Review the changes manually.
 7. Add a concise entry to `ai/ai-use-log.md`.

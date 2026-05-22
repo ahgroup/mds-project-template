@@ -18,8 +18,9 @@ Use this checklist before accepting AI-assisted changes.
 - [ ] Generated outputs are saved under `results/` or the relevant product
       folder.
 - [ ] Generated outputs can be recreated from code.
-- [ ] `quarto render code/check-project.qmd` was run, or a reason is documented.
-- [ ] `quarto render code/run-all.qmd` was run after code changes that affect outputs,
+- [ ] Affected scripts listed in `USAGE.md` were rerun after code changes that
+      affect outputs, or a reason is documented.
+- [ ] Affected Quarto products were rerendered after source or result changes,
       or a reason is documented.
 
 ## Scientific and Statistical Review

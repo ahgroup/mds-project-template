@@ -47,11 +47,13 @@ data:
   data_use_notes: "data/data-use-notes.md"
 
 reproducibility:
-  main_run_command: "quarto render code/run-all.qmd"
-  check_command: "quarto render code/check-project.qmd"
-  render_products_command: "quarto render code/run-all.qmd -P render_products:true"
-  render_supplement_command: "quarto render code/run-all.qmd -P render_products:true -P render_supplement:true"
-  workflow_inventory: "code/workflow.md"
+  workflow_mode: "manual"
+  usage_file: "USAGE.md"
+  example_steps:
+    - "code/processing/processingcode.R"
+    - "code/exploration/edacode.R"
+    - "code/analysis/statistical-analysis.R"
+  product_rendering: "render affected Quarto products manually"
 
 ai_assistance:
   allowed: true
