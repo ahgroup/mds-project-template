@@ -2,7 +2,9 @@
 title: "An example cleaning script with code pulled in"
 author: "Andreas Handel"
 date: "2024-02-07"
-output: html_document
+format:
+  html:
+    embed-resources: true
 ---
 
 
@@ -20,7 +22,7 @@ This needs to run to load the R script so we can include the code chunks below.
 Note that you can pull in more than one R script if you want.
 
 ```{r, include=FALSE, cache=FALSE}
-knitr::read_chunk('processingcode.R')
+knitr::read_chunk('processing-code.r')
 ```
 
 

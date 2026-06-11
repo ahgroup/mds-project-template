@@ -117,15 +117,15 @@ _Explain anything related to your statistical analyses._
 _Use a combination of text/tables/figures to explore and describe your data. Show the most important descriptive results here. Additional ones should go in the supplement. Even more can be in the scripts and Quarto files that are part of your project._
 
 
-@tbl-summarytable shows a summary of the data.
+@tbl-summary-table shows a summary of the data.
 
 Note the loading of the data providing a **relative** path using the `../../` notation. (Two dots means a folder up). You never want to specify an **absolute** path like `C:\ahandel\myproject\results\` because if you share this with someone, it won't work for them since they don't have that path. You can also use the `here` R package to create paths. See examples of that below. I generally recommend the `here` package.
 
 ```{r}
-#| label: tbl-summarytable
+#| label: tbl-summary-table
 #| tbl-cap: "Data summary table."
 #| echo: FALSE
-resulttable <- readRDS("../../results/tables/summarytable.rds")
+resulttable <- readRDS("../../results/tables/summary-table.rds")
 knitr::kable(resulttable)
 ```
 
@@ -150,14 +150,14 @@ knitr::include_graphics(here("results","figures","height-weight-stratified.png")
 
 _Use one or several suitable statistical/machine learning methods to analyze your data and to produce meaningful figures, tables, etc. This might again be code that is best placed in one or several separate scripts that need to be well documented. You want the code to produce figures and data ready for display as tables, and save those. Then you load them here._
 
-Example @tbl-resulttable2 shows a summary of a linear model fit.
+Example @tbl-result-table-2 shows a summary of a linear model fit.
 
 ```{r}
-#| label: tbl-resulttable2
+#| label: tbl-result-table-2
 #| tbl-cap: "Linear model fit table."
 #| echo: FALSE
-resulttable2 <- readRDS(here("results","tables","resulttable2.rds"))
-knitr::kable(resulttable2)
+result_table_2 <- readRDS(here("results","tables","result-table-2.rds"))
+knitr::kable(result_table_2)
 ```
 
 

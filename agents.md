@@ -1,4 +1,4 @@
-# AGENTS.md
+# agents.md
 
 This repository is a template for reproducible data analysis projects. The
 default example uses R, Quarto, Git, and GitHub, but the structure is meant to
@@ -32,7 +32,8 @@ tools in this repository.
   supplements, presentations, posters, and apps.
 - `results/`: code-generated outputs such as figures, tables, model objects, and
   intermediate analysis outputs.
-- `ai/`: AI workflow notes, prompt templates, AI-use logs, and review checklists.
+- `ai/`: AI workflow notes, prompt templates, AI-use logs, student AI-use
+  policy, and review checklists.
 
 ## Core Rules
 
@@ -45,10 +46,16 @@ tools in this repository.
 - Keep code and outputs synchronized. If code changes generated results, rerun
   the affected scripts and update generated outputs when appropriate.
 - Keep edits scoped to the task. Avoid unrelated cleanup in template files.
+- Fix obvious small typos or mistakes you encounter and report what you fixed.
+  If a possible issue is unclear, scientific, statistical, or larger in scope,
+  report it without changing it.
 - Use lower-case, descriptive file and folder names with words separated by `-`
   unless a standard file name requires otherwise.
 - Do not introduce hidden dependencies on a local R session, local file paths, or
   private environment variables.
+- Check for unresolved template placeholders such as `NAME`, `LINK-GOES-HERE`,
+  sample email addresses, and example author details when reviewing a project.
+  Report them rather than silently guessing replacements.
 
 ## Privacy and Sensitive Data
 
@@ -63,17 +70,35 @@ tools in this repository.
 - Use ignored folders such as `data/private-data/` or `data/large-files/` for
   local-only files that should not be committed.
 
+## Generated Output Policy
+
+Generated outputs are generally committed when they are reasonably small and do
+not contain sensitive information. This helps students and collaborators see
+expected results, render products, and compare their regenerated outputs.
+
+Do not commit generated outputs when they are too large for ordinary Git/GitHub
+use or when they contain sensitive, private, regulated, identifiable, or
+otherwise restricted information. Put large outputs in `results/large-files/` or
+another documented ignored location. For sensitive outputs, commit documentation
+that explains how authorized collaborators can regenerate or obtain them without
+exposing the restricted content.
+
 ## Reproducibility Workflow
 
-This template uses a manual, human-run workflow. Do not assume there is a single
-run-all script. Use `usage.md` to understand which scripts to run and in what
-order.
+This template uses a documented, semi-automated workflow. Reproducible means
+that data processing, figure creation, table creation, and analysis are done by
+code rather than by undocumented manual edits. It does not mean every project
+must have one giant run-all script. Use `usage.md` to understand which scripts
+to run and in what order.
 
 For the example project, the intended order is:
 
-- run `code/processing/processingcode.R`;
-- run `code/exploration/edacode.R`;
-- run `code/analysis/statistical-analysis.R`;
+- optionally run `code/utilities/check-project-setup.r`;
+- run `code/processing/processing-code.r`;
+- run `code/exploration/eda-code.r`;
+- run `code/analysis/statistical-analysis.r`;
+- alternatively run `code/utilities/run-example-workflow.r` to perform the
+  setup check and the three example scripts in order;
 - render only the products that need to be updated.
 
 If required software or packages are missing, report that clearly. Do not
@@ -94,17 +119,19 @@ committed.
 ## AI Assistance Documentation
 
 When AI tools are used for meaningful project work, record a short summary in
-`ai/ai-use-log.md`. The log should capture what AI helped with, which files were
-changed or reviewed, and what human checks were performed. Do not store full chat
-transcripts unless the project owner explicitly wants that and privacy has been
-checked.
+`ai/ai-use-log.md` when maintaining or updating the project. The log should
+capture what AI helped with, which files were changed or reviewed, and what
+human checks were performed. Student-facing AI-use expectations are summarized
+in `ai/ai-policy-for-students.md`. Do not store full chat transcripts unless the
+project owner explicitly wants that and privacy has been checked.
 
 ## Review Expectations
 
 Before handing work back to a human collaborator:
 
 - Follow `usage.md` to rerun affected scripts when code or generated outputs
-  changed.
+  changed. Use `Rscript code/utilities/check-project-setup.r` when checking
+  project readiness.
 - Render affected Quarto products when product source files or generated results
   changed.
 - Mention any checks that could not be run.

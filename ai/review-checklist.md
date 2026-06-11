@@ -18,10 +18,27 @@ Use this checklist before accepting AI-assisted changes.
 - [ ] Generated outputs are saved under `results/` or the relevant product
       folder.
 - [ ] Generated outputs can be recreated from code.
+- [ ] Generated outputs that are reasonably small and non-sensitive are committed
+      when useful for review, teaching, or rendering products.
+- [ ] Large or sensitive/restricted outputs are kept in documented ignored
+      locations rather than committed.
 - [ ] Affected scripts listed in `usage.md` were rerun after code changes that
       affect outputs, or a reason is documented.
 - [ ] Affected Quarto products were rerendered after source or result changes,
       or a reason is documented.
+- [ ] If appropriate, `Rscript code/utilities/check-project-setup.r` was run
+      from the project root, or a reason is documented.
+- [ ] No results depend on undocumented manual edits to raw data files,
+      generated tables, or generated figures.
+
+## Template Placeholder Checklist
+
+- [ ] Replace or explain project-owner placeholders such as `NAME`.
+- [ ] Replace or explain link placeholders such as `LINK-GOES-HERE`.
+- [ ] Replace example author names, affiliations, ORCIDs, and email addresses in
+      product templates.
+- [ ] Replace example dates, titles, and project metadata where needed.
+- [ ] Remove example-only wording that does not apply to the current project.
 
 ## Scientific and Statistical Review
 

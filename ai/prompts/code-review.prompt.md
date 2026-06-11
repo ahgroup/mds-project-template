@@ -9,6 +9,8 @@ Focus on:
 - raw data being modified by hand or overwritten;
 - absolute paths or hidden local dependencies;
 - generated outputs that are not saved or documented;
+- generated outputs that should be committed, ignored as large files, or kept
+  private because they contain sensitive/restricted information;
 - missing package dependencies;
 - code that depends on an interactive session state;
 - inconsistencies with the manual run order in usage.md;

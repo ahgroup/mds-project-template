@@ -3,14 +3,14 @@ title: Example Quarto slides
 subtitle: "with some thoughts on how to set up things"
 date: 2025-01-01
 author: "NAME"
-format: 
+format:
   revealjs:
     theme: default
     css: "./media/my-presentation-styling.css"
     transition: none
     incremental: false
     cap-location: bottom
-    self-contained: true
+    embed-resources: true
     slide-number: true
     show-slide-number: all
     auto-stretch: true
@@ -27,7 +27,7 @@ csl: ../../assets/american-journal-of-epidemiology.csl
 
 ## Figures and tables
 
-The suggestion is to place figures/tables/Rds files etc. in the `media` folder.
+The suggestion is to place figures/tables/RDS files etc. in the `media` folder.
 
 You could also pull it from the `results` folder, but the advantage of copying them into `media` is that you have everything related to your presentation in one place, and if content in `results` continues to be changed/updated, you can ensure you have the version you used in your presentation by copying it into `media`.
 
@@ -35,15 +35,15 @@ You could also pull it from the `results` folder, but the advantage of copying t
 
 ## Example slide
 
-This shows the summary table. It is pulled in from an Rds file and rendered as R chunk with the `kable` package. In general, we suggest more powerful/flexible table packages, such as `gt` or `flextable`, but for this example, `kable` is good enough.
+This shows the summary table. It is pulled in from an RDS file and rendered as R chunk with the `kable` package. In general, we suggest more powerful/flexible table packages, such as `gt` or `flextable`, but for this example, `kable` is good enough.
 
 Note that we could have loaded the data with `here()`, but if we ever want to copy this presentation to another folder outside the current project, you would have to adjust the path.
 
 ```{r}
-#| label: tbl-summarytable
+#| label: tbl-summary-table
 #| tbl-cap: "Data summary table."
 #| echo: FALSE
-resulttable=readRDS("./media/summarytable.rds")
+resulttable=readRDS("./media/summary-table.rds")
 knitr::kable(resulttable)
 ```
 
@@ -58,11 +58,11 @@ This shows a figure created by the analysis script. It is inserted using Quarto/
 This shows the model fitting results as table.
 
 ```{r}
-#| label: tbl-resulttable2
+#| label: tbl-result-table-2
 #| tbl-cap: "Linear model fit table."
 #| echo: FALSE
-resulttable2 = readRDS("./media/resulttable2.rds")
-knitr::kable(resulttable2)
+result_table_2 = readRDS("./media/result-table-2.rds")
+knitr::kable(result_table_2)
 ```
 
 ## Example slide with reference

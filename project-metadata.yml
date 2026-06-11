@@ -11,13 +11,13 @@ project:
   status: "template"
   primary_outputs:
     - "products/report/report.qmd"
-    - "products/manuscript/Manuscript.qmd"
+    - "products/manuscript/manuscript.qmd"
     - "products/presentation/presentation.qmd"
 
 software:
   primary_language: "R"
   additional_languages: [] # e.g., Python, Julia
-  workflow_style: "workflow-stage folders with optional mixed-language scripts"
+  workflow_style: "workflow-stage folders with optional setup check and example workflow runner"
   quarto_required: true
   languages:
     - name: "R"
@@ -47,18 +47,29 @@ data:
   data_use_notes: "data/readme-data.md"
 
 reproducibility:
-  workflow_mode: "manual"
+  workflow_mode: "documented semi-automated"
   workflow_instructions: "usage.md"
+  setup_check: "code/utilities/check-project-setup.r"
+  example_runner: "code/utilities/run-example-workflow.r"
   example_steps:
-    - "code/processing/processingcode.R"
-    - "code/exploration/edacode.R"
-    - "code/analysis/statistical-analysis.R"
+    - "code/processing/processing-code.r"
+    - "code/exploration/eda-code.r"
+    - "code/analysis/statistical-analysis.r"
   product_rendering: "render affected Quarto products manually"
+  generated_output_policy: "commit generated outputs unless they are large or sensitive/restricted"
 
 ai_assistance:
   allowed: true
   log_file: "ai/ai-use-log.md"
-  guidance_file: "AGENTS.md"
+  guidance_file: "agents.md"
+  student_policy_file: "ai/ai-policy-for-students.md"
+  prompt_files:
+    - "ai/prompts/start-project.prompt.md"
+    - "ai/prompts/analysis-plan.prompt.md"
+    - "ai/prompts/modeling-plan-review.prompt.md"
+    - "ai/prompts/code-review.prompt.md"
+    - "ai/prompts/reproducibility-audit.prompt.md"
+    - "ai/prompts/final-product-review.prompt.md"
   human_review_required: true
   full_chat_transcripts_required: false
 

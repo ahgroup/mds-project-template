@@ -35,10 +35,24 @@ Those need human review.
 - Prefer asking AI about code structure, synthetic examples, or summarized
   outputs rather than raw records.
 
+## Student AI Policy
+
+The file `ai-policy-for-students.md` gives student-facing guidance on acceptable
+AI use, required human understanding, data privacy, and disclosure. Course,
+instructor, project-owner, journal, funder, or institutional rules take priority
+when they are more specific.
+
 ## Logging AI Use
 
-For meaningful project work, add a short entry to `ai-use-log.md`. Keep the
-entry practical:
+The file `ai-use-log.md` is a transparency record for meaningful AI-assisted
+work. Humans should be able to read it to understand what AI helped with and
+what was checked.
+
+Students usually do not need to edit the log manually unless the instructor or
+project owner asks them to. AI assistants and project maintainers should add
+concise entries when AI meaningfully changes or reviews project materials.
+
+A practical entry records:
 
 - what AI tool was used;
 - what it helped with;
@@ -48,13 +62,33 @@ entry practical:
 
 Do not add full chat transcripts by default.
 
+## Prompt Templates
+
+The `prompts/` folder contains reusable prompts for common project tasks:
+
+- `start-project.prompt.md`: review a new project created from this template.
+- `analysis-plan.prompt.md`: draft or review an analysis plan.
+- `modeling-plan-review.prompt.md`: review statistical or machine-learning
+  modeling choices before implementation.
+- `code-review.prompt.md`: review changed code for reproducibility problems.
+- `reproducibility-audit.prompt.md`: audit a project before submission,
+  sharing, or accepting changes.
+- `final-product-review.prompt.md`: review reports, manuscripts,
+  presentations, posters, websites, or other products.
+
+Adapt the prompts to the specific project and any course, collaborator, funder,
+journal, or institutional requirements.
+
 ## Suggested Workflow
 
 1. Read `../readme.md`, `../usage.md`, `../project-metadata.yml`,
-   `../AGENTS.md`, and `../data/readme-data.md`.
+   `../agents.md`, and `../data/readme-data.md`.
 2. Check data-use limits before exposing data to an AI tool.
 3. Ask for small, reviewable changes.
 4. Rerun affected scripts or rerender affected products.
 5. Confirm generated outputs are traceable to code.
-6. Review the changes manually.
-7. Add a concise entry to `ai-use-log.md`.
+6. Check whether generated outputs should be committed, ignored as large files,
+   or kept private because they contain sensitive information.
+7. Review the changes manually.
+8. Add a concise entry to `ai-use-log.md` when meaningful AI-assisted project
+   maintenance or review occurred.

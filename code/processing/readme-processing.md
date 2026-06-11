@@ -4,10 +4,10 @@ This folder contains code for importing, cleaning, and processing data.
 
 The example shows the same processing steps in three formats:
 
-- `processingcode.R`: an R script that does the cleaning.
-- `processingfile-v1.qmd`: a Quarto file with code and explanation in one file.
-- `processingfile-v2.qmd`: a Quarto file that pulls labeled chunks from
-  `processingcode.R`.
+- `processing-code.r`: an R script that does the cleaning.
+- `processing-file-v1.qmd`: a Quarto file with code and explanation in one file.
+- `processing-file-v2.qmd`: a Quarto file that pulls labeled chunks from
+  `processing-code.r`.
 
 The third approach keeps code in one place for writing and debugging, while
 still allowing a Quarto file to show text, commentary, and selected code.

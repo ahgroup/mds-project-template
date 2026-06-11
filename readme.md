@@ -35,8 +35,9 @@ The template comes with a folder structure and example files to show the kinds
 of content you would place in each folder. See the folder-specific readme files
 for more detail.
 
-- `ai/`: AI workflow notes, prompt templates, review checklists, and a short
-  AI-use log. See `ai/readme-ai.md`.
+- `ai/`: AI workflow notes, prompt templates for analysis planning, modeling
+  review, code review, reproducibility audits, final product review, a student
+  AI policy, and a short AI-use log. See `ai/readme-ai.md`.
 - `assets/`: static non-code materials such as references, CSL files, PDFs,
   and manually created figures. See `assets/readme-assets.md`.
 - `code/`: analysis code organized by workflow stage. See `code/readme-code.md`.
@@ -51,7 +52,7 @@ Important project-level files:
 
 - `readme.md`: this project overview.
 - `usage.md`: practical instructions for running and reproducing the project.
-- `AGENTS.md`: extra instructions for AI coding assistants and collaborators
+- `agents.md`: extra instructions for AI coding assistants and collaborators
   using AI tools.
 - `project-metadata.yml`: concise metadata about the project, software, data,
   and AI-use policy.
@@ -65,10 +66,23 @@ Use descriptive file and folder names. In general:
 - avoid spaces, underscores, and CamelCase unless a standard file name or file
   extension requires otherwise.
 
-For example, this template has `code/analysis/statistical-analysis.R`.
+For example, this template has `code/analysis/statistical-analysis.r`.
 
 Readme files are named by folder context, such as `readme-code.md`,
 `readme-data.md`, and `readme-exploration.md`.
+
+## Generated Outputs
+
+Generated outputs are generally committed when they are reasonably small and do
+not contain sensitive information. That includes example processed data, figures,
+tables, rendered HTML files, and other outputs that help users see expected
+results and render products.
+
+Do not commit generated outputs that are too large for ordinary Git/GitHub use
+or that contain sensitive, private, regulated, identifiable, or otherwise
+restricted information. Use documented ignored locations such as
+`data/private-data/`, `data/large-files/`, or `results/large-files/` for those
+files.
 
 ## Software And Package Management
 
@@ -94,8 +108,11 @@ optional; use them when they solve a real project need.
 This is a GitHub template repository. The best way to start a new project is to
 [create a repository from this template](https://help.github.com/en/articles/creating-a-repository-from-a-template).
 
-For the example project, run the code manually. See `usage.md` for the run
-order, what each code file does, and how to render products.
+For the example project, run the code in documented pieces. The workflow is
+reproducible because data processing, figure creation, table creation, and
+analysis are done by code rather than by undocumented manual edits to data files
+or figures. See `usage.md` for the run order, setup checks, optional example
+workflow runner, and product-rendering instructions.
 
 ## AI-Supported Workflow
 
@@ -106,14 +123,16 @@ citation accuracy, or interpretation of results.
 
 When using AI tools:
 
-- Point the tool to `readme.md`, `usage.md`, `AGENTS.md`,
-  `project-metadata.yml`, and `data/readme-data.md`.
+- Point the tool to `readme.md`, `usage.md`, `agents.md`,
+  `project-metadata.yml`, `data/readme-data.md`, and relevant files in `ai/`.
 - Do not paste sensitive, private, regulated, or identifiable data into
   external AI tools unless the project owner has explicitly approved that
   workflow.
 - Ask for small, reviewable changes.
 - Rerun affected scripts or rerender affected products after meaningful changes.
-- Add a short entry to `ai/ai-use-log.md` for meaningful AI-assisted work.
+- Follow `ai/ai-policy-for-students.md` for student-facing AI-use expectations.
+- Add a short entry to `ai/ai-use-log.md` for meaningful AI-assisted work when
+  maintaining or updating the project.
 
 GitHub Actions and other automated workflows can be useful for advanced users.
 They are intentionally not enabled by default in this template because many

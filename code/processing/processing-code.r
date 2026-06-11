@@ -2,7 +2,7 @@
 # processing script
 #
 #this script loads the raw data, processes and cleans it 
-#and saves it as Rds file in the processed-data folder
+#and saves it as RDS file in the processed-data folder
 #
 # Note the ## ---- name ---- notation
 # This is done so one can pull in the chunks of code into the Quarto document
@@ -22,7 +22,7 @@ library(here) #to set paths
 ## ---- loaddata --------
 #path to data
 #note the use of the here() package and not absolute paths
-data_location <- here::here("data","raw-data","exampledata.xlsx")
+data_location <- here::here("data","raw-data","example-data.xlsx")
 #load data. 
 #note that for functions that come from specific packages (instead of base R)
 # I often specify both package and function like so
@@ -113,7 +113,7 @@ skimr::skim(d4)
 # makes it easier to add steps above
 processeddata <- d4
 # location to save file
-save_data_location <- here::here("data","processed-data","processeddata.rds")
+save_data_location <- here::here("data","processed-data","processed-data.rds")
 saveRDS(processeddata, file = save_data_location)
 
 

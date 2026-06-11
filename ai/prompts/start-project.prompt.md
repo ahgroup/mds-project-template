@@ -5,8 +5,9 @@ Use this prompt when beginning a new project from the template.
 ```text
 Please review this repository as a reproducible data-analysis project. The
 default example uses R and Quarto, but the project may add other languages.
-Read readme.md, usage.md, AGENTS.md, project-metadata.yml,
-data/readme-data.md, and code/readme-code.md.
+Read readme.md, usage.md, agents.md, project-metadata.yml,
+data/readme-data.md, code/readme-code.md, and relevant files in ai/ such as
+ai/readme-ai.md and ai/ai-policy-for-students.md.
 
 First, summarize the project structure and expected workflow. Then identify the
 minimum set of project-specific edits needed before analysis begins, including

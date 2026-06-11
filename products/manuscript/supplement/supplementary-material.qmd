@@ -25,7 +25,7 @@ For illustrative purposes, this uses PDF as output format. For this to work, you
 
 Of course you would choose the format based on needs.
 
-I'm also using a different style for the references here, by specifying a different `.csl` style file. Usually one would have the formatting of the references the same in those two documents, but I want to illustrate how easy it is to switch reference formatting styles, you just need to get the right CSL file and specify it in the YAML header. We could also have a seperate reference bibtext (`.bib`) file, but here we are using the same.
+I'm also using a different style for the references here, by specifying a different `.csl` style file. Usually one would have the formatting of the references the same in those two documents, but I want to illustrate how easy it is to switch reference formatting styles, you just need to get the right CSL file and specify it in the YAML header. We could also have a separate reference BibTeX (`.bib`) file, but here we are using the same.
 
 
 {{< pagebreak >}}
@@ -62,14 +62,14 @@ Show additional results here. Those can be some useful exploratory/descriptive f
 ## Example additional result
 
 
-@tbl-resulttable1 shows an additional table summarizing a model fit.
+@tbl-result-table-1 shows an additional table summarizing a model fit.
 
 ```{r}
-#| label: tbl-resulttable1
+#| label: tbl-result-table-1
 #| tbl-cap: "Another fit table."
 #| echo: FALSE
-resulttable1 = readRDS(here("results","tables","resulttable1.rds"))
-knitr::kable(resulttable1)
+result_table_1 = readRDS(here("results","tables","result-table-1.rds"))
+knitr::kable(result_table_1)
 ```
 
 

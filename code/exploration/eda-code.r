@@ -7,7 +7,7 @@ library(ggplot2)
 
 ## ---- loaddata --------
 #Path to data. Note the use of the here() package and not absolute paths
-data_location <- here::here("data","processed-data","processeddata.rds")
+data_location <- here::here("data","processed-data","processed-data.rds")
 #load data
 mydata <- readRDS(data_location)
 
@@ -15,11 +15,11 @@ mydata <- readRDS(data_location)
 summary_df = skimr::skim(mydata)
 print(summary_df)
 # save to file
-summarytable_file = here("results","tables", "summarytable.rds")
-saveRDS(summary_df, file = summarytable_file)
+summary_table_file = here("results","tables", "summary-table.rds")
+saveRDS(summary_df, file = summary_table_file)
 summary_df_csv = summary_df %>% dplyr::select(-dplyr::ends_with(".hist"))
-summarytable_csv_file = here("results", "tables", "summarytable.csv")
-utils::write.csv(summary_df_csv, file = summarytable_csv_file, row.names = FALSE)
+summary_table_csv_file = here("results", "tables", "summary-table.csv")
+utils::write.csv(summary_df_csv, file = summary_table_csv_file, row.names = FALSE)
 
 ## ---- height --------
 p1 <- mydata %>% ggplot(aes(x=Height)) + geom_histogram(bins = 10)
