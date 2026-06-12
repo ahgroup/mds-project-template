@@ -9,10 +9,11 @@ scripts, or other tools later without changing the overall folder structure.
 
 ## Before You Start
 
-Work from the project root folder. In RStudio, open this repository as a project
-so the project root is set automatically. In another terminal or editor, make
-sure your working directory is the folder that contains `readme.md`, `usage.md`,
-and `project-metadata.yml`.
+Work from the project root folder. In Positron, open this repository as a
+project or folder so the project root is set automatically. Other editors, such
+as RStudio or VS Code, are also fine. If you use a terminal or another editor,
+make sure your working directory is the folder that contains `readme.md`,
+`usage.md`, and `project-metadata.yml`.
 
 Install the example R packages before running the example workflow:
 
@@ -64,7 +65,8 @@ this order:
 2. `code/exploration/eda-code.r`
 3. `code/analysis/statistical-analysis.r`
 
-From RStudio, open each script and use **Source** in that order.
+From Positron or another editor such as RStudio or VS Code, open each script and
+run or source it in that order.
 
 From a terminal, run the scripts one at a time:
 

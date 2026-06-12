@@ -100,7 +100,8 @@ work occurs.
 
 Students usually do not need to manually edit the log unless the instructor or
 project owner asks them to. Instead, students should be ready to disclose and
-explain AI use in the required course or project format.
+explain AI use in the required course or project format. AI assistants or project
+maintainers may update the log when meaningful AI-assisted work occurs.
 
 ## Good and bad examples
 

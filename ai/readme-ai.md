@@ -62,6 +62,24 @@ A practical entry records:
 
 Do not add full chat transcripts by default.
 
+## File Roles
+
+Different files in this folder have different expected readers and writers:
+
+- `prompts/`: prompt templates are mainly read and copied by humans or AI tools.
+  They may be edited by humans or AI maintainers when the project workflow
+  changes.
+- `readme-ai.md`, `ai-policy-for-students.md`, and `review-checklist.md`: these
+  guidance files should be read by humans and AI tools. Humans may edit them
+  when course or project policy changes; AI may suggest or make updates when
+  asked.
+- `ai-use-log.md`: this is mainly a human-readable transparency record. Humans
+  usually read it rather than editing it. AI assistants or project maintainers
+  may add concise entries when meaningful AI-assisted work occurs.
+- Local AI/tool state folders such as `.ai-local/`, `.ai-cache/`, `.codex/`, and
+  local Claude settings are not committed. AI tools may read and write those
+  files for their own operation, and humans usually do not need to inspect them.
+
 ## Prompt Templates
 
 The `prompts/` folder contains reusable prompts for common project tasks:

@@ -69,6 +69,9 @@ tools in this repository.
   limits, and whether AI tools may inspect the data.
 - Use ignored folders such as `data/private-data/` or `data/large-files/` for
   local-only files that should not be committed.
+- A private GitHub repository is not a guarantee that sensitive or restricted
+  material is safe to commit. Treat private repositories as a collaboration and
+  version-control tool, not as a substitute for approved secure storage.
 
 ## Generated Output Policy
 
@@ -77,11 +80,11 @@ not contain sensitive information. This helps students and collaborators see
 expected results, render products, and compare their regenerated outputs.
 
 Do not commit generated outputs when they are too large for ordinary Git/GitHub
-use or when they contain sensitive, private, regulated, identifiable, or
-otherwise restricted information. Put large outputs in `results/large-files/` or
-another documented ignored location. For sensitive outputs, commit documentation
-that explains how authorized collaborators can regenerate or obtain them without
-exposing the restricted content.
+use or when they contain sensitive, private, regulated, identifiable,
+license-protected, or otherwise restricted information. Put large outputs in
+`results/large-files/` or another documented ignored location. For sensitive
+outputs, commit documentation that explains how authorized collaborators can
+regenerate or obtain them without exposing the restricted content.
 
 ## Reproducibility Workflow
 
@@ -117,6 +120,21 @@ files, and make sure local package libraries or virtual environments are not
 committed.
 
 ## AI Assistance Documentation
+
+AI-related files have different expected readers and writers:
+
+- `ai/prompts/`: reusable prompts, read/copied by humans and AI tools, and
+  edited by humans or AI maintainers when workflows change.
+- `ai/readme-ai.md`, `ai/ai-policy-for-students.md`, and
+  `ai/review-checklist.md`: guidance files that humans and AI should read; they
+  may be edited by humans or AI when project/course policy changes.
+- `ai/ai-use-log.md`: a human-readable transparency record. Humans usually read
+  it rather than editing it; AI assistants or project maintainers may add concise
+  entries for meaningful AI-assisted work.
+- Local AI/tool state folders such as `.ai-local/`, `.ai-cache/`, `.codex/`, and
+  local Claude settings are ignored and should not be committed. AI tools may
+  read and write those files for their own operation; humans usually do not need
+  to inspect them.
 
 When AI tools are used for meaningful project work, record a short summary in
 `ai/ai-use-log.md` when maintaining or updating the project. The log should

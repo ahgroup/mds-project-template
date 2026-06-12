@@ -25,7 +25,7 @@ the copy, and document what changed.
 
 Save cleaned or processed data in `data/processed-data/`.
 
-For R-only projects, RDS or RDA/Rdata files can preserve information like
+For R-only projects, RDS or RDA/RData files can preserve information like
 factors, characters, and numeric types. For multi-language projects, consider
 also saving processed data in a language-neutral format such as CSV, TSV, JSON,
 Parquet, or Feather. CSV is easy to inspect and share, but it can lose type
@@ -57,7 +57,9 @@ documented otherwise.
 For sensitive or large local-only files, use ignored folders such as
 `data/private-data/` or `data/large-files/`. Add enough documentation so
 collaborators know how to obtain the data, but do not commit files that should
-remain private or are too large for GitHub.
+remain private or are too large for GitHub. To commit a file means to add it to
+the recorded Git history; once committed and pushed, sensitive data can be hard
+to fully remove from shared copies of the repository.
 
 ## AI Tool Use
 

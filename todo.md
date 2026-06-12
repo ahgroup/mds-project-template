@@ -6,8 +6,9 @@ The template is in a good working state for continued review. Major AI-friendly
 reorganization has been implemented: naming is lower-case and hyphenated,
 Quarto YAML is standardized, the example workflow has setup/runner utilities,
 student AI guidance and reusable prompts are present, generated-output policy is
-documented, and `.gitignore` is intentionally simple while allowing HTML outputs
-to be committed.
+documented, GitHub/private-repository cautions are included, Positron is listed
+as the first-choice editor/IDE, AI file roles are explained, and `.gitignore` is
+intentionally simple while allowing HTML outputs to be committed.
 
 If returning later, next likely discussion items are generated-output edge cases,
 AI-use logging expectations, license/citation choices, dependency-management
@@ -124,8 +125,8 @@ These are not urgent, but they would be useful future improvements.
   and product files, then confirm that the committed outputs match the current
   code.
 - Discuss details of the generated-output policy for specific project types,
-  especially how to identify sensitive outputs and when a project should use Git
-  LFS or another large-file workflow.
+  especially how to identify sensitive outputs, what belongs in a private repo,
+  and when a project should use Git LFS or another large-file workflow.
 - Discuss AI-use logging expectations further, especially which parts should be
   handled by human students, AI assistants, project maintainers, or course-site
   instructions.

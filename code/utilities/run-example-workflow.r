@@ -11,7 +11,7 @@
 # are done by documented code rather than by undocumented manual edits.
 #
 # How to run this script:
-# 1. Open this project folder in RStudio, or open a terminal in the project folder.
+# 1. Open this project folder in Positron or another editor, such as RStudio or VS Code.
 # 2. Run this command from the project root:
 #      Rscript code/utilities/run-example-workflow.r
 # 3. Read the messages. If a step fails, fix the problem and rerun the script.

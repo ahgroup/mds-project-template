@@ -71,6 +71,26 @@ For example, this template has `code/analysis/statistical-analysis.r`.
 Readme files are named by folder context, such as `readme-code.md`,
 `readme-data.md`, and `readme-exploration.md`.
 
+## GitHub, Sharing, And Sensitive Data
+
+Git and GitHub are useful for tracking changes, backing up work, and sharing a
+project with collaborators. In Git/GitHub language, to **commit** a file means to
+add a recorded version of that file to the project history. Once a file is
+committed and pushed to GitHub, it can be difficult to fully remove from the
+history, especially if the repository has been shared.
+
+For many class and research projects, it is wise to start with a **private**
+GitHub repository. Later, after checking the data, outputs, license, authorship,
+and project goals, the project team can decide whether the repository should
+remain private or become public.
+
+Do not commit private, sensitive, regulated, identifiable, restricted, or
+license-protected data unless the project owner has explicitly approved that
+workflow. A private GitHub repository is not the same as a secure data system or
+an IRB/DUA-approved storage plan. If the repository stays private because it
+contains or depends on restricted material, document what can be committed and
+what must stay local or in an approved storage location.
+
 ## Generated Outputs
 
 Generated outputs are generally committed when they are reasonably small and do
@@ -78,11 +98,18 @@ not contain sensitive information. That includes example processed data, figures
 tables, rendered HTML files, and other outputs that help users see expected
 results and render products.
 
-Do not commit generated outputs that are too large for ordinary Git/GitHub use
-or that contain sensitive, private, regulated, identifiable, or otherwise
-restricted information. Use documented ignored locations such as
-`data/private-data/`, `data/large-files/`, or `results/large-files/` for those
-files.
+The main exceptions are:
+
+- large files that are too big for ordinary Git/GitHub use;
+- outputs that contain sensitive, private, regulated, identifiable, restricted,
+  or license-protected information;
+- outputs that the project owner, instructor, collaborator, data provider, IRB,
+  DUA, journal, or funder says should not be shared.
+
+Use documented ignored locations such as `data/private-data/`,
+`data/large-files/`, or `results/large-files/` for files that should not be
+committed. Commit a readme or placeholder explaining what belongs there, how the
+file is generated or obtained, and who is allowed to access it.
 
 ## Software And Package Management
 
@@ -133,6 +160,29 @@ When using AI tools:
 - Follow `ai/ai-policy-for-students.md` for student-facing AI-use expectations.
 - Add a short entry to `ai/ai-use-log.md` for meaningful AI-assisted work when
   maintaining or updating the project.
+
+### AI-related files and expected readers/writers
+
+Different files in `ai/` have different audiences:
+
+- `ai/prompts/`: prompt templates are mainly read and copied by humans or AI
+  tools, and may be edited by humans or AI maintainers when the workflow changes.
+- `ai/readme-ai.md`, `ai/ai-policy-for-students.md`, and
+  `ai/review-checklist.md`: these should be read by humans and AI tools. Humans
+  may edit them when project or course policy changes; AI may suggest or make
+  updates when asked.
+- `ai/ai-use-log.md`: this is mainly a human-readable transparency record.
+  Humans usually read it rather than editing it. AI assistants or project
+  maintainers may add concise entries when meaningful AI-assisted work occurs.
+- Local AI/tool state folders such as `.ai-local/`, `.ai-cache/`, `.codex/`, and
+  local Claude settings are not committed. AI tools may read and write those
+  files for their own operation, and humans usually do not need to inspect them.
+
+Project files outside `ai/`, such as `readme.md`, `usage.md`, `data/readme-data.md`,
+`code/`, `results/`, and `products/`, are human-facing project materials. Humans
+should be able to read and understand them. AI tools may help edit or review
+them, but important scientific, statistical, privacy, and interpretation choices
+need human review.
 
 GitHub Actions and other automated workflows can be useful for advanced users.
 They are intentionally not enabled by default in this template because many

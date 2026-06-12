@@ -5,7 +5,7 @@
 # It does not change files, install packages, or fix anything automatically.
 #
 # How to run this script:
-# 1. Open this project folder in RStudio, or open a terminal in the project folder.
+# 1. Open this project folder in Positron or another editor, such as RStudio or VS Code.
 # 2. Run this command from the project root:
 #      Rscript code/utilities/check-project-setup.r
 # 3. Read the messages. If anything says MISSING, fix that item and run again.
