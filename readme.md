@@ -54,8 +54,6 @@ Important project-level files:
 - `usage.md`: practical instructions for running and reproducing the project.
 - `agents.md`: extra instructions for AI coding assistants and collaborators
   using AI tools.
-- `project-metadata.yml`: concise metadata about the project, software, data,
-  and AI-use policy.
 
 ## Naming Conventions
 
@@ -90,6 +88,15 @@ workflow. A private GitHub repository is not the same as a secure data system or
 an IRB/DUA-approved storage plan. If the repository stays private because it
 contains or depends on restricted material, document what can be committed and
 what must stay local or in an approved storage location.
+
+To keep files out of Git, list them in `.gitignore` before committing them. For
+example, this template already ignores the contents of `data/private-data/`,
+`data/large-files/`, and `results/large-files/`, while keeping small readme or
+placeholder files in those folders. If a file has already been committed, adding
+it to `.gitignore` is not enough; it must also be removed from Git tracking while
+leaving the local file in place. See GitHub's documentation on
+[ignoring files](https://docs.github.com/en/get-started/git-basics/ignoring-files)
+for more detail.
 
 ## Generated Outputs
 
@@ -126,9 +133,9 @@ If you decide to use `renv`, commit the lockfile (`renv.lock`) and the files
 needed to activate the environment, but do not commit the local package library.
 
 For Python, Julia, or other languages, document the chosen environment manager
-in this readme or in `project-metadata.yml`. Examples include virtual
-environments, Conda, Poetry, Julia project files, or containers. These are
-optional; use them when they solve a real project need.
+in this readme or another human-facing documentation file. Examples include
+virtual environments, Conda, Poetry, Julia project files, or containers. These
+are optional; use them when they solve a real project need.
 
 ## Getting Started
 
@@ -151,7 +158,10 @@ citation accuracy, or interpretation of results.
 When using AI tools:
 
 - Point the tool to `readme.md`, `usage.md`, `agents.md`,
-  `project-metadata.yml`, `data/readme-data.md`, and relevant files in `ai/`.
+  `data/readme-data.md`, and relevant files in `ai/`.
+- AI tools may use `ai/project-summary.yml` as a concise orientation aid. It is
+  a secondary summary of information documented elsewhere, not the source of
+  truth.
 - Do not paste sensitive, private, regulated, or identifiable data into
   external AI tools unless the project owner has explicitly approved that
   workflow.
@@ -167,6 +177,10 @@ Different files in `ai/` have different audiences:
 
 - `ai/prompts/`: prompt templates are mainly read and copied by humans or AI
   tools, and may be edited by humans or AI maintainers when the workflow changes.
+- `ai/project-summary.yml`: a concise AI-readable summary of information already
+  documented elsewhere. Humans usually do not need to edit it. AI assistants may
+  read or update it when maintaining the project, but if it disagrees with the
+  human-facing documentation, the human-facing documentation wins.
 - `ai/readme-ai.md`, `ai/ai-policy-for-students.md`, and
   `ai/review-checklist.md`: these should be read by humans and AI tools. Humans
   may edit them when project or course policy changes; AI may suggest or make

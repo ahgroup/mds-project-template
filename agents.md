@@ -115,9 +115,9 @@ research projects that need stronger long-term reproducibility, but they remain
 optional because they add complexity for new users and classroom settings.
 
 If a project chooses to use an environment manager, document that decision in
-`readme.md` or `project-metadata.yml`, commit the appropriate lock or project
-files, and make sure local package libraries or virtual environments are not
-committed.
+`readme.md` or another human-facing documentation file, commit the appropriate
+lock or project files, and make sure local package libraries or virtual
+environments are not committed.
 
 ## AI Assistance Documentation
 
@@ -125,6 +125,12 @@ AI-related files have different expected readers and writers:
 
 - `ai/prompts/`: reusable prompts, read/copied by humans and AI tools, and
   edited by humans or AI maintainers when workflows change.
+- `ai/project-summary.yml`: a concise AI-readable summary of information already
+  documented in human-facing files such as `readme.md`, `usage.md`, this file,
+  and folder-specific readmes. Humans usually do not need to edit it. AI
+  assistants may read or update it for efficiency, but it is not authoritative.
+  If it disagrees with the human-facing documentation, follow the human-facing
+  documentation and update the summary when maintaining the repo.
 - `ai/readme-ai.md`, `ai/ai-policy-for-students.md`, and
   `ai/review-checklist.md`: guidance files that humans and AI should read; they
   may be edited by humans or AI when project/course policy changes.

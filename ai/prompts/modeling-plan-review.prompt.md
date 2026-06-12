@@ -5,8 +5,10 @@ learning analysis.
 
 ```text
 Please review this modeling plan for a reproducible data-analysis project. Use
-readme.md, usage.md, project-metadata.yml, data/readme-data.md, code/readme-code.md,
-and any existing analysis-plan notes as context.
+readme.md, usage.md, data/readme-data.md, code/readme-code.md, and any existing
+analysis-plan notes as context. You may also use ai/project-summary.yml as a
+concise AI-oriented summary, but treat the human-facing documentation as the
+source of truth.
 
 Evaluate whether the proposed modeling approach fits the question and data.
 Focus on:

@@ -1,8 +1,16 @@
-# Project metadata for humans and AI assistants.
+# Concise AI-readable project summary.
 #
-# Replace the example values below when creating a new project from this
-# template. Keep this file concise; detailed methods belong in the code,
-# manuscript/report, supplement, or folder-specific readmes.
+# This file is mainly for AI assistants. It should not contain unique project
+# information. It summarizes information that also appears in human-facing files
+# such as readme.md, usage.md, agents.md, and folder-specific readmes.
+#
+# Human users usually do not need to edit this file directly. If this summary
+# disagrees with the human-facing documentation, the human-facing documentation
+# is the source of truth.
+#
+# AI assistants may read this file for quick orientation and may update it when
+# maintaining the template, but they should not treat it as a required
+# configuration file for running the project.
 
 project:
   title: "Example data analysis project"
@@ -60,6 +68,7 @@ reproducibility:
 
 ai_assistance:
   allowed: true
+  summary_file: "ai/project-summary.yml"
   log_file: "ai/ai-use-log.md"
   guidance_file: "agents.md"
   student_policy_file: "ai/ai-policy-for-students.md"

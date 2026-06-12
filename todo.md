@@ -6,13 +6,18 @@ The template is in a good working state for continued review. Major AI-friendly
 reorganization has been implemented: naming is lower-case and hyphenated,
 Quarto YAML is standardized, the example workflow has setup/runner utilities,
 student AI guidance and reusable prompts are present, generated-output policy is
-documented, GitHub/private-repository cautions are included, Positron is listed
-as the first-choice editor/IDE, AI file roles are explained, and `.gitignore` is
-intentionally simple while allowing HTML outputs to be committed.
+documented, GitHub/private-repository cautions are included, the readme explains
+how `.gitignore` prevents files from being committed, Positron is listed as the
+first-choice editor/IDE, AI file roles are explained, and `.gitignore` is
+intentionally simple while allowing HTML outputs to be committed. The concise
+AI-readable project summary now lives at `ai/project-summary.yml` and is
+documented as secondary to the human-facing documentation rather than as a
+human-facing source of truth.
 
 If returning later, next likely discussion items are generated-output edge cases,
 AI-use logging expectations, license/citation choices, dependency-management
-levels, and whether to add a start-a-new-project checklist.
+levels, whether to add a start-a-new-project checklist, and whether to add a
+changelog or template-notes file.
 
 ## Completed
 
@@ -30,7 +35,7 @@ clear extension pattern for multi-language projects.
 - The default template remains R-only at runtime. Python, Julia, shell scripts,
   and other tools are documented as extension patterns rather than required
   examples.
-- `readme.md`, `usage.md`, `agents.md`, `project-metadata.yml`, and the
+- `readme.md`, `usage.md`, `agents.md`, `ai/project-summary.yml`, and the
   folder-specific readmes describe the default R/Quarto example as one
   supported path rather than the only possible path.
 
@@ -90,7 +95,7 @@ Generated outputs are generally committed when they are reasonably small and do
 not contain sensitive information. Large files and sensitive/restricted outputs
 are exceptions.
 
-- `readme.md`, `usage.md`, `agents.md`, `project-metadata.yml`, and
+- `readme.md`, `usage.md`, `agents.md`, `ai/project-summary.yml`, and
   `results/readme-results.md` document the generated-output policy.
 - `.gitignore` keeps HTML files commit-able, while ignoring local caches,
   secrets, editor state, local Python/R environment folders, large data folders,

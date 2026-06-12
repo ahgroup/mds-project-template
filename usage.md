@@ -13,7 +13,7 @@ Work from the project root folder. In Positron, open this repository as a
 project or folder so the project root is set automatically. Other editors, such
 as RStudio or VS Code, are also fine. If you use a terminal or another editor,
 make sure your working directory is the folder that contains `readme.md`,
-`usage.md`, and `project-metadata.yml`.
+`usage.md`, and the main project folders.
 
 Install the example R packages before running the example workflow:
 
@@ -121,7 +121,7 @@ manually:
 - Confirm that no credentials, tokens, private data, or local-only paths were
   added.
 - Confirm that package and software requirements are documented in `readme.md`
-  or `project-metadata.yml`.
+  or another human-facing documentation file.
 - If code changed generated outputs, rerun the affected scripts manually.
 - If product text or results changed, rerender the affected product files.
 - If AI tools helped with meaningful work, follow the disclosure/logging

@@ -67,8 +67,8 @@ then simplify or revise the code until you can explain it yourself.
 
 ## Data privacy and sensitive information
 
-Before using AI with data, read `data/readme-data.md` and
-`project-metadata.yml`.
+Before using AI with data, read `data/readme-data.md` and any project-specific
+privacy or data-use instructions from the instructor or project owner.
 
 Do not paste private, identifiable, regulated, unpublished, restricted, or
 otherwise sensitive data into external AI tools unless the project owner has

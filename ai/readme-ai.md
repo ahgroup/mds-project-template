@@ -69,6 +69,11 @@ Different files in this folder have different expected readers and writers:
 - `prompts/`: prompt templates are mainly read and copied by humans or AI tools.
   They may be edited by humans or AI maintainers when the project workflow
   changes.
+- `project-summary.yml`: a concise AI-readable summary of information already
+  documented elsewhere. Humans usually do not need to edit it directly. AI
+  assistants may read or update it for efficiency, but it is not authoritative.
+  If it disagrees with human-facing documentation, follow the human-facing
+  documentation.
 - `readme-ai.md`, `ai-policy-for-students.md`, and `review-checklist.md`: these
   guidance files should be read by humans and AI tools. Humans may edit them
   when course or project policy changes; AI may suggest or make updates when
@@ -99,14 +104,16 @@ journal, or institutional requirements.
 
 ## Suggested Workflow
 
-1. Read `../readme.md`, `../usage.md`, `../project-metadata.yml`,
-   `../agents.md`, and `../data/readme-data.md`.
-2. Check data-use limits before exposing data to an AI tool.
-3. Ask for small, reviewable changes.
-4. Rerun affected scripts or rerender affected products.
-5. Confirm generated outputs are traceable to code.
-6. Check whether generated outputs should be committed, ignored as large files,
+1. Read `../readme.md`, `../usage.md`, `../agents.md`, and
+   `../data/readme-data.md`.
+2. Optionally read `project-summary.yml` for a concise AI-oriented summary, but
+   treat it as secondary to the human-facing documentation.
+3. Check data-use limits before exposing data to an AI tool.
+4. Ask for small, reviewable changes.
+5. Rerun affected scripts or rerender affected products.
+6. Confirm generated outputs are traceable to code.
+7. Check whether generated outputs should be committed, ignored as large files,
    or kept private because they contain sensitive information.
-7. Review the changes manually.
-8. Add a concise entry to `ai-use-log.md` when meaningful AI-assisted project
+8. Review the changes manually.
+9. Add a concise entry to `ai-use-log.md` when meaningful AI-assisted project
    maintenance or review occurred.

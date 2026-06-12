@@ -28,7 +28,7 @@ print_check <- function(ok, message) {
 
 # The script should be run from the project root.
 # The project root is the folder that contains readme.md and usage.md.
-root_files <- c("readme.md", "usage.md", "project-metadata.yml")
+root_files <- c("readme.md", "usage.md")
 root_files_present <- file.exists(root_files)
 
 for (i in seq_along(root_files)) {
