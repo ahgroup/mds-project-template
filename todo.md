@@ -135,6 +135,9 @@ These are not urgent, but they would be useful future improvements.
 - Discuss AI-use logging expectations further, especially which parts should be
   handled by human students, AI assistants, project maintainers, or course-site
   instructions.
+- Discuss AI rules and guidelines for writing code, including what coding style,
+  commenting, simplicity, package choices, testing expectations, and review
+  practices should be added to `agents.md`.
 
 - Add a short "how to start a new project" checklist for students and research
   group members after creating a repository from the template.
