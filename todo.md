@@ -13,12 +13,14 @@ guidelines are documented in `code-guidelines.md`, and `.gitignore` is
 intentionally simple while allowing HTML outputs to be committed. The concise
 AI-readable project summary now lives at `ai/project-summary.yml` and is
 documented as secondary to the human-facing documentation rather than as a
-human-facing source of truth.
+human-facing source of truth. The template now also includes
+`new-project-instructions.md` with prose instructions for starting a new project
+from the template.
 
-If returning later, next likely discussion items are generated-output edge cases,
-AI-use logging expectations, license/citation choices, dependency-management
-levels, whether to add a start-a-new-project checklist, and whether to add a
-changelog or template-notes file.
+If returning later, next likely discussion items are AI-use logging
+expectations, license/citation choices, dependency-management levels, whether to
+add a helper-function example, and whether to add a changelog or template-notes
+file.
 
 ## Completed
 
@@ -125,25 +127,40 @@ The Quarto source files now use Quarto-style `format:` YAML rather than older
 R Markdown `output:` YAML. HTML-oriented examples use embedded resources where
 appropriate.
 
+### Full Reproducibility Pass
+
+The example workflow and main rendered products have been regenerated and
+checked on the current development machine.
+
+- `code/utilities/run-example-workflow.r` successfully runs the setup check,
+  processing script, exploration script, and statistical-analysis script.
+- The report, manuscript, and presentation products render successfully after R
+  is made available to Quarto in the shell environment.
+- Generated processed data, figures, tables, and rendered products were updated
+  and committed.
+
+### New Project Instructions
+
+The template includes `new-project-instructions.md`, a prose guide for creating
+a new project from the template and adapting it safely.
+
+- It covers creating a new repository from the template, updating project
+  identity, deciding what data may be stored in GitHub, reviewing generated
+  outputs, adapting the workflow, documenting software requirements, checking
+  setup, reviewing AI-use expectations, and making an initial project-specific
+  commit.
+- It intentionally uses section headings rather than a numbered checklist so
+  sections can be added, removed, or reordered later.
+- `readme.md` links to the new instructions from the project-level files list
+  and Getting Started section.
+
 ## Future
 
 These are not urgent, but they would be useful future improvements.
 
-- Run a full reproducibility pass in a clean environment with the required R
-  packages installed. Regenerate the example processed data, figures, tables,
-  and product files, then confirm that the committed outputs match the current
-  code.
-- Discuss details of the generated-output policy for specific project types only
-  if future projects need stricter sensitive-output examples, Git LFS, or another
-  large-file workflow.
 - Discuss AI-use logging expectations further, especially which parts should be
   handled by human students, AI assistants, project maintainers, or course-site
   instructions.
-- Discuss whether the new `code-guidelines.md` needs additional testing guidance
-  or examples after it has been used in real projects.
-
-- Add a short "how to start a new project" checklist for students and research
-  group members after creating a repository from the template.
 - Consider adding a small helper-function example under `code/utilities/` if
   future users need a concrete pattern for shared code.
 - Consider adding a short `changelog.md` or `template-notes.md` so users can see

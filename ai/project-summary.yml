@@ -57,6 +57,7 @@ data:
 reproducibility:
   workflow_mode: "documented semi-automated"
   workflow_instructions: "usage.md"
+  new_project_instructions: "new-project-instructions.md"
   code_guidelines: "code-guidelines.md"
   setup_check: "code/utilities/check-project-setup.r"
   example_runner: "code/utilities/run-example-workflow.r"

@@ -34,6 +34,7 @@ A useful entry should say:
 | Date | Person | AI tool | Purpose | Files changed or reviewed | Checks run | Human review notes |
 | --- | --- | --- | --- | --- | --- | --- |
 | YYYY-MM-DD | NAME | TOOL | Brief description | `path/to/file` | Scripts/products rerun, or reason not run | What was checked manually |
+| 2026-06-15 | Andreas Handel / Herman | Hermes Agent | Added prose instructions for starting a new project from the template and updated the to-do notes. | `new-project-instructions.md`, `readme.md`, `todo.md`, `ai/project-summary.yml`, `ai/ai-use-log.md` | Ran `git diff --check`; documentation-only change, so workflow rerun was not needed. | Human review of wording and recommendations remains welcome. |
 
 ## Example entries
 

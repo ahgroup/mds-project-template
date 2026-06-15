@@ -51,6 +51,8 @@ for more detail.
 Important project-level files:
 
 - `readme.md`: this project overview.
+- `new-project-instructions.md`: practical instructions for creating a new
+  project from this template and adapting it safely.
 - `usage.md`: practical instructions for running and reproducing the project.
 - `code-guidelines.md`: coding guidelines for scientific/research projects,
   including documentation, failure behavior, simplicity, packages, and
@@ -174,6 +176,9 @@ and AI tools.
 
 This is a GitHub template repository. The best way to start a new project is to
 [create a repository from this template](https://help.github.com/en/articles/creating-a-repository-from-a-template).
+After creating a new repository, follow `new-project-instructions.md` to update
+the project identity, data policy, workflow notes, software requirements, and
+initial project-specific commit.
 
 For the example project, run the code in documented pieces. The workflow is
 reproducible because data processing, figure creation, table creation, and
