@@ -42,7 +42,7 @@ library(knitr)
 
 $*$ These authors contributed equally to this work.
 
-$\land$ Corresponding author: some@email.com
+$\land$ Corresponding author: corresponding-author@example.com
 
 $\dagger$ Disclaimer: The opinions expressed in this article are the
 author's own and don't reflect their employer.
@@ -82,12 +82,12 @@ _Describe your methods. That should describe the data, the cleaning processes, a
 
 ## Schematic of workflow
 
-Sometimes you might want to show a schematic diagram/figure that was not created with code (if you can do it with code, do it). @fig-schematic is an example of some - completely random/unrelated - schematic that was generated with BioRender.
-We store those figures in the `assets` folder.
+Sometimes you might want to show a schematic diagram or figure that was created outside the analysis code, for example a conceptual overview figure. @fig-schematic shows an example schematic.
+Store manually created figures in the `assets` folder and document their source.
 
 ```{r}
 #| label: fig-schematic
-#| fig-cap: "A figure that is manually generated and shows some overview/schematic. This has nothing to do with the data, it's just a random one from one of our projects I found and placed here."
+#| fig-cap: "Example manually created schematic figure. Replace this with a project-specific figure and caption."
 #| echo: FALSE
 knitr::include_graphics(here("assets","antigen-recognition.png"))
 ```
@@ -122,7 +122,7 @@ Note the loading of the data providing a **relative** path using the `../../` no
 
 ```{r}
 #| label: tbl-summary-table
-#| tbl-cap: "Data summary table. All caption text goes here."
+#| tbl-cap: "Data summary table."
 #| echo: FALSE
 resulttable <- readRDS("../../results/tables/summary-table.rds")
 knitr::kable(resulttable)

@@ -51,6 +51,10 @@ log easier to read, edit, and extend when a project needs more explanation.
 
 ## Log Entries
 
+The first entry below records template-maintenance history. When starting a new
+project from this template, you may keep it for provenance, move it elsewhere,
+or replace the log entries with project-specific AI-use notes.
+
 ### 2026-06-15 — New project instructions
 
 Andreas Handel and Herman used Hermes Agent to add prose instructions for

@@ -60,7 +60,7 @@ d1 <- rawdata %>% dplyr::filter( Height != "sixty" ) %>%
                   dplyr::mutate(Height = as.numeric(Height))
 # look at partially fixed data again
 skimr::skim(d1)
-hist(d1$Height)
+if (interactive()) hist(d1$Height)
 
 
 ## ---- cleandata2 --------

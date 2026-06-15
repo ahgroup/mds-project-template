@@ -27,8 +27,10 @@ print_check <- function(ok, message) {
 }
 
 # The script should be run from the project root.
-# The project root is the folder that contains readme.md and usage.md.
-root_files <- c("readme.md", "usage.md")
+# The project root is the folder that contains readme.md, usage.md, and .here.
+# The .here marker helps the R here package find the project root even when a
+# user downloads the template without preserving the Git history.
+root_files <- c("readme.md", "usage.md", ".here")
 root_files_present <- file.exists(root_files)
 
 for (i in seq_along(root_files)) {

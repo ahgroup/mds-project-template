@@ -23,10 +23,8 @@ and commercial projects under the license terms. Dependency-management guidance
 now uses lightweight levels, and report/manuscript products include optional
 software/session reporting.
 
-If returning later, the next likely work item is deciding whether to add a
-small helper-function example under `code/utilities/`. Other remaining
-discussion items are whether to add a changelog or template-notes file and
-optional GitHub workflow helpers.
+There are no remaining open template-maintenance to-do items at this point. The
+repository is ready for human review and testing.
 
 ## Completed
 
@@ -201,14 +199,22 @@ lightweight.
 - `usage.md`, product readmes, and `ai/project-summary.yml` document the optional
   session/software reporting pattern.
 
-## Future
+### Final Readiness Cleanup
 
-These are not urgent, but they would be useful future improvements.
+The remaining future to-do items were removed, and the project was reviewed for
+handoff to a human tester.
 
-- Consider adding a small helper-function example under `code/utilities/` if
-  future users need a concrete pattern for shared code.
-- Consider adding a short `changelog.md` or `template-notes.md` so users can see
-  what changed in the template over time without reading the full Git history.
-- Add optional guidance for GitHub issue templates, pull-request checklists,
-  pre-commit hooks, and GitHub Actions, while keeping those features disabled by
-  default.
+- `.here` was added as a project-root marker so R scripts and Quarto documents
+  can find project-relative paths even when the template is downloaded without
+  Git metadata.
+- Display-only plots in non-interactive R scripts are guarded with
+  `interactive()` to avoid creating local `Rplots.pdf` files during scripted
+  runs.
+- The presentation now reads generated tables and figures directly from
+  `results/` so it does not depend on stale copied media files.
+- Informal placeholder wording in product templates was cleaned up, bundled data
+  documentation was clarified, and AI-log/new-project instructions were aligned.
+
+## Open To-Do Items
+
+There are no remaining open template-maintenance to-do items.

@@ -51,6 +51,8 @@ for more detail.
 Important project-level files:
 
 - `readme.md`: this project overview.
+- `.here`: project-root marker used by the R `here` package so scripts and
+  Quarto files can find project-relative paths even outside a Git checkout.
 - `new-project-instructions.md`: practical instructions for creating a new
   project from this template and adapting it safely.
 - `usage.md`: practical instructions for running and reproducing the project.
@@ -218,8 +220,8 @@ When using AI tools:
 - Ask for small, reviewable changes.
 - Rerun affected scripts or rerender affected products after meaningful changes.
 - Follow `ai/ai-policy-for-students.md` for student-facing AI-use expectations.
-- Add a short entry to `ai/ai-use-log.md` for meaningful AI-assisted work when
-  maintaining or updating the project.
+- Add a short entry to `ai/ai-use-log.md` for meaningful project-specific
+  AI-assisted work when the project owner wants the log maintained.
 
 
 ### AI-related files and expected readers/writers

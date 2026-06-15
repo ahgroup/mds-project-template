@@ -37,9 +37,22 @@ also saving processed data in a language-neutral format such as CSV, TSV, JSON,
 Parquet, or Feather. CSV is easy to inspect and share, but it can lose type
 information. If you save CSV files, document what each variable is.
 
-## Data Summary
+## Bundled Example Data
 
-Update this section when creating a new project from the template.
+This template includes a small synthetic example dataset so users can run the
+workflow immediately.
+
+- Data source: synthetic example data created for this template.
+- Data owner or provider: template maintainer.
+- Raw data location: `data/raw-data/example-data.xlsx`.
+- Processed data location: `data/processed-data/processed-data.rds`.
+- Codebook or metadata location: the `Codebook` sheet in
+  `data/raw-data/example-data.xlsx`.
+
+## Project Data Summary
+
+When creating a new project from the template, replace this section with
+project-specific information.
 
 - Data source:
 - Data owner or provider:

@@ -28,9 +28,10 @@ and the main project folders.
 ## Rename The Project Materials
 
 Update the project identity before doing much analysis work. At minimum, review
-`readme.md`, `ai/project-summary.yml`, and the main files in `products/` for
-placeholder text such as `NAME`, example titles, example author details, sample
-dates, sample email addresses, and generic project descriptions.
+`readme.md`, `data/readme-data.md`, `ai/project-summary.yml`,
+`ai/ai-use-log.md`, and the main files in `products/` for placeholder text such
+as `NAME`, example titles, example author details, sample dates, sample email
+addresses, and generic project descriptions.
 
 Replace placeholders with the real project title, project owner, contributors,
 and a short description of the project. If some information is not known yet,

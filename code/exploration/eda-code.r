@@ -23,13 +23,13 @@ utils::write.csv(summary_df_csv, file = summary_table_csv_file, row.names = FALS
 
 ## ---- height --------
 p1 <- mydata %>% ggplot(aes(x=Height)) + geom_histogram(bins = 10)
-plot(p1)
+if (interactive()) print(p1)
 figure_file = here("results", "figures", "height-distribution.png")
 ggsave(filename = figure_file, plot=p1, width = 7, height = 7, units = "in")
 
 ## ---- weight --------
 p2 <- mydata %>% ggplot(aes(x=Weight)) + geom_histogram(bins = 10)
-plot(p2)
+if (interactive()) print(p2)
 figure_file = here("results", "figures", "weight-distribution.png")
 ggsave(filename = figure_file, plot=p2, width = 7, height = 7, units = "in")
 
@@ -37,7 +37,7 @@ ggsave(filename = figure_file, plot=p2, width = 7, height = 7, units = "in")
 p3 <- mydata %>% ggplot(aes(x=Height, y=Weight)) +
   geom_point() +
   geom_smooth(method = "lm", se = FALSE, formula = y ~ x)
-plot(p3)
+if (interactive()) print(p3)
 figure_file = here("results","figures", "height-weight.png")
 ggsave(filename = figure_file, plot=p3, width = 7, height = 7, units = "in")
 
@@ -45,7 +45,7 @@ ggsave(filename = figure_file, plot=p3, width = 7, height = 7, units = "in")
 p4 <- mydata %>% ggplot(aes(x=Height, y=Weight, color = Gender)) +
   geom_point() +
   geom_smooth(method = "lm", se = FALSE, formula = y ~ x)
-plot(p4)
+if (interactive()) print(p4)
 figure_file = here("results","figures", "height-weight-stratified.png")
 ggsave(filename = figure_file, plot=p4, width = 7, height = 7, units = "in")
 
