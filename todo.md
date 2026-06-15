@@ -19,9 +19,11 @@ from the template. AI-use logging guidance now uses short text sections instead
 of tables and applies the same basic expectations to class and research project
 use.
 
-If returning later, next likely discussion items are license/citation choices,
-dependency-management levels, whether to add a helper-function example, and
-whether to add a changelog or template-notes file.
+If returning later, the next likely work item is deciding whether to add a
+small helper-function example under `code/utilities/`. Other remaining
+discussion items are license/citation choices, dependency-management levels,
+whether to add a changelog or template-notes file, optional GitHub workflow
+helpers, and optional session/software reporting.
 
 ## Completed
 
