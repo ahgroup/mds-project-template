@@ -23,6 +23,27 @@ For sensitive or large outputs, commit a readme or placeholder that explains
 what the file is, how it is generated, and how authorized collaborators can get
 or recreate it.
 
+Generated results can still be sensitive. Treat outputs derived from private,
+restricted, identifiable, or otherwise sensitive data as potentially sensitive
+until they have been checked. This includes processed tables, small cell counts,
+row-level predictions, maps or geocoded results, figures with identifiable
+outliers, rendered reports, and saved model objects.
+
+Saved model objects deserve special caution. Some model objects contain the
+original data, model frame, residuals, predictions, identifiers, or enough
+information to reveal sensitive values. Treat them as sensitive until you know
+what they contain.
+
+As a default:
+
+| Output type | Default choice |
+| --- | --- |
+| Small non-sensitive figures, tables, reports, and rendered HTML products | Commit |
+| Small processed example or public outputs | Usually commit |
+| Outputs derived from sensitive data | Check carefully; usually do not commit unless approved |
+| Large outputs | Do not commit by default; use `results/large-files/` or discuss Git LFS/another large-file workflow |
+| Readme or placeholder files explaining local-only outputs | Commit |
+
 Organize this folder in a way that makes sense for your project. Add readme
 files inside subfolders when they help future readers understand what goes
 where.

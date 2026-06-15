@@ -104,8 +104,8 @@ journal, or institutional requirements.
 
 ## Suggested Workflow
 
-1. Read `../readme.md`, `../usage.md`, `../agents.md`, and
-   `../data/readme-data.md`.
+1. Read `../readme.md`, `../usage.md`, `../agents.md`,
+   `../code-guidelines.md`, and `../data/readme-data.md`.
 2. Optionally read `project-summary.yml` for a concise AI-oriented summary, but
    treat it as secondary to the human-facing documentation.
 3. Check data-use limits before exposing data to an AI tool.

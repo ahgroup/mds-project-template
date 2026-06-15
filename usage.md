@@ -122,6 +122,9 @@ manually:
   added.
 - Confirm that package and software requirements are documented in `readme.md`
   or another human-facing documentation file.
+- Confirm that code follows `code-guidelines.md`, especially documentation,
+  hard-failure behavior, simplicity, mature dependency choices, and
+  project-relative paths.
 - If code changed generated outputs, rerun the affected scripts manually.
 - If product text or results changed, rerender the affected product files.
 - If AI tools helped with meaningful work, follow the disclosure/logging
@@ -149,6 +152,10 @@ Then update this file with:
 - what outputs it creates;
 - when it should be run;
 - any package or environment setup required.
+
+Follow `code-guidelines.md` when adding or editing code. In particular, keep
+scientific code simple, thoroughly commented, strict about unexpected inputs,
+and runnable in a clean session.
 
 Create language-specific folders only if the project becomes large enough that
 separate `code/r/`, `code/python/`, or `code/julia/` folders would make the code

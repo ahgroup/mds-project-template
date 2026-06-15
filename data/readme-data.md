@@ -25,6 +25,12 @@ the copy, and document what changed.
 
 Save cleaned or processed data in `data/processed-data/`.
 
+Processed data can be sensitive even if the raw data are not committed. Cleaning,
+filtering, joining, summarizing, de-identifying, or transforming data does not
+automatically make it safe to share. Before committing processed data, check
+whether it still contains private records, identifiers, small groups, precise
+locations, restricted variables, or other information that should stay private.
+
 For R-only projects, RDS or RDA/RData files can preserve information like
 factors, characters, and numeric types. For multi-language projects, consider
 also saving processed data in a language-neutral format such as CSV, TSV, JSON,

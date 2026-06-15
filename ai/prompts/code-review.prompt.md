@@ -4,7 +4,7 @@ Use this prompt when asking an AI tool to review project code.
 
 ```text
 Please review the changed project code and Quarto files for reproducibility problems.
-Focus on:
+Use code-guidelines.md as the coding-standard reference. Focus on:
 
 - raw data being modified by hand or overwritten;
 - absolute paths or hidden local dependencies;
@@ -14,6 +14,9 @@ Focus on:
 - missing package dependencies;
 - code that depends on an interactive session state;
 - inconsistencies with the manual run order in usage.md;
+- scientific-code issues such as insufficient comments, unclear assumptions,
+  unnecessary complexity, overly deep structure, hidden error handling, or
+  avoidable new dependencies;
 - statistical or data-cleaning choices that need human review;
 - outputs that should be regenerated.
 

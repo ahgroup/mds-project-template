@@ -23,6 +23,8 @@ tools in this repository.
 - `readme.md`: human-facing project overview and getting-started notes.
 - `usage.md`: human-facing instructions for manually running the example
   workflow, rendering products, and reviewing reproducibility.
+- `code-guidelines.md`: human- and AI-facing coding guidelines for scientific
+  and research projects.
 - `assets/`: static non-code project materials, including references, CSL files,
   manually created schematics, PDFs, and other supporting files.
 - `code/`: all analysis code. The example project is split into workflow-stage
@@ -51,6 +53,7 @@ tools in this repository.
   report it without changing it.
 - Use lower-case, descriptive file and folder names with words separated by `-`
   unless a standard file name requires otherwise.
+- Follow `code-guidelines.md` for code written or edited in this project.
 - Do not introduce hidden dependencies on a local R session, local file paths, or
   private environment variables.
 - Check for unresolved template placeholders such as `NAME`, `LINK-GOES-HERE`,
@@ -156,12 +159,16 @@ Before handing work back to a human collaborator:
 - Follow `usage.md` to rerun affected scripts when code or generated outputs
   changed. Use `Rscript code/utilities/check-project-setup.r` when checking
   project readiness.
+- Check code changes against `code-guidelines.md`, especially documentation,
+  hard-failure behavior, simplicity, dependency choices, project-relative paths,
+  and clean-session reproducibility.
 - Render affected Quarto products when product source files or generated results
   changed.
 - Mention any checks that could not be run.
 - Verify that raw data was not edited.
 - Verify that generated outputs are traceable to code.
 - Verify that no obvious secrets, local paths, or private data were added.
+
 
 ## Git Commit and Push Suggestions
 

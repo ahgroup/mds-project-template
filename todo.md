@@ -8,7 +8,8 @@ Quarto YAML is standardized, the example workflow has setup/runner utilities,
 student AI guidance and reusable prompts are present, generated-output policy is
 documented, GitHub/private-repository cautions are included, the readme explains
 how `.gitignore` prevents files from being committed, Positron is listed as the
-first-choice editor/IDE, AI file roles are explained, and `.gitignore` is
+first-choice editor/IDE, AI file roles are explained, scientific coding
+guidelines are documented in `code-guidelines.md`, and `.gitignore` is
 intentionally simple while allowing HTML outputs to be committed. The concise
 AI-readable project summary now lives at `ai/project-summary.yml` and is
 documented as secondary to the human-facing documentation rather than as a
@@ -88,6 +89,9 @@ The AI-facing guidance has been updated for the current template.
 - `ai/ai-use-log.md` now explains how humans should read the log and how AI
   assistants/project maintainers should add concise entries.
 - `ai/review-checklist.md` includes a template-placeholder checklist.
+- `code-guidelines.md` documents coding expectations for humans and AI tools in
+  scientific/research projects, including comments, hard failures, simplicity,
+  dependency choices, R/tidyverse style, and reproducibility expectations.
 
 ### Generated Output Policy And Ignore Rules
 
@@ -129,15 +133,14 @@ These are not urgent, but they would be useful future improvements.
   packages installed. Regenerate the example processed data, figures, tables,
   and product files, then confirm that the committed outputs match the current
   code.
-- Discuss details of the generated-output policy for specific project types,
-  especially how to identify sensitive outputs, what belongs in a private repo,
-  and when a project should use Git LFS or another large-file workflow.
+- Discuss details of the generated-output policy for specific project types only
+  if future projects need stricter sensitive-output examples, Git LFS, or another
+  large-file workflow.
 - Discuss AI-use logging expectations further, especially which parts should be
   handled by human students, AI assistants, project maintainers, or course-site
   instructions.
-- Discuss AI rules and guidelines for writing code, including what coding style,
-  commenting, simplicity, package choices, testing expectations, and review
-  practices should be added to `agents.md`.
+- Discuss whether the new `code-guidelines.md` needs additional testing guidance
+  or examples after it has been used in real projects.
 
 - Add a short "how to start a new project" checklist for students and research
   group members after creating a repository from the template.

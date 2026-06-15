@@ -52,6 +52,9 @@ Important project-level files:
 
 - `readme.md`: this project overview.
 - `usage.md`: practical instructions for running and reproducing the project.
+- `code-guidelines.md`: coding guidelines for scientific/research projects,
+  including documentation, failure behavior, simplicity, packages, and
+  AI-assisted coding expectations.
 - `agents.md`: extra instructions for AI coding assistants and collaborators
   using AI tools.
 
@@ -105,6 +108,24 @@ not contain sensitive information. That includes example processed data, figures
 tables, rendered HTML files, and other outputs that help users see expected
 results and render products.
 
+Generated does not automatically mean safe to share. Outputs created from
+private, restricted, identifiable, or otherwise sensitive data can still reveal
+sensitive information. Before committing processed data, figures, tables, model
+objects, maps, predictions, or rendered reports, check whether they expose
+private records, small cell counts, identifiable outliers, precise locations, or
+other restricted information.
+
+Use this simple decision guide as a starting point:
+
+| File type | Default choice |
+| --- | --- |
+| Small non-sensitive figures, tables, reports, and rendered HTML products | Commit |
+| Small processed example or public data | Usually commit |
+| Private, identifiable, regulated, restricted, or license-protected data | Do not commit unless explicitly approved |
+| Outputs derived from sensitive data | Check carefully; usually do not commit unless approved |
+| Large outputs | Do not commit by default; use an ignored folder or discuss Git LFS/another large-file workflow |
+| Readme or placeholder files explaining local-only files | Commit |
+
 The main exceptions are:
 
 - large files that are too big for ordinary Git/GitHub use;
@@ -117,6 +138,10 @@ Use documented ignored locations such as `data/private-data/`,
 `data/large-files/`, or `results/large-files/` for files that should not be
 committed. Commit a readme or placeholder explaining what belongs there, how the
 file is generated or obtained, and who is allowed to access it.
+
+Each project can refine this policy. For example, a public teaching project may
+commit nearly all outputs, while a restricted health-data project may commit
+only code, documentation, and carefully reviewed aggregate results.
 
 ## Software And Package Management
 
@@ -136,6 +161,14 @@ For Python, Julia, or other languages, document the chosen environment manager
 in this readme or another human-facing documentation file. Examples include
 virtual environments, Conda, Poetry, Julia project files, or containers. These
 are optional; use them when they solve a real project need.
+
+## Code Guidelines
+
+Code in this template should be written for scientific and research workflows.
+That means it should be transparent, reproducible, simple, heavily documented,
+and strict about unexpected inputs or missing requirements. See
+`code-guidelines.md` for the full coding guidelines that apply to both humans
+and AI tools.
 
 ## Getting Started
 
@@ -158,7 +191,7 @@ citation accuracy, or interpretation of results.
 When using AI tools:
 
 - Point the tool to `readme.md`, `usage.md`, `agents.md`,
-  `data/readme-data.md`, and relevant files in `ai/`.
+  `code-guidelines.md`, `data/readme-data.md`, and relevant files in `ai/`.
 - AI tools may use `ai/project-summary.yml` as a concise orientation aid. It is
   a secondary summary of information documented elsewhere, not the source of
   truth.
@@ -170,6 +203,7 @@ When using AI tools:
 - Follow `ai/ai-policy-for-students.md` for student-facing AI-use expectations.
 - Add a short entry to `ai/ai-use-log.md` for meaningful AI-assisted work when
   maintaining or updating the project.
+
 
 ### AI-related files and expected readers/writers
 
