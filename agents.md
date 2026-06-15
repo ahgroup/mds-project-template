@@ -113,14 +113,26 @@ silently install packages.
 ## Dependency Policy
 
 The template does not enable `renv`, virtual environments, Conda, Poetry, Julia
-environments, or containers by default. Environment managers are recommended for
-research projects that need stronger long-term reproducibility, but they remain
-optional because they add complexity for new users and classroom settings.
+environments, containers, or GitHub Actions by default. Keep the default
+dependency approach lightweight and beginner-friendly.
 
-If a project chooses to use an environment manager, document that decision in
-`readme.md` or another human-facing documentation file, commit the appropriate
-lock or project files, and make sure local package libraries or virtual
-environments are not committed.
+Use the lowest dependency-management level that honestly supports the project:
+
+- Manual package lists plus `code/utilities/check-project-setup.r` are the
+  default for this template, class projects, simple examples, and many
+  work-related projects.
+- Lockfiles or environment managers such as `renv`, Conda, Python virtual
+  environments, Poetry, or Julia project files are optional when exact versions
+  matter for longer-term reproducibility.
+- CI or containers are advanced options for long-term, multi-user,
+  multi-language, publication, or regulated workflows that need controlled reruns
+  across machines.
+
+Do not add `renv`, containers, CI, or new environment files unless the user asks
+for them or the project documentation clearly calls for them. If a project uses
+an environment manager, document that decision in `readme.md` or another
+human-facing documentation file, commit the appropriate lock or project files,
+and make sure local package libraries or virtual environments are not committed.
 
 ## AI Assistance Documentation
 

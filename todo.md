@@ -19,13 +19,14 @@ from the template. AI-use logging guidance now uses short text sections instead
 of tables and applies the same basic expectations to class and research project
 use. The template now has an MIT license in `license.md`, with `readme.md`
 documenting that the template may be reused for class, research, work-related,
-and commercial projects under the license terms.
+and commercial projects under the license terms. Dependency-management guidance
+now uses lightweight levels, and report/manuscript products include optional
+software/session reporting.
 
 If returning later, the next likely work item is deciding whether to add a
 small helper-function example under `code/utilities/`. Other remaining
-discussion items are dependency-management levels, whether to add a changelog or
-template-notes file, optional GitHub workflow helpers, and optional
-session/software reporting.
+discussion items are whether to add a changelog or template-notes file and
+optional GitHub workflow helpers.
 
 ## Completed
 
@@ -183,6 +184,23 @@ The template includes an MIT license.
   distribution, and commercial use.
 - No citation metadata file has been added at this point.
 
+### Dependency Management And Session Reporting
+
+Dependency-management guidance has been clarified while keeping the template
+lightweight.
+
+- Manual package lists plus `code/utilities/check-project-setup.r` remain the
+  default approach.
+- `readme.md`, `new-project-instructions.md`, and `agents.md` describe optional
+  higher levels: lockfiles/environment managers when exact versions matter, and
+  CI/containers for advanced controlled reruns.
+- The guidance explicitly says not to add `renv`, containers, CI, or new
+  environment files unless the project needs them.
+- The report and manuscript templates include optional `sessionInfo()` sections
+  as a lightweight way to document the software environment.
+- `usage.md`, product readmes, and `ai/project-summary.yml` document the optional
+  session/software reporting pattern.
+
 ## Future
 
 These are not urgent, but they would be useful future improvements.
@@ -191,11 +209,6 @@ These are not urgent, but they would be useful future improvements.
   future users need a concrete pattern for shared code.
 - Consider adding a short `changelog.md` or `template-notes.md` so users can see
   what changed in the template over time without reading the full Git history.
-- Revisit dependency-management guidance later. Possible levels include manual
-  package lists for class projects, lockfiles such as `renv` for stronger
-  research reproducibility, and CI/containers for advanced long-term projects.
 - Add optional guidance for GitHub issue templates, pull-request checklists,
   pre-commit hooks, and GitHub Actions, while keeping those features disabled by
   default.
-- Consider adding optional session/software reporting to products, for example
-  an appendix chunk with `sessionInfo()` or `sessioninfo::session_info()`.

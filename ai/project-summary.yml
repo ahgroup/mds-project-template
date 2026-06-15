@@ -31,7 +31,7 @@ software:
   languages:
     - name: "R"
       role: "default example workflow"
-      package_management: "manual" # manual, renv, container, other
+      package_management: "manual" # manual by default; optional lockfiles/environment managers/containers only when needed
       required_packages:
         - "broom"
         - "dplyr"
@@ -67,6 +67,7 @@ reproducibility:
     - "code/exploration/eda-code.r"
     - "code/analysis/statistical-analysis.r"
   product_rendering: "render affected Quarto products manually"
+  session_reporting: "optional sessionInfo() section in report/manuscript products"
   generated_output_policy: "commit generated outputs unless they are large or sensitive/restricted"
 
 ai_assistance:
@@ -89,7 +90,8 @@ ai_assistance:
   full_chat_transcripts_required: false
 
 optional_tools:
-  renv: "recommended for research projects, optional for this template"
+  dependency_levels: "manual package lists by default; lockfiles/environment managers when exact versions matter; CI/containers for advanced controlled reruns"
+  renv: "optional when exact R package versions matter; not enabled by default"
   python_virtualenv_or_conda: "recommended for Python-heavy projects, optional"
   poetry: "optional for Python package-style projects"
   julia_project: "recommended for Julia-heavy projects, optional"

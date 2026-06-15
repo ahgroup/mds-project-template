@@ -122,6 +122,9 @@ manually:
   added.
 - Confirm that package and software requirements are documented in `readme.md`
   or another human-facing documentation file.
+- For reports or manuscripts, decide whether to keep, remove, or adapt optional
+  software/session information such as `sessionInfo()` based on the project and
+  audience.
 - Confirm that code follows `code-guidelines.md`, especially documentation,
   hard-failure behavior, simplicity, mature dependency choices, and
   project-relative paths.

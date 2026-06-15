@@ -13,3 +13,5 @@ locations by code, as shown in the example.
 
 Many journals prefer the main manuscript as a Word file and the supplement as a
 PDF. You may need to adjust this based on the target journal or project.
+
+The example manuscript includes an optional software/session information section using base R `sessionInfo()`. Keep, remove, or adapt that section depending on the journal, project, or collaborator needs.

@@ -149,21 +149,32 @@ only code, documentation, and carefully reviewed aggregate results.
 ## Software And Package Management
 
 Document the software and package setup your project needs. The default example
-uses manually installed R packages because that is approachable for students and
-short projects.
+uses manually installed R packages because that is approachable for students,
+short projects, and many work-related projects.
 
-For R projects, [renv](https://rstudio.github.io/renv/index.html) can help
-manage R packages and improve long-term reproducibility. This template does not
-enable `renv` by default because it adds complexity for new users and classroom
-settings.
+This template uses lightweight dependency guidance by default. Choose the lowest
+level that honestly supports the project:
 
-If you decide to use `renv`, commit the lockfile (`renv.lock`) and the files
-needed to activate the environment, but do not commit the local package library.
+- **Manual package list**: the default for this template. List required packages
+  in human-facing documentation and check them with a setup script such as
+  `code/utilities/check-project-setup.r`.
+- **Lockfile or environment manager**: use tools such as
+  [renv](https://rstudio.github.io/renv/index.html), Conda, Python virtual
+  environments, Poetry, or Julia project files when exact package versions matter
+  for longer-term work. Commit the lock or project files needed to restore the
+  environment, but do not commit local package libraries or virtual environments.
+- **CI or containers**: use GitHub Actions, Docker, or similar tools for advanced
+  long-term, multi-user, multi-language, publication, or regulated workflows that
+  need controlled reruns across machines. These are intentionally not enabled by
+  default.
 
-For Python, Julia, or other languages, document the chosen environment manager
-in this readme or another human-facing documentation file. Examples include
-virtual environments, Conda, Poetry, Julia project files, or containers. These
-are optional; use them when they solve a real project need.
+Analysis scripts should load the packages they need and fail clearly when a
+package is missing. They should not silently install packages while running.
+
+As a lightweight reproducibility aid, final products may include optional
+software/session information, such as `sessionInfo()` or
+`sessioninfo::session_info()`, when that information would help readers or
+collaborators understand the computing environment.
 
 ## Code Guidelines
 

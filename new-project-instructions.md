@@ -101,15 +101,21 @@ need, what outputs they create, and which products should be rendered afterward.
 Document the software and packages needed for the project in a human-facing file
 such as `readme.md`, `usage.md`, or a language-specific setup file.
 
-For short class projects and simple examples, a manual package list may be
-enough. For research projects that need stronger long-term reproducibility,
-consider using tools such as `renv` for R, virtual environments or Conda for
-Python, Julia project files, or containers. Use those tools only when they solve
-a real project need, and do not commit local package libraries or virtual
-environments.
+Use the simplest dependency approach that honestly supports the project. A
+manual package list is usually enough for this template, short class projects,
+simple examples, and many work-related projects. If exact package versions matter
+for longer-term reproducibility, consider tools such as `renv` for R, virtual
+environments or Conda for Python, Julia project files, Poetry, or containers.
+Use those tools only when they solve a real project need, and do not commit local
+package libraries or virtual environments.
 
 Analysis scripts should fail clearly if required packages are missing. They
 should not silently install packages while running.
+
+For reports or manuscripts, consider adding a short software/session information
+section if readers or collaborators need to know the computing environment. Base
+R's `sessionInfo()` is a lightweight option; `sessioninfo::session_info()` is an
+optional alternative if the project already uses that package.
 
 ## Check The Project Setup
 
