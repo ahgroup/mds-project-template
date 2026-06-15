@@ -17,6 +17,7 @@ project:
   short_name: "example-project"
   project_type: "teaching-template" # teaching-template, class-project, research-project
   status: "template"
+  license: "MIT"
   primary_outputs:
     - "products/report/report.qmd"
     - "products/manuscript/manuscript.qmd"

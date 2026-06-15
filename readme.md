@@ -59,6 +59,7 @@ Important project-level files:
   AI-assisted coding expectations.
 - `agents.md`: extra instructions for AI coding assistants and collaborators
   using AI tools.
+- `license.md`: the MIT license for this template.
 
 ## Naming Conventions
 
@@ -240,3 +241,13 @@ need human review.
 GitHub Actions and other automated workflows can be useful for advanced users.
 They are intentionally not enabled by default in this template because many
 users will be new to Git and GitHub.
+
+## License
+
+This template is licensed under the MIT License. See `license.md` for the full
+license text.
+
+The MIT License permits reuse, modification, distribution, and commercial use.
+That means students and collaborators may use this template as a starting point
+for class, research, work-related, or commercial projects, as long as the license
+notice is included where required.
