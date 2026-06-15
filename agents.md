@@ -138,19 +138,24 @@ AI-related files have different expected readers and writers:
   `ai/review-checklist.md`: guidance files that humans and AI should read; they
   may be edited by humans or AI when project/course policy changes.
 - `ai/ai-use-log.md`: a human-readable transparency record. Humans usually read
-  it rather than editing it; AI assistants or project maintainers may add concise
-  entries for meaningful AI-assisted work.
+  it rather than editing it. In projects created from this template, AI
+  assistants or project maintainers may add concise text entries for meaningful
+  project-specific AI-assisted work.
 - Local AI/tool state folders such as `.ai-local/`, `.ai-cache/`, `.codex/`, and
   local Claude settings are ignored and should not be committed. AI tools may
   read and write those files for their own operation; humans usually do not need
   to inspect them.
 
-When AI tools are used for meaningful project work, record a short summary in
-`ai/ai-use-log.md` when maintaining or updating the project. The log should
-capture what AI helped with, which files were changed or reviewed, and what
-human checks were performed. Student-facing AI-use expectations are summarized
-in `ai/ai-policy-for-students.md`. Do not store full chat transcripts unless the
-project owner explicitly wants that and privacy has been checked.
+When AI tools are used for meaningful project-specific work, record a short
+summary in `ai/ai-use-log.md` if the project owner wants the log maintained. Use
+short text sections rather than table rows. The log should capture what AI
+helped with, which files were changed or reviewed, and what human checks were
+performed. Routine template maintenance does not need extra logging beyond
+existing entries unless the project owner asks for more detail. Student-facing
+AI-use expectations are summarized in `ai/ai-policy-for-students.md`; they use
+the same basic standard for class and research projects. Do not store full chat
+transcripts unless the project owner explicitly wants that and privacy has been
+checked.
 
 ## Review Expectations
 

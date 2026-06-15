@@ -15,12 +15,13 @@ AI-readable project summary now lives at `ai/project-summary.yml` and is
 documented as secondary to the human-facing documentation rather than as a
 human-facing source of truth. The template now also includes
 `new-project-instructions.md` with prose instructions for starting a new project
-from the template.
+from the template. AI-use logging guidance now uses short text sections instead
+of tables and applies the same basic expectations to class and research project
+use.
 
-If returning later, next likely discussion items are AI-use logging
-expectations, license/citation choices, dependency-management levels, whether to
-add a helper-function example, and whether to add a changelog or template-notes
-file.
+If returning later, next likely discussion items are license/citation choices,
+dependency-management levels, whether to add a helper-function example, and
+whether to add a changelog or template-notes file.
 
 ## Completed
 
@@ -87,9 +88,11 @@ The AI-facing guidance has been updated for the current template.
 - `agents.md` tells AI tools to propose a Git commit and push when a coherent
   set of changes is complete and sharing the work would be useful.
 - `ai/ai-policy-for-students.md` gives student-facing guidance on acceptable AI
-  use, privacy, required understanding, and disclosure.
-- `ai/ai-use-log.md` now explains how humans should read the log and how AI
-  assistants/project maintainers should add concise entries.
+  use, privacy, required understanding, and disclosure, using the same basic
+  expectations for class projects and research projects.
+- `ai/ai-use-log.md` now explains how humans should read the log and how to add
+  concise text-section entries when meaningful project-specific AI-assisted work
+  occurs.
 - `ai/review-checklist.md` includes a template-placeholder checklist.
 - `code-guidelines.md` documents coding expectations for humans and AI tools in
   scientific/research projects, including comments, hard failures, simplicity,
@@ -154,13 +157,23 @@ a new project from the template and adapting it safely.
 - `readme.md` links to the new instructions from the project-level files list
   and Getting Started section.
 
+### AI-Use Logging Expectations
+
+AI-use logging expectations have been clarified for projects created from this
+template.
+
+- The same basic expectations apply to class projects and research projects so
+  students practice real-world reproducible workflows.
+- `ai/ai-use-log.md` uses short text sections rather than a table.
+- The log emphasizes meaningful project-specific AI assistance, human review,
+  checks run, files changed or reviewed, and remaining review needs.
+- Routine template maintenance does not need extra logging beyond existing
+  entries unless the project owner asks for more detail.
+
 ## Future
 
 These are not urgent, but they would be useful future improvements.
 
-- Discuss AI-use logging expectations further, especially which parts should be
-  handled by human students, AI assistants, project maintainers, or course-site
-  instructions.
 - Consider adding a small helper-function example under `code/utilities/` if
   future users need a concrete pattern for shared code.
 - Consider adding a short `changelog.md` or `template-notes.md` so users can see
@@ -175,6 +188,3 @@ These are not urgent, but they would be useful future improvements.
   default.
 - Consider adding optional session/software reporting to products, for example
   an appendix chunk with `sessionInfo()` or `sessioninfo::session_info()`.
-- Decide how much AI-use documentation is appropriate for class assignments
-  versus research manuscripts, since those contexts may need different levels of
-  detail.

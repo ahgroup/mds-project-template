@@ -1,13 +1,14 @@
 # AI policy for students
 
-This file gives temporary student-facing guidance for using AI tools with this
-project template. Course-specific instructions from the instructor, syllabus, or
-assignment page always take priority over this file.
+This file gives student-facing guidance for using AI tools with this project
+template. Course-specific instructions from the instructor, syllabus,
+assignment page, project owner, institution, funder, or journal always take
+priority when they are more specific.
 
-This repository is also used as a starting point for research projects. Some
-research projects may need stricter rules than a class project, especially if
-private, identifiable, regulated, unpublished, or otherwise sensitive data are
-involved.
+The same basic expectations apply whether this template is used for a class
+project or a research project. Students are expected to learn immediately useful
+real-world workflows: use AI transparently, protect data, understand your own
+work, check outputs, and keep the project reproducible.
 
 ## Short version
 
@@ -79,18 +80,15 @@ summaries instead of sharing raw records.
 
 ## How to disclose AI use
 
-For a class project, follow the course instructions. If no more specific
-instructions are available, include a short disclosure in your project materials
-or final report. For example:
+Follow the course or project instructions. If no more specific instructions are
+available, include a short disclosure in your project materials or final report.
+For example:
 
 > I used [AI tool name] to help with [task, such as debugging R code, drafting
 > plot code, or reviewing reproducibility]. I reviewed the output by [checks,
 > such as reading the code, rerunning scripts, comparing outputs to expectations,
 > and revising the text]. Final data-cleaning, modeling, interpretation, and
 > writing decisions were made by [me/us].
-
-For research projects, follow the norms of the project, funder, journal,
-institution, and collaborators.
 
 ## AI-use logs
 
@@ -100,8 +98,11 @@ work occurs.
 
 Students usually do not need to manually edit the log unless the instructor or
 project owner asks them to. Instead, students should be ready to disclose and
-explain AI use in the required course or project format. AI assistants or project
-maintainers may update the log when meaningful AI-assisted work occurs.
+explain AI use in the required course or project format. In a project created
+from this template, the log should be updated when AI meaningfully helps with
+project-specific work. Routine maintenance of the template itself does not need
+extra logging beyond existing entries unless the project owner asks for more
+detail.
 
 ## Good and bad examples
 

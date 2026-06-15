@@ -38,9 +38,10 @@ Those need human review.
 ## Student AI Policy
 
 The file `ai-policy-for-students.md` gives student-facing guidance on acceptable
-AI use, required human understanding, data privacy, and disclosure. Course,
-instructor, project-owner, journal, funder, or institutional rules take priority
-when they are more specific.
+AI use, required human understanding, data privacy, and disclosure. The same
+basic expectations apply to class projects and research projects so students
+practice real-world workflows. Course, instructor, project-owner, journal,
+funder, or institutional rules take priority when they are more specific.
 
 ## Logging AI Use
 
@@ -49,10 +50,13 @@ work. Humans should be able to read it to understand what AI helped with and
 what was checked.
 
 Students usually do not need to edit the log manually unless the instructor or
-project owner asks them to. AI assistants and project maintainers should add
-concise entries when AI meaningfully changes or reviews project materials.
+project owner asks them to. In a project created from the template, add entries
+when AI meaningfully helps with project-specific work. Routine maintenance of
+the template itself does not need extra logging beyond existing entries unless
+the project owner asks for more detail.
 
-A practical entry records:
+A practical entry is written as a short text section rather than a table row and
+records:
 
 - what AI tool was used;
 - what it helped with;
@@ -79,8 +83,9 @@ Different files in this folder have different expected readers and writers:
   when course or project policy changes; AI may suggest or make updates when
   asked.
 - `ai-use-log.md`: this is mainly a human-readable transparency record. Humans
-  usually read it rather than editing it. AI assistants or project maintainers
-  may add concise entries when meaningful AI-assisted work occurs.
+  usually read it rather than editing it. In projects created from the template,
+  AI assistants or project maintainers may add concise text entries when
+  meaningful project-specific AI-assisted work occurs.
 - Local AI/tool state folders such as `.ai-local/`, `.ai-cache/`, `.codex/`, and
   local Claude settings are not committed. AI tools may read and write those
   files for their own operation, and humans usually do not need to inspect them.
@@ -115,5 +120,5 @@ journal, or institutional requirements.
 7. Check whether generated outputs should be committed, ignored as large files,
    or kept private because they contain sensitive information.
 8. Review the changes manually.
-9. Add a concise entry to `ai-use-log.md` when meaningful AI-assisted project
-   maintenance or review occurred.
+9. Add a concise text entry to `ai-use-log.md` when meaningful AI-assisted
+   project-specific work occurred and the project owner wants it logged.
