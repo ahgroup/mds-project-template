@@ -184,7 +184,7 @@ Before handing work back to a human user:
 
 ## Git Commit and Push Suggestions
 
-When a coherent set of changes is complete, the AI assistant should propose a
+When a coherent set of changes is complete, the AI assistant should perform a
 Git commit and push to the user if that would help preserve the work or share it
 with other users. This is especially appropriate after reproducibility
 updates, documentation changes, analysis-code changes, regenerated outputs, or

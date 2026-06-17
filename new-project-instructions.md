@@ -7,18 +7,6 @@ template. Hopefully, the content and examples in this template are documented we
 
 This is a GitHub template repository. The best way to start a new project is to
 [create a repository from this template](https://help.github.com/en/articles/creating-a-repository-from-a-template).
-After creating a new repository, follow .
-
-For the example project, run the code in documented pieces. The workflow is
-reproducible because data processing, figure creation, table creation, and
-analysis are done by code rather than by undocumented manual edits to data files
-or figures. See `usage.md` for the run order, setup checks, optional example
-workflow runner, and product-rendering instructions.
-
-
-Start by creating a new GitHub repository from this template rather than copying
-files by hand. GitHub's template-repository workflow preserves the folder
-structure while giving the new project its own Git history.
 
 For many projects, the safest default is to make the new
 repository private at first. A private repository can be made public later after
@@ -31,13 +19,19 @@ folder in Positron or another editor. Make sure the editor or terminal is
 working from the project root, the folder that contains `readme.md`, `usage.md`,
 and the main project folders.
 
+
+
+## Explore the template
+
+The template contains example files and code to illustrate the whole setup and workflow. Follow the information provided in `usage.md` to explore the different example components.
+
+
+
 ## Rename The Project Materials
 
 Update the project identity before doing much analysis work. At minimum, review
 `readme.md`, `data/readme-data.md`, and the main files in `products/` for
-placeholder text such
-as `NAME`, example titles, example author details, sample dates, sample email
-addresses, and generic project descriptions.
+placeholder text such as `NAME`, example titles, and other generic project descriptions.
 
 Replace placeholders with the real project title, project owner, contributors,
 and a short description of the project. If some information is not known yet,
@@ -60,46 +54,22 @@ as potentially sensitive until the project owner has documented otherwise.
 Raw data should go in `data/raw-data/` only if it is appropriate to store in the
 repository. Private, restricted, identifiable, regulated, or license-protected
 data should usually stay out of Git. Use ignored folders such as
-`data/private-data/` or `data/large-files/` for local-only data, and commit a
+`data/private-data/` for local-only data, and commit a
 readme or placeholder explaining what belongs there and who is allowed to access
 it.
 
 Do not manually edit raw data files to make an analysis work. Keep raw data
 unchanged and write code that creates processed data in `data/processed-data/`.
 
-## Review The Generated-Output Plan
-
-Decide which generated outputs should be committed. For many example projects
-and public projects, it is useful to commit small, non-sensitive outputs such as
-processed example data, figures, tables, rendered HTML reports, and slides.
-These files help users see what the workflow should produce.
-
-Large outputs, local-only outputs, and outputs derived from sensitive or
-restricted data should not be committed by default. Put them in documented
-ignored locations such as `results/large-files/`, or document another approved
-workflow.
-
-Generated outputs should be traceable to code. If a figure, table, model
-summary, or report output changes, rerun the code that produces it rather than
-editing the generated file by hand.
 
 ## Adapt The Workflow To The Project
 
 Use the existing example workflow as a starting pattern, not as a required
-scientific structure. Put code in the workflow-stage folder where it belongs:
+scientific structure. Put code in the workflow-stage folder where it belongs.
 
-- data-cleaning and data-preparation scripts in `code/processing/`;
-- exploratory summaries and figures in `code/exploration/`;
-- statistical, modeling, or simulation analyses in `code/analysis/`;
-- shared setup checks, helper functions, or workflow runners in
-  `code/utilities/`.
+Based on your specific needs, you can change the folder names and structure. The main important aspects are that you come up with a consistent and logical structure, and that you document and explain your structure.
 
-If the project uses Python, Julia, shell scripts, or other tools, place those
-scripts in the relevant workflow-stage folder. Create language-specific folders
-only if the project becomes large enough that separate folders would make the
-code easier to maintain.
-
-Update `usage.md` whenever the run order changes. A new user should be
+Update `usage.md` regulary. A new user should be
 able to open `usage.md` and understand which scripts to run, what inputs they
 need, what outputs they create, and which products should be rendered afterward.
 
@@ -108,42 +78,16 @@ need, what outputs they create, and which products should be rendered afterward.
 Document the software and packages needed for the project in a human-facing file
 such as `readme.md`, `usage.md`, or a language-specific setup file.
 
-Use the simplest dependency approach that honestly supports the project. A
-manual package list is usually enough for this template, short projects,
-simple examples, and many work-related projects. If exact package versions matter
-for longer-term reproducibility, consider tools such as `renv` for R, virtual
-environments or Conda for Python, Julia project files, Poetry, or containers.
-Use those tools only when they solve a real project need, and do not commit local
-package libraries or virtual environments.
+Use the dependency managament approach that is best for your project. 
 
-Analysis scripts should fail clearly if required packages are missing. They
-should not silently install packages while running.
-
-For reports or manuscripts, consider adding a short software/session information
-section if readers or users need to know the computing environment. Base
-R's `sessionInfo()` is a lightweight option; `sessioninfo::session_info()` is an
-optional alternative if the project already uses that package.
 
 ## Check The Project Setup
 
-Before doing substantive work, run the setup check if it still applies to the
-project:
 
-```sh
-Rscript code/utilities/check-project-setup.r
-```
+If you have adapted the folder structure, input files, or required packages, update the setup check `check-project-setup.r` so it reflects the new project. (If you don't use `R` as part of this project, you might want to implement a similar script for your language of choice.) Then run the check to make sure the project is overall in good shape.
 
-If you have adapted the folder structure, input files, or required packages,
-update the setup check so it reflects the new project. The setup check should
-inspect the project and report problems; it should not change data or results.
 
-For the default example workflow, you can run all example steps with:
-
-```sh
-Rscript code/utilities/run-example-workflow.r
-```
-
-After running analysis code, render any products that depend on changed results.
+After running code, render any products that depend on changed results.
 For example:
 
 ```sh
@@ -154,19 +98,8 @@ quarto render products/presentation/presentation.qmd
 
 ## Review AI-Use Expectations
 
-If AI tools will be used, review `agents.md` and `ai/ai-use-policy.md` early in
-the project. Human users may also read `ai/ai-use-log.md` if they need to review
-past AI-assisted work.
+If AI tools will be used, review `agents.md` and contents in the `ai/` folder. The readme file in that folder provides further details.
 
-AI tools can help draft code, improve documentation, review for reproducibility
-issues, and troubleshoot errors. They should not be treated as final authority
-for scientific claims, statistical decisions, citations, data privacy, or
-interpretation.
-
-Do not paste sensitive, private, regulated, or identifiable data into external
-AI tools unless the project owner has explicitly approved that workflow. For
-meaningful AI-assisted project work, the AI tool should add a concise entry to
-`ai/ai-use-log.md` if that is appropriate for the project.
 
 ## Make An Initial Project-Specific Commit
 
