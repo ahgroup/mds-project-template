@@ -71,26 +71,20 @@ The analysis stage fits the example statistical models and saves model results.
   `results/tables/result-table-2.*`.
 
 The Quarto files in `code/processing/` and `code/exploration/` are alternative
-ways to run and document the same work. You do not need to run both an R script
-and its matching Quarto version unless you want to compare them.
+ways to run and document the same work. 
+
 
 ## Run The Example Workflow
 
 This template uses a documented, semi-automated workflow. That means the work is
 reproducible from code, but you can still run the code in understandable pieces.
 You should not manually edit raw Excel files, generated tables, or generated
-figures to make the results look right. Instead, update the code and rerun the
-affected step.
+figures. Instead, update the code and rerun the affected step.
 
-Before running the workflow, you can check whether the required files, folders,
-and R packages are available:
+Before running the workflow, you can run `code/utilities/check-project-setup.r` to check whether the required files, folders,
+and R packages are available.
 
-```sh
-Rscript code/utilities/check-project-setup.r
-```
-
-For the example project, the simplest path is to run the R scripts manually in
-this order:
+For the example project, the simplest path is to run the R scripts manually in this order:
 
 1. `code/processing/processing-code.r`
 2. `code/exploration/eda-code.r`
