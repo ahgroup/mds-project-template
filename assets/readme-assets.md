@@ -12,6 +12,10 @@ Examples include:
 - PDFs of references;
 - other supporting files that need to travel with the project.
 
+The file `schematic-example.png` is an example static schematic generated for
+this template. It is meant as a placeholder that users can replace with a
+project-specific schematic or conceptual figure.
+
 You can organize this folder further if needed. For example, this template has a
 `references/` folder for reference PDFs.
 

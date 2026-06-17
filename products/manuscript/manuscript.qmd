@@ -89,7 +89,7 @@ Store manually created figures in the `assets` folder and document their source.
 #| label: fig-schematic
 #| fig-cap: "Example manually created schematic figure. Replace this with a project-specific figure and caption."
 #| echo: FALSE
-knitr::include_graphics(here("assets","antigen-recognition.png"))
+knitr::include_graphics(here("assets", "schematic-example.png"))
 ```
 
 
