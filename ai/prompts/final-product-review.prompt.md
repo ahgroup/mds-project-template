@@ -6,9 +6,9 @@ poster, website, or other project product.
 ```text
 Please review this project product for clarity, reproducibility, and consistency
 with the project files. Use readme.md, usage.md, data/readme-data.md,
-results/readme-results.md, ai/review-checklist.md, and the product source file
-as context. You may also use ai/project-summary.yml as a concise AI-oriented
-summary, but treat the human-facing documentation as the source of truth.
+results/readme-results.md, and the product source file as context. You may also
+use ai/project-summary.yml as a concise AI-oriented summary, but treat the
+human-facing documentation as the source of truth.
 
 Focus on:
 

@@ -91,16 +91,16 @@ For example:
 
 ## AI-use logs
 
-This template includes `ai/ai-use-log.md`. The log is meant to be read by humans
-and updated by AI assistants or project maintainers when meaningful AI-assisted
-work occurs.
+This template includes `ai/ai-use-log.md`. The log is written by AI tools when
+meaningful AI-assisted work occurs. AI tools may also read it when past AI-use
+context is useful. Human users may read it as needed, but are not expected to
+write or edit it.
 
-Users usually do not need to manually edit the log unless the project owner asks
-them to. Instead, users should be ready to disclose and explain AI use in the
-required project format. In a project created from this template, the log should
-be updated when AI meaningfully helps with project-specific work. Routine maintenance of the template itself does not need
-extra logging beyond existing entries unless the project owner asks for more
-detail.
+Users should be ready to disclose and explain AI use in the required project
+format. In a project created from this template, the AI tool should update the
+log when it meaningfully helps with project-specific work. Routine maintenance
+of the template itself does not need extra logging beyond existing entries unless
+the project owner asks for more detail.
 
 ## Good and bad examples
 

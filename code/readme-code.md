@@ -56,5 +56,5 @@ useful, in comments in the scripts themselves.
 
 For AI-assisted work, keep scripts reviewable and make dependencies explicit.
 Avoid code that relies on objects already loaded in an interactive session. If
-AI tools helped write or modify meaningful code, add a short note to
-`../ai/ai-use-log.md`.
+AI tools helped write or modify meaningful code, the AI tool should add a short
+note to `../ai/ai-use-log.md` when the project owner wants that work logged.

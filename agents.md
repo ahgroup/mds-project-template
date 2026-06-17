@@ -6,8 +6,8 @@ support additional languages such as Python or Julia without major
 reorganization. It is intended for reproducible modeling and data science
 workflows.
 
-These instructions are for AI coding agents and human users who use AI
-tools in this repository.
+These instructions are for AI coding agents working in this repository and for
+human users who want to understand how AI tools should work here.
 
 ## Project Goals
 
@@ -34,8 +34,8 @@ tools in this repository.
   supplements, presentations, posters, and apps.
 - `results/`: code-generated outputs such as figures, tables, model objects, and
   intermediate analysis outputs.
-- `ai/`: AI workflow notes, prompt templates, AI-use logs, AI-use
-  policy, and review checklists.
+- `ai/`: AI workflow notes, prompt templates, an AI-use policy, an AI-use log,
+  and an AI-oriented project summary.
 
 ## Core Rules
 
@@ -140,29 +140,25 @@ AI-related files have different expected readers and writers:
 
 - `ai/prompts/`: reusable prompts, read/copied by humans and AI tools, and
   edited by humans or AI maintainers when workflows change.
-- `ai/project-summary.yml`: a concise AI-readable summary of information already
-  documented in human-facing files such as `readme.md`, `usage.md`, this file,
-  and folder-specific readmes. Humans usually do not need to edit it. AI
-  assistants may read or update it for efficiency, but it is not authoritative.
-  If it disagrees with the human-facing documentation, follow the human-facing
-  documentation and update the summary when maintaining the repo.
-- `ai/readme-ai.md`, `ai/ai-use-policy.md`, and
-  `ai/review-checklist.md`: guidance files that humans and AI should read; they
-  may be edited by humans or AI when project policy changes.
-- `ai/ai-use-log.md`: a human-readable transparency record. Humans usually read
-  it rather than editing it. In projects created from this template, AI
-  assistants or project maintainers may add concise text entries for meaningful
-  project-specific AI-assisted work.
+- `ai/project-summary.yml`: a concise summary file for AI tools to read and
+  write. Human users are not expected to read, write, or maintain it. It is not
+  authoritative; if it disagrees with human-facing documentation, follow the
+  human-facing documentation and update the summary when maintaining the repo.
+- `ai/readme-ai.md` and `ai/ai-use-policy.md`: human-facing AI guidance files
+  that may be edited when project policy changes.
+- `ai/ai-use-log.md`: a transparency record written by AI tools. AI tools may
+  also read it when they need past AI-use context. Human users may read it as
+  needed, but are not expected to write or edit it.
 - Local AI/tool state folders such as `.ai-local/`, `.ai-cache/`, `.codex/`, and
   local Claude settings are ignored and should not be committed. AI tools may
   read and write those files for their own operation; humans usually do not need
   to inspect them.
 
-When AI tools are used for meaningful project-specific work, record a short
-summary in `ai/ai-use-log.md` if the project owner wants the log maintained. Use
-short text sections rather than table rows. The log should capture what AI
-helped with, which files were changed or reviewed, and what human checks were
-performed. Routine template maintenance does not need extra logging beyond
+When AI tools are used for meaningful project-specific work, the AI tool should
+record a short summary in `ai/ai-use-log.md` if the project owner wants the log
+maintained. Use short text sections rather than table rows. The log should
+capture what AI helped with, which files were changed or reviewed, and what
+human checks were performed. Routine template maintenance does not need extra logging beyond
 existing entries unless the project owner asks for more detail. AI-use expectations are summarized in `ai/ai-use-policy.md` and apply uniformly
 to projects created from this template. Do not store full chat
 transcripts unless the project owner explicitly wants that and privacy has been

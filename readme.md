@@ -37,7 +37,7 @@ for more detail.
 
 - `ai/`: AI workflow notes, prompt templates for analysis planning, modeling
   review, code review, reproducibility audits, final product review, an AI-use
-  policy, and a short AI-use log. See `ai/readme-ai.md`.
+  policy, an AI-use log, and an AI-oriented project summary. See `ai/readme-ai.md`.
 - `assets/`: static non-code materials such as references, reference style files, PDFs,
   and manually created figures. See `assets/readme-assets.md`.
 - `code/`: code organized by workflow stage. See `code/readme-code.md`.
@@ -79,7 +79,7 @@ project with other users. While you could use this template without Git/GitHub t
 
 Before using this template and starting a project, you should familiarize yourself with Git/GitHub at least a little bit, e.g. by going through [this brief Git/GitHub introduction](https://andreashandel.github.io/mds-tools/courses/courses.html).
 
-An important feature of Git/GitHub is the tracking of changes (what Git does) and syncing those changes between local machines and a remote server (what GitHub provides). In Git/GitHub languge, you **commit** project updates, then **push/pull** between local computer(s) and the remote. Once anything has been committed (e.g., a file has been added) and pushed to GitHub, it can be difficult to fully remove from the history, especially if the repository has been shared.
+An important feature of Git/GitHub is the tracking of changes (what Git does) and syncing those changes between local machines and a remote server (what GitHub provides). In Git/GitHub language, you **commit** project updates, then **push/pull** between local computer(s) and the remote. Once anything has been committed (e.g., a file has been added) and pushed to GitHub, it can be difficult to fully remove from the history, especially if the repository has been shared.
 
 This might raise questions of confidentiality and the risk of accidentally publicly sharing information that should not be public. Because of this, for many projects, it is wise to start with a **private** GitHub repository. Later, after checking the data, outputs, license, authorship,
 and project goals, you can decide whether the repository should remain private or become public.
@@ -129,7 +129,7 @@ This is quick overview of the different levels:
   long-term, multi-user, multi-language, publication, or regulated workflows that
   need controlled reruns across machines. 
   
-Thhis repository template assumes you will start with a manual approach, and add any more advanced software management pieces yourself, based on needs.
+This repository template assumes you will start with a manual approach, and add any more advanced software management pieces yourself, based on needs.
 
 Code should load the needed packages and fail clearly when a package is missing. In general, there should not be any silent install of packages or other environment modification done by code.
 
@@ -169,16 +169,19 @@ When using AI tools:
 
 - Point the tool to `readme.md`, `usage.md`, `agents.md`,
   `code-guidelines.md`, `data/readme-data.md`, and relevant files in `ai/`.
-- AI tools may use `ai/project-summary.yml` as a concise orientation aid. It is
-  a secondary summary of information documented elsewhere, not the source of
-  truth.
+- AI tools may read and update `ai/project-summary.yml` as a concise orientation
+  aid. It is a convenience file for AI tools, not human-facing documentation and
+  not the source of truth.
 - Do not paste sensitive, private, regulated, or identifiable data into
   external AI tools unless the project owner has explicitly approved that
   workflow.
 - Ask for small, reviewable changes.
 - Rerun affected scripts or rerender affected products after meaningful changes.
 - Follow `ai/ai-use-policy.md` for AI-use expectations.
-- Add a short entry to `ai/ai-use-log.md` for meaningful project-specific AI-assisted work when the project owner wants the log maintained.
+- AI tools should write concise entries to `ai/ai-use-log.md` for meaningful
+  project-specific AI-assisted work when the project owner wants the log
+  maintained. Human users may read the log as needed, but are not expected to
+  write or edit it.
 
 
 ### AI-related files and expected readers/writers
@@ -187,17 +190,15 @@ Different files in `ai/` have different expected readers and writers:
 
 - `ai/prompts/`: prompt templates are mainly read and copied by humans or AI
   tools, and may be edited by humans or AI maintainers when the workflow changes.
-- `ai/project-summary.yml`: a concise AI-readable summary of information already
-  documented elsewhere. Humans usually do not need to edit it. AI assistants may
-  read or update it when maintaining the project, but if it disagrees with the
-  human-facing documentation, the human-facing documentation wins.
-- `ai/readme-ai.md`, `ai/ai-use-policy.md`, and
-  `ai/review-checklist.md`: these should be read by humans and AI tools. Humans
-  may edit them when project policy changes; AI may suggest or make updates
-  when asked.
-- `ai/ai-use-log.md`: this is mainly a human-readable transparency record.
-  Humans usually read it rather than editing it. AI assistants or project
-  maintainers may add concise entries when meaningful AI-assisted work occurs.
+- `ai/project-summary.yml`: a concise summary file for AI tools to read and
+  write. Human users are not expected to read, write, or maintain it. If it
+  disagrees with human-facing documentation, the human-facing documentation wins.
+- `ai/readme-ai.md` and `ai/ai-use-policy.md`: human-facing AI guidance files.
+  Human users may edit them when project policy changes; AI may suggest or make
+  updates when asked.
+- `ai/ai-use-log.md`: a transparency record written by AI tools. AI tools may
+  also read it when they need past AI-use context. Human users may read it as
+  needed, but are not expected to write or edit it.
 - Local AI/tool state folders such as `.ai-local/`, `.ai-cache/`, `.codex/`, and
   local Claude settings are not committed. AI tools may read and write those
   files for their own operation, and humans usually do not need to inspect them.

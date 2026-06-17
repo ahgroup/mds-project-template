@@ -5,8 +5,8 @@ Use this prompt before submitting, sharing, or accepting a project update.
 ```text
 Please audit this repository as a reproducible data-analysis project. Read
 readme.md, usage.md, agents.md, code-guidelines.md, data/readme-data.md,
-code/readme-code.md, results/readme-results.md, and ai/review-checklist.md. You
-may also read ai/project-summary.yml as a concise AI-oriented summary, but treat
+code/readme-code.md and results/readme-results.md. You may also read
+ai/project-summary.yml as a concise AI-oriented summary, but treat
 the human-facing documentation as the source of truth.
 
 Focus on whether the project can be regenerated from documented code rather than

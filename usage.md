@@ -129,13 +129,13 @@ manually:
   project-relative paths.
 - If code changed generated outputs, rerun the affected scripts manually.
 - If product text or results changed, rerender the affected product files.
-- If AI tools helped with meaningful work, follow the disclosure/logging
-  guidance in `ai/ai-use-policy.md` and `ai/ai-use-log.md`.
+- If AI tools helped with meaningful work, follow the disclosure guidance in
+  `ai/ai-use-policy.md`. The AI tool should update `ai/ai-use-log.md` when
+  logging is appropriate; human users may read that log as needed.
 - Check for unresolved template placeholders such as `NAME`, `LINK-GOES-HERE`,
   sample email addresses, and example author details. Replace them with
   project-specific information or document why they remain.
 
-The file `ai/review-checklist.md` provides a more detailed review checklist.
 
 ## Adding Another Language
 

@@ -1,16 +1,15 @@
 # Concise AI-readable project summary.
 #
-# This file is mainly for AI assistants. It should not contain unique project
-# information. It summarizes information that also appears in human-facing files
-# such as readme.md, usage.md, agents.md, and folder-specific readmes.
+# This file is for AI tools to read and write as a convenience summary. It is not
+# human-facing documentation, and human users are not expected to read, write, or
+# maintain it.
 #
-# Human users usually do not need to edit this file directly. If this summary
-# disagrees with the human-facing documentation, the human-facing documentation
-# is the source of truth.
+# It should not contain unique project information. It summarizes information
+# that also appears in human-facing files such as readme.md, usage.md, agents.md,
+# and folder-specific readmes.
 #
-# AI assistants may read this file for quick orientation and may update it when
-# maintaining the template, but they should not treat it as a required
-# configuration file for running the project.
+# If this summary disagrees with the human-facing documentation, the
+# human-facing documentation is the source of truth.
 
 project:
   title: "Example data analysis project"

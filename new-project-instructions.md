@@ -28,8 +28,8 @@ and the main project folders.
 ## Rename The Project Materials
 
 Update the project identity before doing much analysis work. At minimum, review
-`readme.md`, `data/readme-data.md`, `ai/project-summary.yml`,
-`ai/ai-use-log.md`, and the main files in `products/` for placeholder text such
+`readme.md`, `data/readme-data.md`, and the main files in `products/` for
+placeholder text such
 as `NAME`, example titles, example author details, sample dates, sample email
 addresses, and generic project descriptions.
 
@@ -148,8 +148,9 @@ quarto render products/presentation/presentation.qmd
 
 ## Review AI-Use Expectations
 
-If AI tools will be used, review `agents.md`, `ai/ai-use-policy.md`,
-`ai/ai-use-log.md`, and `ai/review-checklist.md` early in the project.
+If AI tools will be used, review `agents.md` and `ai/ai-use-policy.md` early in
+the project. Human users may also read `ai/ai-use-log.md` if they need to review
+past AI-assisted work.
 
 AI tools can help draft code, improve documentation, review for reproducibility
 issues, and troubleshoot errors. They should not be treated as final authority
@@ -158,8 +159,8 @@ interpretation.
 
 Do not paste sensitive, private, regulated, or identifiable data into external
 AI tools unless the project owner has explicitly approved that workflow. For
-meaningful AI-assisted project work, add a concise entry to `ai/ai-use-log.md`
-if that is appropriate for the project.
+meaningful AI-assisted project work, the AI tool should add a concise entry to
+`ai/ai-use-log.md` if that is appropriate for the project.
 
 ## Make An Initial Project-Specific Commit
 

@@ -45,14 +45,14 @@ journal, or institutional rules take priority when they are more specific.
 ## Logging AI Use
 
 The file `ai-use-log.md` is a transparency record for meaningful AI-assisted
-work. Humans should be able to read it to understand what AI helped with and
-what was checked.
+work. It is written by AI tools and may also be read by AI tools when past
+AI-use context is useful. Human users may read it as needed, but are not
+expected to write or edit it.
 
-Users usually do not need to edit the log manually unless the project owner asks
-them to. In a project created from the template, add entries when AI
-meaningfully helps with project-specific work. Routine maintenance of
-the template itself does not need extra logging beyond existing entries unless
-the project owner asks for more detail.
+In a project created from the template, the AI tool should add entries when it
+meaningfully helps with project-specific work. Routine maintenance of the
+template itself does not need extra logging beyond existing entries unless the
+project owner asks for more detail.
 
 A practical entry is written as a short text section rather than a table row and
 records:
@@ -72,19 +72,16 @@ Different files in this folder have different expected readers and writers:
 - `prompts/`: prompt templates are mainly read and copied by humans or AI tools.
   They may be edited by humans or AI maintainers when the project workflow
   changes.
-- `project-summary.yml`: a concise AI-readable summary of information already
-  documented elsewhere. Humans usually do not need to edit it directly. AI
-  assistants may read or update it for efficiency, but it is not authoritative.
-  If it disagrees with human-facing documentation, follow the human-facing
-  documentation.
-- `readme-ai.md`, `ai-use-policy.md`, and `review-checklist.md`: these
-  guidance files should be read by humans and AI tools. Humans may edit them
-  when project policy changes; AI may suggest or make updates when
-  asked.
-- `ai-use-log.md`: this is mainly a human-readable transparency record. Humans
-  usually read it rather than editing it. In projects created from the template,
-  AI assistants or project maintainers may add concise text entries when
-  meaningful project-specific AI-assisted work occurs.
+- `project-summary.yml`: a concise summary file for AI tools to read and write.
+  Human users are not expected to read, write, or maintain it. It is not
+  authoritative; if it disagrees with human-facing documentation, follow the
+  human-facing documentation.
+- `readme-ai.md` and `ai-use-policy.md`: human-facing AI guidance files. Human
+  users may edit them when project policy changes; AI may suggest or make updates
+  when asked.
+- `ai-use-log.md`: a transparency record written by AI tools. AI tools may also
+  read it when they need past AI-use context. Human users may read it as needed,
+  but are not expected to write or edit it.
 - Local AI/tool state folders such as `.ai-local/`, `.ai-cache/`, `.codex/`, and
   local Claude settings are not committed. AI tools may read and write those
   files for their own operation, and humans usually do not need to inspect them.
@@ -110,8 +107,8 @@ journal, or institutional requirements.
 
 1. Read `../readme.md`, `../usage.md`, `../agents.md`,
    `../code-guidelines.md`, and `../data/readme-data.md`.
-2. Optionally read `project-summary.yml` for a concise AI-oriented summary, but
-   treat it as secondary to the human-facing documentation.
+2. AI tools may read `project-summary.yml` for a concise orientation summary, but
+   should treat it as secondary to the human-facing documentation.
 3. Check data-use limits before exposing data to an AI tool.
 4. Ask for small, reviewable changes.
 5. Rerun affected scripts or rerender affected products.
@@ -119,5 +116,6 @@ journal, or institutional requirements.
 7. Check whether generated outputs should be committed, ignored as large files,
    or kept private because they contain sensitive information.
 8. Review the changes manually.
-9. Add a concise text entry to `ai-use-log.md` when meaningful AI-assisted
-   project-specific work occurred and the project owner wants it logged.
+9. When meaningful AI-assisted project-specific work occurred and the project
+   owner wants it logged, the AI tool should add a concise text entry to
+   `ai-use-log.md`.
