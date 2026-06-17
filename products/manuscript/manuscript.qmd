@@ -190,7 +190,7 @@ Note that this cited reference will show up at the end of the document, the refe
 
 The chunk below is optional. It records the R version, platform, and loaded
 package versions used when the manuscript was rendered. This is a lightweight
-way to help collaborators understand the computing environment without requiring
+way to help users understand the computing environment without requiring
 a full environment manager.
 
 ```{r}

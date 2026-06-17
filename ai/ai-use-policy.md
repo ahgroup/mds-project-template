@@ -1,14 +1,13 @@
-# AI policy for students
+# AI-use policy
 
-This file gives student-facing guidance for using AI tools with this project
-template. Course-specific instructions from the instructor, syllabus,
-assignment page, project owner, institution, funder, or journal always take
-priority when they are more specific.
+This file gives user-facing guidance for using AI tools with this project
+template. Project-specific instructions from the project owner, institution, funder,
+journal, or other governing body always take priority when they are more
+specific.
 
-The same basic expectations apply whether this template is used for a class
-project or a research project. Students are expected to learn immediately useful
-real-world workflows: use AI transparently, protect data, understand your own
-work, check outputs, and keep the project reproducible.
+The same basic expectations apply to projects created from this template. Users
+should use AI transparently, protect data, understand their own work, check
+outputs, and keep the project reproducible.
 
 ## Short version
 
@@ -18,7 +17,7 @@ project, checking your results, or making your own scientific and statistical
 decisions.
 
 If AI meaningfully helps with your project, disclose that use in the way the
-course or project owner requests.
+project owner requests.
 
 ## Acceptable AI use
 
@@ -69,7 +68,7 @@ then simplify or revise the code until you can explain it yourself.
 ## Data privacy and sensitive information
 
 Before using AI with data, read `data/readme-data.md` and any project-specific
-privacy or data-use instructions from the instructor or project owner.
+privacy or data-use instructions from the project owner.
 
 Do not paste private, identifiable, regulated, unpublished, restricted, or
 otherwise sensitive data into external AI tools unless the project owner has
@@ -80,7 +79,7 @@ summaries instead of sharing raw records.
 
 ## How to disclose AI use
 
-Follow the course or project instructions. If no more specific instructions are
+Follow the project instructions. If no more specific instructions are
 available, include a short disclosure in your project materials or final report.
 For example:
 
@@ -96,11 +95,10 @@ This template includes `ai/ai-use-log.md`. The log is meant to be read by humans
 and updated by AI assistants or project maintainers when meaningful AI-assisted
 work occurs.
 
-Students usually do not need to manually edit the log unless the instructor or
-project owner asks them to. Instead, students should be ready to disclose and
-explain AI use in the required course or project format. In a project created
-from this template, the log should be updated when AI meaningfully helps with
-project-specific work. Routine maintenance of the template itself does not need
+Users usually do not need to manually edit the log unless the project owner asks
+them to. Instead, users should be ready to disclose and explain AI use in the
+required project format. In a project created from this template, the log should
+be updated when AI meaningfully helps with project-specific work. Routine maintenance of the template itself does not need
 extra logging beyond existing entries unless the project owner asks for more
 detail.
 

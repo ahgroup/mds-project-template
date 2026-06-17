@@ -35,8 +35,8 @@ of content you would place in each folder. See the folder-specific readme files
 for more detail.
 
 - `ai/`: AI workflow notes, prompt templates for analysis planning, modeling
-  review, code review, reproducibility audits, final product review, a student
-  AI policy, and a short AI-use log. See `ai/readme-ai.md`.
+  review, code review, reproducibility audits, final product review, an AI-use
+  policy, and a short AI-use log. See `ai/readme-ai.md`.
 - `assets/`: static non-code materials such as references, reference style files, PDFs,
   and manually created figures. See `assets/readme-assets.md`.
 - `code/`: code organized by workflow stage. See `code/readme-code.md`.
@@ -50,13 +50,14 @@ Important project-level files:
 
 - `readme.md`: this project overview.
 - `.here`: project-root marker used by the R `here` package so scripts and
-  Quarto files can find project-relative paths even outside a Git checkout. Can be kept even if R or the `here` package are not used.
+  Quarto files can find project-relative paths even outside a Git checkout. It can
+  be kept even if R or the `here` package are not used.
 - `new-project-instructions.md`: instructions for creating a new project from this template.
 - `usage.md`: instructions for running and reproducing the project.
-- `code-guidelines.md`: coding guidelines for scientific/research projects,
+- `code-guidelines.md`: coding guidelines for scientific and reproducible projects,
   including documentation, failure behavior, simplicity, packages, and
   AI-assisted coding expectations.
-- `agents.md`: extra instructions for AI coding assistants and collaborators
+- `agents.md`: extra instructions for AI coding assistants and users
   using AI tools.
 - `license.md`: the license for this template.
 
@@ -74,12 +75,12 @@ Readme files are named by folder context, such as `readme-code.md` or `readme-da
 ## GitHub, Sharing, And Sensitive Data
 
 Git and GitHub are useful for tracking changes, backing up work, and sharing a
-project with collaborators. In Git/GitHub language, to **commit** a file means to
+project with other users. In Git/GitHub language, to **commit** a file means to
 add a recorded version of that file to the project history. Once a file is
 committed and pushed to GitHub, it can be difficult to fully remove from the
 history, especially if the repository has been shared.
 
-For many class and research projects, it is wise to start with a **private**
+For many projects, it is wise to start with a **private**
 GitHub repository. Later, after checking the data, outputs, license, authorship,
 and project goals, the project team can decide whether the repository should
 remain private or become public.
@@ -131,7 +132,7 @@ Use documented ignored locations such as `data/private-data/`,
 committed. Commit a readme or placeholder explaining what belongs there, how the
 file is generated or obtained, and who is allowed to access it.
 
-Each project can refine this policy. For example, a public teaching project may
+Each project can refine this policy. For example, a public example project may
 commit nearly all outputs, while a restricted health-data project may commit
 only code, documentation, and carefully reviewed aggregate results.
 
@@ -163,11 +164,12 @@ Code should load the needed packages and fail clearly when a package is missing.
 As a lightweight reproducibility aid, final products may include optional
 software/session information, such as `sessionInfo()` or
 `sessioninfo::session_info()`, when that information would help readers or
-collaborators understand the computing environment.
+users understand the computing environment.
 
 ## Code Guidelines
 
-Code in this template should be written for scientific and research workflows.
+Code in this template should be written for scientific and reproducible
+workflows.
 That means it should be transparent, reproducible, simple, heavily documented,
 and strict about unexpected inputs or missing requirements. See
 `code-guidelines.md` for the full coding guidelines that apply to both humans
@@ -204,13 +206,13 @@ When using AI tools:
   workflow.
 - Ask for small, reviewable changes.
 - Rerun affected scripts or rerender affected products after meaningful changes.
-- Follow `ai/ai-policy-for-students.md` for student-facing AI-use expectations.
+- Follow `ai/ai-use-policy.md` for AI-use expectations.
 - Add a short entry to `ai/ai-use-log.md` for meaningful project-specific AI-assisted work when the project owner wants the log maintained.
 
 
 ### AI-related files and expected readers/writers
 
-Different files in `ai/` have different audiences:
+Different files in `ai/` have different expected readers and writers:
 
 - `ai/prompts/`: prompt templates are mainly read and copied by humans or AI
   tools, and may be edited by humans or AI maintainers when the workflow changes.
@@ -218,10 +220,10 @@ Different files in `ai/` have different audiences:
   documented elsewhere. Humans usually do not need to edit it. AI assistants may
   read or update it when maintaining the project, but if it disagrees with the
   human-facing documentation, the human-facing documentation wins.
-- `ai/readme-ai.md`, `ai/ai-policy-for-students.md`, and
+- `ai/readme-ai.md`, `ai/ai-use-policy.md`, and
   `ai/review-checklist.md`: these should be read by humans and AI tools. Humans
-  may edit them when project or course policy changes; AI may suggest or make
-  updates when asked.
+  may edit them when project policy changes; AI may suggest or make updates
+  when asked.
 - `ai/ai-use-log.md`: this is mainly a human-readable transparency record.
   Humans usually read it rather than editing it. AI assistants or project
   maintainers may add concise entries when meaningful AI-assisted work occurs.
@@ -245,6 +247,6 @@ This template is licensed under the MIT License. See `license.md` for the full
 license text.
 
 The MIT License permits reuse, modification, distribution, and commercial use.
-That means students and collaborators may use this template as a starting point
-for class, research, work-related, or commercial projects, as long as the license
+That means users may use this template as a starting point for a wide range of
+projects, including work-related or commercial projects, as long as the license
 notice is included where required.

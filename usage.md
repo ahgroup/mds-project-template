@@ -123,15 +123,14 @@ manually:
 - Confirm that package and software requirements are documented in `readme.md`
   or another human-facing documentation file.
 - For reports or manuscripts, decide whether to keep, remove, or adapt optional
-  software/session information such as `sessionInfo()` based on the project and
-  audience.
+  software/session information such as `sessionInfo()` based on the project needs.
 - Confirm that code follows `code-guidelines.md`, especially documentation,
   hard-failure behavior, simplicity, mature dependency choices, and
   project-relative paths.
 - If code changed generated outputs, rerun the affected scripts manually.
 - If product text or results changed, rerender the affected product files.
 - If AI tools helped with meaningful work, follow the disclosure/logging
-  guidance in `ai/ai-policy-for-students.md` and `ai/ai-use-log.md`.
+  guidance in `ai/ai-use-policy.md` and `ai/ai-use-log.md`.
 - Check for unresolved template placeholders such as `NAME`, `LINK-GOES-HERE`,
   sample email addresses, and example author details. Replace them with
   project-specific information or document why they remain.

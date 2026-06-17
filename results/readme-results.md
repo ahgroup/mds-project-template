@@ -6,7 +6,7 @@ objects, and other analysis results.
 Files in this folder should be reproducible from code. If code changes, rerun
 the affected scripts and make sure the outputs here match the current code.
 
-Generated outputs are generally committed to Git so collaborators, students, and
+Generated outputs are generally committed to Git so users and
 reviewers can see the expected results and render products without rebuilding
 everything first. To commit a file means to add it to the recorded project
 history. Before committing generated outputs, check whether they are appropriate
@@ -20,7 +20,7 @@ to include in that history. There are two main exceptions:
   unless the project owner has explicitly approved that workflow.
 
 For sensitive or large outputs, commit a readme or placeholder that explains
-what the file is, how it is generated, and how authorized collaborators can get
+what the file is, how it is generated, and how authorized users can get
 or recreate it.
 
 Generated results can still be sensitive. Treat outputs derived from private,

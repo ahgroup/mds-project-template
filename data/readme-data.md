@@ -75,7 +75,7 @@ documented otherwise.
 
 For sensitive or large local-only files, use ignored folders such as
 `data/private-data/` or `data/large-files/`. Add enough documentation so
-collaborators know how to obtain the data, but do not commit files that should
+users know how to obtain the data, but do not commit files that should
 remain private or are too large for GitHub. To commit a file means to add it to
 the recorded Git history; once committed and pushed, sensitive data can be hard
 to fully remove from shared copies of the repository.

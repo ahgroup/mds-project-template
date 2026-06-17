@@ -2,7 +2,7 @@
 
 The folders inside this folder contain final or near-final project products.
 
-For a classical academic project, this often includes a manuscript. You may also
+For an academic project, this often includes a manuscript. You may also
 make presentations, posters, reports, websites, apps, or other deliverables.
 
 The example folders are:

@@ -35,13 +35,12 @@ Those need human review.
 - Prefer asking AI about code structure, synthetic examples, or summarized
   outputs rather than raw records.
 
-## Student AI Policy
+## AI-Use Policy
 
-The file `ai-policy-for-students.md` gives student-facing guidance on acceptable
-AI use, required human understanding, data privacy, and disclosure. The same
-basic expectations apply to class projects and research projects so students
-practice real-world workflows. Course, instructor, project-owner, journal,
-funder, or institutional rules take priority when they are more specific.
+The file `ai-use-policy.md` gives user-facing guidance on acceptable AI use,
+required human understanding, data privacy, and disclosure. The same basic
+expectations apply to projects created from this template. Project owner, funder,
+journal, or institutional rules take priority when they are more specific.
 
 ## Logging AI Use
 
@@ -49,9 +48,9 @@ The file `ai-use-log.md` is a transparency record for meaningful AI-assisted
 work. Humans should be able to read it to understand what AI helped with and
 what was checked.
 
-Students usually do not need to edit the log manually unless the instructor or
-project owner asks them to. In a project created from the template, add entries
-when AI meaningfully helps with project-specific work. Routine maintenance of
+Users usually do not need to edit the log manually unless the project owner asks
+them to. In a project created from the template, add entries when AI
+meaningfully helps with project-specific work. Routine maintenance of
 the template itself does not need extra logging beyond existing entries unless
 the project owner asks for more detail.
 
@@ -78,9 +77,9 @@ Different files in this folder have different expected readers and writers:
   assistants may read or update it for efficiency, but it is not authoritative.
   If it disagrees with human-facing documentation, follow the human-facing
   documentation.
-- `readme-ai.md`, `ai-policy-for-students.md`, and `review-checklist.md`: these
+- `readme-ai.md`, `ai-use-policy.md`, and `review-checklist.md`: these
   guidance files should be read by humans and AI tools. Humans may edit them
-  when course or project policy changes; AI may suggest or make updates when
+  when project policy changes; AI may suggest or make updates when
   asked.
 - `ai-use-log.md`: this is mainly a human-readable transparency record. Humans
   usually read it rather than editing it. In projects created from the template,
@@ -104,7 +103,7 @@ The `prompts/` folder contains reusable prompts for common project tasks:
 - `final-product-review.prompt.md`: review reports, manuscripts,
   presentations, posters, websites, or other products.
 
-Adapt the prompts to the specific project and any course, collaborator, funder,
+Adapt the prompts to the specific project and any project owner, funder,
 journal, or institutional requirements.
 
 ## Suggested Workflow

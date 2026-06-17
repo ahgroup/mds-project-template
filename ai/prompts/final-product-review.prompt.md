@@ -21,7 +21,7 @@ Focus on:
 - whether interpretations are appropriately cautious and match the analysis;
 - whether limitations, missing data, and uncertainty are discussed;
 - whether citations are present where needed and should be verified by a human;
-- whether AI use should be disclosed according to ai/ai-policy-for-students.md
+- whether AI use should be disclosed according to ai/ai-use-policy.md
   or project-specific rules;
 - whether unresolved template placeholders remain.
 

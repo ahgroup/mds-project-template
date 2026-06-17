@@ -1,18 +1,18 @@
 # Code Guidelines For Scientific Projects
 
-This repository is designed for scientific, research, and teaching projects. The
+This repository is designed for scientific and reproducible projects. The
 code should therefore be optimized for transparency, reproducibility, and human
 review rather than for cleverness or production-software architecture.
 
 These guidelines apply to code written by humans and to code drafted or edited
 by AI tools. They are defaults, not rigid laws. If a project needs to depart
-from them, document the reason so future collaborators understand the decision.
+from them, document the reason so future users understand the decision.
 
 ## Overall Principles
 
 Code in this project should be:
 
-- **understandable** to students, collaborators, and future researchers;
+- **understandable** to current and future users;
 - **reproducible** from documented inputs to documented outputs;
 - **transparent** about assumptions and analysis decisions;
 - **simple** enough that the main workflow can be reviewed without reconstructing
@@ -21,7 +21,7 @@ Code in this project should be:
   signs that something may be wrong.
 
 Scientific code is often read long after it was written. Write code for the next
-person who needs to understand, rerun, modify, or review the analysis.
+user who needs to understand, rerun, modify, or review the analysis.
 
 ## Documentation And Comments
 
@@ -130,7 +130,7 @@ Prefer a flat, understandable structure:
 - avoid hidden side effects;
 - avoid clever metaprogramming unless it solves a real and documented problem.
 
-A future collaborator should be able to open a main script and understand the
+A future user should be able to open a main script and understand the
 workflow without first reconstructing a complicated map of dependencies across
 many files.
 
@@ -189,7 +189,7 @@ Pipes are encouraged when they make the workflow easier to read. Avoid pipelines
 so long or complex that intermediate objects would be clearer.
 
 Avoid mixing base R and tidyverse styles unnecessarily. Use the style that makes
-the script most understandable for the intended audience.
+the script most understandable for the intended users.
 
 ## Reproducibility Expectations
 

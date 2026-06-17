@@ -5,7 +5,7 @@
 The template is in a good working state for continued review. Major AI-friendly
 reorganization has been implemented: naming is lower-case and hyphenated,
 Quarto YAML is standardized, the example workflow has setup/runner utilities,
-student AI guidance and reusable prompts are present, generated-output policy is
+AI-use guidance and reusable prompts are present, generated-output policy is
 documented, GitHub/private-repository cautions are included, the readme explains
 how `.gitignore` prevents files from being committed, Positron is listed as the
 first-choice editor/IDE, AI file roles are explained, scientific coding
@@ -16,10 +16,10 @@ documented as secondary to the human-facing documentation rather than as a
 human-facing source of truth. The template now also includes
 `new-project-instructions.md` with prose instructions for starting a new project
 from the template. AI-use logging guidance now uses short text sections instead
-of tables and applies the same basic expectations to class and research project
-use. The template now has an MIT license in `license.md`, with `readme.md`
-documenting that the template may be reused for class, research, work-related,
-and commercial projects under the license terms. Dependency-management guidance
+of tables and applies the same basic expectations to projects created from the
+template. The template now has an MIT license in `license.md`, with `readme.md`
+documenting that the template may be reused for a wide range of projects under
+the license terms. Dependency-management guidance
 now uses lightweight levels, and report/manuscript products include optional
 software/session reporting.
 
@@ -73,7 +73,7 @@ The project now follows lower-case, hyphen-separated names more consistently.
 
 - The main human-facing overview is `readme.md`.
 - The top-level run instructions are in `usage.md`.
-- AI/collaborator instructions are in `agents.md`.
+- AI/user instructions are in `agents.md`.
 - Product source files now use names such as `manuscript.qmd` and
   `supplementary-material.qmd`.
 - Example data and output files now use names such as `example-data.xlsx`,
@@ -90,15 +90,14 @@ The AI-facing guidance has been updated for the current template.
   expectations, placeholder checks, and review expectations for AI tools.
 - `agents.md` tells AI tools to propose a Git commit and push when a coherent
   set of changes is complete and sharing the work would be useful.
-- `ai/ai-policy-for-students.md` gives student-facing guidance on acceptable AI
-  use, privacy, required understanding, and disclosure, using the same basic
-  expectations for class projects and research projects.
+- `ai/ai-use-policy.md` gives user-facing guidance on acceptable AI
+  use, privacy, required understanding, and disclosure.
 - `ai/ai-use-log.md` now explains how humans should read the log and how to add
   concise text-section entries when meaningful project-specific AI-assisted work
   occurs.
 - `ai/review-checklist.md` includes a template-placeholder checklist.
 - `code-guidelines.md` documents coding expectations for humans and AI tools in
-  scientific/research projects, including comments, hard failures, simplicity,
+  scientific and reproducible projects, including comments, hard failures, simplicity,
   dependency choices, R/tidyverse style, and reproducibility expectations.
 
 ### Generated Output Policy And Ignore Rules
@@ -165,8 +164,7 @@ a new project from the template and adapting it safely.
 AI-use logging expectations have been clarified for projects created from this
 template.
 
-- The same basic expectations apply to class projects and research projects so
-  students practice real-world reproducible workflows.
+- The same basic expectations apply to projects created from this template.
 - `ai/ai-use-log.md` uses short text sections rather than a table.
 - The log emphasizes meaningful project-specific AI assistance, human review,
   checks run, files changed or reviewed, and remaining review needs.

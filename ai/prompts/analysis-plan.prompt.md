@@ -11,7 +11,7 @@ Use the repository structure, usage.md, code/readme-code.md, and
 data/readme-data.md as context. The plan should
 include:
 
-- research question or assignment goal;
+- research question or project goal;
 - data sources and data limitations;
 - required cleaning and processing steps;
 - exploratory analyses;

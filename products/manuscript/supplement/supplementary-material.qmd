@@ -23,7 +23,7 @@ This shows some materials that could go into a supplementary file. Often you wan
 
 For illustrative purposes, this uses PDF as output format. For this to work, you need a (La)TeX system installed. It's easy. Just follow [these steps](https://quarto.org/docs/output-formats/pdf-basics.html).
 
-Of course you would choose the format based on needs.
+Choose the format based on project needs.
 
 I'm also using a different style for the references here, by specifying a different `.csl` style file. Usually one would have the formatting of the references the same in those two documents, but I want to illustrate how easy it is to switch reference formatting styles, you just need to get the right CSL file and specify it in the YAML header. We could also have a separate reference BibTeX (`.bib`) file, but here we are using the same.
 

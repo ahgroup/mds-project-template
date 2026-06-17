@@ -7,7 +7,7 @@ Please review this repository as a reproducible data-analysis project. The
 default example uses R and Quarto, but the project may add other languages.
 Read readme.md, usage.md, agents.md, code-guidelines.md, data/readme-data.md,
 code/readme-code.md, and relevant files in ai/ such as ai/readme-ai.md and
-ai/ai-policy-for-students.md. You may also read ai/project-summary.yml as a
+ai/ai-use-policy.md. You may also read ai/project-summary.yml as a
 concise AI-oriented summary, but treat the human-facing documentation as the
 source of truth.
 

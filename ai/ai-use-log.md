@@ -4,8 +4,8 @@ This file records meaningful AI-assisted work on the project. It is meant to be
 read by humans who want to understand how AI contributed and what was checked.
 It is a transparency record, not proof that the work is correct.
 
-Use the same logging expectations for class projects and research projects.
-Students are expected to learn immediately useful real-world workflows, so the
+Use the same logging expectations for projects.
+Users are expected to learn immediately useful real-world workflows, so the
 basic standard is the same: meaningful AI help should be disclosed clearly,
 reviewed by a human, and connected to reproducibility checks.
 

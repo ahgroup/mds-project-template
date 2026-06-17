@@ -19,7 +19,7 @@ Use this checklist before accepting AI-assisted changes.
       folder.
 - [ ] Generated outputs can be recreated from code.
 - [ ] Generated outputs that are reasonably small and non-sensitive are committed
-      when useful for review, teaching, or rendering products.
+      when useful for review or rendering products.
 - [ ] Large or sensitive/restricted outputs are kept in documented ignored
       locations rather than committed.
 - [ ] Affected scripts listed in `usage.md` were rerun after code changes that
@@ -33,7 +33,7 @@ Use this checklist before accepting AI-assisted changes.
 
 ## Template Placeholder Checklist
 
-- [ ] Replace or explain project-owner placeholders such as `NAME`.
+- [ ] Replace or explain project owner placeholders such as `NAME`.
 - [ ] Replace or explain link placeholders such as `LINK-GOES-HERE`.
 - [ ] Replace example author names, affiliations, ORCIDs, and email addresses in
       product templates.
@@ -42,7 +42,7 @@ Use this checklist before accepting AI-assisted changes.
 
 ## Scientific and Statistical Review
 
-- [ ] The analysis matches the research question or assignment prompt.
+- [ ] The analysis matches the research question or project goal.
 - [ ] Cleaning decisions are justified and documented.
 - [ ] Model choices are justified and not treated as automatically correct
       because AI suggested them.

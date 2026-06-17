@@ -15,7 +15,7 @@
 project:
   title: "Example data analysis project"
   short_name: "example-project"
-  project_type: "teaching-template" # teaching-template, class-project, research-project
+  project_type: "project-template" # project-template or project
   status: "template"
   license: "MIT"
   primary_outputs:
@@ -76,9 +76,9 @@ ai_assistance:
   log_file: "ai/ai-use-log.md"
   log_format: "short text sections, not a table"
   logging_scope: "meaningful project-specific AI assistance; routine template maintenance does not need extra logging unless requested"
-  class_and_research_expectations: "same basic AI-use expectations"
+  uniform_user_expectations: "same basic AI-use expectations for all users"
   guidance_file: "agents.md"
-  student_policy_file: "ai/ai-policy-for-students.md"
+  user_policy_file: "ai/ai-use-policy.md"
   prompt_files:
     - "ai/prompts/start-project.prompt.md"
     - "ai/prompts/analysis-plan.prompt.md"
@@ -95,5 +95,5 @@ optional_tools:
   python_virtualenv_or_conda: "recommended for Python-heavy projects, optional"
   poetry: "optional for Python package-style projects"
   julia_project: "recommended for Julia-heavy projects, optional"
-  containers: "recommended for complex multi-language research projects, optional"
+  containers: "recommended for complex multi-language projects, optional"
   github_actions: "recommended for advanced users, not enabled by default"

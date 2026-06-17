@@ -3,10 +3,10 @@
 This repository is a template for reproducible data analysis projects. The
 default example uses R, Quarto, Git, and GitHub, but the structure is meant to
 support additional languages such as Python or Julia without major
-reorganization. It is used for research group projects and for teaching
-modeling/data science workflows.
+reorganization. It is intended for reproducible modeling and data science
+workflows.
 
-These instructions are for AI coding agents and human collaborators who use AI
+These instructions are for AI coding agents and human users who use AI
 tools in this repository.
 
 ## Project Goals
@@ -15,7 +15,7 @@ tools in this repository.
 - Keep raw data unchanged.
 - Keep generated outputs traceable to code.
 - Keep AI assistance transparent, reviewed, and privacy-aware.
-- Keep the template approachable for students and collaborators who are new to
+- Keep the template approachable for users who are new to
   Git/GitHub.
 
 ## Repository Structure
@@ -23,8 +23,8 @@ tools in this repository.
 - `readme.md`: human-facing project overview and getting-started notes.
 - `usage.md`: human-facing instructions for manually running the example
   workflow, rendering products, and reviewing reproducibility.
-- `code-guidelines.md`: human- and AI-facing coding guidelines for scientific
-  and research projects.
+- `code-guidelines.md`: human- and AI-facing coding guidelines for reproducible
+  scientific code.
 - `assets/`: static non-code project materials, including references, CSL files,
   manually created schematics, PDFs, and other supporting files.
 - `code/`: all analysis code. The example project is split into workflow-stage
@@ -34,7 +34,7 @@ tools in this repository.
   supplements, presentations, posters, and apps.
 - `results/`: code-generated outputs such as figures, tables, model objects, and
   intermediate analysis outputs.
-- `ai/`: AI workflow notes, prompt templates, AI-use logs, student AI-use
+- `ai/`: AI workflow notes, prompt templates, AI-use logs, AI-use
   policy, and review checklists.
 
 ## Core Rules
@@ -79,14 +79,14 @@ tools in this repository.
 ## Generated Output Policy
 
 Generated outputs are generally committed when they are reasonably small and do
-not contain sensitive information. This helps students and collaborators see
+not contain sensitive information. This helps users see
 expected results, render products, and compare their regenerated outputs.
 
 Do not commit generated outputs when they are too large for ordinary Git/GitHub
 use or when they contain sensitive, private, regulated, identifiable,
 license-protected, or otherwise restricted information. Put large outputs in
 `results/large-files/` or another documented ignored location. For sensitive
-outputs, commit documentation that explains how authorized collaborators can
+outputs, commit documentation that explains how authorized users can
 regenerate or obtain them without exposing the restricted content.
 
 ## Reproducibility Workflow
@@ -119,8 +119,8 @@ dependency approach lightweight and beginner-friendly.
 Use the lowest dependency-management level that honestly supports the project:
 
 - Manual package lists plus `code/utilities/check-project-setup.r` are the
-  default for this template, class projects, simple examples, and many
-  work-related projects.
+  default for this template and are suitable for many small or straightforward
+  projects.
 - Lockfiles or environment managers such as `renv`, Conda, Python virtual
   environments, Poetry, or Julia project files are optional when exact versions
   matter for longer-term reproducibility.
@@ -146,9 +146,9 @@ AI-related files have different expected readers and writers:
   assistants may read or update it for efficiency, but it is not authoritative.
   If it disagrees with the human-facing documentation, follow the human-facing
   documentation and update the summary when maintaining the repo.
-- `ai/readme-ai.md`, `ai/ai-policy-for-students.md`, and
+- `ai/readme-ai.md`, `ai/ai-use-policy.md`, and
   `ai/review-checklist.md`: guidance files that humans and AI should read; they
-  may be edited by humans or AI when project/course policy changes.
+  may be edited by humans or AI when project policy changes.
 - `ai/ai-use-log.md`: a human-readable transparency record. Humans usually read
   it rather than editing it. In projects created from this template, AI
   assistants or project maintainers may add concise text entries for meaningful
@@ -163,15 +163,14 @@ summary in `ai/ai-use-log.md` if the project owner wants the log maintained. Use
 short text sections rather than table rows. The log should capture what AI
 helped with, which files were changed or reviewed, and what human checks were
 performed. Routine template maintenance does not need extra logging beyond
-existing entries unless the project owner asks for more detail. Student-facing
-AI-use expectations are summarized in `ai/ai-policy-for-students.md`; they use
-the same basic standard for class and research projects. Do not store full chat
+existing entries unless the project owner asks for more detail. AI-use expectations are summarized in `ai/ai-use-policy.md` and apply uniformly
+to projects created from this template. Do not store full chat
 transcripts unless the project owner explicitly wants that and privacy has been
 checked.
 
 ## Review Expectations
 
-Before handing work back to a human collaborator:
+Before handing work back to a human user:
 
 - Follow `usage.md` to rerun affected scripts when code or generated outputs
   changed. Use `Rscript code/utilities/check-project-setup.r` when checking
@@ -191,7 +190,7 @@ Before handing work back to a human collaborator:
 
 When a coherent set of changes is complete, the AI assistant should propose a
 Git commit and push to the user if that would help preserve the work or share it
-with collaborators. This is especially appropriate after reproducibility
+with other users. This is especially appropriate after reproducibility
 updates, documentation changes, analysis-code changes, regenerated outputs, or
 reviewed fixes.
 

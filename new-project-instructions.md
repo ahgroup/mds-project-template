@@ -1,8 +1,8 @@
 # Starting A New Project From This Template
 
 This document gives practical instructions for starting a new project from this
-template. It is written for students, research group members, and collaborators
-who want to turn the template into a real class or research project.
+template. It is written for users who want to turn the template into a real
+project.
 
 The goal is not to complete every possible setup task immediately. The goal is
 to make a clear, safe, reproducible starting point before doing substantive
@@ -14,7 +14,7 @@ Start by creating a new GitHub repository from this template rather than copying
 files by hand. GitHub's template-repository workflow preserves the folder
 structure while giving the new project its own Git history.
 
-For many class and research projects, the safest default is to make the new
+For many projects, the safest default is to make the new
 repository private at first. A private repository can be made public later after
 the project team has checked the data, outputs, license, authorship, and sharing
 goals. Do not treat a private GitHub repository as approved storage for
@@ -63,10 +63,10 @@ unchanged and write code that creates processed data in `data/processed-data/`.
 
 ## Review The Generated-Output Plan
 
-Decide which generated outputs should be committed. For many teaching examples
+Decide which generated outputs should be committed. For many example projects
 and public projects, it is useful to commit small, non-sensitive outputs such as
 processed example data, figures, tables, rendered HTML reports, and slides.
-These files help collaborators see what the workflow should produce.
+These files help users see what the workflow should produce.
 
 Large outputs, local-only outputs, and outputs derived from sensitive or
 restricted data should not be committed by default. Put them in documented
@@ -93,7 +93,7 @@ scripts in the relevant workflow-stage folder. Create language-specific folders
 only if the project becomes large enough that separate folders would make the
 code easier to maintain.
 
-Update `usage.md` whenever the run order changes. A new collaborator should be
+Update `usage.md` whenever the run order changes. A new user should be
 able to open `usage.md` and understand which scripts to run, what inputs they
 need, what outputs they create, and which products should be rendered afterward.
 
@@ -103,7 +103,7 @@ Document the software and packages needed for the project in a human-facing file
 such as `readme.md`, `usage.md`, or a language-specific setup file.
 
 Use the simplest dependency approach that honestly supports the project. A
-manual package list is usually enough for this template, short class projects,
+manual package list is usually enough for this template, short projects,
 simple examples, and many work-related projects. If exact package versions matter
 for longer-term reproducibility, consider tools such as `renv` for R, virtual
 environments or Conda for Python, Julia project files, Poetry, or containers.
@@ -114,7 +114,7 @@ Analysis scripts should fail clearly if required packages are missing. They
 should not silently install packages while running.
 
 For reports or manuscripts, consider adding a short software/session information
-section if readers or collaborators need to know the computing environment. Base
+section if readers or users need to know the computing environment. Base
 R's `sessionInfo()` is a lightweight option; `sessioninfo::session_info()` is an
 optional alternative if the project already uses that package.
 
@@ -148,7 +148,7 @@ quarto render products/presentation/presentation.qmd
 
 ## Review AI-Use Expectations
 
-If AI tools will be used, review `agents.md`, `ai/ai-policy-for-students.md`,
+If AI tools will be used, review `agents.md`, `ai/ai-use-policy.md`,
 `ai/ai-use-log.md`, and `ai/review-checklist.md` early in the project.
 
 AI tools can help draft code, improve documentation, review for reproducibility
@@ -159,7 +159,7 @@ interpretation.
 Do not paste sensitive, private, regulated, or identifiable data into external
 AI tools unless the project owner has explicitly approved that workflow. For
 meaningful AI-assisted project work, add a concise entry to `ai/ai-use-log.md`
-if that is appropriate for the project or course.
+if that is appropriate for the project.
 
 ## Make An Initial Project-Specific Commit
 

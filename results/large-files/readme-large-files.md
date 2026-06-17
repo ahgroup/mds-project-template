@@ -13,7 +13,7 @@ This folder is ignored by Git. The folder itself and this readme are kept in the
 repository, but other files placed here are not committed.
 
 If files in this folder are needed to reproduce the project, document where they
-are stored and how approved collaborators can obtain them.
+are stored and how approved users can obtain them.
 
 - Link to large result files: LINK-GOES-HERE
 - Instructions for obtaining large result files: email, shared drive, or other
