@@ -202,13 +202,8 @@ Before proposing a commit and push:
 - Confirm that raw data, private data, credentials, and local-only files were
   not added.
 - Suggest a concise commit message.
+- Commit messages should start with "AI: " to make it clear that this commit was AI generated.
 
 Do not commit or push automatically unless the user explicitly asks for it or
 approves the proposal. If the user approves, commit only the intended changes
 and push to the appropriate GitHub remote/branch.
-
-## Optional Future Enhancements
-
-GitHub Actions, pre-commit hooks, and stricter dependency locking can improve
-research reproducibility. They are intentionally not enabled by default in this
-template so that it remains approachable for Git/GitHub novices.
