@@ -100,6 +100,15 @@ The `prompts/` folder contains reusable prompts for common project tasks:
 - `final-product-review.prompt.md`: review reports, manuscripts,
   presentations, posters, websites, or other products.
 
+These files are prompt templates, not scripts. They are not discovered or run
+automatically by default. Human users can copy the prompt text into an AI tool
+and adapt it to the project. If the AI tool has access to the repository files,
+the user can instead ask the tool to read and apply a specific prompt file, for
+example: "Read `ai/prompts/reproducibility-audit.prompt.md` and use it to audit
+this project." AI tools may also read these prompt files when orienting
+themselves to the project, but users should not assume that prompts are found or
+used unless they point the tool to the relevant file.
+
 Adapt the prompts to the specific project and any project owner, funder,
 journal, or institutional requirements.
 
