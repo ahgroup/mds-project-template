@@ -184,21 +184,24 @@ Before handing work back to a human user:
 
 ## Git Commit and Push Suggestions
 
-When a coherent set of changes is complete, the AI assistant should perform a
-Git commit and push to the user if that would help preserve the work or share it
-with other users. This is especially appropriate after reproducibility
-updates, documentation changes, analysis-code changes, regenerated outputs, or
-reviewed fixes.
+When a coherent set of changes is complete, the AI assistant should commit the
+intended changes automatically. This helps preserve useful checkpoints without
+requiring the user to ask after every small but meaningful update. Automatic
+commits are especially appropriate after reproducibility updates, documentation
+changes, analysis-code changes, regenerated outputs, or reviewed fixes.
 
-Before proposing a commit and push:
+Before committing:
 
-- Check `git status` and summarize the changed files.
+- Check `git status` and make sure only intended files are included.
 - Confirm that checks were run, or clearly state why they were not.
 - Confirm that raw data, private data, credentials, and local-only files were
   not added.
-- Suggest a concise commit message.
-- Commit messages should start with "AI: " to make it clear that this commit was AI generated.
+- Use a concise commit message.
+- Commit messages should start with "AI: " to make it clear that this commit was
+  AI generated.
 
-Do not commit or push automatically unless the user explicitly asks for it or
-approves the proposal. If the user approves, commit only the intended changes
-and push to the appropriate GitHub remote/branch.
+Do not push automatically unless the user explicitly asks for a push. Instead,
+mention the local commit hash when reporting the completed work. After several
+useful local commits, or when the work reaches a natural sharing/review point,
+suggest that pushing to the GitHub remote might be useful. If the user approves
+or asks for a push, push to the appropriate GitHub remote/branch.
