@@ -1,15 +1,10 @@
 # Utilities
 
-This optional folder is for helper functions, setup checks, or shared code used
-by more than one workflow stage.
+This folder is a placeholder for optional helper scripts, shared functions, or
+small workflow utilities that are useful across more than one workflow stage.
 
-The current example includes two beginner-friendly utility scripts:
+Place helper scripts here when they are shared by multiple processing,
+exploration, analysis, or product-generation files. If a helper is only used by
+one script, it can usually stay next to that script instead.
 
-- `check-project-setup.r`: checks required folders, files, and R packages
-  without changing anything.
-- `run-example-workflow.r`: optionally runs the setup check and then runs the
-  processing, exploration, and analysis scripts in the documented order.
-
-Keep this folder small. If a helper is only used by one processing,
-exploration, or analysis script, it can usually stay next to that script
-instead.
+Keep this folder small and document any helper script you add.

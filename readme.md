@@ -121,10 +121,10 @@ uses manually installed R packages because that is easiest. It can be suitable f
 
 In general, you can think of levels of package/software management and use the one that's best for your project. It is possible to switch, but easier to pick the appropriate one early on.
 
-This is quick overview of the different levels:
+This is a quick overview of the different levels:
 
-- **Manual package list**: the default for this template. List required packages prominently in user-facing documentation and check them with a setup script such as
-  `code/utilities/check-project-setup.r`.
+- **Manual package list**: the default for this template. List required packages
+  prominently in user-facing documentation.
 - **Lockfile or environment manager**: use tools such as
   [renv](https://rstudio.github.io/renv/index.html), Conda, Python virtual
   environments, or Julia project files when exact package versions matter

@@ -99,12 +99,9 @@ to run and in what order.
 
 For the example project, the intended order is:
 
-- optionally run `code/utilities/check-project-setup.r`;
 - run `code/processing/processing-code.r`;
 - run `code/exploration/eda-code.r`;
 - run `code/analysis/statistical-analysis.r`;
-- alternatively run `code/utilities/run-example-workflow.r` to perform the
-  setup check and the three example scripts in order;
 - render only the products that need to be updated.
 
 If required software or packages are missing, report that clearly. Do not
@@ -118,9 +115,8 @@ dependency approach lightweight and beginner-friendly.
 
 Use the lowest dependency-management level that honestly supports the project:
 
-- Manual package lists plus `code/utilities/check-project-setup.r` are the
-  default for this template and are suitable for many small or straightforward
-  projects.
+- Manual package lists documented in human-facing files are the default for this
+  template and are suitable for many small or straightforward projects.
 - Lockfiles or environment managers such as `renv`, Conda, Python virtual
   environments, Poetry, or Julia project files are optional when exact versions
   matter for longer-term reproducibility.
@@ -169,8 +165,7 @@ checked.
 Before handing work back to a human user:
 
 - Follow `usage.md` to rerun affected scripts when code or generated outputs
-  changed. Use `Rscript code/utilities/check-project-setup.r` when checking
-  project readiness.
+  changed.
 - Check code changes against `code-guidelines.md`, especially documentation,
   hard-failure behavior, simplicity, dependency choices, project-relative paths,
   and clean-session reproducibility.

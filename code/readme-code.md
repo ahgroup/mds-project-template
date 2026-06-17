@@ -63,12 +63,9 @@ The example code files are organized by workflow stage.
 
 ### Utilities
 
-- `code/utilities/check-project-setup.r` checks required files, folders, and R
-  packages without changing anything. It uses the project files and installed R
-  packages as inputs and reports console messages only.
-- `code/utilities/run-example-workflow.r` runs the setup check and then runs the
-  processing, exploration, and analysis scripts in order. It uses the example
-  scripts and data as inputs and regenerates processed data, figures, and tables.
+The `code/utilities/` folder is available for optional helper scripts, shared
+functions, or small workflow utilities. The default example does not require a
+utility script.
 
 The Quarto files in `processing/` and `exploration/` are alternative ways to
 run and document the same work. You do not need to run both an R script and its

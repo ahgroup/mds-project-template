@@ -1,7 +1,8 @@
 # Starting A New Project From This Template
 
 This document provides brief instructions for starting a new project from this
-template. Hopefully, the content and examples in this template are documented well enough to make it clear how to go about using and adapting the template..
+template. Hopefully, the content and examples in this template are documented
+well enough to make it clear how to use and adapt the template.
 
 ## Create The New Repository
 
@@ -69,7 +70,7 @@ scientific structure. Put code in the workflow-stage folder where it belongs.
 
 Based on your specific needs, you can change the folder names and structure. The main important aspects are that you come up with a consistent and logical structure, and that you document and explain your structure.
 
-Update `usage.md` regulary. A new user should be
+Update `usage.md` regularly. A new user should be
 able to open `usage.md` and understand which scripts to run, what inputs they
 need, what outputs they create, and which products should be rendered afterward.
 
@@ -78,14 +79,15 @@ need, what outputs they create, and which products should be rendered afterward.
 Document the software and packages needed for the project in a human-facing file
 such as `readme.md`, `usage.md`, or a language-specific setup file.
 
-Use the dependency managament approach that is best for your project. 
+Use the dependency management approach that is best for your project.
 
 
 ## Check The Project Setup
 
-
-If you have adapted the folder structure, input files, or required packages, update the setup check `check-project-setup.r` so it reflects the new project. (If you don't use `R` as part of this project, you might want to implement a similar script for your language of choice.) Then run the check to make sure the project is overall in good shape.
-
+After adapting the folder structure, input files, or required packages, review
+`usage.md` and the relevant folder readme files to make sure they still describe
+how to run the project. Then run the project scripts manually in the documented
+order.
 
 After running code, render any products that depend on changed results.
 For example:

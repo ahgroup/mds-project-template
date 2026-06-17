@@ -25,7 +25,7 @@ project:
 software:
   primary_language: "R"
   additional_languages: [] # e.g., Python, Julia
-  workflow_style: "workflow-stage folders with optional setup check and example workflow runner"
+  workflow_style: "workflow-stage folders with optional utilities for shared helpers"
   quarto_required: true
   languages:
     - name: "R"
@@ -59,8 +59,7 @@ reproducibility:
   workflow_instructions: "usage.md"
   new_project_instructions: "new-project-instructions.md"
   code_guidelines: "code-guidelines.md"
-  setup_check: "code/utilities/check-project-setup.r"
-  example_runner: "code/utilities/run-example-workflow.r"
+  utilities_folder: "code/utilities/"
   example_steps:
     - "code/processing/processing-code.r"
     - "code/exploration/eda-code.r"

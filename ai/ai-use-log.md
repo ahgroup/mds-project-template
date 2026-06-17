@@ -106,8 +106,7 @@ Purpose: Reviewed the project for reproducibility problems before submission.
 Files changed or reviewed: `readme.md`, `usage.md`, `code/`, and
 `products/report/report.qmd`.
 
-Checks run: Ran `Rscript code/utilities/check-project-setup.r` and rerendered
-the affected report.
+Checks run: Reran the affected scripts and rerendered the affected report.
 
 Human review notes: Confirmed outputs were produced by code and no private data
 were added.

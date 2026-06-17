@@ -81,9 +81,6 @@ reproducible from code, but you can still run the code in understandable pieces.
 You should not manually edit raw Excel files, generated tables, or generated
 figures. Instead, update the code and rerun the affected step.
 
-Before running the workflow, you can run `code/utilities/check-project-setup.r` to check whether the required files, folders,
-and R packages are available.
-
 For the example project, the simplest path is to run the R scripts manually in this order:
 
 1. `code/processing/processing-code.r`
