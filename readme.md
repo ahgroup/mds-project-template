@@ -4,8 +4,7 @@ This repository is a template for a reproducible modeling or data science projec
 workflow-first so projects can add Python, Julia, shell scripts, or other tools
 without major reorganization.
 
-This template also includes guidance for AI-supported work. The
-goal is not to make AI do the project for you. The goal is to make AI tools
+This template also includes guidance for AI-supported work. The goal is to make AI tools
 useful for coding, documentation, review, and troubleshooting while keeping the
 project transparent, reproducible, and human-reviewed.
 
@@ -13,6 +12,8 @@ project transparent, reproducible, and human-reviewed.
 
 The default example uses R, Quarto, GitHub, and a reference manager that can
 handle BibTeX. Zotero with the Better BibTeX plugin is a good choice.
+
+It is also assumed that you will be working through some sort of IDE. Our currently preferred one is [Positron](https://positron.posit.co/), but others like VS Code, RStudio or another option of your choice also work.
 
 It is also useful to have a word processor installed, such as MS Word or
 [LibreOffice](https://www.libreoffice.org/). To produce PDF output, you need a
@@ -57,8 +58,7 @@ Important project-level files:
 - `code-guidelines.md`: coding guidelines for scientific and reproducible projects,
   including documentation, failure behavior, simplicity, packages, and
   AI-assisted coding expectations.
-- `agents.md`: extra instructions for AI coding assistants and users
-  using AI tools.
+- `agents.md`: extra instructions for AI coding assistants.
 - `license.md`: the license for this template.
 
 ## Naming Conventions
@@ -72,18 +72,17 @@ Use descriptive file and folder names. In general:
 
 Readme files are named by folder context, such as `readme-code.md` or `readme-data.md`.
 
-## GitHub, Sharing, And Sensitive Data
+## Git/GitHub and Sensitive Information
 
 Git and GitHub are useful for tracking changes, backing up work, and sharing a
-project with other users. In Git/GitHub language, to **commit** a file means to
-add a recorded version of that file to the project history. Once a file is
-committed and pushed to GitHub, it can be difficult to fully remove from the
-history, especially if the repository has been shared.
+project with other users. While you could use this template without Git/GitHub tracking, in the following it is assumed that you'll be using Git/GitHub.
 
-For many projects, it is wise to start with a **private**
-GitHub repository. Later, after checking the data, outputs, license, authorship,
-and project goals, the project team can decide whether the repository should
-remain private or become public.
+Before using this template and starting a project, you should familiarize yourself with Git/GitHub at least a little bit, e.g. by going through [this brief Git/GitHub introduction](https://andreashandel.github.io/mds-tools/courses/courses.html).
+
+An important feature of Git/GitHub is the tracking of changes (what Git does) and syncing those changes between local machines and a remote server (what GitHub provides). In Git/GitHub languge, you **commit** project updates, then **push/pull** between local computer(s) and the remote. Once anything has been committed (e.g., a file has been added) and pushed to GitHub, it can be difficult to fully remove from the history, especially if the repository has been shared.
+
+This might raise questions of confidentiality and the risk of accidentally publicly sharing information that should not be public. Because of this, for many projects, it is wise to start with a **private** GitHub repository. Later, after checking the data, outputs, license, authorship,
+and project goals, you can decide whether the repository should remain private or become public.
 
 Do not commit private, sensitive, regulated, identifiable, restricted, or
 license-protected data unless the project owner has explicitly approved that
@@ -93,48 +92,21 @@ contains or depends on restricted material, document what can be committed and
 what must stay local or in an approved storage location.
 
 To keep files out of Git and thus potentially making them public, list them in `.gitignore` before committing them. For
-example, this template already ignores the contents of `data/private-data/`,
-`data/large-files/`, and `results/large-files/`, while keeping small readme or
-placeholder files in those folders. If a file has already been committed, adding
-it to `.gitignore` is not enough; it must also be removed from Git tracking while
+example, this template already ignores the contents of `data/private-data/`, apart from the readme file, which is included.
+
+If a file has already been committed, adding it to `.gitignore` is not enough; it must also be removed from Git tracking while
 leaving the local file in place. See GitHub's documentation on
 [ignoring files](https://docs.github.com/en/get-started/git-basics/ignoring-files)
 for more detail.
 
-## Generated Outputs
-
-Generated outputs are generally committed when they are reasonably small and do
-not contain sensitive information. That includes example processed data, figures,
-tables, rendered HTML files, and other outputs that help users see expected
-results and render products.
-
-Generated does not automatically mean safe to share. Outputs created from
-private, restricted, identifiable, or otherwise sensitive data can still reveal
-sensitive information. Before committing processed data, figures, tables, model
-objects, maps, predictions, or rendered reports, check whether they expose
-private records, small cell counts, identifiable outliers, precise locations, or
-other restricted information.
-
-Use this simple decision guide as a starting point:
-
-| File type | Default choice |
-| --- | --- |
-| Small non-sensitive figures, tables, reports, and rendered HTML products | Commit |
-| Small processed example or public data | Usually commit |
-| Private, identifiable, regulated, restricted, or license-protected data | Do not commit unless explicitly approved |
-| Outputs derived from sensitive data | Check carefully; usually do not commit unless approved |
-| Large outputs | Do not commit by default; use an ignored folder or discuss Git LFS/another large-file workflow |
-| Readme or placeholder files explaining local-only files | Commit |
+In general, any raw or processed data is likely the potentially most sensitive part of your project. Some generated outputs might also contain sensitive information. Check carefully, then decide if what you have can be 1) fully public, 2) private but ok to check into GitHub, 3) so sensitive that you don't want to push it to GitHub, even inside a private repository.
 
 
-Use documented ignored locations such as `data/private-data/`,
-`data/large-files/`, or `results/large-files/` for files that should not be
-committed. Commit a readme or placeholder explaining what belongs there, how the
-file is generated or obtained, and who is allowed to access it.
+## Git/GitHub and large files
 
-Each project can refine this policy. For example, a public example project may
-commit nearly all outputs, while a restricted health-data project may commit
-only code, documentation, and carefully reviewed aggregate results.
+**Do not try to use Git/GitHub with large files!** As a rule of thumb, anything larger than 20MB should not be tracked and synced with Git/GitHub. There are specialized options to work with large files, such as Git LFS. If you think you might have to work with large files, review the relevant information in the [brief Git/GitHub introduction](https://andreashandel.github.io/mds-tools/courses/courses.html) course.
+
+This project template is set up to allow for large files, with currently the folders `data/large-files/`, and `results/large-files/` being ignored by Git/GitHub, while keeping small readme or placeholder files in those folders. 
 
 
 ## Software And Package Management
@@ -146,8 +118,7 @@ In general, you can think of levels of package/software management and use the o
 
 This is quick overview of the different levels:
 
-- **Manual package list**: the default for this template. List required packages
-  in human-facing documentation and check them with a setup script such as
+- **Manual package list**: the default for this template. List required packages prominently in user-facing documentation and check them with a setup script such as
   `code/utilities/check-project-setup.r`.
 - **Lockfile or environment manager**: use tools such as
   [renv](https://rstudio.github.io/renv/index.html), Conda, Python virtual
@@ -156,8 +127,9 @@ This is quick overview of the different levels:
   environment, but do not commit local package libraries or virtual environments.
 - **Continuous Integration or containers**: use GitHub Actions, Docker, or similar tools for advanced
   long-term, multi-user, multi-language, publication, or regulated workflows that
-  need controlled reruns across machines. These are intentionally not enabled by
-  default.
+  need controlled reruns across machines. 
+  
+Thhis repository template assumes you will start with a manual approach, and add any more advanced software management pieces yourself, based on needs.
 
 Code should load the needed packages and fail clearly when a package is missing. In general, there should not be any silent install of packages or other environment modification done by code.
 
@@ -168,8 +140,7 @@ users understand the computing environment.
 
 ## Code Guidelines
 
-Code in this template should be written for scientific and reproducible
-workflows.
+Code should be written for scientific and reproducible workflows.
 That means it should be transparent, reproducible, simple, heavily documented,
 and strict about unexpected inputs or missing requirements. See
 `code-guidelines.md` for the full coding guidelines that apply to both humans
