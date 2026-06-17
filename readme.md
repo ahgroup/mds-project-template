@@ -1,4 +1,4 @@
-# Overview
+## Overview
 
 This repository is a template for a reproducible modeling or data science project. The default example uses R, Quarto, Git, and GitHub, but the structure is
 workflow-first so projects can add Python, Julia, shell scripts, or other tools
@@ -28,6 +28,11 @@ workflow:
 install.packages(c("broom", "dplyr", "ggplot2", "here", "knitr",
                    "readxl", "skimr", "tidyr"))
 ```
+
+## Getting Started
+
+See `new-project-instructions.md` for a brief getting started guide.
+
 
 ## Template Structure
 
@@ -145,10 +150,6 @@ That means it should be transparent, reproducible, simple, heavily documented,
 and strict about unexpected inputs or missing requirements. See
 `code-guidelines.md` for the full coding guidelines that apply to both humans
 and AI tools.
-
-## Getting Started
-
-See `new-project-instructions.md` for a brief getting started guide.
 
 
 ## AI-Supported Workflow

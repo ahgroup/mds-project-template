@@ -90,24 +90,6 @@ For the example project, the simplest path is to run the R scripts manually in t
 2. `code/exploration/eda-code.r`
 3. `code/analysis/statistical-analysis.r`
 
-From Positron or another editor such as RStudio or VS Code, open each script and
-run or source it in that order.
-
-From a terminal, run the scripts one at a time:
-
-```sh
-Rscript code/processing/processing-code.r
-Rscript code/exploration/eda-code.r
-Rscript code/analysis/statistical-analysis.r
-```
-
-If you want to run the complete example workflow in one command, use the
-optional runner. The runner simply performs the setup check and then sources the
-three example scripts in the same documented order:
-
-```sh
-Rscript code/utilities/run-example-workflow.r
-```
 
 If a script fails because a package is missing, install that package
 deliberately and rerun the script. Do not silently install packages inside
@@ -115,7 +97,7 @@ analysis scripts.
 
 ## Render Products
 
-After the results have been regenerated, render only the products you need.
+After the results have been regenerated, render the products you need.
 
 ```sh
 quarto render products/report/report.qmd
@@ -152,8 +134,6 @@ manually:
 - Confirm that code follows `code-guidelines.md`, especially documentation,
   hard-failure behavior, simplicity, mature dependency choices, and
   project-relative paths.
-- If code changed generated outputs, rerun the affected scripts manually.
-- If product text or results changed, rerender the affected product files.
 - If AI tools helped with meaningful work, follow the disclosure guidance in
   `ai/ai-use-policy.md`. The AI tool should update `ai/ai-use-log.md` when
   logging is appropriate; human users may read that log as needed.
@@ -183,7 +163,3 @@ Then update this file with:
 Follow `code-guidelines.md` when adding or editing code. In particular, keep
 scientific code simple, thoroughly commented, strict about unexpected inputs,
 and runnable in a clean session.
-
-Create language-specific folders only if the project becomes large enough that
-separate `code/r/`, `code/python/`, or `code/julia/` folders would make the code
-easier to maintain.
