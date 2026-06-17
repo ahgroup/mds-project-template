@@ -148,15 +148,8 @@ and AI tools.
 
 ## Getting Started
 
-This is a GitHub template repository. The best way to start a new project is to
-[create a repository from this template](https://help.github.com/en/articles/creating-a-repository-from-a-template).
-After creating a new repository, follow `new-project-instructions.md`.
+See `new-project-instructions.md` for a brief getting started guide.
 
-For the example project, run the code in documented pieces. The workflow is
-reproducible because data processing, figure creation, table creation, and
-analysis are done by code rather than by undocumented manual edits to data files
-or figures. See `usage.md` for the run order, setup checks, optional example
-workflow runner, and product-rendering instructions.
 
 ## AI-Supported Workflow
 

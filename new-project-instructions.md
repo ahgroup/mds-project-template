@@ -1,14 +1,20 @@
 # Starting A New Project From This Template
 
-This document gives practical instructions for starting a new project from this
-template. It is written for users who want to turn the template into a real
-project.
-
-The goal is not to complete every possible setup task immediately. The goal is
-to make a clear, safe, reproducible starting point before doing substantive
-analysis work.
+This document provides brief instructions for starting a new project from this
+template. Hopefully, the content and examples in this template are documented well enough to make it clear how to go about using and adapting the template..
 
 ## Create The New Repository
+
+This is a GitHub template repository. The best way to start a new project is to
+[create a repository from this template](https://help.github.com/en/articles/creating-a-repository-from-a-template).
+After creating a new repository, follow .
+
+For the example project, run the code in documented pieces. The workflow is
+reproducible because data processing, figure creation, table creation, and
+analysis are done by code rather than by undocumented manual edits to data files
+or figures. See `usage.md` for the run order, setup checks, optional example
+workflow runner, and product-rendering instructions.
+
 
 Start by creating a new GitHub repository from this template rather than copying
 files by hand. GitHub's template-repository workflow preserves the folder
