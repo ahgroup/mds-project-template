@@ -210,8 +210,9 @@ handoff to a human tester.
 - Display-only plots in non-interactive R scripts are guarded with
   `interactive()` to avoid creating local `Rplots.pdf` files during scripted
   runs.
-- The presentation now reads generated tables and figures directly from
-  `results/` so it does not depend on stale copied media files.
+- The presentation intentionally reads copied tables and figures from its own
+  `products/presentation/media/` folder so it can preserve a static snapshot of
+  what was shown in a specific presentation.
 - Informal placeholder wording in product templates was cleaned up, bundled data
   documentation was clarified, and AI-log/new-project instructions were aligned.
 

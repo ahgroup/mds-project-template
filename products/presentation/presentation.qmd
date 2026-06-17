@@ -2,7 +2,7 @@
 title: Example Quarto slides
 subtitle: "with some thoughts on how to set up things"
 date: 2025-01-01
-author: ""
+author: "NAME"
 format:
   revealjs:
     theme: default
@@ -27,7 +27,9 @@ csl: ../../assets/american-journal-of-epidemiology.csl
 
 ## Figures and tables
 
-This example pulls figures and tables directly from the project `results/` folder so the slides reflect the current generated outputs. For a final talk, you may instead copy selected results into `products/presentation/media/` if you want to freeze the exact presentation version.
+The suggestion is to place figures/tables/RDS files etc. in the `media` folder.
+
+You could also pull it from the `results` folder, but the advantage of copying them into `media` is that you have everything related to your presentation in one place, and if content in `results` continues to be changed/updated, you can ensure you have the version you used in your presentation by copying it into `media`.
 
 
 
@@ -41,7 +43,7 @@ Note that we could have loaded the data with `here()`, but if we ever want to co
 #| label: tbl-summary-table
 #| tbl-cap: "Data summary table."
 #| echo: FALSE
-resulttable <- readRDS("../../results/tables/summary-table.rds")
+resulttable=readRDS("./media/summary-table.rds")
 knitr::kable(resulttable)
 ```
 
@@ -49,7 +51,7 @@ knitr::kable(resulttable)
 
 This shows a figure created by the analysis script. It is inserted using Quarto/Markdown syntax (not knitr code, but that would be possible too).
 
-![](../../results/figures/height-weight.png){fig-align="center" width="420"}
+![](./media/height-weight.png){fig-align="center" width="420"}
 
 ## Example slide
 
@@ -59,7 +61,7 @@ This shows the model fitting results as table.
 #| label: tbl-result-table-2
 #| tbl-cap: "Linear model fit table."
 #| echo: FALSE
-result_table_2 <- readRDS("../../results/tables/result-table-2.rds")
+result_table_2 = readRDS("./media/result-table-2.rds")
 knitr::kable(result_table_2)
 ```
 

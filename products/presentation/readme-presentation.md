@@ -3,10 +3,10 @@
 This folder contains an example slide presentation using Quarto and the
 `revealjs` output format.
 
-The example presentation pulls figures and tables directly from the main project
-`results/` folder so the slides reflect the current generated outputs.
+The general suggestion is to place figures, tables, RDS files, and other files
+used in the presentation in the `media/` folder.
 
-For a final talk, you can instead copy selected figures, tables, RDS files, and
-other presentation-specific materials into the `media/` folder. That freezes the
-version used in the presentation even if the main analysis results change later.
-The CSS file for the example presentation also lives in `media/`.
+You could also pull files from the main project `results/` folder. The advantage
+of copying them into `media/` is that everything related to the presentation is
+in one place. If results keep changing, this also helps preserve the version you
+used in a specific presentation.
