@@ -29,15 +29,46 @@ other Quarto products.
 
 The example workflow is organized by stage.
 
-| Stage | File | What It Does | Main Inputs | Main Outputs |
-| --- | --- | --- | --- | --- |
-| Processing | `code/processing/processing-code.r` | Reads the example Excel file, inspects the raw data, cleans problematic values, and saves processed data. | `data/raw-data/example-data.xlsx` | `data/processed-data/processed-data.rds` |
-| Processing | `code/processing/processing-file-v1.qmd` | Quarto version of the processing workflow with code and explanation in one file. | `data/raw-data/example-data.xlsx` | `data/processed-data/processed-data.rds` |
-| Processing | `code/processing/processing-file-v2.qmd` | Quarto version that pulls labeled chunks from `processing-code.r`. | `code/processing/processing-code.r` and raw data | `data/processed-data/processed-data.rds` |
-| Exploration | `code/exploration/eda-code.r` | Loads processed data and creates summary tables and exploratory figures. | `data/processed-data/processed-data.rds` | `results/tables/summary-table.*`, `results/figures/*.png` |
-| Exploration | `code/exploration/eda.qmd` | Quarto version of the exploratory analysis with code and explanation in one file. | `data/processed-data/processed-data.rds` | `results/tables/summary-table.*`, `results/figures/*.png` |
-| Exploration | `code/exploration/eda-v2.qmd` | Quarto version that pulls labeled chunks from `eda-code.r`. | `code/exploration/eda-code.r` and processed data | `results/tables/summary-table.*`, `results/figures/*.png` |
-| Analysis | `code/analysis/statistical-analysis.r` | Fits example linear models and saves model-result tables. | `data/processed-data/processed-data.rds` | `results/tables/result-table-1.*`, `results/tables/result-table-2.*` |
+### Processing
+
+The processing stage imports, inspects, and cleans the raw example data.
+
+- `code/processing/processing-code.r` reads
+  `data/raw-data/example-data.xlsx`, inspects the raw data, cleans problematic
+  values, and saves `data/processed-data/processed-data.rds`.
+- `code/processing/processing-file-v1.qmd` is a Quarto version of the same
+  processing workflow with code and explanation in one file. It reads
+  `data/raw-data/example-data.xlsx` and saves
+  `data/processed-data/processed-data.rds`.
+- `code/processing/processing-file-v2.qmd` is another Quarto version of the same
+  workflow. It pulls labeled code chunks from `code/processing/processing-code.r`
+  and uses the raw example data to create
+  `data/processed-data/processed-data.rds`.
+
+### Exploration
+
+The exploration stage summarizes the processed data and creates exploratory
+outputs.
+
+- `code/exploration/eda-code.r` loads
+  `data/processed-data/processed-data.rds` and creates summary tables in
+  `results/tables/summary-table.*` and exploratory figures in
+  `results/figures/`.
+- `code/exploration/eda.qmd` is a Quarto version of the exploratory analysis
+  with code and explanation in one file. It uses the processed data and writes
+  the same kinds of summary tables and figures.
+- `code/exploration/eda-v2.qmd` is another Quarto version of the exploratory
+  analysis. It pulls labeled code chunks from `code/exploration/eda-code.r`, uses
+  the processed data, and writes the same kinds of summary tables and figures.
+
+### Analysis
+
+The analysis stage fits the example statistical models and saves model results.
+
+- `code/analysis/statistical-analysis.r` loads
+  `data/processed-data/processed-data.rds`, fits example linear models, and saves
+  model-result tables in `results/tables/result-table-1.*` and
+  `results/tables/result-table-2.*`.
 
 The Quarto files in `code/processing/` and `code/exploration/` are alternative
 ways to run and document the same work. You do not need to run both an R script

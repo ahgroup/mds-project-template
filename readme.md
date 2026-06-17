@@ -181,8 +181,10 @@ When using AI tools:
 
 Different files in `ai/` have different expected readers and writers:
 
-- `ai/prompts/`: prompt templates are mainly read and copied by humans or AI
-  tools, and may be edited by humans or AI maintainers when the workflow changes.
+- `ai/prompts/`: reusable prompt templates. Human users can copy the prompt text
+  into an AI tool, or tell an AI tool with file access to read and apply a
+  specific prompt file. The prompts are not scripts and should not be assumed to
+  run automatically.
 - `ai/project-summary.yml`: a concise summary file for AI tools to read and
   write. Human users are not expected to read, write, or maintain it. If it
   disagrees with human-facing documentation, the human-facing documentation wins.

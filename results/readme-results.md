@@ -36,13 +36,15 @@ what they contain.
 
 As a default:
 
-| Output type | Default choice |
-| --- | --- |
-| Small non-sensitive figures, tables, reports, and rendered HTML products | Commit |
-| Small processed example or public outputs | Usually commit |
-| Outputs derived from sensitive data | Check carefully; usually do not commit unless approved |
-| Large outputs | Do not commit by default; use `results/large-files/` or discuss Git LFS/another large-file workflow |
-| Readme or placeholder files explaining local-only outputs | Commit |
+- Commit small non-sensitive figures, tables, reports, and rendered HTML
+  products.
+- Usually commit small processed example outputs or small processed public
+  outputs.
+- Check outputs derived from sensitive data carefully. Usually do not commit them
+  unless the project owner has approved that workflow.
+- Do not commit large outputs by default. Use `results/large-files/` or discuss
+  Git LFS or another large-file workflow.
+- Commit readme or placeholder files that explain local-only outputs.
 
 Organize this folder in a way that makes sense for your project. Add readme
 files inside subfolders when they help future readers understand what goes
