@@ -1,8 +1,6 @@
 # Usage
 
-This file explains how to run and reproduce the example project. It is meant
-for humans. Run the commands yourself, inspect messages and warnings, and adjust
-the workflow as the project changes.
+This file is meant to explain how to run and reproduce the project. 
 
 The default example uses R and Quarto. Projects can add Python, Julia, shell
 scripts, or other tools later without changing the overall folder structure.
@@ -22,8 +20,11 @@ install.packages(c("broom", "dplyr", "ggplot2", "here", "knitr",
                    "readxl", "skimr", "tidyr"))
 ```
 
-Install Quarto if you want to render reports, manuscripts, presentations, or
-other Quarto products.
+Install Quarto if you want to render reports, manuscripts, presentations, orvother Quarto products.
+
+Install MS Word or LibreOffice if you want to be able to open word documents created from Quarto source documents.
+
+Install a TeX system if you want to generate pdf files from Quarto. TinyTex is recommended. It can be installed by typing `quarto install tinytex` into the console/terminal.
 
 ## Example Code Files
 
@@ -87,9 +88,7 @@ For the example project, the simplest path is to run the R scripts manually in t
 2. `code/exploration/eda-code.r`
 3. `code/analysis/statistical-analysis.r`
 
-
-If a script fails because a package is missing, install that package
-deliberately and rerun the script. Do not silently install packages inside
+If a script fails because a package is missing, install that package and rerun the script. Do not silently install packages inside
 analysis scripts.
 
 ## Render Products

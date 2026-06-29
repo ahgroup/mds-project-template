@@ -15,8 +15,7 @@ human users who want to understand how AI tools should work here.
 - Keep raw data unchanged.
 - Keep generated outputs traceable to code.
 - Keep AI assistance transparent, reviewed, and privacy-aware.
-- Keep the template approachable for users who are new to
-  Git/GitHub.
+- Keep the template approachable for users who are new to Git/GitHub.
 
 ## Repository Structure
 
@@ -130,6 +129,12 @@ an environment manager, document that decision in `readme.md` or another
 human-facing documentation file, commit the appropriate lock or project files,
 and make sure local package libraries or virtual environments are not committed.
 
+## Quarto documents
+
+Unless the user specifies otherwise, the default Quarto output format for manuscripts should be docx, for supplement it should be pdf. For all other Quarto files, it should be self-contained html. If you are editing and existing Quarto document, do not change the output format unless instructed to do so.
+
+Figures and Tables should in general be placed into the document close to the text where they are mentioned first. Only place figures and tables at the end or some other location if instructed by the user or if necessary for reasonable layout. For instance a large table might need to start on a new page for better readability.
+
 ## AI Assistance Documentation
 
 AI-related files have different expected readers and writers:
@@ -164,17 +169,15 @@ checked.
 
 Before handing work back to a human user:
 
-- Follow `usage.md` to rerun affected scripts when code or generated outputs
-  changed.
-- Check code changes against `code-guidelines.md`, especially documentation,
-  hard-failure behavior, simplicity, dependency choices, project-relative paths,
-  and clean-session reproducibility.
-- Render affected Quarto products when product source files or generated results
-  changed.
-- Mention any checks that could not be run.
+- Check code changes against `code-guidelines.md`.
 - Verify that raw data was not edited.
 - Verify that generated outputs are traceable to code.
 - Verify that no obvious secrets, local paths, or private data were added.
+- Update all relevant documentation files to reflect the updates that were made.
+- Do not render any Quarto files that changed unless instructed to do so. 
+- Do not run any code unless instructed to do so.
+- Provide the user with a clear list of what has changed, a summery on how, and what was and was not run after the changes were made.
+- Mention any checks that could not be run.
 
 
 ## Git Commit and Push Suggestions

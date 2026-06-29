@@ -160,20 +160,26 @@ Prefer mature, robust, well-developed, and actively maintained packages or
 libraries. Avoid adding obscure dependencies for small conveniences.
 
 Any package or library used by the project should be documented in a
-human-facing file such as `readme.md`, `usage.md`, or a language-specific setup
+human-facing file such as `readme.md`, `usage.md`, and if needed, also  a language-specific setup
 or environment file.
 
-Do not install packages inside analysis scripts. If a package is missing, the
+Do not install packages inside code files. If a package is missing, the
 script should fail and tell the user what needs to be installed.
 
 If an unusual or specialized package is necessary, document why it is needed and
 what part of the workflow depends on it.
+
+If the user decides to implement some type of package management, e.g. `renv` for R, use it, but still also follow the steps above.
 
 ## R-Specific Guidance
 
 For R code, prefer the tidyverse style and stable tidyverse packages when they
 fit the task. This includes packages such as `dplyr`, `tidyr`, `ggplot2`,
 `readr`, `purrr`, and related well-maintained tools.
+
+For figures created by R, prefer ones that are based on `ggplot2` and extensions, unless there is a good reason to use an alternative plotting system, such as base R.
+
+For tables that will be inserted into Quarto documents, prefer the `flextable` package, unless there are reasons to use another setup.
 
 Use readable object names:
 
