@@ -51,6 +51,35 @@ project from this template, an AI tool may keep it for provenance, move it
 elsewhere, or replace the log entries with project-specific AI-use notes if the
 project owner wants that.
 
+### 2026-07-13 — Restructured code folders and split compute from figure/table generation
+
+AI tool: Claude Code.
+
+Purpose: Renamed the `code/` workflow-stage subfolders (`processing` →
+`data-processing`, `exploration` → `data-exploration`, `analysis` →
+`modeling-analysis`), added a new `code/figures-tables/` folder, and reworked the
+example so that the processing/exploration/analysis stages only compute and save
+results (processed data in `data/processed-data/`, computed results as RDS in
+`results/output/`), while new scripts in `code/figures-tables/` generate the
+figures (`results/figures/`) and tables (`results/tables/`).
+
+Files changed or reviewed: renamed folders and their readmes; rewrote
+`code/data-exploration/eda-code.r`, `eda.qmd`, `eda-v2.qmd`, and
+`code/modeling-analysis/statistical-analysis.r`; added
+`code/figures-tables/make-tables.r`, `make-figures.r`, and
+`readme-figures-tables.md`; updated `code/readme-code.md`, `usage.md`,
+`agents.md`, `code-guidelines.md`, `ai/project-summary.yml`,
+`data/processed-data/readme-processed-data.md`, and the `results/` folder
+readmes.
+
+Checks run: None. Code was not run and no products were rerendered; the scripts
+need to be rerun to regenerate `results/output/`, `results/tables/`, and
+`results/figures/`.
+
+Human review notes: The project owner should rerun the example workflow in the
+order documented in `usage.md` and confirm the regenerated outputs match, then
+rerender the products if desired.
+
 ### 2026-06-15 — New project instructions
 
 Andreas Handel and Herman used Hermes Agent to add prose instructions for
@@ -90,7 +119,7 @@ AI tool: ChatGPT/Codex.
 Purpose: Drafted a first version of a data-cleaning function and suggested
 review checks.
 
-Files changed or reviewed: `code/processing/processing-code.r`.
+Files changed or reviewed: `code/data-processing/processing-code.r`.
 
 Checks run: Reran affected processing and analysis scripts listed in `usage.md`.
 
@@ -117,8 +146,8 @@ AI tool: ChatGPT/Codex.
 
 Purpose: Suggested possible exploratory plots and model diagnostics.
 
-Files changed or reviewed: `code/exploration/eda-code.r` and
-`code/analysis/statistical-analysis.r`.
+Files changed or reviewed: `code/data-exploration/eda-code.r` and
+`code/modeling-analysis/statistical-analysis.r`.
 
 Checks run: Reran the example workflow after edits.
 

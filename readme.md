@@ -64,7 +64,7 @@ Important project-level files:
   including documentation, failure behavior, simplicity, packages, and
   AI-assisted coding expectations.
 - `agents.md`: extra instructions for AI coding assistants.
-- `license.md`: the license for this template.
+- `license.md`: the license for this template, or later for your project.
 
 ## Naming Conventions
 

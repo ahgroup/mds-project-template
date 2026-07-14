@@ -55,7 +55,7 @@ At the top of each main script, include a short header such as:
 #   data/processed-data/processed-data.rds
 #
 # How to run:
-#   Rscript code/processing/processing-code.r
+#   Rscript code/data-processing/processing-code.r
 ```
 
 Use section comments to make long scripts easy to scan:

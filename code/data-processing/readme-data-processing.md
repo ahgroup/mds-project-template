@@ -1,4 +1,4 @@
-# Processing
+# Data processing
 
 This folder contains code for importing, cleaning, and processing data.
 
@@ -14,6 +14,10 @@ still allowing a Quarto file to show text, commentary, and selected code.
 
 Each approach is reasonable. Pick the one that makes the most sense for your
 project. You can also mix and match.
+
+The processing code reads the raw example data from `data/raw-data/` and writes
+the cleaned dataset to `data/processed-data/processed-data.rds`. The cleaned
+dataset is a data artifact, so it goes in `data/`, not in `results/`.
 
 If a project uses another language for part of processing, place that script
 here too, for example `02-geocode-data.py` or `03-clean-records.jl`. Move to

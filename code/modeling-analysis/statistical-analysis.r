@@ -1,11 +1,14 @@
 ###############################
-# analysis script
+# modeling / analysis script
 #
-#this script loads the processed, cleaned data, does a simple analysis
-#and saves the results to the results folder
+# This script loads the processed, cleaned data, fits simple linear models,
+# and saves the model result objects as RDS files in results/output/.
+# It only computes and saves results; it does not create any figures or final
+# tables. Those are produced by the scripts in code/figures-tables/, which read
+# the results saved here.
+###############################
 
 #load needed packages. make sure they are installed.
-library(ggplot2) #for plotting
 library(broom) #for cleaning up output from lm()
 library(here) #for data loading/saving
 
@@ -13,7 +16,7 @@ library(here) #for data loading/saving
 #note the use of the here() package and not absolute paths
 data_location <- here::here("data","processed-data","processed-data.rds")
 
-#load data. 
+#load data.
 mydata <- readRDS(data_location)
 
 
@@ -25,7 +28,7 @@ mydata <- readRDS(data_location)
 #### First model fit
 # fit linear model using height as outcome, weight as predictor
 
-lmfit1 <- lm(Height ~ Weight, mydata)  
+lmfit1 <- lm(Height ~ Weight, mydata)
 
 # place results from fit into a data frame with the tidy function
 lmtable1 <- broom::tidy(lmfit1)
@@ -33,17 +36,15 @@ lmtable1 <- broom::tidy(lmfit1)
 #look at fit results
 print(lmtable1)
 
-# save fit results table  
-table_file1 = here("results", "tables", "result-table-1.rds")
-saveRDS(lmtable1, file = table_file1)
-table_csv_file1 = here("results", "tables", "result-table-1.csv")
-utils::write.csv(lmtable1, file = table_csv_file1, row.names = FALSE)
+# save the model result object (not a final table) to results/output
+result_file1 = here::here("results", "output", "result-table-1.rds")
+saveRDS(lmtable1, file = result_file1)
 
 ############################
 #### Second model fit
 # fit linear model using height as outcome, weight and gender as predictor
 
-lmfit2 <- lm(Height ~ Weight + Gender, mydata)  
+lmfit2 <- lm(Height ~ Weight + Gender, mydata)
 
 # place results from fit into a data frame with the tidy function
 lmtable2 <- broom::tidy(lmfit2)
@@ -51,8 +52,6 @@ lmtable2 <- broom::tidy(lmfit2)
 #look at fit results
 print(lmtable2)
 
-# save fit results table  
-table_file2 = here("results", "tables", "result-table-2.rds")
-saveRDS(lmtable2, file = table_file2)
-table_csv_file2 = here("results", "tables", "result-table-2.csv")
-utils::write.csv(lmtable2, file = table_csv_file2, row.names = FALSE)
+# save the model result object (not a final table) to results/output
+result_file2 = here::here("results", "output", "result-table-2.rds")
+saveRDS(lmtable2, file = result_file2)

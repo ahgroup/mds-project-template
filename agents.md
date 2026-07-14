@@ -27,7 +27,9 @@ human users who want to understand how AI tools should work here.
 - `assets/`: static non-code project materials, including references, CSL files,
   manually created schematics, PDFs, and other supporting files.
 - `code/`: all analysis code. The example project is split into workflow-stage
-  folders: `processing/`, `exploration/`, and `analysis/`.
+  folders: `data-processing/`, `data-exploration/`, `modeling-analysis/`, and
+  `figures-tables/`. The first three stages only compute and save results; the
+  `figures-tables/` stage turns those results into figures and tables.
 - `data/`: data at different stages. Raw data should not be edited by hand.
 - `products/`: final or near-final deliverables such as reports, manuscripts,
   supplements, presentations, posters, and apps.
@@ -98,9 +100,11 @@ to run and in what order.
 
 For the example project, the intended order is:
 
-- run `code/processing/processing-code.r`;
-- run `code/exploration/eda-code.r`;
-- run `code/analysis/statistical-analysis.r`;
+- run `code/data-processing/processing-code.r`;
+- run `code/data-exploration/eda-code.r`;
+- run `code/modeling-analysis/statistical-analysis.r`;
+- run `code/figures-tables/make-tables.r` and
+  `code/figures-tables/make-figures.r`;
 - render only the products that need to be updated.
 
 If required software or packages are missing, report that clearly. Do not
