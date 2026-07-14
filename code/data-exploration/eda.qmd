@@ -54,7 +54,9 @@ summary_result_file = here::here("results", "output", "summary-table.rds")
 saveRDS(summary_df, file = summary_result_file)
 ```
 
-We are saving only the *computed result* to `results/output/`. The finalized summary table (RDS plus a CSV companion) is produced later by `code/figures-tables/make-tables.r`, which reads this file. The exploratory figures (histograms and scatterplots) are produced by `code/figures-tables/make-figures.r`, which reads the processed data directly. Keeping all figure and table generation in one folder makes it easy to see and rerun everything that turns results into presentation-ready outputs.
+We are saving only the *computed result* to `results/output/`. The finalized summary table (RDS plus a CSV companion) is produced later by `code/figures-tables/make-tables.r`, which reads this file. The exploratory figures (histograms and scatterplots) are produced by `code/figures-tables/make-figures.r`, which reads the processed data directly. 
+
+This is a bit too much for a small project like this, but for larger projects, where code might take long to run, it is a good idea to split any kind of modeling/analysis from the generation of figures and tables. Keeping all figure and table generation in one folder makes it easy to see and rerun everything that turns results into presentation-ready outputs.
 
 
 # Notes

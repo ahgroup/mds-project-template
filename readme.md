@@ -26,7 +26,7 @@ workflow:
 
 ```r
 install.packages(c("broom", "dplyr", "ggplot2", "here", "knitr",
-                   "readxl", "skimr", "tidyr"))
+                   "readxl", "skimr", "tidyr","rmarkdown"))
 ```
 
 ## Getting Started

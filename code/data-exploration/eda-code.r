@@ -2,7 +2,7 @@
 # exploratory analysis script
 #
 # This script loads the processed, cleaned data and computes exploratory
-# summary results. It only computes and saves results as an RDS file in
+# summary results. It computes and saves results as an RDS file in
 # results/output/. It does not create any figures or final tables. Those are
 # produced by the scripts in code/figures-tables/, which read the results
 # saved here.
