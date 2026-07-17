@@ -21,12 +21,12 @@ TeX distribution. TinyTeX is a good option; see the
 [Quarto PDF instructions](https://quarto.org/docs/output-formats/pdf-basics.html).
 
 The example files use these R packages: `broom`, `dplyr`, `ggplot2`, `here`,
-`knitr`, `readxl`, `skimr`, and `tidyr`. Install them before running the example
-workflow:
+`knitr`, `readxl`, `rmarkdown`, `skimr`, and `tidyr`. Install them before running
+the example workflow:
 
 ```r
 install.packages(c("broom", "dplyr", "ggplot2", "here", "knitr",
-                   "readxl", "skimr", "tidyr","rmarkdown"))
+                   "readxl", "rmarkdown", "skimr", "tidyr"))
 ```
 
 ## Getting Started
@@ -162,6 +162,9 @@ When using AI tools:
 
 - Point the tool to `readme.md`, `usage.md`, `agents.md`,
   `code-guidelines.md`, `data/readme-data.md`, and relevant files in `ai/`.
+  Some AI tools automatically read only files named `CLAUDE.md` or `AGENTS.md`.
+  Because this template keeps its agent instructions in `agents.md`, point the
+  tool at that file explicitly if it does not pick it up on its own.
 - AI tools may read and update `ai/project-summary.yml` as a concise orientation
   aid. It is a convenience file for AI tools, not human-facing documentation and
   not the source of truth.
@@ -180,20 +183,10 @@ When using AI tools:
 
 ### AI-related files and expected readers/writers
 
-Different files in `ai/` have different expected readers and writers:
-
-- `ai/project-summary.yml`: a concise summary file for AI tools to read and
-  write. Human users are not expected to read, write, or maintain it. If it
-  disagrees with human-facing documentation, the human-facing documentation wins.
-- `ai/readme-ai.md` and `ai/ai-use-policy.md`: human-facing AI guidance files.
-  Human users may edit them when project policy changes; AI may suggest or make
-  updates when asked.
-- `ai/ai-use-log.md`: a transparency record written by AI tools. AI tools may
-  also read it when they need past AI-use context. Human users may read it as
-  needed, but are not expected to write or edit it.
-- Local AI/tool state folders such as `.ai-local/`, `.ai-cache/`, `.codex/`, and
-  local Claude settings are not committed. AI tools may read and write those
-  files for their own operation, and humans usually do not need to inspect them.
+The files in `ai/` have different expected readers and writers. For example,
+`ai/ai-use-log.md` is written by AI tools, while `ai/readme-ai.md` and
+`ai/ai-use-policy.md` are human-facing. See the "File Roles" section of
+`ai/readme-ai.md` for the full list.
 
 Project files outside `ai/`, such as `readme.md`, `usage.md`, `data/readme-data.md`,
 `code/`, `results/`, and `products/`, are human-facing project materials. Humans

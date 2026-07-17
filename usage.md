@@ -13,12 +13,8 @@ as RStudio or VS Code, are also fine. If you use a terminal or another editor,
 make sure your working directory is the folder that contains `readme.md`,
 `usage.md`, and the main project folders.
 
-Install the example R packages before running the example workflow:
-
-```r
-install.packages(c("broom", "dplyr", "ggplot2", "here", "knitr",
-                   "readxl", "skimr", "tidyr"))
-```
+Install the example R packages listed in `readme.md` before running the example
+workflow.
 
 Install Quarto if you want to render reports, manuscripts, presentations, or other Quarto products.
 
@@ -28,70 +24,13 @@ Install a TeX system if you want to generate pdf files from Quarto. TinyTex is r
 
 ## Example Code Files
 
-The example workflow is organized by stage. A key idea is the split between
+The example workflow is organized by stage, with a deliberate split between
 *computing* results and *presenting* them: the processing, exploration, and
 analysis stages only compute and save results, and the figures-tables stage
 turns those results into figures and tables.
 
-### Data processing
-
-The processing stage imports, inspects, and cleans the raw example data.
-
-- `code/data-processing/processing-code.r` reads
-  `data/raw-data/example-data.xlsx`, inspects the raw data, cleans problematic
-  values, and saves `data/processed-data/processed-data.rds`.
-- `code/data-processing/processing-file-v1.qmd` is a Quarto version of the same
-  processing workflow with code and explanation in one file. It reads
-  `data/raw-data/example-data.xlsx` and saves
-  `data/processed-data/processed-data.rds`.
-- `code/data-processing/processing-file-v2.qmd` is another Quarto version of the
-  same workflow. It pulls labeled code chunks from
-  `code/data-processing/processing-code.r` and uses the raw example data to
-  create `data/processed-data/processed-data.rds`.
-
-### Data exploration
-
-The exploration stage summarizes the processed data and saves the computed
-result.
-
-- `code/data-exploration/eda-code.r` loads
-  `data/processed-data/processed-data.rds`, computes a data summary, and saves
-  the result to `results/output/summary-table.rds`. It does not create figures
-  or final tables.
-- `code/data-exploration/eda.qmd` is a Quarto version of the exploratory
-  analysis with code and explanation in one file. It uses the processed data and
-  writes the same computed summary result.
-- `code/data-exploration/eda-v2.qmd` is another Quarto version of the
-  exploratory analysis. It pulls labeled code chunks from
-  `code/data-exploration/eda-code.r`, uses the processed data, and writes the
-  same computed summary result.
-
-### Modeling and analysis
-
-The analysis stage fits the example statistical models and saves the computed
-model results.
-
-- `code/modeling-analysis/statistical-analysis.r` loads
-  `data/processed-data/processed-data.rds`, fits example linear models, and saves
-  the tidied model results to `results/output/result-table-1.rds` and
-  `results/output/result-table-2.rds`. It does not create figures or final
-  tables.
-
-### Figures and tables
-
-The figures-tables stage reads the computed results and produces the
-presentation-ready figures and tables.
-
-- `code/figures-tables/make-tables.r` loads the computed results from
-  `results/output/` and writes finalized tables to `results/tables/` as RDS
-  files with CSV companions (`summary-table.*`, `result-table-1.*`,
-  `result-table-2.*`).
-- `code/figures-tables/make-figures.r` loads
-  `data/processed-data/processed-data.rds` and writes the exploratory and result
-  figures to `results/figures/`.
-
-The Quarto files in `code/data-processing/` and `code/data-exploration/` are
-alternative ways to run and document the same work. 
+For a description of each example code file, including its inputs and outputs,
+see `code/readme-code.md`. The run order is given below.
 
 
 ## Run The Example Workflow

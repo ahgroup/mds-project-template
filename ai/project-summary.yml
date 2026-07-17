@@ -38,6 +38,7 @@ software:
         - "here"
         - "knitr"
         - "readxl"
+        - "rmarkdown"
         - "skimr"
         - "tidyr"
 

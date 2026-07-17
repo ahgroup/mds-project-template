@@ -39,9 +39,8 @@ and a short description of the project. If some information is not known yet,
 leave a clear placeholder that says what needs to be decided rather than
 guessing.
 
-Keep file and folder names lower-case and descriptive, with words separated by
-hyphens. Avoid spaces, underscores, and CamelCase unless a standard file name or
-file extension requires otherwise.
+Keep file and folder names lower-case, descriptive, and hyphen-separated. See
+the "Naming Conventions" section in `readme.md` for the full convention.
 
 ## Decide What Data May Be Stored In The Repository
 
@@ -79,7 +78,9 @@ need, what outputs they create, and which products should be rendered afterward.
 Document the software and packages needed for the project in a human-facing file
 such as `readme.md`, `usage.md`, or a language-specific setup file.
 
-Use the dependency management approach that is best for your project.
+Use the dependency management approach that is best for your project. See the
+"Software And Package Management" section in `readme.md` for the available levels
+(manual package lists, lockfiles or environment managers, and CI or containers).
 
 
 ## Check The Project Setup
@@ -89,14 +90,8 @@ After adapting the folder structure, input files, or required packages, review
 how to run the project. Then run the project scripts manually in the documented
 order.
 
-After running code, render any products that depend on changed results.
-For example:
-
-```sh
-quarto render products/report/report.qmd
-quarto render products/manuscript/manuscript.qmd
-quarto render products/presentation/presentation.qmd
-```
+After running code, render any products that depend on changed results. See the
+"Render Products" section in `usage.md` for the render commands.
 
 ## Review AI-Use Expectations
 
