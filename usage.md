@@ -20,7 +20,7 @@ install.packages(c("broom", "dplyr", "ggplot2", "here", "knitr",
                    "readxl", "skimr", "tidyr"))
 ```
 
-Install Quarto if you want to render reports, manuscripts, presentations, orvother Quarto products.
+Install Quarto if you want to render reports, manuscripts, presentations, or other Quarto products.
 
 Install MS Word or LibreOffice if you want to be able to open word documents created from Quarto source documents.
 

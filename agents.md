@@ -179,7 +179,7 @@ Before handing work back to a human user:
 - Update all relevant documentation files to reflect the updates that were made.
 - Do not render any Quarto files that changed unless instructed to do so. 
 - Do not run any code unless instructed to do so.
-- Provide the user with a clear list of what has changed, a summery on how, and what was and was not run after the changes were made.
+- Provide the user with a clear list of what has changed, a summary on how, and what was and was not run after the changes were made.
 - Mention any checks that could not be run.
 
 
