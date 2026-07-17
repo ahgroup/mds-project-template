@@ -23,15 +23,19 @@ project owner requests.
 
 AI tools can be useful for tasks such as:
 
-- explaining unfamiliar code or error messages;
+- writing or editing code;
+- explaining code or error messages;
 - suggesting possible project organization;
-- drafting first-pass code that you then read, test, and revise;
+- drafting analysis plans or checklists;
 - suggesting data-cleaning checks;
 - suggesting exploratory plots or summary tables;
 - suggesting possible modeling approaches for you to evaluate;
+- writing drafts of documents;
 - improving comments, documentation, and report wording;
-- reviewing code for reproducibility problems;
+- finding likely bugs or reproducibility gaps;
 - checking whether outputs are traceable to code.
+
+
 
 ## Things AI should not decide for you
 
@@ -45,14 +49,17 @@ Do not treat AI output as final authority for:
 - whether assumptions are satisfied;
 - whether a result is important or causal;
 - whether citations are real and correctly represented;
-- what the final interpretation or conclusion should be.
+- interpretation of p-values, effect sizes, or uncertainty;
+- what the final interpretation or conclusion should be;
+- citation accuracy.
 
 Those decisions require human judgment and review.
 
+
+
 ## What you must understand yourself
 
-You should be able to explain every important part of the project you submit,
-including:
+You should be able to take full responsibility and be able to explain every important part of the project you submit, including:
 
 - where the data came from;
 - what each main code file does;

@@ -8,10 +8,8 @@ The log is a transparency record, not proof that the work is correct. Do not
 include full chat transcripts by default. Do not include sensitive, private,
 regulated, identifiable, restricted, unpublished, or license-protected data.
 
-Routine maintenance of this template does not need to be logged beyond existing
-entries unless the project owner asks for more detail. In a project created from
-the template, the AI tool should update this log when it meaningfully helps with
-project-specific work.
+In a project created from the template, the AI tool should add entries when it
+meaningfully helps with project-specific work. Updates to the template itself should not be logged. As long as the repository is named mds-project-template, it can be assumed that work happens on the template itself, and no logging is needed. Once the repository name changes, it is assumed that a new project is started and logging should start.
 
 ## What AI Tools Should Log
 
@@ -51,49 +49,6 @@ project from this template, an AI tool may keep it for provenance, move it
 elsewhere, or replace the log entries with project-specific AI-use notes if the
 project owner wants that.
 
-### 2026-07-13 — Restructured code folders and split compute from figure/table generation
-
-AI tool: Claude Code.
-
-Purpose: Renamed the `code/` workflow-stage subfolders (`processing` →
-`data-processing`, `exploration` → `data-exploration`, `analysis` →
-`modeling-analysis`), added a new `code/figures-tables/` folder, and reworked the
-example so that the processing/exploration/analysis stages only compute and save
-results (processed data in `data/processed-data/`, computed results as RDS in
-`results/output/`), while new scripts in `code/figures-tables/` generate the
-figures (`results/figures/`) and tables (`results/tables/`).
-
-Files changed or reviewed: renamed folders and their readmes; rewrote
-`code/data-exploration/eda-code.r`, `eda.qmd`, `eda-v2.qmd`, and
-`code/modeling-analysis/statistical-analysis.r`; added
-`code/figures-tables/make-tables.r`, `make-figures.r`, and
-`readme-figures-tables.md`; updated `code/readme-code.md`, `usage.md`,
-`agents.md`, `code-guidelines.md`, `ai/project-summary.yml`,
-`data/processed-data/readme-processed-data.md`, and the `results/` folder
-readmes.
-
-Checks run: None. Code was not run and no products were rerendered; the scripts
-need to be rerun to regenerate `results/output/`, `results/tables/`, and
-`results/figures/`.
-
-Human review notes: The project owner should rerun the example workflow in the
-order documented in `usage.md` and confirm the regenerated outputs match, then
-rerender the products if desired.
-
-### 2026-06-15 — New project instructions
-
-Andreas Handel and Herman used Hermes Agent to add prose instructions for
-starting a new project from the template and to update the to-do notes.
-
-Files changed or reviewed: `new-project-instructions.md`, `readme.md`,
-the then-existing `todo.md`, `ai/project-summary.yml`, and
-`ai/ai-use-log.md`.
-
-Checks run: `git diff --check`. This was a documentation-only change, so the
-example workflow was not rerun.
-
-Human review notes: wording and recommendations should still be reviewed by the
-project owner before being treated as final guidance.
 
 ## Example Entries
 
@@ -111,45 +66,3 @@ checks were run, briefly say why.
 
 Human review notes: Describe what the human checked or what still needs human
 review.
-
-### 2026-05-20 — Drafted data-cleaning code
-
-AI tool: ChatGPT/Codex.
-
-Purpose: Drafted a first version of a data-cleaning function and suggested
-review checks.
-
-Files changed or reviewed: `code/data-processing/processing-code.r`.
-
-Checks run: Reran affected processing and analysis scripts listed in `usage.md`.
-
-Human review notes: Verified cleaning logic against the codebook and confirmed
-that raw data were unchanged.
-
-### 2026-05-21 — Reproducibility review before submission
-
-AI tool: ChatGPT/Codex.
-
-Purpose: Reviewed the project for reproducibility problems before submission.
-
-Files changed or reviewed: `readme.md`, `usage.md`, `code/`, and
-`products/report/report.qmd`.
-
-Checks run: Reran the affected scripts and rerendered the affected report.
-
-Human review notes: Confirmed outputs were produced by code and no private data
-were added.
-
-### 2026-05-22 — Exploratory analysis suggestions
-
-AI tool: ChatGPT/Codex.
-
-Purpose: Suggested possible exploratory plots and model diagnostics.
-
-Files changed or reviewed: `code/data-exploration/eda-code.r` and
-`code/modeling-analysis/statistical-analysis.r`.
-
-Checks run: Reran the example workflow after edits.
-
-Human review notes: Human author chose which suggestions were appropriate for
-the question and data.
