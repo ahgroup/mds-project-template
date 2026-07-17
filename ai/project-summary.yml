@@ -79,13 +79,6 @@ ai_assistance:
   uniform_user_expectations: "same basic AI-use expectations for all users"
   guidance_file: "agents.md"
   user_policy_file: "ai/ai-use-policy.md"
-  prompt_files:
-    - "ai/prompts/start-project.prompt.md"
-    - "ai/prompts/analysis-plan.prompt.md"
-    - "ai/prompts/modeling-plan-review.prompt.md"
-    - "ai/prompts/code-review.prompt.md"
-    - "ai/prompts/reproducibility-audit.prompt.md"
-    - "ai/prompts/final-product-review.prompt.md"
   human_review_required: true
   full_chat_transcripts_required: false
 

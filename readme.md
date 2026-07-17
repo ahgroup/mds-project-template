@@ -40,9 +40,8 @@ The template comes with a folder structure and example files to show the kinds
 of content you would place in each folder. See the folder-specific readme files
 for more detail.
 
-- `ai/`: AI workflow notes, prompt templates for analysis planning, modeling
-  review, code review, reproducibility audits, final product review, an AI-use
-  policy, an AI-use log, and an AI-oriented project summary. See `ai/readme-ai.md`.
+- `ai/`: AI workflow notes, an AI-use policy, an AI-use log, and an AI-oriented
+  project summary. See `ai/readme-ai.md`.
 - `assets/`: static non-code materials such as references, reference style files, PDFs,
   and manually created figures. See `assets/readme-assets.md`.
 - `code/`: code organized by workflow stage. See `code/readme-code.md`.
@@ -182,10 +181,6 @@ When using AI tools:
 
 Different files in `ai/` have different expected readers and writers:
 
-- `ai/prompts/`: reusable prompt templates. Human users can copy the prompt text
-  into an AI tool, or tell an AI tool with file access to read and apply a
-  specific prompt file. The prompts are not scripts and should not be assumed to
-  run automatically.
 - `ai/project-summary.yml`: a concise summary file for AI tools to read and
   write. Human users are not expected to read, write, or maintain it. If it
   disagrees with human-facing documentation, the human-facing documentation wins.

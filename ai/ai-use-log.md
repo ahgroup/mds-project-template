@@ -44,10 +44,8 @@ log easier for AI tools to update and easier for human users to read when needed
 
 ## Log Entries
 
-The first entry below records template-maintenance history. When starting a new
-project from this template, an AI tool may keep it for provenance, move it
-elsewhere, or replace the log entries with project-specific AI-use notes if the
-project owner wants that.
+No entries yet. In a project created from this template, AI tools add entries
+here once the repository has been renamed, following the format shown below.
 
 
 ## Example Entries

@@ -35,8 +35,8 @@ human users who want to understand how AI tools should work here.
   supplements, presentations, posters, and apps.
 - `results/`: code-generated outputs such as figures, tables, model objects, and
   intermediate analysis outputs.
-- `ai/`: AI workflow notes, prompt templates, an AI-use policy, an AI-use log,
-  and an AI-oriented project summary.
+- `ai/`: AI workflow notes, an AI-use policy, an AI-use log, and an AI-oriented
+  project summary.
 
 ## Core Rules
 
@@ -143,8 +143,6 @@ Figures and Tables should in general be placed into the document close to the te
 
 AI-related files have different expected readers and writers:
 
-- `ai/prompts/`: reusable prompts, read/copied by humans and AI tools, and
-  edited by humans or AI maintainers when workflows change.
 - `ai/project-summary.yml`: a concise summary file for AI tools to read and
   write. Human users are not expected to read, write, or maintain it. It is not
   authoritative; if it disagrees with human-facing documentation, follow the
