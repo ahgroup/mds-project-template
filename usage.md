@@ -158,8 +158,9 @@ manually:
   hard-failure behavior, simplicity, mature dependency choices, and
   project-relative paths.
 - If AI tools helped with meaningful work, follow the disclosure guidance in
-  `ai/ai-use-policy.md`. The AI tool should update `ai/ai-use-log.md` when
-  logging is appropriate; human users may read that log as needed.
+  `ai/ai-use-policy.md`. The AI tool should update `ai/ai-use-log.md`; see
+  `ai/readme-ai.md` for when logging applies. Human users may read that log as
+  needed.
 - Check for unresolved template placeholders such as `NAME`, `LINK-GOES-HERE`,
   sample email addresses, and example author details. Replace them with
   project-specific information or document why they remain.

@@ -75,7 +75,7 @@ ai_assistance:
   summary_file: "ai/project-summary.yml"
   log_file: "ai/ai-use-log.md"
   log_format: "short text sections, not a table"
-  logging_scope: "meaningful project-specific AI assistance; routine template maintenance does not need extra logging unless requested"
+  logging_scope: "meaningful project-specific AI assistance; enabled by default once the repository is renamed from mds-project-template, unless the project owner asks to turn it off; work on the template itself is not logged"
   uniform_user_expectations: "same basic AI-use expectations for all users"
   guidance_file: "agents.md"
   user_policy_file: "ai/ai-use-policy.md"

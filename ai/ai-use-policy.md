@@ -104,10 +104,10 @@ context is useful. Human users may read it as needed, but are not expected to
 write or edit it.
 
 Users should be ready to disclose and explain AI use in the required project
-format. In a project created from this template, the AI tool should update the
-log when it meaningfully helps with project-specific work. Routine maintenance
-of the template itself does not need extra logging beyond existing entries unless
-the project owner asks for more detail.
+format. In a project created from this template, logging is enabled by default,
+and AI tools update the log when they meaningfully help with project-specific
+work. If the project owner does not want the log maintained, they can ask for it
+to be turned off.
 
 ## Good and bad examples
 

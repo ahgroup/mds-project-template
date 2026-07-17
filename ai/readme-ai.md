@@ -30,7 +30,7 @@ AI-use context is useful. Human users may read it as needed, but are not
 expected to write or edit it.
 
 In a project created from the template, the AI tool should add entries when it
-meaningfully helps with project-specific work. Updates to the template itself should not be logged. As long as the repository is named mds-project-template, it can be assumed that work happens on the template itself, and no logging is needed. Once the repository name changes, it is assumed that a new project is started and logging should start.
+meaningfully helps with project-specific work. Updates to the template itself should not be logged. As long as the repository is named mds-project-template, it can be assumed that work happens on the template itself, and no logging is needed. Once the repository name changes, it is assumed that a new project is started and logging is enabled by default. Logging stays enabled unless the project owner explicitly asks to turn it off.
 
 A practical entry is written as a short text section rather than a table row and
 records:
@@ -74,6 +74,5 @@ Different files in this folder have different expected readers and writers:
 7. Check whether generated outputs should be committed, ignored as large files,
    or kept private because they contain sensitive information.
 8. Review the changes manually.
-9. When meaningful AI-assisted project-specific work occurred and the project
-   owner wants it logged, the AI tool should add a concise text entry to
-   `ai-use-log.md`.
+9. When meaningful AI-assisted project-specific work occurred, the AI tool should
+   add a concise text entry to `ai-use-log.md`.

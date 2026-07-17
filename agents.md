@@ -158,14 +158,15 @@ AI-related files have different expected readers and writers:
   to inspect them.
 
 When AI tools are used for meaningful project-specific work, the AI tool should
-record a short summary in `ai/ai-use-log.md` if the project owner wants the log
-maintained. Use short text sections rather than table rows. The log should
-capture what AI helped with, which files were changed or reviewed, and what
-human checks were performed. Routine template maintenance does not need extra logging beyond
-existing entries unless the project owner asks for more detail. AI-use expectations are summarized in `ai/ai-use-policy.md` and apply uniformly
-to projects created from this template. Do not store full chat
-transcripts unless the project owner explicitly wants that and privacy has been
-checked.
+record a short summary in `ai/ai-use-log.md`. Logging is enabled by default once
+the repository has been renamed from `mds-project-template`, and stays enabled
+unless the project owner explicitly asks to turn it off. Work on the template
+itself is not logged. Use short text sections rather than table rows. The log
+should capture what AI helped with, which files were changed or reviewed, and
+what human checks were performed. AI-use expectations are summarized in
+`ai/ai-use-policy.md` and apply uniformly to projects created from this template.
+Do not store full chat transcripts unless the project owner explicitly wants that
+and privacy has been checked.
 
 ## Review Expectations
 

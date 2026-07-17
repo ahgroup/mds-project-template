@@ -172,8 +172,9 @@ When using AI tools:
 - Rerun affected scripts or rerender affected products after meaningful changes.
 - Follow `ai/ai-use-policy.md` for AI-use expectations.
 - AI tools should write concise entries to `ai/ai-use-log.md` for meaningful
-  project-specific AI-assisted work when the project owner wants the log
-  maintained. Human users may read the log as needed, but are not expected to
+  project-specific AI-assisted work. Logging is enabled by default once the
+  repository has been renamed for a new project, unless the project owner asks to
+  turn it off. Human users may read the log as needed, but are not expected to
   write or edit it.
 
 

@@ -9,7 +9,7 @@ include full chat transcripts by default. Do not include sensitive, private,
 regulated, identifiable, restricted, unpublished, or license-protected data.
 
 In a project created from the template, the AI tool should add entries when it
-meaningfully helps with project-specific work. Updates to the template itself should not be logged. As long as the repository is named mds-project-template, it can be assumed that work happens on the template itself, and no logging is needed. Once the repository name changes, it is assumed that a new project is started and logging should start.
+meaningfully helps with project-specific work. Updates to the template itself should not be logged. As long as the repository is named mds-project-template, it can be assumed that work happens on the template itself, and no logging is needed. Once the repository name changes, it is assumed that a new project is started and logging is enabled by default. Logging stays enabled unless the project owner explicitly asks to turn it off.
 
 ## What AI Tools Should Log
 
