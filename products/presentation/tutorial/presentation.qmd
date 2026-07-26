@@ -22,6 +22,35 @@ bibliography: ../../../assets/dataanalysis-references.bib
 csl: ../../../assets/american-journal-of-epidemiology.csl
 ---
 
+## Outline
+
+::: {.outline-list}
+<div><span>1</span><strong>Why the template exists</strong><br>Motivation, READy workflows, and AI responsibility.</div>
+<div><span>2</span><strong>The tools</strong><br>What each tool does, assuming no prior experience.</div>
+<div><span>3</span><strong>The repository map</strong><br>Where data, code, results, products, assets, and AI notes belong.</div>
+<div><span>4</span><strong>Getting started</strong><br>First setup decisions and the example run order.</div>
+<div><span>5</span><strong>AI-assisted work</strong><br>How to use AI help without losing review and ownership.</div>
+<div><span>6</span><strong>Sharing and next steps</strong><br>Collaboration, open research, and learning resources.</div>
+:::
+
+::: {.notes}
+Use this as the roadmap for the talk. The main arc is: first motivate why a workflow template is needed, then introduce the tools, then explain the repository, then show how to start, then discuss responsible AI use and sharing.
+
+[Sources] Local template: readme.md; usage.md; new-project-instructions.md; ai/ai-use-policy.md.
+:::
+
+## Topic 1: Why the template exists {.section-break}
+
+<div class="section-kicker">Topic 1</div>
+<div class="section-title-text">Why the template exists</div>
+<div class="section-subtitle">Reproducible projects need structure before they need sophistication.</div>
+
+::: {.notes}
+This section motivates the template before introducing folders or tools. The point is to make the audience care about project drift, READy workflows, and human responsibility in AI-assisted analysis.
+
+[Sources] Local template: readme.md; usage.md. READy workflow framing: https://andreashandel.github.io/MADAcourse/content/module-ready-workflow/ready-overview.html
+:::
+
 ## Analysis projects rarely fail at one dramatic step
 
 ::: {.headline}
@@ -65,7 +94,7 @@ These are not exotic problems. They are the normal consequences of using separat
 [Sources] Local template: readme.md; usage.md; data/readme-data.md; code-guidelines.md. READy introduction: https://andreashandel.github.io/MADAcourse/content/module-ready-workflow/ready-introduction/ready-introduction.html
 :::
 
-## READy is the workflow target
+## READy is the workflow target {.fig-slide}
 
 ::: {.full-figure}
 ![](./media/ready-pillars.svg)
@@ -91,7 +120,7 @@ Use this slide to set the tone for AI use. AI belongs in the workflow, but it sh
 [Sources] Local template: ai/ai-use-policy.md; agents.md. MADA syllabus AI-use framing: https://andreashandel.github.io/MADAcourse/courseinfo/course-syllabus.html
 :::
 
-## The template is a practical answer
+## The template is a practical answer {.fig-slide}
 
 ::: {.full-figure}
 ![](./media/template-concept.svg)
@@ -129,11 +158,11 @@ This replaces a generic agenda. It defines the audience outcome. The deck is mea
 [Sources] Local template: readme.md; new-project-instructions.md; usage.md.
 :::
 
-## First, the tool vocabulary
+## Topic 2: The tools {.section-break}
 
-::: {.section-intro}
-The template assumes tools, but users should not need to know them before the talk starts.
-:::
+<div class="section-kicker">Topic 2</div>
+<div class="section-title-text">The tools</div>
+<div class="section-subtitle">Assume no prior tool knowledge; give each tool one clear job.</div>
 
 ::: {.notes}
 Transition to a beginner-friendly tool section. Avoid treating R, Quarto, Git, GitHub, or an IDE as self-explanatory.
@@ -141,7 +170,7 @@ Transition to a beginner-friendly tool section. Avoid treating R, Quarto, Git, G
 [Sources] Local template: readme.md. MDS tools site: https://andreashandel.github.io/mds-tools/
 :::
 
-## Each tool has one main job
+## Each tool has one main job {.fig-slide}
 
 ::: {.full-figure}
 ![](./media/toolchain-map.svg)
@@ -318,11 +347,11 @@ The template is not just code. Real projects need references, manuscripts, repor
 [Sources] Local template: readme.md; usage.md.
 :::
 
-## The repository gives the workflow a map
+## Topic 3: The repository map {.section-break}
 
-::: {.section-intro}
-Once the tools are named, the folder structure tells them where to act.
-:::
+<div class="section-kicker">Topic 3</div>
+<div class="section-title-text">The repository map</div>
+<div class="section-subtitle">Each folder has a job, and the jobs keep the workflow traceable.</div>
 
 ::: {.notes}
 Transition from tools to structure. The next slides explain the repository as a map with roles, not as a list of arbitrary folders.
@@ -330,7 +359,7 @@ Transition from tools to structure. The next slides explain the repository as a 
 [Sources] Local template: readme.md.
 :::
 
-## The main path is data to products
+## The main path is data to products {.fig-slide}
 
 ::: {.full-figure}
 ![](./media/folder-map.svg)
@@ -373,7 +402,7 @@ Stress the raw-data rule. If the raw file is inconvenient, write code that creat
 [Sources] Local template: readme.md; usage.md; data/readme-data.md; agents.md.
 :::
 
-## `code/` follows the analysis stages
+## `code/` follows the analysis stages {.fig-slide}
 
 ::: {.full-figure}
 ![](./media/code-stages.svg)
@@ -439,11 +468,11 @@ The MADA documentation unit makes this point directly: documentation is essentia
 [Sources] Local template: readme.md; usage.md; code-guidelines.md. Project documentation unit: https://andreashandel.github.io/MADAcourse/content/module-ready-workflow/ready-documentation/ready-documentation.html
 :::
 
-## A project starts with a few decisions
+## Topic 4: Getting started {.section-break}
 
-::: {.section-intro}
-Before adding analysis, set identity, data rules, software expectations, and run order.
-:::
+<div class="section-kicker">Topic 4</div>
+<div class="section-title-text">Getting started</div>
+<div class="section-subtitle">Start with identity, data rules, software notes, and a documented run order.</div>
 
 ::: {.notes}
 Transition to the getting-started sequence. This is deliberately practical and beginner-friendly.
@@ -466,7 +495,7 @@ This slide makes the first setup pass concrete. Many reproducibility problems be
 [Sources] Local template: new-project-instructions.md; readme.md; data/readme-data.md.
 :::
 
-## The example workflow runs in pieces
+## The example workflow runs in pieces {.fig-slide}
 
 ::: {.full-figure}
 ![](./media/run-order.svg)
@@ -523,6 +552,18 @@ Do not introduce heavy infrastructure before it is needed. The local template in
 [Sources] Local template: readme.md; agents.md. Software management unit: https://andreashandel.github.io/MADAcourse/content/module-ready-workflow/ready-software-management/ready-software-management.html
 :::
 
+## Topic 5: AI-assisted work {.section-break}
+
+<div class="section-kicker">Topic 5</div>
+<div class="section-title-text">AI-assisted work</div>
+<div class="section-subtitle">Use AI for bounded help, then inspect, rerun, and document.</div>
+
+::: {.notes}
+This section shifts from general project setup to AI operating practice. The audience should leave with a concrete loop for asking, checking, rerunning, and documenting meaningful AI help.
+
+[Sources] Local template: ai/ai-use-policy.md; ai/readme-ai.md; agents.md.
+:::
+
 ## AI assistance needs context
 
 :::: {.split}
@@ -571,7 +612,7 @@ AI can suggest options, but these decisions need human ownership and review. Thi
 [Sources] Local template: ai/ai-use-policy.md; code-guidelines.md.
 :::
 
-## AI belongs inside the review loop
+## AI belongs inside the review loop {.fig-slide}
 
 ::: {.full-figure}
 ![](./media/ai-review-loop.svg)
@@ -593,6 +634,18 @@ When sensitive raw records cannot be shared with AI, use code structure, summari
 The template policy says not to paste sensitive, private, regulated, unpublished, restricted, or identifiable data into external AI tools unless explicitly approved. The MADA course also includes synthetic-data material as a way to work safely with data-like structures.
 
 [Sources] Local template: ai/ai-use-policy.md; data/readme-data.md. MADA synthetic data overview: https://andreashandel.github.io/MADAcourse/content/module-synthetic-data/synthetic-data-overview.html
+:::
+
+## Topic 6: Sharing and next steps {.section-break}
+
+<div class="section-kicker">Topic 6</div>
+<div class="section-title-text">Sharing and next steps</div>
+<div class="section-subtitle">A project is ready to share when others can understand and rerun it.</div>
+
+::: {.notes}
+This final section connects the template to collaboration, open research, a practical first-week plan, and follow-up learning resources.
+
+[Sources] Local template: readme.md; usage.md; new-project-instructions.md. Open research unit: https://andreashandel.github.io/MADAcourse/content/module-ready-workflow/ready-open/ready-open.html
 :::
 
 ## The template also supports collaboration
