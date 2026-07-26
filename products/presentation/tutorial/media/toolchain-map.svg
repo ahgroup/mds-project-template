@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Template toolchain map">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="640" y="78" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700" fill="#123c66">A small set of tools covers the full workflow</text>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <circle cx="640" cy="362" r="94" fill="#123c66"/>
+    <text x="640" y="350" text-anchor="middle" font-size="31" font-weight="700" fill="#ffffff">Project</text>
+    <text x="640" y="386" text-anchor="middle" font-size="27" fill="#ffffff">folder</text>
+    <g>
+      <circle cx="308" cy="185" r="77" fill="#eaf3ef" stroke="#2a7f62" stroke-width="4"/>
+      <text x="308" y="177" text-anchor="middle" font-size="30" font-weight="700" fill="#2a7f62">R</text>
+      <text x="308" y="211" text-anchor="middle" font-size="20" fill="#303944">analysis</text>
+    </g>
+    <g>
+      <circle cx="640" cy="143" r="77" fill="#eef2f7" stroke="#123c66" stroke-width="4"/>
+      <text x="640" y="135" text-anchor="middle" font-size="30" font-weight="700" fill="#123c66">Quarto</text>
+      <text x="640" y="169" text-anchor="middle" font-size="20" fill="#303944">products</text>
+    </g>
+    <g>
+      <circle cx="972" cy="185" r="77" fill="#fbf0eb" stroke="#b35c33" stroke-width="4"/>
+      <text x="972" y="177" text-anchor="middle" font-size="30" font-weight="700" fill="#b35c33">Git</text>
+      <text x="972" y="211" text-anchor="middle" font-size="20" fill="#303944">history</text>
+    </g>
+    <g>
+      <circle cx="308" cy="539" r="77" fill="#f2f0fb" stroke="#6a5acd" stroke-width="4"/>
+      <text x="308" y="531" text-anchor="middle" font-size="30" font-weight="700" fill="#6a5acd">AI</text>
+      <text x="308" y="565" text-anchor="middle" font-size="20" fill="#303944">assistance</text>
+    </g>
+    <g>
+      <circle cx="972" cy="539" r="77" fill="#edf3f6" stroke="#4e6b7d" stroke-width="4"/>
+      <text x="972" y="531" text-anchor="middle" font-size="30" font-weight="700" fill="#4e6b7d">IDE</text>
+      <text x="972" y="565" text-anchor="middle" font-size="20" fill="#303944">workbench</text>
+    </g>
+  </g>
+  <g stroke="#b6c2cd" stroke-width="5" stroke-linecap="round">
+    <line x1="375" y1="222" x2="560" y2="318"/>
+    <line x1="640" y1="220" x2="640" y2="268"/>
+    <line x1="905" y1="222" x2="720" y2="318"/>
+    <line x1="375" y1="502" x2="560" y2="406"/>
+    <line x1="905" y1="502" x2="720" y2="406"/>
+  </g>
+</svg>

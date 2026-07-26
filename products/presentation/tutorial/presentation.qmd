@@ -1,0 +1,686 @@
+---
+title: "AI-assisted reproducible data analysis"
+subtitle: "A tutorial introduction to the MDS project template"
+date: 2026-07-26
+author: "NAME"
+format:
+  revealjs:
+    theme: default
+    css: "./media/my-presentation-styling.css"
+    transition: none
+    incremental: false
+    cap-location: bottom
+    embed-resources: true
+    slide-number: true
+    show-slide-number: all
+    auto-stretch: true
+    smaller: false
+bibliography: ../../../assets/dataanalysis-references.bib
+csl: ../../../assets/american-journal-of-epidemiology.csl
+---
+
+## The template is a working system
+
+:::: {.two-col}
+::: {.column}
+
+::: {.callout}
+Project folders, code, outputs, products, Git, and AI notes all work together.
+:::
+
+:::
+::: {.column .image-frame}
+![](./media/template-concept.svg)
+:::
+::::
+
+::: {.notes}
+Open by framing the template as more than a folder tree. It is meant to make a modeling or data science project easier to explain, rerun, review, and extend. The key idea is that AI assistance is useful only when it is embedded in a reproducible workflow where data, code, outputs, and human decisions stay traceable.
+
+[Sources] readme.md; usage.md; ai/ai-use-policy.md; agents.md.
+:::
+
+## What this tutorial covers
+
+1. Why this template exists
+2. What tools it assumes
+3. How the folders fit together
+4. How to start a new project
+5. How to use AI without losing control
+
+::: {.notes}
+Set expectations. The deck is a guided tour, not a live coding session. The audience should leave knowing what problem the template solves, what each major tool contributes, where files belong, and what first steps to take in a new project.
+
+[Sources] readme.md; new-project-instructions.md; usage.md.
+:::
+
+## The core problem is drift
+
+:::: {.two-col}
+::: {.column}
+- Data change
+- Code changes
+- Outputs change
+- Decisions get forgotten
+:::
+::: {.column}
+<p class="big-idea">Reproducibility is how we keep those pieces connected.</p>
+:::
+::::
+
+::: {.notes}
+Explain "drift" in practical terms: a figure in a report no longer matches the script, a table was manually edited, a model object was regenerated but not documented, or a collaborator cannot tell which code produced which result. The template is designed to reduce those failure modes.
+
+[Sources] readme.md; usage.md; code-guidelines.md.
+:::
+
+## The template makes the workflow explicit
+
+:::: {.two-col}
+::: {.column}
+- Raw data stays raw
+- Code computes results
+- Products read generated outputs
+- Documentation explains the run order
+:::
+::: {.column .image-frame}
+![](./media/run-order.svg)
+:::
+::::
+
+::: {.notes}
+Emphasize that reproducible does not mean one giant script. The example workflow is intentionally split into understandable stages. The important feature is that each stage has documented inputs and outputs, and a user can rerun the sequence.
+
+[Sources] usage.md; code/readme-code.md.
+:::
+
+## AI is helpful, but not authoritative
+
+:::: {.two-col}
+::: {.column}
+- Draft code
+- Explain errors
+- Suggest checks
+- Review reproducibility
+:::
+::: {.column}
+<p class="big-idea">Scientific judgment stays with the human project team.</p>
+:::
+::::
+
+::: {.notes}
+This is a central message. AI can accelerate work, but it should not decide whether a dataset is appropriate, which model is scientifically justified, whether data are safe to share, or what the final interpretation should be. The template includes policy and logging files so AI use is transparent.
+
+[Sources] ai/ai-use-policy.md; readme.md.
+:::
+
+## Concept: compute first, communicate second
+
+:::: {.two-col}
+::: {.column}
+<p class="big-idea">Analysis scripts produce results.</p>
+<p class="quiet">Reports, manuscripts, posters, and slides consume them.</p>
+:::
+::: {.column}
+- Avoid manually edited figures
+- Avoid copied tables
+- Avoid mystery outputs
+:::
+::::
+
+::: {.notes}
+This split is one of the most important habits the template teaches. Processing, exploration, and analysis scripts create data or result objects. Later scripts turn those objects into tables and figures. Products then include the latest generated files. This makes it easier to check whether a final claim is traceable to code.
+
+[Sources] usage.md; readme.md.
+:::
+
+## The tools
+
+<p class="big-idea">The default setup is deliberately familiar.</p>
+
+::: {.notes}
+Transition from concept to toolchain. The template is not trying to introduce a complex infrastructure stack by default. It starts with tools many data analysts already use or can learn incrementally.
+
+[Sources] readme.md.
+:::
+
+## The toolchain is small on purpose
+
+::: {.wide-image .centered}
+![](./media/toolchain-map.svg)
+:::
+
+::: {.notes}
+Walk through the map. R is the default analysis language in the example, Quarto creates products, Git and GitHub track and share changes, the IDE provides a working environment, and AI tools help with drafting, review, and explanation. The structure can also accommodate Python, Julia, or shell scripts when a project needs them.
+
+[Sources] readme.md; usage.md.
+:::
+
+## R does the example analysis
+
+:::: {.two-col}
+::: {.column}
+- Read data
+- Clean data
+- Explore patterns
+- Fit models
+- Save outputs
+:::
+::: {.column}
+<p class="big-idea">R is the default example, not a cage.</p>
+<p class="quiet">Python, Julia, and shell scripts can be added in the same staged workflow.</p>
+:::
+::::
+
+::: {.notes}
+The example project uses R packages such as dplyr, ggplot2, broom, here, readxl, knitr, skimr, and tidyr. Mention that the template is workflow-first: other languages can be added without reorganizing the entire repository.
+
+[Sources] readme.md; usage.md.
+:::
+
+## Quarto turns analysis into products
+
+:::: {.three-col}
+::: {.mini-panel}
+**Reports**
+
+HTML by default in the example
+:::
+::: {.mini-panel}
+**Manuscripts**
+
+Quarto source, Word output
+:::
+::: {.mini-panel}
+**Slides**
+
+Reveal.js presentation folders
+:::
+::::
+
+::: {.notes}
+Quarto is used because it combines narrative text, code, figures, tables, citations, and output formats. In this repository, the presentation setup is reveal.js HTML with local media, embedded resources, and slide numbers, as shown by the example presentation.
+
+[Sources] readme.md; usage.md; products/presentation/example/presentation.qmd.
+:::
+
+## Git records the project history
+
+:::: {.two-col}
+::: {.column}
+- Commit small checkpoints
+- Review changed files
+- Share through GitHub
+- Keep large or sensitive files out
+:::
+::: {.column}
+<p class="big-idea">A private repository is not a secure data system.</p>
+:::
+::::
+
+::: {.notes}
+Git is for history and collaboration. GitHub is for backup and sharing. Stress the privacy distinction: private GitHub repos are useful, but they do not replace approved secure storage for sensitive, identifiable, restricted, or regulated data. The template includes ignored folders for private or large local files.
+
+[Sources] readme.md; new-project-instructions.md.
+:::
+
+## The IDE keeps the project rooted
+
+:::: {.two-col}
+::: {.column}
+- Open the project folder
+- Run scripts from the root
+- Use project-relative paths
+:::
+::: {.column}
+<p class="big-idea">The root is the folder with <code>readme.md</code>, <code>usage.md</code>, and <code>.here</code>.</p>
+:::
+::::
+
+::: {.notes}
+Use this slide to make project-root behavior concrete. In Positron, RStudio, VS Code, or a terminal, users should work from the project root so relative paths resolve correctly. The `.here` marker helps the R `here` package find that root.
+
+[Sources] readme.md; usage.md; code-guidelines.md.
+:::
+
+## AI tools are collaborators with boundaries
+
+:::: {.two-col}
+::: {.column .image-frame}
+![](./media/ai-review-loop.svg)
+:::
+::: {.column}
+- Ask for scoped help
+- Review the changes
+- Rerun what matters
+- Log meaningful use
+:::
+::::
+
+::: {.notes}
+This slide can carry a short discussion of responsible AI use. AI tools are good at suggesting drafts and checks, but they are not a substitute for understanding the project. The template includes `agents.md` for AI assistant behavior, `ai/project-summary.yml` for orientation, `ai/ai-use-policy.md` for human-facing expectations, and `ai/ai-use-log.md` for transparency.
+
+[Sources] ai/ai-use-policy.md; ai/readme-ai.md; agents.md.
+:::
+
+## The folder structure
+
+<p class="big-idea">Each folder has a job.</p>
+
+::: {.notes}
+Transition to a practical tour of the repository. The audience should learn the role of each major folder and why files should not be placed wherever they happen to be convenient.
+
+[Sources] readme.md.
+:::
+
+## The folders separate responsibilities
+
+::: {.wide-image .centered}
+![](./media/folder-map.svg)
+:::
+
+::: {.notes}
+Use the figure as a map. The top row follows the main analysis path: data, code, results, products. The lower row supports the workflow: static assets, AI documentation, and human-facing project documentation.
+
+[Sources] readme.md.
+:::
+
+## `data/` holds inputs and derived data
+
+:::: {.two-col}
+::: {.column .path-list}
+- `data/raw-data/`
+- `data/processed-data/`
+- `data/private-data/`
+- `data/large-files/`
+:::
+::: {.column}
+<p class="big-idea">Raw data should not be edited by hand.</p>
+:::
+::::
+
+::: {.notes}
+Explain the difference between raw, processed, private, and large data. Raw data is the source. Processed data is created by code. Private and large folders are for local-only materials that generally should not be committed. Real project data should be treated as potentially sensitive until documented otherwise.
+
+[Sources] readme.md; data/readme-data.md; new-project-instructions.md.
+:::
+
+## `code/` follows the workflow stages
+
+:::: {.two-col}
+::: {.column .path-list}
+- `data-processing/`
+- `data-exploration/`
+- `modeling-analysis/`
+- `figures-tables/`
+- `utilities/`
+:::
+::: {.column}
+<p class="big-idea">Main scripts should be readable from top to bottom.</p>
+:::
+::::
+
+::: {.notes}
+The example code is organized by what the script does in the workflow, not by file type or author. Mention that scripts should have purpose, inputs, outputs, and run instructions near the top. Simplicity and documentation are deliberate design goals.
+
+[Sources] readme.md; code-guidelines.md; code/readme-code.md.
+:::
+
+## `results/` is generated by code
+
+:::: {.two-col}
+::: {.column}
+- Figures
+- Tables
+- Model outputs
+- Intermediate result objects
+:::
+::: {.column}
+<p class="big-idea">If a result is manual, it probably belongs somewhere else.</p>
+:::
+::::
+
+::: {.notes}
+The template treats `results/` as code-generated output. Generated files may be committed if small and non-sensitive. Large or sensitive outputs should stay in documented ignored locations. Manually created static materials usually belong in `assets/`.
+
+[Sources] readme.md; usage.md; agents.md.
+:::
+
+## `products/` is where the audience sees the work
+
+:::: {.three-col}
+::: {.mini-panel}
+**Report**
+
+Working summaries
+:::
+::: {.mini-panel}
+**Manuscript**
+
+Publication products
+:::
+::: {.mini-panel}
+**Presentation**
+
+Talk-ready slides
+:::
+::::
+
+::: {.notes}
+Products are final or near-final deliverables. They should pull from generated outputs where possible so the report, manuscript, slides, and poster remain traceable to code. This tutorial deck itself lives under `products/presentation/tutorial/`.
+
+[Sources] readme.md; usage.md; products/readme-products.md.
+:::
+
+## `assets/` holds stable supporting material
+
+:::: {.two-col}
+::: {.column}
+- Reference PDFs
+- Bibliography files
+- CSL styles
+- Manually created schematics
+:::
+::: {.column}
+<p class="big-idea">Assets support the project, but are not generated results.</p>
+:::
+::::
+
+::: {.notes}
+Use this slide to distinguish assets from results. A hand-drawn schematic, citation style, or source PDF belongs in assets. A figure produced by an analysis script belongs in results.
+
+[Sources] readme.md; assets/readme-assets.md; agents.md.
+:::
+
+## `ai/` makes assistance transparent
+
+:::: {.two-col}
+::: {.column .path-list}
+- `ai-use-policy.md`
+- `ai-use-log.md`
+- `project-summary.yml`
+- `readme-ai.md`
+:::
+::: {.column}
+<p class="big-idea">AI use should be visible enough to review.</p>
+:::
+::::
+
+::: {.notes}
+Explain the reader/writer distinction. Some AI files are human-facing policy or guidance. The project summary is a concise orientation aid for AI tools, not the authoritative source. The log records meaningful AI-assisted work after a repository has been adapted from the template, unless the owner turns logging off.
+
+[Sources] ai/readme-ai.md; ai/ai-use-policy.md; agents.md.
+:::
+
+## Getting started
+
+<p class="big-idea">Start with identity, data policy, and the run order.</p>
+
+::: {.notes}
+Transition from structure to action. The getting-started sequence is intentionally practical: create the repo, rename project materials, decide data rules, adapt the workflow, document dependencies, then run and review.
+
+[Sources] new-project-instructions.md.
+:::
+
+## Start from the template repository
+
+:::: {.two-col}
+::: {.column}
+1. Create a repo from the template
+2. Clone it locally
+3. Open the project root
+:::
+::: {.column}
+<p class="big-idea">Private is often the safer first GitHub setting.</p>
+:::
+::::
+
+::: {.notes}
+For many projects, it is safer to begin private and make the repository public later only after checking data, outputs, license, authorship, and sharing goals. Make clear that "private repository" does not mean "approved secure storage."
+
+[Sources] new-project-instructions.md; readme.md.
+:::
+
+## Rename the project before analysis grows
+
+:::: {.two-col}
+::: {.column}
+- Project title
+- Owners and contributors
+- Data description
+- Product titles
+:::
+::: {.column}
+<p class="big-idea">Replace placeholders early.</p>
+<p class="quiet">Do not guess unknown project details.</p>
+:::
+::::
+
+::: {.notes}
+Point out common placeholders: `NAME`, generic author information, example titles, sample descriptions, and placeholder links. Unknown information should remain as an explicit placeholder that says what needs to be decided, rather than being silently invented.
+
+[Sources] new-project-instructions.md; agents.md; usage.md.
+:::
+
+## Decide what data can be committed
+
+:::: {.two-col}
+::: {.column}
+- Public
+- Private but commit-safe
+- Local-only or restricted
+:::
+::: {.column}
+<p class="big-idea">Document the decision in <code>data/readme-data.md</code>.</p>
+:::
+::::
+
+::: {.notes}
+This is often the most important early project governance decision. The template expects users to document data source, sensitivity, access limits, and whether AI tools may inspect the data. Raw data should go in `data/raw-data/` only if it is appropriate to store in the repository.
+
+[Sources] new-project-instructions.md; readme.md; data/readme-data.md.
+:::
+
+## Adapt the workflow, then update `usage.md`
+
+:::: {.two-col}
+::: {.column}
+- What scripts exist?
+- What do they read?
+- What do they write?
+- What order should they run?
+:::
+::: {.column}
+<p class="big-idea">A new collaborator should be able to reproduce the project from the docs.</p>
+:::
+::::
+
+::: {.notes}
+The example workflow is a pattern, not a scientific requirement. Projects can change folders or add languages, but the run order and input/output relationships should remain documented in `usage.md` and folder readmes.
+
+[Sources] new-project-instructions.md; usage.md.
+:::
+
+## Run scripts in a clean, documented order
+
+::: {.wide-image .centered}
+![](./media/run-order.svg)
+:::
+
+::: {.notes}
+For the default example, the order is processing, EDA, statistical analysis, tables, figures, then products. Scripts 1 to 3 compute and save results. Scripts 4 and 5 create presentation-ready tables and figures. After that, render the products that need updating.
+
+[Sources] usage.md.
+:::
+
+## Render only the products you need
+
+:::: {.two-col}
+::: {.column .path-list}
+- `products/report/`
+- `products/manuscript/`
+- `products/presentation/`
+:::
+::: {.column}
+<p class="big-idea">Regenerate results first, then render products.</p>
+:::
+::::
+
+::: {.notes}
+Explain why products come last. If a table or figure changes, a report or slide deck needs to be rerendered to reflect the updated output. The example usage file gives specific Quarto render commands. Some formats require additional software, such as Word or LibreOffice for DOCX and TeX for PDF.
+
+[Sources] usage.md; readme.md.
+:::
+
+## Working well with AI
+
+<p class="big-idea">Use AI for acceleration, not abdication.</p>
+
+::: {.notes}
+Transition to practical AI use. The audience should understand what to ask AI for, what not to delegate, and how to check outputs.
+
+[Sources] ai/ai-use-policy.md; agents.md.
+:::
+
+## Good AI requests are small and checkable
+
+:::: {.two-col}
+::: {.column}
+- "Explain this error"
+- "Review path handling"
+- "Draft a data check"
+- "Summarize changed files"
+:::
+::: {.column}
+<p class="big-idea">Scope makes review possible.</p>
+:::
+::::
+
+::: {.notes}
+AI is most useful when asked to help with bounded, inspectable tasks. Encourage users to point AI tools to the relevant project files and to ask for explanations, not just code. For scientific or statistical choices, AI suggestions should be treated as proposals.
+
+[Sources] ai/ai-use-policy.md; readme.md.
+:::
+
+## Do not outsource the scientific decision
+
+:::: {.two-col}
+::: {.column}
+- Model choice
+- Data exclusions
+- Privacy decisions
+- Final interpretation
+:::
+::: {.column}
+<p class="big-idea">The project team owns the conclusion.</p>
+:::
+::::
+
+::: {.notes}
+This slide should be said plainly. AI can suggest options, but humans must decide whether a research question is meaningful, whether data are appropriate, which model is justified, what assumptions are reasonable, and what the results mean.
+
+[Sources] ai/ai-use-policy.md.
+:::
+
+## Review is part of the workflow
+
+:::: {.two-col}
+::: {.column .image-frame}
+![](./media/ai-review-loop.svg)
+:::
+::: {.column}
+- Read the diff
+- Run affected scripts
+- Compare outputs
+- Update documentation
+:::
+::::
+
+::: {.notes}
+Connect AI review to ordinary reproducibility review. If AI changes code that affects outputs, rerun the affected scripts and update generated outputs when appropriate. If AI changes documentation, read the final document, not just the patch. If AI helped meaningfully, log or disclose the help according to project policy.
+
+[Sources] ai/ai-use-policy.md; agents.md; usage.md.
+:::
+
+## What to check before sharing
+
+:::: {.three-col}
+::: {.mini-panel}
+**Data**
+
+Raw, private, large
+:::
+::: {.mini-panel}
+**Outputs**
+
+Traceable to code
+:::
+::: {.mini-panel}
+**Docs**
+
+Run order and dependencies
+:::
+::::
+
+::: {.notes}
+Use this as a practical final checklist: raw data not edited, generated outputs traceable to code, no credentials or private data added, package requirements documented, code follows guidelines, AI use handled transparently, and placeholders replaced or intentionally retained.
+
+[Sources] usage.md; agents.md.
+:::
+
+## The template succeeds when handoff is easy
+
+:::: {.two-col}
+::: {.column}
+<p class="big-idea">Someone else should be able to open the repo and understand the project.</p>
+:::
+::: {.column}
+- What data exist
+- What code to run
+- What outputs mean
+- What AI helped with
+:::
+::::
+
+::: {.notes}
+Close by returning to the reason for the template. It is not bureaucracy for its own sake. It is an investment in handoff: to a collaborator, a reviewer, a future student, a future version of yourself, or an AI tool that needs context.
+
+[Sources] readme.md; usage.md; ai/ai-use-policy.md.
+:::
+
+## A simple first-week plan
+
+1. Create and rename the project
+2. Document data sensitivity
+3. Adapt the run order
+4. Run the example or first project workflow
+5. Commit a reviewed checkpoint
+
+::: {.notes}
+This gives the audience a concrete way to act after the talk. The plan is deliberately modest: establish identity, data rules, run order, reproducibility checks, and version history before the project becomes complex.
+
+[Sources] new-project-instructions.md; usage.md.
+:::
+
+## Useful references inside the project
+
+:::: {.two-col}
+::: {.column .path-list}
+- `readme.md`
+- `usage.md`
+- `new-project-instructions.md`
+- `code-guidelines.md`
+:::
+::: {.column .path-list}
+- `agents.md`
+- `ai/ai-use-policy.md`
+- `data/readme-data.md`
+- folder readmes
+:::
+::::
+
+::: {.notes}
+End with internal references rather than an external bibliography. These are the files a new user should open first. If presenting live, this is a good slide for telling the audience where to look after cloning a project from the template.
+
+[Sources] readme.md; usage.md; new-project-instructions.md; code-guidelines.md; agents.md; ai/ai-use-policy.md.
+:::

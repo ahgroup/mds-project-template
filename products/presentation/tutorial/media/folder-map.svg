@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Template folder map">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="86" y="86" font-size="42" font-weight="700" fill="#123c66">The folders separate roles</text>
+    <text x="88" y="126" font-size="23" fill="#4e5b66">Raw inputs, code, outputs, products, and AI notes each have a home.</text>
+    <rect x="88" y="176" width="1104" height="418" rx="16" fill="#f3f6f8" stroke="#cfd7e0" stroke-width="3"/>
+    <g>
+      <rect x="129" y="228" width="170" height="92" rx="12" fill="#ffffff" stroke="#2a7f62" stroke-width="4"/>
+      <text x="214" y="265" text-anchor="middle" font-size="28" font-weight="700" fill="#2a7f62">data/</text>
+      <text x="214" y="294" text-anchor="middle" font-size="18" fill="#303944">raw and processed</text>
+    </g>
+    <g>
+      <rect x="380" y="228" width="170" height="92" rx="12" fill="#ffffff" stroke="#123c66" stroke-width="4"/>
+      <text x="465" y="265" text-anchor="middle" font-size="28" font-weight="700" fill="#123c66">code/</text>
+      <text x="465" y="294" text-anchor="middle" font-size="18" fill="#303944">workflow stages</text>
+    </g>
+    <g>
+      <rect x="631" y="228" width="170" height="92" rx="12" fill="#ffffff" stroke="#b35c33" stroke-width="4"/>
+      <text x="716" y="265" text-anchor="middle" font-size="28" font-weight="700" fill="#b35c33">results/</text>
+      <text x="716" y="294" text-anchor="middle" font-size="18" fill="#303944">generated outputs</text>
+    </g>
+    <g>
+      <rect x="882" y="228" width="170" height="92" rx="12" fill="#ffffff" stroke="#6a5acd" stroke-width="4"/>
+      <text x="967" y="265" text-anchor="middle" font-size="28" font-weight="700" fill="#6a5acd">products/</text>
+      <text x="967" y="294" text-anchor="middle" font-size="18" fill="#303944">final deliverables</text>
+    </g>
+    <g>
+      <rect x="253" y="414" width="170" height="92" rx="12" fill="#ffffff" stroke="#4e6b7d" stroke-width="4"/>
+      <text x="338" y="451" text-anchor="middle" font-size="28" font-weight="700" fill="#4e6b7d">assets/</text>
+      <text x="338" y="480" text-anchor="middle" font-size="18" fill="#303944">static materials</text>
+    </g>
+    <g>
+      <rect x="504" y="414" width="170" height="92" rx="12" fill="#ffffff" stroke="#7a6b37" stroke-width="4"/>
+      <text x="589" y="451" text-anchor="middle" font-size="28" font-weight="700" fill="#7a6b37">ai/</text>
+      <text x="589" y="480" text-anchor="middle" font-size="18" fill="#303944">policy and log</text>
+    </g>
+    <g>
+      <rect x="755" y="414" width="170" height="92" rx="12" fill="#ffffff" stroke="#56616c" stroke-width="4"/>
+      <text x="840" y="451" text-anchor="middle" font-size="28" font-weight="700" fill="#56616c">docs</text>
+      <text x="840" y="480" text-anchor="middle" font-size="18" fill="#303944">readme and usage</text>
+    </g>
+  </g>
+  <g stroke="#aab7c2" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M299 274 L380 274"/>
+    <path d="M550 274 L631 274"/>
+    <path d="M801 274 L882 274"/>
+    <path d="M465 320 C450 362 407 389 338 414"/>
+    <path d="M716 320 C695 363 648 390 589 414"/>
+    <path d="M967 320 C948 363 909 390 840 414"/>
+  </g>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="AI assisted reproducible analysis concept">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="70" y="82" width="1140" height="556" rx="18" fill="#f3f6f8" stroke="#cfd7e0" stroke-width="3"/>
+  <circle cx="640" cy="360" r="116" fill="#123c66"/>
+  <text x="640" y="338" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" fill="#ffffff">Project</text>
+  <text x="640" y="386" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#ffffff">Template</text>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="130" y="135" width="280" height="112" rx="14" fill="#ffffff" stroke="#2a7f62" stroke-width="4"/>
+    <text x="270" y="183" text-anchor="middle" font-size="31" font-weight="700" fill="#2a7f62">Reproducible</text>
+    <text x="270" y="218" text-anchor="middle" font-size="23" fill="#303944">code creates outputs</text>
+    <rect x="870" y="135" width="280" height="112" rx="14" fill="#ffffff" stroke="#b35c33" stroke-width="4"/>
+    <text x="1010" y="183" text-anchor="middle" font-size="31" font-weight="700" fill="#b35c33">Automated</text>
+    <text x="1010" y="218" text-anchor="middle" font-size="23" fill="#303944">repeatable run order</text>
+    <rect x="130" y="474" width="280" height="112" rx="14" fill="#ffffff" stroke="#6a5acd" stroke-width="4"/>
+    <text x="270" y="522" text-anchor="middle" font-size="31" font-weight="700" fill="#6a5acd">AI assisted</text>
+    <text x="270" y="557" text-anchor="middle" font-size="23" fill="#303944">reviewed, logged help</text>
+    <rect x="870" y="474" width="280" height="112" rx="14" fill="#ffffff" stroke="#4e6b7d" stroke-width="4"/>
+    <text x="1010" y="522" text-anchor="middle" font-size="31" font-weight="700" fill="#4e6b7d">Human owned</text>
+    <text x="1010" y="557" text-anchor="middle" font-size="23" fill="#303944">judgment stays explicit</text>
+  </g>
+  <g stroke="#8fa1b2" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M412 192 C505 190 538 249 573 293"/>
+    <path d="M868 192 C775 190 742 249 707 293"/>
+    <path d="M412 531 C505 530 538 472 573 427"/>
+    <path d="M868 531 C775 530 742 472 707 427"/>
+  </g>
+</svg>

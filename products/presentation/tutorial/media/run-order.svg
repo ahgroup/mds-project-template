@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Example workflow run order">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="88" y="84" font-size="42" font-weight="700" fill="#123c66">Run the example in understandable pieces</text>
+    <text x="90" y="125" font-size="23" fill="#4e5b66">The first scripts compute. The last scripts prepare figures and tables for products.</text>
+    <g>
+      <rect x="88" y="246" width="180" height="120" rx="16" fill="#eaf3ef" stroke="#2a7f62" stroke-width="4"/>
+      <text x="178" y="292" text-anchor="middle" font-size="25" font-weight="700" fill="#2a7f62">Process</text>
+      <text x="178" y="324" text-anchor="middle" font-size="18" fill="#303944">raw data to</text>
+      <text x="178" y="350" text-anchor="middle" font-size="18" fill="#303944">processed data</text>
+    </g>
+    <g>
+      <rect x="328" y="246" width="180" height="120" rx="16" fill="#eef2f7" stroke="#123c66" stroke-width="4"/>
+      <text x="418" y="292" text-anchor="middle" font-size="25" font-weight="700" fill="#123c66">Explore</text>
+      <text x="418" y="324" text-anchor="middle" font-size="18" fill="#303944">summaries and</text>
+      <text x="418" y="350" text-anchor="middle" font-size="18" fill="#303944">diagnostics</text>
+    </g>
+    <g>
+      <rect x="568" y="246" width="180" height="120" rx="16" fill="#fbf0eb" stroke="#b35c33" stroke-width="4"/>
+      <text x="658" y="292" text-anchor="middle" font-size="25" font-weight="700" fill="#b35c33">Analyze</text>
+      <text x="658" y="324" text-anchor="middle" font-size="18" fill="#303944">models and</text>
+      <text x="658" y="350" text-anchor="middle" font-size="18" fill="#303944">results</text>
+    </g>
+    <g>
+      <rect x="808" y="246" width="180" height="120" rx="16" fill="#f2f0fb" stroke="#6a5acd" stroke-width="4"/>
+      <text x="898" y="292" text-anchor="middle" font-size="25" font-weight="700" fill="#6a5acd">Package</text>
+      <text x="898" y="324" text-anchor="middle" font-size="18" fill="#303944">figures and</text>
+      <text x="898" y="350" text-anchor="middle" font-size="18" fill="#303944">tables</text>
+    </g>
+    <g>
+      <rect x="1048" y="246" width="180" height="120" rx="16" fill="#edf3f6" stroke="#4e6b7d" stroke-width="4"/>
+      <text x="1138" y="292" text-anchor="middle" font-size="25" font-weight="700" fill="#4e6b7d">Render</text>
+      <text x="1138" y="324" text-anchor="middle" font-size="18" fill="#303944">reports and</text>
+      <text x="1138" y="350" text-anchor="middle" font-size="18" fill="#303944">slides</text>
+    </g>
+    <g stroke="#9aa8b5" stroke-width="5" stroke-linecap="round">
+      <line x1="268" y1="306" x2="328" y2="306"/>
+      <line x1="508" y1="306" x2="568" y2="306"/>
+      <line x1="748" y1="306" x2="808" y2="306"/>
+      <line x1="988" y1="306" x2="1048" y2="306"/>
+    </g>
+    <g fill="#9aa8b5">
+      <polygon points="324,306 305,295 305,317"/>
+      <polygon points="564,306 545,295 545,317"/>
+      <polygon points="804,306 785,295 785,317"/>
+      <polygon points="1044,306 1025,295 1025,317"/>
+    </g>
+    <rect x="140" y="478" width="1000" height="82" rx="14" fill="#f8fafb" stroke="#cfd7e0" stroke-width="3"/>
+    <text x="640" y="515" text-anchor="middle" font-size="25" font-weight="700" fill="#123c66">Reproducibility is not one magic button</text>
+    <text x="640" y="548" text-anchor="middle" font-size="20" fill="#303944">It is a documented sequence that someone else can inspect and rerun.</text>
+  </g>
+</svg>

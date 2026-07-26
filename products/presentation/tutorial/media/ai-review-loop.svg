@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="AI assistance review loop">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="88" y="86" font-size="42" font-weight="700" fill="#123c66">AI help stays inside a review loop</text>
+    <text x="90" y="127" font-size="23" fill="#4e5b66">The template makes help visible, checkable, and bounded by human judgment.</text>
+    <circle cx="640" cy="368" r="190" fill="#f3f6f8" stroke="#cfd7e0" stroke-width="4"/>
+    <circle cx="640" cy="368" r="76" fill="#123c66"/>
+    <text x="640" y="358" text-anchor="middle" font-size="29" font-weight="700" fill="#ffffff">Human</text>
+    <text x="640" y="392" text-anchor="middle" font-size="25" fill="#ffffff">review</text>
+    <g>
+      <rect x="524" y="148" width="232" height="86" rx="14" fill="#ffffff" stroke="#6a5acd" stroke-width="4"/>
+      <text x="640" y="182" text-anchor="middle" font-size="25" font-weight="700" fill="#6a5acd">Ask clearly</text>
+      <text x="640" y="211" text-anchor="middle" font-size="18" fill="#303944">small, scoped requests</text>
+    </g>
+    <g>
+      <rect x="822" y="326" width="232" height="86" rx="14" fill="#ffffff" stroke="#b35c33" stroke-width="4"/>
+      <text x="938" y="360" text-anchor="middle" font-size="25" font-weight="700" fill="#b35c33">Inspect changes</text>
+      <text x="938" y="389" text-anchor="middle" font-size="18" fill="#303944">read, test, compare</text>
+    </g>
+    <g>
+      <rect x="524" y="502" width="232" height="86" rx="14" fill="#ffffff" stroke="#2a7f62" stroke-width="4"/>
+      <text x="640" y="536" text-anchor="middle" font-size="25" font-weight="700" fill="#2a7f62">Rerun outputs</text>
+      <text x="640" y="565" text-anchor="middle" font-size="18" fill="#303944">when results depend on code</text>
+    </g>
+    <g>
+      <rect x="226" y="326" width="232" height="86" rx="14" fill="#ffffff" stroke="#4e6b7d" stroke-width="4"/>
+      <text x="342" y="360" text-anchor="middle" font-size="25" font-weight="700" fill="#4e6b7d">Document use</text>
+      <text x="342" y="389" text-anchor="middle" font-size="18" fill="#303944">log and disclose</text>
+    </g>
+  </g>
+  <g stroke="#9aa8b5" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M746 222 C813 247 862 284 898 326"/>
+    <path d="M899 412 C865 462 814 504 756 529"/>
+    <path d="M524 529 C461 505 410 462 376 412"/>
+    <path d="M376 326 C412 284 461 247 524 222"/>
+  </g>
+  <g fill="#9aa8b5">
+    <polygon points="895,323 892,300 873,314"/>
+    <polygon points="759,528 780,517 761,504"/>
+    <polygon points="521,528 500,517 519,504"/>
+    <polygon points="527,222 508,209 504,232"/>
+  </g>
+</svg>

@@ -1,0 +1,148 @@
+/* Tutorial slide styling for the MDS project template.
+   Based on the example presentation setup, with added utility classes for
+   low-text tutorial slides. */
+
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: #fff;
+  color: #1b1f24;
+}
+
+.reveal {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  color: #123c66;
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+.reveal h1 {
+  font-size: 1.9em;
+}
+
+.reveal h2 {
+  font-size: 1.25em;
+  margin-bottom: 0.55em;
+}
+
+.reveal h3 {
+  font-size: 0.9em;
+}
+
+.reveal p,
+.reveal li {
+  font-size: 0.75em;
+  line-height: 1.28;
+}
+
+.reveal ul {
+  margin-left: 1.1em;
+}
+
+.reveal li:not(:last-child) {
+  margin-bottom: 0.28em;
+}
+
+.reveal img {
+  max-width: 100%;
+  max-height: 78vh;
+  padding: 2px;
+}
+
+.section-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 55vh;
+}
+
+.section-title h2 {
+  font-size: 1.55em;
+  margin-bottom: 0.25em;
+}
+
+.section-title p {
+  font-size: 0.85em;
+  color: #3c4856;
+}
+
+.big-idea {
+  font-size: 1.15em !important;
+  line-height: 1.18 !important;
+  color: #123c66;
+  font-weight: 700;
+}
+
+.quiet {
+  color: #4e5b66;
+}
+
+.micro {
+  font-size: 0.55em !important;
+  color: #5b6772;
+}
+
+.callout {
+  border-left: 8px solid #2a7f62;
+  padding: 0.25em 0 0.25em 0.65em;
+  margin-top: 0.4em;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 1.4em;
+  align-items: center;
+}
+
+.three-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8em;
+  align-items: start;
+}
+
+.mini-panel {
+  border-top: 4px solid #cfd7e0;
+  padding-top: 0.35em;
+}
+
+.mini-panel strong {
+  color: #123c66;
+}
+
+.path-list code {
+  font-size: 0.85em;
+  color: #123c66;
+}
+
+.slide-footer-note {
+  font-size: 0.48em !important;
+  color: #65717c;
+}
+
+.image-frame {
+  text-align: center;
+}
+
+.image-frame img {
+  max-height: 63vh;
+}
+
+.wide-image img {
+  max-height: 67vh;
+}
+
+.centered {
+  text-align: center;
+}
+
+.reveal .slide-number {
+  color: #65717c;
+}
