@@ -94,7 +94,9 @@ These are not exotic problems. They are the normal consequences of using separat
 [Sources] Local template: readme.md; usage.md; data/readme-data.md; code-guidelines.md. READy introduction: https://andreashandel.github.io/MADAcourse/content/module-ready-workflow/ready-introduction/ready-introduction.html
 :::
 
-## READy is the workflow target {.fig-slide}
+## READy is the workflow target
+
+<p class="figure-lead">Reproducible, efficient, automated, and documented work is one connected system.</p>
 
 ::: {.full-figure}
 ![](./media/ready-pillars.svg)
@@ -120,7 +122,9 @@ Use this slide to set the tone for AI use. AI belongs in the workflow, but it sh
 [Sources] Local template: ai/ai-use-policy.md; agents.md. MADA syllabus AI-use framing: https://andreashandel.github.io/MADAcourse/courseinfo/course-syllabus.html
 :::
 
-## The template is a practical answer {.fig-slide}
+## The template is a practical answer
+
+<p class="figure-lead">Data, code, outputs, products, AI help, and human decisions each have a defined place.</p>
 
 ::: {.full-figure}
 ![](./media/template-concept.svg)
@@ -170,7 +174,9 @@ Transition to a beginner-friendly tool section. Avoid treating R, Quarto, Git, G
 [Sources] Local template: readme.md. MDS tools site: https://andreashandel.github.io/mds-tools/
 :::
 
-## Each tool has one main job {.fig-slide}
+## Each tool has one main job
+
+<p class="figure-lead">No tool needs to be mysterious: each one serves a specific workflow role.</p>
 
 ::: {.full-figure}
 ![](./media/toolchain-map.svg)
@@ -359,7 +365,9 @@ Transition from tools to structure. The next slides explain the repository as a 
 [Sources] Local template: readme.md.
 :::
 
-## The main path is data to products {.fig-slide}
+## The main path is data to products
+
+<p class="figure-lead">Support folders document, cite, and make AI assistance visible.</p>
 
 ::: {.full-figure}
 ![](./media/folder-map.svg)
@@ -402,7 +410,9 @@ Stress the raw-data rule. If the raw file is inconvenient, write code that creat
 [Sources] Local template: readme.md; usage.md; data/readme-data.md; agents.md.
 :::
 
-## `code/` follows the analysis stages {.fig-slide}
+## `code/` follows the analysis stages
+
+<p class="figure-lead">Each stage should have clear inputs, outputs, and run instructions.</p>
 
 ::: {.full-figure}
 ![](./media/code-stages.svg)
@@ -495,7 +505,9 @@ This slide makes the first setup pass concrete. Many reproducibility problems be
 [Sources] Local template: new-project-instructions.md; readme.md; data/readme-data.md.
 :::
 
-## The example workflow runs in pieces {.fig-slide}
+## The example workflow runs in pieces
+
+<p class="figure-lead">Compute results first; render reports and slides after outputs are current.</p>
 
 ::: {.full-figure}
 ![](./media/run-order.svg)
@@ -612,7 +624,9 @@ AI can suggest options, but these decisions need human ownership and review. Thi
 [Sources] Local template: ai/ai-use-policy.md; code-guidelines.md.
 :::
 
-## AI belongs inside the review loop {.fig-slide}
+## AI belongs inside the review loop
+
+<p class="figure-lead">The loop makes assistance visible, bounded, and checkable.</p>
 
 ::: {.full-figure}
 ![](./media/ai-review-loop.svg)
