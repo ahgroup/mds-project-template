@@ -1,19 +1,15 @@
 ## Overview
 
-This repository is a template for a reproducible modeling or data science project. The default example uses R, Quarto, Git, and GitHub, but the structure is
-workflow-first so projects can add Python, Julia, shell scripts, or other tools
-without major reorganization.
+This repository is a template for a reproducible modeling or data science (MDS) project. It is set up to facilitate reproducible and robust workflows that include AI support.
 
-This template also includes guidance for AI-supported work. The goal is to make AI tools
-useful for coding, documentation, review, and troubleshooting while keeping the
-project transparent, reproducible, and human-reviewed.
+The default tools to use this template for any MDS project are R, Quarto, Git/GitHub, an IDE (e.g. Positron) and an agentic AI tool. The template structure is workflow-first, so projects can add Python, Julia, shell scripts, or other tools without major reorganization.
+
 
 ## Pre-Requisites
 
-The default example uses R, Quarto, GitHub, and a reference manager that can
-handle BibTeX. Zotero with the Better BibTeX plugin is a good choice.
+You should have the tools mentioned above installed and be familiar with them. If not, [this website](https://andreashandel.github.io/mds-tools/) provides brief introductory courses to these tools.
 
-It is also assumed that you will be working through some sort of IDE. Our currently preferred one is [Positron](https://positron.posit.co/), but others like VS Code, RStudio or another option of your choice also work.
+You also want a reference manager that can handle BibTeX. Zotero with the Better BibTeX plugin is a good choice.
 
 It is also useful to have a word processor installed, such as MS Word or
 [LibreOffice](https://www.libreoffice.org/). To produce PDF output, you need a
