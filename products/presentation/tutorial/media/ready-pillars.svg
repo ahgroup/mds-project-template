@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="READy workflow pillars">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="70" y="86" font-family="Arial, Helvetica, sans-serif" font-size="52" font-weight="700" fill="#123c66">READy workflow</text>
+  <text x="70" y="132" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#4e5b66">Reproducible, efficient, automated, and documented work is one connected system.</text>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="70" y="210" width="260" height="310" fill="#edf3f8" stroke="#123c66" stroke-width="6"/>
+    <text x="200" y="285" text-anchor="middle" font-size="34" font-weight="700" fill="#123c66">Reproducible</text>
+    <text x="200" y="342" text-anchor="middle" font-size="24" fill="#26313c">Someone else can</text>
+    <text x="200" y="376" text-anchor="middle" font-size="24" fill="#26313c">rerun the work</text>
+    <text x="200" y="410" text-anchor="middle" font-size="24" fill="#26313c">and get the same</text>
+    <text x="200" y="444" text-anchor="middle" font-size="24" fill="#26313c">outputs.</text>
+
+    <rect x="365" y="210" width="260" height="310" fill="#edf6f2" stroke="#2a7f62" stroke-width="6"/>
+    <text x="495" y="285" text-anchor="middle" font-size="34" font-weight="700" fill="#2a7f62">Efficient</text>
+    <text x="495" y="342" text-anchor="middle" font-size="24" fill="#26313c">The setup saves</text>
+    <text x="495" y="376" text-anchor="middle" font-size="24" fill="#26313c">time after the</text>
+    <text x="495" y="410" text-anchor="middle" font-size="24" fill="#26313c">first pass.</text>
+
+    <rect x="660" y="210" width="260" height="310" fill="#fbf1eb" stroke="#b35c33" stroke-width="6"/>
+    <text x="790" y="285" text-anchor="middle" font-size="34" font-weight="700" fill="#b35c33">Automated</text>
+    <text x="790" y="342" text-anchor="middle" font-size="24" fill="#26313c">Scripts do the</text>
+    <text x="790" y="376" text-anchor="middle" font-size="24" fill="#26313c">copying, cleaning,</text>
+    <text x="790" y="410" text-anchor="middle" font-size="24" fill="#26313c">modeling, and</text>
+    <text x="790" y="444" text-anchor="middle" font-size="24" fill="#26313c">rendering.</text>
+
+    <rect x="955" y="210" width="260" height="310" fill="#f3f1fb" stroke="#5f56b3" stroke-width="6"/>
+    <text x="1085" y="285" text-anchor="middle" font-size="34" font-weight="700" fill="#5f56b3">Documented</text>
+    <text x="1085" y="342" text-anchor="middle" font-size="24" fill="#26313c">The why, what,</text>
+    <text x="1085" y="376" text-anchor="middle" font-size="24" fill="#26313c">and how are</text>
+    <text x="1085" y="410" text-anchor="middle" font-size="24" fill="#26313c">visible.</text>
+  </g>
+  <rect x="158" y="576" width="964" height="74" fill="#f4f7f9" stroke="#cfd7e0" stroke-width="4"/>
+  <text x="640" y="623" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#123c66">The template turns the principles into folders, files, run order, and review habits.</text>
+</svg>

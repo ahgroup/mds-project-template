@@ -1,23 +1,47 @@
-/* Tutorial slide styling for the MDS project template.
-   Based on the example presentation setup, with added utility classes for
-   low-text tutorial slides. */
+/* Tutorial slide styling for the MDS project template. */
+
+:root {
+  --blue: #123c66;
+  --green: #2a7f62;
+  --orange: #b35c33;
+  --purple: #5f56b3;
+  --slate: #4e5b66;
+  --ink: #1b1f24;
+  --muted: #5b6772;
+  --line: #cfd7e0;
+  --soft: #f4f7f9;
+  --soft-blue: #edf3f8;
+  --soft-green: #edf6f2;
+  --soft-orange: #fbf1eb;
+  --soft-purple: #f3f1fb;
+}
 
 html {
   margin: 0;
   padding: 0;
   border: 0;
   background-color: #fff;
-  color: #1b1f24;
+  color: var(--ink);
 }
 
 .reveal {
   font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides section {
+  box-sizing: border-box;
+  padding: 34px 58px;
 }
 
 .reveal h1,
 .reveal h2,
 .reveal h3 {
-  color: #123c66;
+  color: var(--blue);
   letter-spacing: 0;
   font-weight: 700;
 }
@@ -27,8 +51,10 @@ html {
 }
 
 .reveal h2 {
-  font-size: 1.25em;
-  margin-bottom: 0.55em;
+  font-size: 1.34em;
+  line-height: 1.04;
+  margin: 0 0 0.62em 0;
+  max-width: 1050px;
 }
 
 .reveal h3 {
@@ -37,112 +63,259 @@ html {
 
 .reveal p,
 .reveal li {
-  font-size: 0.75em;
-  line-height: 1.28;
+  font-size: 0.66em;
+  line-height: 1.22;
 }
 
-.reveal ul {
-  margin-left: 1.1em;
+.reveal ul,
+.reveal ol {
+  margin-left: 1.05em;
 }
 
 .reveal li:not(:last-child) {
-  margin-bottom: 0.28em;
+  margin-bottom: 0.22em;
+}
+
+.reveal code {
+  color: var(--blue);
+  font-size: 0.86em;
+}
+
+.reveal a {
+  color: var(--blue);
 }
 
 .reveal img {
   max-width: 100%;
-  max-height: 78vh;
-  padding: 2px;
+  max-height: 100%;
+  padding: 0;
+  border: 0;
 }
 
-.section-title {
+.headline {
+  color: var(--blue);
+  font-size: 1.28em;
+  font-weight: 700;
+  line-height: 1.15;
+  max-width: 950px;
+  margin-top: 1.0em;
+}
+
+.statement {
+  min-height: 430px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 55vh;
+  color: var(--blue);
+  font-size: 1.0em;
+  line-height: 1.18;
+  font-weight: 700;
+  max-width: 1040px;
 }
 
-.section-title h2 {
-  font-size: 1.55em;
+.statement p {
+  font-size: 1.0em;
+}
+
+.statement strong {
+  color: var(--orange);
+}
+
+.warning {
+  color: var(--orange);
+  max-width: 980px;
+}
+
+.section-intro {
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  color: var(--blue);
+  font-size: 1.25em;
+  line-height: 1.16;
+  font-weight: 700;
+  max-width: 1000px;
+}
+
+.full-figure {
+  width: 100%;
+  height: 535px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.full-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 68px;
+  align-items: center;
+  min-height: 430px;
+}
+
+.split .left,
+.split .right {
+  border-top: 7px solid var(--line);
+  padding-top: 22px;
+}
+
+.split strong,
+.tile strong,
+.resource strong,
+.numbered-flow strong {
+  color: var(--blue);
+}
+
+.big-list li {
+  font-size: 0.82em;
+}
+
+.two-up,
+.three-up,
+.four-up,
+.resource-grid {
+  display: grid;
+  gap: 28px;
+  align-items: stretch;
+  min-height: 395px;
+}
+
+.two-up {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.three-up,
+.resource-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.four-up {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.tile,
+.resource {
+  background: var(--soft);
+  border-top: 9px solid var(--line);
+  padding: 26px 24px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.tile p,
+.resource p {
+  margin: 0.35em 0 0 0;
+}
+
+.tile strong,
+.resource strong {
+  display: block;
+  font-size: 1.12em;
+  line-height: 1.08;
   margin-bottom: 0.25em;
 }
 
-.section-title p {
-  font-size: 0.85em;
-  color: #3c4856;
+.large-tiles .tile strong {
+  font-size: 1.25em;
 }
 
-.big-idea {
-  font-size: 1.15em !important;
-  line-height: 1.18 !important;
-  color: #123c66;
+.accent-blue {
+  border-color: var(--blue);
+  background: var(--soft-blue);
+}
+
+.accent-green {
+  border-color: var(--green);
+  background: var(--soft-green);
+}
+
+.accent-orange {
+  border-color: var(--orange);
+  background: var(--soft-orange);
+}
+
+.accent-purple {
+  border-color: var(--purple);
+  background: var(--soft-purple);
+}
+
+.numbered-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  align-items: stretch;
+  min-height: 390px;
+}
+
+.numbered-flow.compact {
+  grid-template-columns: repeat(5, 1fr);
+  min-height: 360px;
+}
+
+.numbered-flow div {
+  background: var(--soft);
+  border-top: 7px solid var(--blue);
+  padding: 22px 18px;
+}
+
+.numbered-flow span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: white;
+  font-size: 0.72em;
   font-weight: 700;
 }
 
+.numbered-flow strong {
+  font-size: 0.82em;
+  line-height: 1.05;
+}
+
+.numbered-flow br + * {
+  color: var(--muted);
+}
+
+.resource {
+  overflow-wrap: anywhere;
+}
+
+.resource p,
+.resource a,
+.resource code {
+  font-size: 0.58em;
+  line-height: 1.25;
+}
+
 .quiet {
-  color: #4e5b66;
-}
-
-.micro {
-  font-size: 0.55em !important;
-  color: #5b6772;
-}
-
-.callout {
-  border-left: 8px solid #2a7f62;
-  padding: 0.25em 0 0.25em 0.65em;
-  margin-top: 0.4em;
-}
-
-.two-col {
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 1.4em;
-  align-items: center;
-}
-
-.three-col {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.8em;
-  align-items: start;
-}
-
-.mini-panel {
-  border-top: 4px solid #cfd7e0;
-  padding-top: 0.35em;
-}
-
-.mini-panel strong {
-  color: #123c66;
-}
-
-.path-list code {
-  font-size: 0.85em;
-  color: #123c66;
-}
-
-.slide-footer-note {
-  font-size: 0.48em !important;
-  color: #65717c;
-}
-
-.image-frame {
-  text-align: center;
-}
-
-.image-frame img {
-  max-height: 63vh;
-}
-
-.wide-image img {
-  max-height: 67vh;
-}
-
-.centered {
-  text-align: center;
+  color: var(--muted);
 }
 
 .reveal .slide-number {
-  color: #65717c;
+  color: var(--muted);
+  background: transparent;
+}
+
+@media (max-width: 900px) {
+  .four-up,
+  .three-up,
+  .two-up,
+  .resource-grid,
+  .split,
+  .numbered-flow,
+  .numbered-flow.compact {
+    grid-template-columns: 1fr;
+  }
 }

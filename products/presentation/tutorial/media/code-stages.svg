@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Code workflow stages">
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="70" y="82" font-family="Arial, Helvetica, sans-serif" font-size="50" font-weight="700" fill="#123c66">Code folders follow the work</text>
+  <text x="72" y="126" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#4e5b66">Each stage should have clear inputs, outputs, and run instructions.</text>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="94" y="210" width="210" height="140" fill="#edf3f8" stroke="#123c66" stroke-width="5"/>
+    <text x="199" y="262" text-anchor="middle" font-size="27" font-weight="700" fill="#123c66">data-processing</text>
+    <text x="199" y="304" text-anchor="middle" font-size="21" fill="#26313c">raw data to</text>
+    <text x="199" y="334" text-anchor="middle" font-size="21" fill="#26313c">processed data</text>
+    <rect x="384" y="210" width="210" height="140" fill="#edf6f2" stroke="#2a7f62" stroke-width="5"/>
+    <text x="489" y="262" text-anchor="middle" font-size="27" font-weight="700" fill="#2a7f62">data-exploration</text>
+    <text x="489" y="304" text-anchor="middle" font-size="21" fill="#26313c">summaries, checks,</text>
+    <text x="489" y="334" text-anchor="middle" font-size="21" fill="#26313c">early plots</text>
+    <rect x="674" y="210" width="210" height="140" fill="#fbf1eb" stroke="#b35c33" stroke-width="5"/>
+    <text x="779" y="262" text-anchor="middle" font-size="27" font-weight="700" fill="#b35c33">modeling-analysis</text>
+    <text x="779" y="304" text-anchor="middle" font-size="21" fill="#26313c">models and</text>
+    <text x="779" y="334" text-anchor="middle" font-size="21" fill="#26313c">computed results</text>
+    <rect x="964" y="210" width="210" height="140" fill="#f3f1fb" stroke="#5f56b3" stroke-width="5"/>
+    <text x="1069" y="262" text-anchor="middle" font-size="27" font-weight="700" fill="#5f56b3">figures-tables</text>
+    <text x="1069" y="304" text-anchor="middle" font-size="21" fill="#26313c">final visual and</text>
+    <text x="1069" y="334" text-anchor="middle" font-size="21" fill="#26313c">tabular outputs</text>
+    <g stroke="#9aa8b5" stroke-width="6" stroke-linecap="round">
+      <line x1="304" y1="280" x2="384" y2="280"/>
+      <line x1="594" y1="280" x2="674" y2="280"/>
+      <line x1="884" y1="280" x2="964" y2="280"/>
+    </g>
+    <rect x="250" y="480" width="780" height="92" fill="#f4f7f9" stroke="#cfd7e0" stroke-width="4"/>
+    <text x="640" y="518" text-anchor="middle" font-size="28" font-weight="700" fill="#123c66">utilities/ is optional support</text>
+    <text x="640" y="554" text-anchor="middle" font-size="22" fill="#26313c">Use helpers when they clarify repeated work, not to hide core analysis logic.</text>
+  </g>
+</svg>

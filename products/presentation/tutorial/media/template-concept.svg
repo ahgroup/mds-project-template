@@ -1,27 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="AI assisted reproducible analysis concept">
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="Template concept for AI assisted reproducible analysis">
   <rect width="1280" height="720" fill="#ffffff"/>
-  <rect x="70" y="82" width="1140" height="556" rx="18" fill="#f3f6f8" stroke="#cfd7e0" stroke-width="3"/>
-  <circle cx="640" cy="360" r="116" fill="#123c66"/>
-  <text x="640" y="338" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" fill="#ffffff">Project</text>
-  <text x="640" y="386" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#ffffff">Template</text>
+  <text x="70" y="82" font-family="Arial, Helvetica, sans-serif" font-size="50" font-weight="700" fill="#123c66">The template keeps the pieces connected</text>
+  <text x="72" y="126" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#4e5b66">Data, code, outputs, products, AI help, and human decisions all have a defined place.</text>
   <g font-family="Arial, Helvetica, sans-serif">
-    <rect x="130" y="135" width="280" height="112" rx="14" fill="#ffffff" stroke="#2a7f62" stroke-width="4"/>
-    <text x="270" y="183" text-anchor="middle" font-size="31" font-weight="700" fill="#2a7f62">Reproducible</text>
-    <text x="270" y="218" text-anchor="middle" font-size="23" fill="#303944">code creates outputs</text>
-    <rect x="870" y="135" width="280" height="112" rx="14" fill="#ffffff" stroke="#b35c33" stroke-width="4"/>
-    <text x="1010" y="183" text-anchor="middle" font-size="31" font-weight="700" fill="#b35c33">Automated</text>
-    <text x="1010" y="218" text-anchor="middle" font-size="23" fill="#303944">repeatable run order</text>
-    <rect x="130" y="474" width="280" height="112" rx="14" fill="#ffffff" stroke="#6a5acd" stroke-width="4"/>
-    <text x="270" y="522" text-anchor="middle" font-size="31" font-weight="700" fill="#6a5acd">AI assisted</text>
-    <text x="270" y="557" text-anchor="middle" font-size="23" fill="#303944">reviewed, logged help</text>
-    <rect x="870" y="474" width="280" height="112" rx="14" fill="#ffffff" stroke="#4e6b7d" stroke-width="4"/>
-    <text x="1010" y="522" text-anchor="middle" font-size="31" font-weight="700" fill="#4e6b7d">Human owned</text>
-    <text x="1010" y="557" text-anchor="middle" font-size="23" fill="#303944">judgment stays explicit</text>
-  </g>
-  <g stroke="#8fa1b2" stroke-width="5" fill="none" stroke-linecap="round">
-    <path d="M412 192 C505 190 538 249 573 293"/>
-    <path d="M868 192 C775 190 742 249 707 293"/>
-    <path d="M412 531 C505 530 538 472 573 427"/>
-    <path d="M868 531 C775 530 742 472 707 427"/>
+    <rect x="92" y="228" width="180" height="110" fill="#edf3f8" stroke="#123c66" stroke-width="5"/>
+    <text x="182" y="291" text-anchor="middle" font-size="31" font-weight="700" fill="#123c66">Data</text>
+    <rect x="328" y="228" width="180" height="110" fill="#edf6f2" stroke="#2a7f62" stroke-width="5"/>
+    <text x="418" y="291" text-anchor="middle" font-size="31" font-weight="700" fill="#2a7f62">Code</text>
+    <rect x="564" y="228" width="180" height="110" fill="#fbf1eb" stroke="#b35c33" stroke-width="5"/>
+    <text x="654" y="291" text-anchor="middle" font-size="31" font-weight="700" fill="#b35c33">Results</text>
+    <rect x="800" y="228" width="180" height="110" fill="#f3f1fb" stroke="#5f56b3" stroke-width="5"/>
+    <text x="890" y="291" text-anchor="middle" font-size="31" font-weight="700" fill="#5f56b3">Products</text>
+    <rect x="1036" y="228" width="180" height="110" fill="#edf3f6" stroke="#4e5b66" stroke-width="5"/>
+    <text x="1126" y="291" text-anchor="middle" font-size="31" font-weight="700" fill="#4e5b66">Share</text>
+    <g stroke="#9aa8b5" stroke-width="6" stroke-linecap="round">
+      <line x1="272" y1="283" x2="328" y2="283"/>
+      <line x1="508" y1="283" x2="564" y2="283"/>
+      <line x1="744" y1="283" x2="800" y2="283"/>
+      <line x1="980" y1="283" x2="1036" y2="283"/>
+    </g>
+    <rect x="160" y="464" width="440" height="112" fill="#f4f7f9" stroke="#cfd7e0" stroke-width="4"/>
+    <text x="380" y="510" text-anchor="middle" font-size="29" font-weight="700" fill="#123c66">AI assistance</text>
+    <text x="380" y="548" text-anchor="middle" font-size="22" fill="#26313c">Draft, explain, check, and document</text>
+    <rect x="680" y="464" width="440" height="112" fill="#f4f7f9" stroke="#cfd7e0" stroke-width="4"/>
+    <text x="900" y="510" text-anchor="middle" font-size="29" font-weight="700" fill="#123c66">Human review</text>
+    <text x="900" y="548" text-anchor="middle" font-size="22" fill="#26313c">Decide, verify, interpret, and approve</text>
   </g>
 </svg>
