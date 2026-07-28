@@ -149,18 +149,20 @@ and AI tools.
 
 ## AI-Supported Workflow
 
-AI tools can help explain code, draft first-pass code, improve documentation,
-suggest checks, and review for reproducibility problems. They should not be
-treated as final authority for scientific claims, model choice, data privacy,
-citation accuracy, or interpretation of results.
+### Overview
+
+This project is set up such that AI tools can be used at any level of intensity - from not at all to letting the AI tool perform most of the work and focus on guiding and assessing its work.
+
+AI tools can be used widely for tasks such as helping write and explain code, improving documentation, helping with exploratory data analysis, suggesting analysis options, reviewing project components, and more.
+
+That said, such tools should not be trusted blindly. Human users need to guide, assess and decide. In the end, you need to be able to fully stand behind your results, and for that you need to be in charge and understand what the AI suggests and implement at a level where you are comfortable explaining and defending your project approaches and results. 
+
+### AI Use
 
 When using AI tools:
 
-- Point the tool to `readme.md`, `usage.md`, `agents.md`,
-  `code-guidelines.md`, `data/readme-data.md`, and relevant files in `ai/`.
-  Some AI tools automatically read only files named `CLAUDE.md` or `AGENTS.md`.
-  Because this template keeps its agent instructions in `agents.md`, point the
-  tool at that file explicitly if it does not pick it up on its own.
+- Use AI tools in agentic mode, such that they can read/write files inside the repo, and run commands on your computer (either in a sandboxed environment, or directly on your machine - the latter tends to be more powerful but also riskier). 
+- Tell the AI to start by reviewing the project and the files. Most importantly, point the tool to `readme.md`, `usage.md`, `agents.md`, `code-guidelines.md`, and relevant files in `ai/`.
 - AI tools may read and update `ai/project-summary.yml` as a concise orientation
   aid. It is a convenience file for AI tools, not human-facing documentation and
   not the source of truth.
@@ -178,6 +180,10 @@ When using AI tools:
 
 
 ### AI-related files and expected readers/writers
+
+**It is strongly advised that you review all of these files fully at least once and adjust to your own needs. Some of these files contain detailed instructions, which might not fit your circumstances and you thus want to update before starting to use AI help.**
+
+The starting point is `agents.md`, which contains a lot of general information. `code-guidelines.md` tells AI (and humans) how to write code.
 
 The files in `ai/` have different expected readers and writers. For example,
 `ai/ai-use-log.md` is written by AI tools, while `ai/readme-ai.md` and

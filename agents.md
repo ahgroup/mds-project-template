@@ -135,7 +135,7 @@ and make sure local package libraries or virtual environments are not committed.
 
 ## Quarto documents
 
-Unless the user specifies otherwise, the default Quarto output format for manuscripts should be docx, for supplement it should be pdf. For all other Quarto files, it should be self-contained html. If you are editing and existing Quarto document, do not change the output format unless instructed to do so.
+Unless the user specifies otherwise, the default Quarto output format for manuscripts should be docx, for supplement it should be pdf. For all other Quarto files, it should be self contained html (embed-resources: true). If you are editing an existing Quarto document, do not change the output format unless instructed to do so.
 
 Figures and Tables should in general be placed into the document close to the text where they are mentioned first. Only place figures and tables at the end or some other location if instructed by the user or if necessary for reasonable layout. For instance a large table might need to start on a new page for better readability.
 
