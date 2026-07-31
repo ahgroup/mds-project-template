@@ -25,7 +25,7 @@ csl: ../../../assets/american-journal-of-epidemiology.csl
 ## Outline
 
 ::: {.outline-list}
-<div><span>1</span><strong>Why the template exists</strong><br>Motivation, READy workflows, and AI responsibility.</div>
+<div><span>1</span><strong>Why the template exists</strong><br>Motivation, ORDERly workflows, and AI responsibility.</div>
 <div><span>2</span><strong>The tools</strong><br>What each tool does, assuming no prior experience.</div>
 <div><span>3</span><strong>The repository map</strong><br>Where data, code, results, products, assets, and AI notes belong.</div>
 <div><span>4</span><strong>Getting started</strong><br>First setup decisions and the example run order.</div>
@@ -46,9 +46,9 @@ Use this as the roadmap for the talk. The main arc is: first motivate why a work
 <div class="section-subtitle">Reproducible projects need structure before they need sophistication.</div>
 
 ::: {.notes}
-This section motivates the template before introducing folders or tools. The point is to make the audience care about project drift, READy workflows, and human responsibility in AI-assisted analysis.
+This section motivates the template before introducing folders or tools. The point is to make the audience care about project drift, ORDERly workflows, and human responsibility in AI-assisted analysis.
 
-[Sources] Local template: readme.md; usage.md. READy workflow framing: https://andreashandel.github.io/MADAcourse/content/module-ready-workflow/ready-overview.html
+[Sources] Local template: readme.md; usage.md. ORDERly framework supplied by the project author.
 :::
 
 ## Analysis projects rarely fail at one dramatic step
@@ -60,7 +60,7 @@ They usually drift: files move, outputs age, decisions vanish, and nobody knows 
 ::: {.notes}
 Start with a practical motivation rather than the folder structure. A data analysis project is not only a statistical model or a script. It is a collection of data, code, results, products, decisions, people, and software. The template exists because those pieces tend to drift apart unless the workflow keeps them connected.
 
-[Sources] Local template: readme.md; usage.md. READy workflow framing: https://andreashandel.github.io/MADAcourse/content/module-ready-workflow/ready-overview.html
+[Sources] Local template: readme.md; usage.md. ORDERly framework supplied by the project author.
 :::
 
 ## The common failure modes are ordinary
@@ -91,21 +91,21 @@ Private data slips into convenient places.
 ::: {.notes}
 These are not exotic problems. They are the normal consequences of using separate tools without a shared project system. Use this slide to connect reproducibility to day-to-day work: fewer stale outputs, fewer unclear files, and less risk when sharing.
 
-[Sources] Local template: readme.md; usage.md; data/readme-data.md; code-guidelines.md. READy introduction: https://andreashandel.github.io/MADAcourse/content/module-ready-workflow/ready-introduction/ready-introduction.html
+[Sources] Local template: readme.md; usage.md; data/readme-data.md; code-guidelines.md.
 :::
 
-## READy is the workflow target
+## Put the project in ORDER
 
-<p class="figure-lead">Reproducible, efficient, automated, and documented work is one connected system.</p>
+<p class="figure-lead">Organized + Recorded + Documented + Executable = Reproducible.</p>
 
 ::: {.full-figure}
-![](./media/ready-pillars.svg)
+![](./media/orderly-framework.png)
 :::
 
 ::: {.notes}
-READy stands for reproducible, efficient, automated, and documented. The MADA course frames these as connected ideas: reproducibility requires documentation and automation, and automation also improves efficiency. The template turns that teaching concept into a concrete repository layout.
+ORDERly gives reproducibility a practical structure. Organized means people and tools can find the pieces. Recorded means changes and important decisions leave a useful trail. Documented means a new user can understand purpose, inputs, instructions, and outputs. Executable means the important path runs from saved instructions rather than remembered clicks. Reproducible is the testable outcome: a stated result can be recreated from the recorded inputs, instructions, and software.
 
-[Sources] READy overview: https://andreashandel.github.io/MADAcourse/content/module-ready-workflow/ready-overview.html. READy introduction: https://andreashandel.github.io/MADAcourse/content/module-ready-workflow/ready-introduction/ready-introduction.html
+[Sources] ORDERly framework supplied by the project author; local template: readme.md; usage.md; code-guidelines.md.
 :::
 
 ## AI changes the workflow, but not the responsibility
@@ -127,7 +127,7 @@ Use this slide to set the tone for AI use. AI belongs in the workflow, but it sh
 <p class="figure-lead">Data, code, outputs, products, AI help, and human decisions each have a defined place.</p>
 
 ::: {.full-figure}
-![](./media/template-concept.svg)
+![](./media/template-concept.png)
 :::
 
 ::: {.notes}
@@ -179,7 +179,7 @@ Transition to a beginner-friendly tool section. Avoid treating R, Quarto, Git, G
 <p class="figure-lead">No tool needs to be mysterious: each one serves a specific workflow role.</p>
 
 ::: {.full-figure}
-![](./media/toolchain-map.svg)
+![](./media/toolchain-map.png)
 :::
 
 ::: {.notes}
@@ -370,7 +370,7 @@ Transition from tools to structure. The next slides explain the repository as a 
 <p class="figure-lead">Support folders document, cite, and make AI assistance visible.</p>
 
 ::: {.full-figure}
-![](./media/folder-map.svg)
+![](./media/folder-map.png)
 :::
 
 ::: {.notes}
@@ -415,7 +415,7 @@ Stress the raw-data rule. If the raw file is inconvenient, write code that creat
 <p class="figure-lead">Each stage should have clear inputs, outputs, and run instructions.</p>
 
 ::: {.full-figure}
-![](./media/code-stages.svg)
+![](./media/code-stages.png)
 :::
 
 ::: {.notes}
@@ -473,9 +473,9 @@ If users cannot understand why, what, and how, technical reproducibility is not 
 :::
 
 ::: {.notes}
-The MADA documentation unit makes this point directly: documentation is essential for practical reproducibility. Running code is not enough if a collaborator cannot understand the project. The template therefore includes project-level and folder-level readmes plus usage instructions.
+Documentation is essential for practical reproducibility. Running code is not enough if a collaborator cannot understand the project. The template therefore includes project-level and folder-level readmes plus usage instructions.
 
-[Sources] Local template: readme.md; usage.md; code-guidelines.md. Project documentation unit: https://andreashandel.github.io/MADAcourse/content/module-ready-workflow/ready-documentation/ready-documentation.html
+[Sources] Local template: readme.md; usage.md; code-guidelines.md.
 :::
 
 ## Topic 4: Getting started {.section-break}
@@ -510,7 +510,7 @@ This slide makes the first setup pass concrete. Many reproducibility problems be
 <p class="figure-lead">Compute results first; render reports and slides after outputs are current.</p>
 
 ::: {.full-figure}
-![](./media/run-order.svg)
+![](./media/run-order.png)
 :::
 
 ::: {.notes}
@@ -561,17 +561,17 @@ This checklist comes from `usage.md` and `agents.md`. It is especially important
 ::: {.notes}
 Do not introduce heavy infrastructure before it is needed. The local template intentionally starts with manual package documentation. For longer-term, multi-user, publication, or regulated workflows, environment managers, CI, or containers may become appropriate.
 
-[Sources] Local template: readme.md; agents.md. Software management unit: https://andreashandel.github.io/MADAcourse/content/module-ready-workflow/ready-software-management/ready-software-management.html
+[Sources] Local template: readme.md; agents.md.
 :::
 
 ## Topic 5: AI-assisted work {.section-break}
 
 <div class="section-kicker">Topic 5</div>
 <div class="section-title-text">AI-assisted work</div>
-<div class="section-subtitle">Use AI for bounded help, then inspect, rerun, and document.</div>
+<div class="section-subtitle">Orient, ask, review, run and check, then record.</div>
 
 ::: {.notes}
-This section shifts from general project setup to AI operating practice. The audience should leave with a concrete loop for asking, checking, rerunning, and documenting meaningful AI help.
+This section shifts from general project setup to AI operating practice. The audience should leave with a concrete loop for orienting, asking, reviewing, running and checking, and recording meaningful AI help.
 
 [Sources] Local template: ai/ai-use-policy.md; ai/readme-ai.md; agents.md.
 :::
@@ -624,16 +624,16 @@ AI can suggest options, but these decisions need human ownership and review. Thi
 [Sources] Local template: ai/ai-use-policy.md; code-guidelines.md.
 :::
 
-## AI belongs inside the review loop
+## AI belongs inside an ORDERly loop
 
 <p class="figure-lead">The loop makes assistance visible, bounded, and checkable.</p>
 
 ::: {.full-figure}
-![](./media/ai-review-loop.svg)
+![](./media/ai-working-loop.png)
 :::
 
 ::: {.notes}
-Use the loop to make AI work operational: ask a bounded question, inspect changes, rerun affected outputs, document meaningful use, then decide. For real projects, the AI-use log provides transparency unless the project owner disables it.
+Use the loop to make AI work operational. First orient to the goal and inspect the relevant files. Ask for a bounded task with context and limits. Review the proposal. Run the affected code and inspect the actual output. Record meaningful assistance and the human decision. For real projects, the AI-use log provides transparency unless the project owner disables it.
 
 [Sources] Local template: ai/ai-use-policy.md; ai/readme-ai.md; agents.md.
 :::
@@ -659,7 +659,7 @@ The template policy says not to paste sensitive, private, regulated, unpublished
 ::: {.notes}
 This final section connects the template to collaboration, open research, a practical first-week plan, and follow-up learning resources.
 
-[Sources] Local template: readme.md; usage.md; new-project-instructions.md. Open research unit: https://andreashandel.github.io/MADAcourse/content/module-ready-workflow/ready-open/ready-open.html
+[Sources] Local template: readme.md; usage.md; new-project-instructions.md.
 :::
 
 ## The template also supports collaboration
@@ -680,19 +680,19 @@ Commits, branches, and pull requests make review explicit.
 ::: {.notes}
 Project management here means management of actual files and folders. Version control is useful for one person and becomes more important with collaborators because it records who did what and reduces confusion.
 
-[Sources] Local template: readme.md; new-project-instructions.md. Project management unit: https://andreashandel.github.io/MADAcourse/content/module-ready-workflow/ready-project-management/ready-project-management.html
+[Sources] Local template: readme.md; new-project-instructions.md.
 :::
 
-## Open research needs READy structure
+## Sharing needs ORDERly structure
 
 ::: {.statement}
 Sharing data and code is useful only when others can understand and rerun the workflow.
 :::
 
 ::: {.notes}
-READy workflows and open research are related but not identical. The open-science material makes the point that sharing data and code is much less useful if the workflow is not documented and reproducible.
+Sharing and reproducibility are related but not identical. A repository can be public and still be impossible to understand or rerun. ORDERly structure makes sharing useful by preserving organization, history, documentation, executable instructions, and a testable result.
 
-[Sources] Open research unit: https://andreashandel.github.io/MADAcourse/content/module-ready-workflow/ready-open/ready-open.html. Local template: readme.md; usage.md.
+[Sources] Local template: readme.md; usage.md; new-project-instructions.md.
 :::
 
 ## A useful first-week plan
@@ -715,9 +715,9 @@ Close with an action plan rather than another conceptual summary. The first week
 
 :::: {.resource-grid}
 ::: {.resource}
-**READy workflow module**
+**MDS project template**
 
-<https://andreashandel.github.io/MADAcourse/content/module-ready-workflow/ready-overview.html>
+<https://github.com/andreashandel/mds-project-template>
 :::
 ::: {.resource}
 **MDS tools mini-courses**
@@ -734,5 +734,5 @@ Close with an action plan rather than another conceptual summary. The first week
 ::: {.notes}
 End by pointing people to the internal and external resources. The deck itself is an entry point; users should next read the repository documentation and the tool mini-courses they need.
 
-[Sources] READy module: https://andreashandel.github.io/MADAcourse/content/module-ready-workflow/ready-overview.html. MDS tools site: https://andreashandel.github.io/mds-tools/. Local template docs listed on slide.
+[Sources] MDS project template: https://github.com/andreashandel/mds-project-template. MDS tools site: https://andreashandel.github.io/mds-tools/. Local template docs listed on slide.
 :::
