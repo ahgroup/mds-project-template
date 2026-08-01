@@ -11,7 +11,7 @@ format:
     incremental: false
     cap-location: bottom
     embed-resources: true
-    slide-number: true
+    slide-number: c/t
     show-slide-number: all
     auto-stretch: true
     smaller: false
@@ -25,16 +25,15 @@ csl: ../../../assets/american-journal-of-epidemiology.csl
 ## Outline
 
 ::: {.outline-list}
-<div><span>1</span><strong>Why the template exists</strong><br>Motivation, ORDERly workflows, and AI responsibility.</div>
-<div><span>2</span><strong>The tools</strong><br>What each tool does, assuming no prior experience.</div>
-<div><span>3</span><strong>The repository map</strong><br>Where data, code, results, products, assets, and AI notes belong.</div>
-<div><span>4</span><strong>Getting started</strong><br>First setup decisions and the example run order.</div>
-<div><span>5</span><strong>AI-assisted work</strong><br>How to use AI help without losing review and ownership.</div>
-<div><span>6</span><strong>Sharing and next steps</strong><br>Collaboration, open research, and learning resources.</div>
+<div><span>1</span><strong>Why use a project template?</strong><small>Prevent drift and make reproducibility practical.</small></div>
+<div><span>2</span><strong>What tools are involved?</strong><small>Give each tool one clear job.</small></div>
+<div><span>3</span><strong>Where does everything go?</strong><small>Separate inputs, code, outputs, and products.</small></div>
+<div><span>4</span><strong>How do I get started?</strong><small>Set up, run, check, and document the workflow.</small></div>
+<div><span>5</span><strong>How should AI fit in?</strong><small>Use bounded assistance with human review.</small></div>
 :::
 
 ::: {.notes}
-Use this as the roadmap for the talk. The main arc is: first motivate why a workflow template is needed, then introduce the tools, then explain the repository, then show how to start, then discuss responsible AI use and sharing.
+Use this as a short roadmap, not a detailed agenda. The presentation answers two main questions: why a structured template helps, and how a new user can begin using it. The final section integrates AI practice, sharing, and next steps.
 
 [Sources] Local template: readme.md; usage.md; new-project-instructions.md; ai/ai-use-policy.md.
 :::
@@ -46,50 +45,22 @@ Use this as the roadmap for the talk. The main arc is: first motivate why a work
 <div class="section-subtitle">Reproducible projects need structure before they need sophistication.</div>
 
 ::: {.notes}
-This section motivates the template before introducing folders or tools. The point is to make the audience care about project drift, ORDERly workflows, and human responsibility in AI-assisted analysis.
+Begin with the practical problem. A template is useful because data-analysis projects accumulate files, tools, decisions, and outputs that otherwise drift apart.
 
 [Sources] Local template: readme.md; usage.md. ORDERly framework supplied by the project author.
 :::
 
-## Analysis projects rarely fail at one dramatic step
+## Small shortcuts create workflow problems
 
-::: {.headline}
-They usually drift: files move, outputs age, decisions vanish, and nobody knows which result is current.
+::: {.simple-list}
+<div><strong>Copy-paste results</strong><span>Tables and figures lose their code trail.</span></div>
+<div><strong>Mystery files</strong><span>Nobody knows what is raw, derived, or current.</span></div>
+<div><strong>Invisible decisions</strong><span>Cleaning and modeling choices live in memory.</span></div>
+<div><strong>Unsafe sharing</strong><span>Private data slips into convenient places.</span></div>
 :::
 
 ::: {.notes}
-Start with a practical motivation rather than the folder structure. A data analysis project is not only a statistical model or a script. It is a collection of data, code, results, products, decisions, people, and software. The template exists because those pieces tend to drift apart unless the workflow keeps them connected.
-
-[Sources] Local template: readme.md; usage.md. ORDERly framework supplied by the project author.
-:::
-
-## The common failure modes are ordinary
-
-:::: {.four-up}
-::: {.tile .accent-green}
-**Copy-paste results**
-
-Tables and figures lose their code trail.
-:::
-::: {.tile .accent-blue}
-**Mystery files**
-
-Nobody knows what is raw, derived, or final.
-:::
-::: {.tile .accent-orange}
-**Invisible decisions**
-
-Cleaning and modeling choices live in memory.
-:::
-::: {.tile .accent-purple}
-**Unsafe sharing**
-
-Private data slips into convenient places.
-:::
-::::
-
-::: {.notes}
-These are not exotic problems. They are the normal consequences of using separate tools without a shared project system. Use this slide to connect reproducibility to day-to-day work: fewer stale outputs, fewer unclear files, and less risk when sharing.
+Projects rarely fail at one dramatic step. More often, small shortcuts accumulate: a manually updated figure, a vaguely named file, an undocumented exclusion, or data placed in the wrong location. A shared workflow reduces these ordinary sources of confusion.
 
 [Sources] Local template: readme.md; usage.md; data/readme-data.md; code-guidelines.md.
 :::
@@ -108,21 +79,21 @@ ORDERly gives reproducibility a practical structure. Organized means people and 
 [Sources] ORDERly framework supplied by the project author; local template: readme.md; usage.md; code-guidelines.md.
 :::
 
-## AI changes the workflow, but not the responsibility
+## AI helps, but humans remain responsible
 
 ::: {.statement}
 AI can accelerate coding, debugging, documentation, and review.
 
-**It does not own the scientific judgment.**
+**Scientific judgment and final decisions remain human responsibilities.**
 :::
 
 ::: {.notes}
-Use this slide to set the tone for AI use. AI belongs in the workflow, but it should not decide whether data are appropriate, whether a model is scientifically justified, whether private data can be shared, or what the final interpretation should be.
+AI belongs in the workflow, but it should not decide whether data are appropriate, whether a model is scientifically justified, whether private data can be shared, or what the final interpretation should be.
 
 [Sources] Local template: ai/ai-use-policy.md; agents.md. MADA syllabus AI-use framing: https://andreashandel.github.io/MADAcourse/courseinfo/course-syllabus.html
 :::
 
-## The template is a practical answer
+## The template keeps pieces connected
 
 <p class="figure-lead">Data, code, outputs, products, AI help, and human decisions each have a defined place.</p>
 
@@ -131,236 +102,85 @@ Use this slide to set the tone for AI use. AI belongs in the workflow, but it sh
 :::
 
 ::: {.notes}
-This is the first explicit template slide. The point is not that the folder names are special by themselves. The point is that the repository gives each part of the workflow a defined place and makes AI-assisted work reviewable.
+The folder names are not valuable by themselves. The value comes from giving each part of the workflow a predictable place and preserving the path from source data to final communication. That structure also makes AI-assisted work easier to review.
 
 [Sources] Local template: readme.md; usage.md; ai/ai-use-policy.md; agents.md.
 :::
-
-## By the end, users should know three things
-
-:::: {.three-up .large-tiles}
-::: {.tile .accent-blue}
-**What problem this solves**
-
-Keeping data, code, outputs, products, and decisions connected.
-:::
-::: {.tile .accent-green}
-**What each tool does**
-
-Enough vocabulary to start, even without prior tool experience.
-:::
-::: {.tile .accent-orange}
-**How to begin**
-
-A concrete first pass from template repository to checked workflow.
-:::
-::::
-
-::: {.notes}
-This replaces a generic agenda. It defines the audience outcome. The deck is meant for oral presentation, so visible copy stays short and the explanatory detail is in the notes.
-
-[Sources] Local template: readme.md; new-project-instructions.md; usage.md.
-:::
-
 ## Topic 2: The tools {.section-break}
 
 <div class="section-kicker">Topic 2</div>
 <div class="section-title-text">The tools</div>
-<div class="section-subtitle">Assume no prior tool knowledge; give each tool one clear job.</div>
+<div class="section-subtitle">No prior tool knowledge is required; each tool has one main job.</div>
 
 ::: {.notes}
-Transition to a beginner-friendly tool section. Avoid treating R, Quarto, Git, GitHub, or an IDE as self-explanatory.
+Define the tools from first principles. The goal is recognition and orientation, not mastery during this presentation.
 
 [Sources] Local template: readme.md. MDS tools site: https://andreashandel.github.io/mds-tools/
 :::
 
 ## Each tool has one main job
 
-<p class="figure-lead">No tool needs to be mysterious: each one serves a specific workflow role.</p>
+<p class="figure-lead">The project folder is the shared map that connects the tools.</p>
 
 ::: {.full-figure}
 ![](./media/toolchain-map.png)
 :::
 
 ::: {.notes}
-Walk left to right. The IDE is the workbench. R, Python, or Julia compute. Quarto publishes. Git records history. GitHub backs up and shares. AI assists, explains, drafts, and reviews. The template gives these tools a common project structure.
+Walk left to right. The IDE is the workbench. R, Python, or Julia compute. Quarto publishes. Git and GitHub record and share change. AI assists with bounded tasks. The template gives all of these tools a common project structure.
 
-[Sources] Local template: readme.md; usage.md. MDS tools overview: https://andreashandel.github.io/mds-tools/. Positron intro: https://andreashandel.github.io/mds-tools/courses/fc1-intro-positron/positron-introduction/positron-introduction.html. Quarto overview: https://andreashandel.github.io/mds-tools/courses/fc3-intro-quarto/quarto-introduction/quarto-introduction.html. Git in Positron: https://andreashandel.github.io/mds-tools/courses/fc4-intro-github/github-positron/github-positron.html
+[Sources] Local template: readme.md; usage.md. MDS tools overview: https://andreashandel.github.io/mds-tools/
 :::
 
-## The IDE is the workbench
+## Create, compute, and publish
 
-:::: {.split}
-::: {.left}
-**What it is**
-
-A single place to edit files, run code, inspect output, and manage the project.
-:::
-::: {.right .big-list}
-- File browser
-- Code editor
-- Console and terminal
-- Viewer for plots and rendered documents
-- Git panel
-:::
-::::
-
-::: {.notes}
-For beginners, define IDE before naming Positron. Positron is recommended in the local template because it works well with R, Quarto, Python, Julia, and Git/GitHub, but the same project ideas can work in RStudio, VS Code, or another editor.
-
-[Sources] Local template: readme.md; usage.md. Positron introduction: https://andreashandel.github.io/mds-tools/courses/fc1-intro-positron/positron-introduction/positron-introduction.html. Positron features: https://andreashandel.github.io/mds-tools/courses/fc1-intro-positron/positron-features/positron-features.html
-:::
-
-## R is the default computation language
-
-:::: {.split}
-::: {.left .big-list}
-- Read and clean data
-- Explore patterns
-- Fit models
-- Save result objects
-- Create figures and tables
-:::
-::: {.right}
-**Important distinction**
-
-The template is workflow-first. R is the example; Python, Julia, and shell scripts can be added when a project needs them.
-:::
-::::
-
-::: {.notes}
-Do not assume the audience knows what R is. R is a programming language widely used for statistical computing and data analysis. The example uses R, but the repository structure is not R-only. Scripts from other languages should still live in the workflow stage where they belong.
-
-[Sources] Local template: readme.md; usage.md; code-guidelines.md.
-:::
-
-## Quarto turns source into products
-
-:::: {.split}
-::: {.left}
-**A `.qmd` file can combine**
-
-- YAML settings
-- Markdown text
-- Code chunks
-- Figures, tables, and citations
-:::
-::: {.right}
-**Rendered outputs can be**
-
-- HTML reports
-- Word manuscripts
-- PDF supplements
-- Reveal.js slides
-- Websites
-:::
-::::
-
-::: {.notes}
-Quarto is an open-source scientific and technical publishing system. Explain rendering: Quarto reads a source file and produces a finished output. This matters because products can be regenerated instead of manually rebuilt.
-
-[Sources] Local template: readme.md; usage.md; products/presentation/example/presentation.qmd. Quarto overview: https://andreashandel.github.io/mds-tools/courses/fc3-intro-quarto/quarto-introduction/quarto-introduction.html
-:::
-
-## Git records change over time
-
-:::: {.split}
-::: {.left}
-**Git answers:**
-
-- What changed?
-- When did it change?
-- Who changed it?
-- Can we go back?
-:::
-::: {.right}
-**GitHub adds:**
-
-- Remote backup
-- Sharing
-- Collaboration
-- Pull requests
-:::
-::::
-
-::: {.notes}
-Define Git and GitHub separately. Git is version control on the project files. GitHub is a hosting and collaboration service. The template assumes Git/GitHub because history and review are central to reproducible work.
-
-[Sources] Local template: readme.md; new-project-instructions.md. Git/GitHub in Positron: https://andreashandel.github.io/mds-tools/courses/fc4-intro-github/github-positron/github-positron.html
-:::
-
-## GitHub is useful, but not a data vault
-
-::: {.statement .warning}
-A private GitHub repository is not the same as approved secure storage.
+::: {.simple-list .spacious}
+<div><strong>IDE</strong><span>Edit files, run code, inspect output, and manage the project.</span></div>
+<div><strong>R, Python, or Julia</strong><span>Clean data, explore patterns, fit models, and save results.</span></div>
+<div><strong>Quarto</strong><span>Turn source files into reports, manuscripts, slides, and websites.</span></div>
 :::
 
 ::: {.notes}
-This should be emphasized for any real data project. GitHub is useful for version control and collaboration, but private repositories are not a substitute for IRB-, DUA-, institutional-, or funder-approved secure storage. Sensitive or restricted data should usually remain outside the repository in documented local or approved locations.
+An IDE is a workbench that combines a file browser, editor, console or terminal, output viewer, and Git tools. Positron is recommended in the template, but RStudio, VS Code, and other editors can support the same workflow. R is the default example language, not a restriction. Quarto reads a source file and renders a finished product that can be regenerated.
 
-[Sources] Local template: readme.md; new-project-instructions.md; data/readme-data.md.
+[Sources] Local template: readme.md; usage.md; code-guidelines.md. Positron introduction: https://andreashandel.github.io/mds-tools/courses/fc1-intro-positron/positron-introduction/positron-introduction.html. Quarto overview: https://andreashandel.github.io/mds-tools/courses/fc3-intro-quarto/quarto-introduction/quarto-introduction.html
 :::
 
-## AI tools are useful when the task is reviewable
+## Git records; GitHub shares
 
-:::: {.three-up}
-::: {.tile .accent-purple}
-**Draft**
-
-Code, comments, documentation, report language.
+::: {.simple-list .spacious}
+<div><strong>Git</strong><span>Records snapshots, compares changes, and lets you return to earlier versions.</span></div>
+<div><strong>GitHub</strong><span>Stores a remote repository and supports sharing, collaboration, and review.</span></div>
+<div><strong>Important limit</strong><span>A private repository is not approved secure storage for sensitive data.</span></div>
 :::
-::: {.tile .accent-green}
-**Explain**
-
-Errors, functions, workflow steps, unfamiliar tools.
-:::
-::: {.tile .accent-orange}
-**Review**
-
-Paths, reproducibility gaps, stale docs, unclear outputs.
-:::
-::::
 
 ::: {.notes}
-This is a practical AI slide. Ask for bounded help: explain this error, review this function for path problems, draft a data check, summarize what changed. The smaller the request, the easier it is to review.
+Define Git and GitHub separately. Git is version control on the project files. GitHub is a hosting and collaboration service. A private GitHub repository can limit access, but it is not a substitute for IRB-, DUA-, institutional-, or funder-approved secure storage.
+
+[Sources] Local template: readme.md; new-project-instructions.md; data/readme-data.md. Git/GitHub in Positron: https://andreashandel.github.io/mds-tools/courses/fc4-intro-github/github-positron/github-positron.html
+:::
+
+## AI works best on reviewable tasks
+
+::: {.simple-list .spacious}
+<div><strong>Draft</strong><span>Code, comments, documentation, and report language.</span></div>
+<div><strong>Explain</strong><span>Errors, functions, workflow steps, and unfamiliar tools.</span></div>
+<div><strong>Review</strong><span>Paths, reproducibility gaps, stale documentation, and unclear outputs.</span></div>
+:::
+
+::: {.notes}
+Ask for bounded help: explain this error, review this function for path problems, draft a data check, or summarize what changed. Smaller requests are easier to evaluate. Reference managers, word processors, and TeX tools still matter, but they can be introduced when a particular product requires them.
 
 [Sources] Local template: ai/ai-use-policy.md; agents.md; readme.md.
 :::
-
-## Reference and writing tools still matter
-
-:::: {.three-up}
-::: {.tile .accent-blue}
-**Zotero + BibTeX**
-
-Keeps citations usable in Quarto.
-:::
-::: {.tile .accent-green}
-**Word or LibreOffice**
-
-Opens rendered manuscript files.
-:::
-::: {.tile .accent-orange}
-**TinyTeX**
-
-Needed for many PDF outputs.
-:::
-::::
-
-::: {.notes}
-The template is not just code. Real projects need references, manuscripts, reports, and PDFs. The local README recommends a reference manager that handles BibTeX, plus Word or LibreOffice for DOCX and a TeX distribution such as TinyTeX for PDF output.
-
-[Sources] Local template: readme.md; usage.md.
-:::
-
 ## Topic 3: The repository map {.section-break}
 
 <div class="section-kicker">Topic 3</div>
 <div class="section-title-text">The repository map</div>
-<div class="section-subtitle">Each folder has a job, and the jobs keep the workflow traceable.</div>
+<div class="section-subtitle">Each folder has a job, so people and tools can find the right material.</div>
 
 ::: {.notes}
-Transition from tools to structure. The next slides explain the repository as a map with roles, not as a list of arbitrary folders.
+Explain the repository as a map with roles, not as a list of arbitrary folders.
 
 [Sources] Local template: readme.md.
 :::
@@ -374,365 +194,203 @@ Transition from tools to structure. The next slides explain the repository as a 
 :::
 
 ::: {.notes}
-This figure should be large enough to read from the back of a room. Walk through the path: data, code, results, products. Then mention the support folders: assets for stable supporting material and ai for AI policy, summary, and logs.
+Walk through the main path: data, code, results, and products. Then mention support material: assets for stable inputs and the ai folder for policy, project context, and meaningful AI-use records.
 
 [Sources] Local template: readme.md; usage.md.
 :::
 
-## `data/` is not one bucket
+## Keep raw and derived data separate
 
-:::: {.four-up}
-::: {.tile .accent-blue}
-**raw-data**
-
-Original input; do not edit by hand.
+::: {.simple-list}
+<div><strong>raw-data</strong><span>Original input; do not edit it by hand.</span></div>
+<div><strong>processed-data</strong><span>Cleaned or transformed data created by code.</span></div>
+<div><strong>private-data</strong><span>Restricted material that stays in an approved location.</span></div>
+<div><strong>large-files</strong><span>Files too large for ordinary Git and GitHub use.</span></div>
 :::
-::: {.tile .accent-green}
-**processed-data**
-
-Derived by scripts.
-:::
-::: {.tile .accent-purple}
-**private-data**
-
-Local or restricted.
-:::
-::: {.tile .accent-orange}
-**large-files**
-
-Too large for ordinary Git/GitHub use.
-:::
-::::
 
 ::: {.notes}
-Stress the raw-data rule. If the raw file is inconvenient, write code that creates a processed file. Do not fix raw Excel files by hand and lose the record of what changed.
+If a raw file is inconvenient, write code that creates a processed file. Do not fix raw spreadsheets by hand and lose the record of what changed. The data README should document source, sensitivity, access limits, and storage expectations.
 
 [Sources] Local template: readme.md; usage.md; data/readme-data.md; agents.md.
 :::
 
-## `code/` follows the analysis stages
+## Code follows the analysis stages
 
-<p class="figure-lead">Each stage should have clear inputs, outputs, and run instructions.</p>
+<p class="figure-lead">Each stage has recognizable inputs, outputs, and run instructions.</p>
 
 ::: {.full-figure}
 ![](./media/code-stages.png)
 :::
 
 ::: {.notes}
-The code folders mirror the project workflow. Processing creates processed data. Exploration helps understand the data. Modeling/analysis computes results. Figures/tables turns results into communication-ready artifacts. Utilities hold reusable helpers when needed.
+Processing creates processed data. Exploration helps users understand and check the data. Modeling and analysis compute results. Figures and tables turn results into communication-ready artifacts. Utilities hold reusable helpers when needed.
 
 [Sources] Local template: readme.md; usage.md; code/readme-code.md; code-guidelines.md.
 :::
 
-## `results/` and `products/` are different
+## Keep outputs and supporting inputs separate
 
-:::: {.split}
-::: {.left}
-**Results**
-
-Generated objects, figures, tables, and intermediate outputs.
-:::
-::: {.right}
-**Products**
-
-Reports, manuscripts, slides, posters, apps, and other deliverables.
-:::
-::::
-
-::: {.notes}
-This distinction prevents a common reproducibility problem. Results should be generated by code and then consumed by products. Products are what an audience sees. If a figure is manually created, it belongs in assets, not results, unless the manual source is documented and intentionally treated as a static input.
-
-[Sources] Local template: readme.md; usage.md; agents.md.
-:::
-
-## `assets/` and `ai/` support the workflow
-
-:::: {.split}
-::: {.left}
-**`assets/`**
-
-References, CSL files, manually created schematics, and stable supporting material.
-:::
-::: {.right}
-**`ai/`**
-
-Policy, project summary, AI-use log, and AI guidance.
-:::
-::::
-
-::: {.notes}
-Assets are stable supporting inputs, not generated outputs. The AI folder makes assistance transparent and gives AI tools a short project summary, but human-facing documentation remains authoritative.
-
-[Sources] Local template: readme.md; assets/readme-assets.md; ai/readme-ai.md; ai/ai-use-policy.md; agents.md.
-:::
-
-## Documentation is part of the product
-
-::: {.statement}
-If users cannot understand why, what, and how, technical reproducibility is not enough.
+::: {.simple-list}
+<div><strong>results/</strong><span>Generated objects, figures, tables, and intermediate outputs.</span></div>
+<div><strong>products/</strong><span>Reports, manuscripts, slides, posters, and apps.</span></div>
+<div><strong>assets/</strong><span>References, CSL files, and manually created supporting material.</span></div>
+<div><strong>ai/</strong><span>AI policy, project summary, guidance, and meaningful-use log.</span></div>
 :::
 
 ::: {.notes}
-Documentation is essential for practical reproducibility. Running code is not enough if a collaborator cannot understand the project. The template therefore includes project-level and folder-level readmes plus usage instructions.
+Results should be generated by code and then consumed by products. Assets are stable supporting inputs rather than generated results. Documentation is part of the workflow: a technically runnable project is still difficult to reproduce if users cannot understand why, what, and how. Human-facing documentation remains authoritative if it conflicts with an AI summary.
 
-[Sources] Local template: readme.md; usage.md; code-guidelines.md.
+[Sources] Local template: readme.md; usage.md; assets/readme-assets.md; ai/readme-ai.md; ai/ai-use-policy.md; agents.md.
 :::
-
 ## Topic 4: Getting started {.section-break}
 
 <div class="section-kicker">Topic 4</div>
 <div class="section-title-text">Getting started</div>
-<div class="section-subtitle">Start with identity, data rules, software notes, and a documented run order.</div>
+<div class="section-subtitle">Set identity and data rules first, then run and check the workflow.</div>
 
 ::: {.notes}
-Transition to the getting-started sequence. This is deliberately practical and beginner-friendly.
+This section turns the template into a short sequence a beginner can follow.
 
 [Sources] Local template: new-project-instructions.md.
 :::
 
-## The first setup pass is not analysis
+## Start with identity and ground rules
 
-::: {.numbered-flow}
-<div><span>1</span><strong>Create from the template</strong><br>Start private unless sharing is already cleared.</div>
-<div><span>2</span><strong>Rename the project</strong><br>Replace template placeholders with real project identity.</div>
-<div><span>3</span><strong>Document data policy</strong><br>Decide what can be committed and what stays local.</div>
-<div><span>4</span><strong>Update software notes</strong><br>List packages and tools users need.</div>
+::: {.steps-list}
+<div><span>1</span><p><strong>Create from the template</strong><br>Start private unless sharing is already cleared.</p></div>
+<div><span>2</span><p><strong>Rename and describe the project</strong><br>Replace placeholders with real identity and purpose.</p></div>
+<div><span>3</span><p><strong>Classify the data</strong><br>Decide what can be committed and what stays elsewhere.</p></div>
+<div><span>4</span><p><strong>Document the software</strong><br>List the tools and packages needed to run the work.</p></div>
 :::
 
 ::: {.notes}
-This slide makes the first setup pass concrete. Many reproducibility problems begin because people jump straight into analysis before project identity, data sensitivity, and software expectations are documented.
+Many reproducibility problems begin because people jump into analysis before project identity, data sensitivity, and software expectations are documented. The default dependency approach is intentionally lightweight. Add environment managers, continuous integration, or containers only when project duration, collaboration, or risk justifies them.
 
-[Sources] Local template: new-project-instructions.md; readme.md; data/readme-data.md.
+[Sources] Local template: new-project-instructions.md; readme.md; data/readme-data.md; agents.md.
 :::
 
-## The example workflow runs in pieces
+## Run the workflow in clear stages
 
-<p class="figure-lead">Compute results first; render reports and slides after outputs are current.</p>
+<p class="figure-lead">Regenerate results before rendering reports, manuscripts, or slides.</p>
 
 ::: {.full-figure}
 ![](./media/run-order.png)
 :::
 
 ::: {.notes}
-The example workflow is semi-automated: code is reproducible, but users can run understandable stages manually. The first three stages compute and save results. The figures/tables scripts prepare final output artifacts. Products are rendered afterward.
+The example workflow is semi-automated. The first three stages compute and save results. The figure and table scripts prepare final output artifacts. Products are rendered afterward. Users can understand and rerun individual stages without requiring one large pipeline tool.
 
 [Sources] Local template: usage.md; code/readme-code.md.
 :::
 
-## Reproducibility checks happen before sharing
+## Check the project before sharing
 
-:::: {.four-up}
-::: {.tile .accent-blue}
-**Raw data**
-
-Was it left unchanged?
+::: {.simple-list}
+<div><strong>Raw data</strong><span>Was it left unchanged?</span></div>
+<div><strong>Outputs</strong><span>Can each important result be traced to code?</span></div>
+<div><strong>Privacy</strong><span>Were private and restricted files kept out?</span></div>
+<div><strong>Documentation</strong><span>Do the paths and instructions match the current project?</span></div>
 :::
-::: {.tile .accent-green}
-**Outputs**
-
-Can each be traced to code?
-:::
-::: {.tile .accent-orange}
-**Privacy**
-
-Were private files kept out?
-:::
-::: {.tile .accent-purple}
-**Docs**
-
-Do instructions match reality?
-:::
-::::
 
 ::: {.notes}
-This checklist comes from `usage.md` and `agents.md`. It is especially important before accepting AI-assisted changes, sharing a repository, or making a project public.
+Run these checks before accepting AI-assisted changes, sharing a repository, or making a project public. A clean-session or clean-copy run is a particularly useful way to expose hidden objects, absolute paths, missing packages, and undocumented manual steps.
 
 [Sources] Local template: usage.md; agents.md; readme.md.
 :::
-
-## Software management can grow with the project
-
-::: {.numbered-flow .compact}
-<div><span>1</span><strong>Manual package list</strong><br>Default, easiest for small projects.</div>
-<div><span>2</span><strong>Environment manager</strong><br>Use when exact versions matter.</div>
-<div><span>3</span><strong>CI or container</strong><br>Use when controlled reruns matter across machines.</div>
-:::
-
-::: {.notes}
-Do not introduce heavy infrastructure before it is needed. The local template intentionally starts with manual package documentation. For longer-term, multi-user, publication, or regulated workflows, environment managers, CI, or containers may become appropriate.
-
-[Sources] Local template: readme.md; agents.md.
-:::
-
-## Topic 5: AI-assisted work {.section-break}
+## Topic 5: AI-assisted work and next steps {.section-break}
 
 <div class="section-kicker">Topic 5</div>
-<div class="section-title-text">AI-assisted work</div>
-<div class="section-subtitle">Orient, ask, review, run and check, then record.</div>
+<div class="section-title-text">AI-assisted work and next steps</div>
+<div class="section-subtitle">Use AI for bounded help, verify the result, and leave the project understandable.</div>
 
 ::: {.notes}
-This section shifts from general project setup to AI operating practice. The audience should leave with a concrete loop for orienting, asking, reviewing, running and checking, and recording meaningful AI help.
+The final section combines responsible AI practice with sharing and an immediate action plan.
 
-[Sources] Local template: ai/ai-use-policy.md; ai/readme-ai.md; agents.md.
+[Sources] Local template: ai/ai-use-policy.md; ai/readme-ai.md; agents.md; new-project-instructions.md.
 :::
 
-## AI assistance needs context
+## Give AI context; keep judgment human
 
-:::: {.split}
-::: {.left}
-**Give AI**
-
-- The specific file
-- The task boundary
-- The relevant docs
-- The desired checks
+::: {.simple-list}
+<div><strong>Provide</strong><span>The goal, relevant files, task boundary, project guidance, and desired checks.</span></div>
+<div><strong>Request</strong><span>Small changes, clear explanations, testable outputs, and a summary of risks.</span></div>
+<div><strong>Retain</strong><span>Human ownership of scientific choices, privacy, citations, and interpretation.</span></div>
 :::
-::: {.right}
-**Ask for**
-
-- Small changes
-- Clear explanations
-- Testable outputs
-- A summary of risks
-:::
-::::
 
 ::: {.notes}
-This slide turns the AI policy into a usable practice. The local README tells users to point AI tools to the project documentation, including readme, usage, agents, code guidelines, data readme, and AI files.
+Point AI tools to the relevant project documentation instead of assuming they know the project. AI can suggest options, but scientific and governance decisions need human ownership. If a user cannot explain a proposed change, the task should be made smaller before it is accepted.
 
-[Sources] Local template: readme.md; ai/ai-use-policy.md; agents.md.
+[Sources] Local template: readme.md; ai/ai-use-policy.md; agents.md; code-guidelines.md.
 :::
 
-## Some decisions should not be delegated
+## Use AI inside an ORDERly loop
 
-:::: {.two-up}
-::: {.tile .accent-orange}
-**Scientific judgment**
-
-Question, data suitability, assumptions, interpretation.
-:::
-::: {.tile .accent-purple}
-**Governance judgment**
-
-Privacy, sharing permission, citation accuracy, disclosure.
-:::
-::::
-
-::: {.notes}
-AI can suggest options, but these decisions need human ownership and review. This is especially important when the deck is presented to new users who may be tempted to treat AI output as authoritative.
-
-[Sources] Local template: ai/ai-use-policy.md; code-guidelines.md.
-:::
-
-## AI belongs inside an ORDERly loop
-
-<p class="figure-lead">The loop makes assistance visible, bounded, and checkable.</p>
+<p class="figure-lead">Orient, ask, review, run and check, then record.</p>
 
 ::: {.full-figure}
 ![](./media/ai-working-loop.png)
 :::
 
 ::: {.notes}
-Use the loop to make AI work operational. First orient to the goal and inspect the relevant files. Ask for a bounded task with context and limits. Review the proposal. Run the affected code and inspect the actual output. Record meaningful assistance and the human decision. For real projects, the AI-use log provides transparency unless the project owner disables it.
+First orient to the goal and inspect the relevant files. Ask for a bounded task with context and limits. Review the proposal. Run the affected code and inspect the actual output. Record meaningful assistance and the human decision. AI output remains a proposal until it has been checked.
 
 [Sources] Local template: ai/ai-use-policy.md; ai/readme-ai.md; agents.md.
 :::
 
-## Synthetic data can help protect privacy
+## Protect sensitive information
 
 ::: {.statement}
-When sensitive raw records cannot be shared with AI, use code structure, summaries, or synthetic examples instead.
+Do not send private or restricted records to an AI tool unless that use is explicitly approved.
+
+Use code structure, summaries, or synthetic examples when possible.
 :::
 
 ::: {.notes}
-The template policy says not to paste sensitive, private, regulated, unpublished, restricted, or identifiable data into external AI tools unless explicitly approved. The MADA course also includes synthetic-data material as a way to work safely with data-like structures.
+The template policy says not to paste sensitive, private, regulated, unpublished, restricted, or identifiable data into external AI tools unless explicitly approved. Synthetic examples can preserve a useful data structure without exposing the original records.
 
 [Sources] Local template: ai/ai-use-policy.md; data/readme-data.md. MADA synthetic data overview: https://andreashandel.github.io/MADAcourse/content/module-synthetic-data/synthetic-data-overview.html
 :::
 
-## Topic 6: Sharing and next steps {.section-break}
+## A useful project is easy to continue
 
-<div class="section-kicker">Topic 6</div>
-<div class="section-title-text">Sharing and next steps</div>
-<div class="section-subtitle">A project is ready to share when others can understand and rerun it.</div>
-
-::: {.notes}
-This final section connects the template to collaboration, open research, a practical first-week plan, and follow-up learning resources.
-
-[Sources] Local template: readme.md; usage.md; new-project-instructions.md.
-:::
-
-## The template also supports collaboration
-
-:::: {.split}
-::: {.left}
-**Solo use**
-
-History helps future you understand what happened.
-:::
-::: {.right}
-**Team use**
-
-Commits, branches, and pull requests make review explicit.
-:::
-::::
-
-::: {.notes}
-Project management here means management of actual files and folders. Version control is useful for one person and becomes more important with collaborators because it records who did what and reduces confusion.
-
-[Sources] Local template: readme.md; new-project-instructions.md.
-:::
-
-## Sharing needs ORDERly structure
-
-::: {.statement}
-Sharing data and code is useful only when others can understand and rerun the workflow.
+::: {.simple-list .spacious}
+<div><strong>Future you</strong><span>History and documentation explain what happened.</span></div>
+<div><strong>Collaborators</strong><span>Commits and review make changes visible.</span></div>
+<div><strong>Wider sharing</strong><span>ORDERly structure lets others understand and rerun the work.</span></div>
 :::
 
 ::: {.notes}
-Sharing and reproducibility are related but not identical. A repository can be public and still be impossible to understand or rerun. ORDERly structure makes sharing useful by preserving organization, history, documentation, executable instructions, and a testable result.
+Version control is useful for one person and becomes more important with collaborators. Public access alone does not create reproducibility. Sharing becomes useful when the project preserves organization, history, documentation, executable instructions, and a testable result.
 
 [Sources] Local template: readme.md; usage.md; new-project-instructions.md.
 :::
 
 ## A useful first-week plan
 
-::: {.numbered-flow .compact}
-<div><span>1</span><strong>Create and rename</strong><br>Project identity and authorship.</div>
-<div><span>2</span><strong>Classify data</strong><br>Commit-safe, private, large, restricted.</div>
-<div><span>3</span><strong>Adapt workflow</strong><br>Scripts, inputs, outputs, run order.</div>
-<div><span>4</span><strong>Run and render</strong><br>Regenerate outputs, then products.</div>
-<div><span>5</span><strong>Commit checkpoint</strong><br>Small reviewed history point.</div>
+::: {.steps-list .compact}
+<div><span>1</span><p><strong>Create and rename</strong><br>Establish project identity and authorship.</p></div>
+<div><span>2</span><p><strong>Classify data</strong><br>Separate commit-safe, private, large, and restricted files.</p></div>
+<div><span>3</span><p><strong>Adapt the workflow</strong><br>Connect scripts, inputs, outputs, and run order.</p></div>
+<div><span>4</span><p><strong>Run and render</strong><br>Regenerate outputs, then update products.</p></div>
+<div><span>5</span><p><strong>Commit a checkpoint</strong><br>Preserve one small, reviewed, working state.</p></div>
 :::
 
 ::: {.notes}
-Close with an action plan rather than another conceptual summary. The first week does not need to solve the science. It should make the project understandable, runnable, and safe to share within the intended team.
+The first week does not need to solve the science. It should make the project understandable, runnable, and safe to share within the intended team.
 
 [Sources] Local template: new-project-instructions.md; usage.md; readme.md.
 :::
 
 ## Where to learn more
 
-:::: {.resource-grid}
-::: {.resource}
-**MDS project template**
-
-<https://github.com/andreashandel/mds-project-template>
+::: {.resource-list}
+<div><strong>MDS project template</strong><a href="https://github.com/andreashandel/mds-project-template">github.com/andreashandel/mds-project-template</a></div>
+<div><strong>MDS tools mini-courses</strong><a href="https://andreashandel.github.io/mds-tools/">andreashandel.github.io/mds-tools</a></div>
+<div><strong>Inside the template</strong><span><code>readme.md</code>, <code>usage.md</code>, <code>new-project-instructions.md</code>, <code>code-guidelines.md</code>, <code>agents.md</code>, and <code>ai/ai-use-policy.md</code></span></div>
 :::
-::: {.resource}
-**MDS tools mini-courses**
-
-<https://andreashandel.github.io/mds-tools/>
-:::
-::: {.resource}
-**Inside this template**
-
-`readme.md`, `usage.md`, `new-project-instructions.md`, `code-guidelines.md`, `agents.md`, and `ai/ai-use-policy.md`
-:::
-::::
 
 ::: {.notes}
-End by pointing people to the internal and external resources. The deck itself is an entry point; users should next read the repository documentation and the tool mini-courses they need.
+End by pointing people to the repository documentation and the tool mini-courses they need. The deck is an introduction; the next step is to create a small project and use the documentation while working through the first setup and run.
 
-[Sources] MDS project template: https://github.com/andreashandel/mds-project-template. MDS tools site: https://andreashandel.github.io/mds-tools/. Local template docs listed on slide.
+[Sources] MDS project template: https://github.com/andreashandel/mds-project-template. MDS tools site: https://andreashandel.github.io/mds-tools/. Local template documents listed on the slide.
 :::
