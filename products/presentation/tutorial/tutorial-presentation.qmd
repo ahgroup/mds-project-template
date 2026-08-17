@@ -46,12 +46,22 @@ csl: ../../../assets/american-journal-of-epidemiology.csl
 
 ## Problems with "standard" workflows
 
+::: {.problems-layout}
 ::: {.simple-list}
 <div><strong>Results drift from their code</strong><span>Copied tables and figures become hard to update or verify.</span></div>
 <div><strong>Files lose their roles</strong><span>Raw, processed, current, and obsolete versions become difficult to distinguish.</span></div>
 <div><strong>Decisions disappear</strong><span>Cleaning and modeling choices remain in memory or private conversations.</span></div>
 <div><strong>Sharing becomes risky</strong><span>Private data and unfinished material move into unsuitable places.</span></div>
 <div><strong>Reproducibility is hard</strong><span>Others (including your future self) will struggle reproducing your work.</span></div>
+:::
+
+::: {.problem-figure}
+![](./media/amiracleoccurs.gif){fig-alt="A black-and-white cartoon showing an unexplained step labeled 'Then a miracle occurs' in a mathematical derivation."}
+:::
+:::
+
+::: {.notes}
+[Sources] Cartoon supplied by the project owner: media/amiracleoccurs.gif.
 :::
 
 

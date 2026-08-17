@@ -252,9 +252,11 @@ html {
 
 .arc-list > div {
   display: grid;
-  grid-template-columns: 58px 196px minmax(0, 1fr);
-  gap: 24px;
-  align-items: center;
+  grid-template-columns: 58px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  column-gap: 22px;
+  row-gap: 4px;
+  align-items: start;
   padding: 22px 8px;
   border-bottom: 2px solid var(--line);
 }
@@ -264,21 +266,56 @@ html {
 }
 
 .arc-list span {
+  grid-row: 1 / 3;
+  align-self: center;
   color: var(--terracotta);
   font-size: 0.78em;
   font-weight: 760;
 }
 
 .arc-list strong {
+  grid-column: 2;
   color: var(--navy);
   font-size: 0.82em;
 }
 
 .arc-list small {
   display: block;
+  grid-column: 2;
   color: var(--muted);
-  font-size: 0.52em;
+  font-size: 0.55em;
   line-height: 1.22;
+}
+
+.problems-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.72fr);
+  gap: 40px;
+  align-items: center;
+  max-width: 1120px;
+}
+
+.problems-layout .simple-list {
+  max-width: none;
+  margin: 0;
+}
+
+.problems-layout .simple-list > div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.problem-figure {
+  margin: 0;
+}
+
+.problem-figure img {
+  display: block;
+  width: 100%;
+  max-height: 345px;
+  margin: 0 auto;
+  object-fit: contain;
+  mix-blend-mode: multiply;
 }
 
 .flow-figure {
@@ -603,16 +640,13 @@ html {
 }
 
 .section-break {
-  overflow: hidden;
-  border-left: 14px solid var(--terracotta);
-  background:
-    radial-gradient(circle at 91% 34%, rgba(47, 127, 120, 0.22) 0 110px, transparent 112px),
-    radial-gradient(circle at 83% 71%, rgba(214, 166, 60, 0.24) 0 70px, transparent 72px),
-    var(--paper);
+  overflow: visible;
+  border: 0;
+  background: var(--paper);
 }
 
 .section-kicker {
-  margin-top: 105px;
+  margin-top: 156px;
   color: var(--terracotta);
   font-size: 0.66em;
   font-weight: 760;
@@ -658,8 +692,12 @@ html {
   }
 
   .arc-list > div {
-    grid-template-columns: 52px 180px minmax(0, 1fr);
-    gap: 17px;
+    grid-template-columns: 52px minmax(0, 1fr);
+    column-gap: 17px;
+  }
+
+  .problems-layout {
+    gap: 26px;
   }
 
   .flow-figure {
