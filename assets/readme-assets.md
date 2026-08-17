@@ -12,19 +12,11 @@ Examples include:
 - PDFs of references;
 - other supporting files that need to travel with the project.
 
-Some of these are third-party material. Anything in this folder that you did not
-create yourself keeps its own license, and committing it means redistributing it
-to everyone who can see the repository. See the "Third-Party Materials" section
-of `../license.md`.
+As suitable, you might want to create further sub-folders.
 
 The file `schematic-example.png` is an example static schematic generated for
 this template. It is meant as a placeholder that users can replace with a
 project-specific schematic or conceptual figure.
-
-You can organize this folder further if needed. For example, this template has a
-`references/` folder for reference PDFs. Read
-`references/readme-references.md` before committing a PDF there, since most
-published articles cannot simply be redistributed.
 
 The `.csl` files are used by Quarto documents to format citations and reference
 lists. Journals often require specific formats. While writing, it can be useful
@@ -40,3 +32,6 @@ as recorded in the `<rights>` element inside each file. That license is their
 own and is separate from the license of this project. Keep the `<rights>`
 element intact if you edit a style, and note the license if you redistribute a
 modified version.
+
+You might end up adding some third-party material (e.g. pdf files of papers). Anything in this folder that you did not
+create yourself keeps its own license, and committing it means redistributing it to everyone who can see the repository. Be cognizant of the licenses and rights to redistribute.
