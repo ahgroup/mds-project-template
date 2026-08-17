@@ -6,8 +6,7 @@
 #
 # Outputs:
 #   PNG files in this media folder:
-#   orderly-framework.png, template-concept.png, toolchain-map.png, folder-map.png,
-#   code-stages.png, run-order.png, ai-working-loop.png
+#   orderly-framework.png, folder-map.png, code-stages.png
 #
 # How to run:
 #   Rscript products/presentation/tutorial/media/create-tutorial-media.r
@@ -105,16 +104,6 @@ arrow_line <- function(x0, y0, x1, y1, col = "#9aa8b5", lwd = 3) {
   )
 }
 
-curved_arrow <- function(x0, y0, x1, y1, curvature = 0.25, col = "#9aa8b5", lwd = 3) {
-  grid.curve(
-    x1 = unit(x0, "npc"), y1 = unit(y0, "npc"),
-    x2 = unit(x1, "npc"), y2 = unit(y1, "npc"),
-    curvature = curvature,
-    arrow = arrow(length = unit(0.18, "inches"), type = "closed"),
-    gp = gpar(col = col, lwd = lwd, lineend = "round")
-  )
-}
-
 make_orderly_framework <- function() {
   open_png("orderly-framework.png")
   xs <- c(0.14, 0.38, 0.62, 0.86)
@@ -139,44 +128,6 @@ make_orderly_framework <- function() {
     c("a stated result can be recreated"),
     colors$soft_slate, colors$blue, title_size = 22, line_size = 13
   )
-  close_png()
-}
-
-make_template_concept <- function() {
-  open_png("template-concept.png")
-  xs <- c(0.11, 0.27, 0.43, 0.59, 0.75, 0.91)
-  names <- c("Data", "Code", "Results", "Products", "Share", "Review")
-  fills <- c(colors$soft_blue, colors$soft_green, colors$soft_orange, colors$soft_purple, colors$soft_slate, colors$soft)
-  borders <- c(colors$blue, colors$green, colors$orange, colors$purple, colors$slate, colors$blue)
-  for (i in seq_along(xs)) {
-    box_label(xs[i], 0.56, 0.13, 0.20, names[i], character(), fills[i], borders[i], title_size = 18)
-    if (i < length(xs)) arrow_line(xs[i] + 0.065, 0.56, xs[i + 1] - 0.065, 0.56)
-  }
-  box_label(0.31, 0.22, 0.34, 0.18, "AI assistance", c("draft", "explain", "check"), colors$soft_purple, colors$purple, title_size = 18)
-  box_label(0.69, 0.22, 0.34, 0.18, "Human ownership", c("decide", "verify", "interpret"), colors$soft_blue, colors$blue, title_size = 18)
-  arrow_line(0.48, 0.22, 0.52, 0.22)
-  close_png()
-}
-
-make_toolchain_map <- function() {
-  open_png("toolchain-map.png")
-  xs <- c(0.12, 0.31, 0.50, 0.69, 0.88)
-  titles <- c("IDE", "R / Python", "Quarto", "GitHub", "AI")
-  subtitles <- list(
-    c("workbench", "edit / run / view"),
-    c("compute", "clean / model / save"),
-    c("publish", "reports / slides"),
-    c("history", "share / review"),
-    c("assist", "draft / explain / check")
-  )
-  fills <- c(colors$soft_blue, colors$soft_green, colors$soft_orange, colors$soft_purple, colors$soft_slate)
-  borders <- c(colors$blue, colors$green, colors$orange, colors$purple, colors$slate)
-  for (i in seq_along(xs)) {
-    box_label(xs[i], 0.53, 0.16, 0.45, titles[i], subtitles[[i]], fills[i], borders[i], title_size = 18, line_size = 12)
-  }
-  for (i in 1:4) arrow_line(xs[i] + 0.08, 0.53, xs[i + 1] - 0.08, 0.53)
-  rect_box(0.5, 0.16, 0.68, 0.13, colors$soft, colors$line, lwd = 3)
-  label("The project folder is the shared map for all tools.", 0.5, 0.16, 17, colors$blue, "bold")
   close_png()
 }
 
@@ -213,51 +164,6 @@ make_code_stages <- function() {
   close_png()
 }
 
-make_run_order <- function() {
-  open_png("run-order.png")
-  xs <- c(0.11, 0.305, 0.50, 0.695, 0.89)
-  titles <- c("1 Process", "2 Explore", "3 Analyze", "4 Package", "5 Render")
-  lines <- list(c("raw to", "processed"), c("checks", "summaries"), c("models", "results"), c("figures", "tables"), c("reports", "slides"))
-  fills <- c(colors$soft_blue, colors$soft_green, colors$soft_orange, colors$soft_purple, colors$soft_slate)
-  borders <- c(colors$blue, colors$green, colors$orange, colors$purple, colors$slate)
-  for (i in seq_along(xs)) {
-    box_label(xs[i], 0.57, 0.15, 0.24, titles[i], lines[[i]], fills[i], borders[i], title_size = 17, line_size = 12)
-  }
-  for (i in 1:4) arrow_line(xs[i] + 0.075, 0.57, xs[i + 1] - 0.075, 0.57)
-  rect_box(0.5, 0.22, 0.72, 0.14, colors$soft, colors$line, lwd = 3)
-  label("Regenerate results before rendering products", 0.5, 0.24, 16, colors$blue, "bold")
-  label("A stale report is often an old render.", 0.5, 0.19, 12, colors$ink)
-  close_png()
-}
-
-make_ai_working_loop <- function() {
-  open_png("ai-working-loop.png")
-  xs <- c(0.10, 0.30, 0.50, 0.70, 0.90)
-  titles <- c("Orient", "Ask", "Review", "Run + check", "Record")
-  lines <- list(
-    c("goal", "relevant files"),
-    c("specific", "bounded"),
-    c("proposal", "diffs + logic"),
-    c("code", "actual output"),
-    c("decision", "meaningful use")
-  )
-  fills <- c(colors$soft_slate, colors$soft_purple, colors$soft_blue, colors$soft_green, colors$soft_orange)
-  borders <- c(colors$slate, colors$purple, colors$blue, colors$green, colors$orange)
-  for (i in seq_along(xs)) {
-    box_label(xs[i], 0.60, 0.15, 0.25, titles[i], lines[[i]], fills[i], borders[i], title_size = 16, line_size = 11)
-  }
-  for (i in 1:4) arrow_line(xs[i] + 0.075, 0.60, xs[i + 1] - 0.075, 0.60)
-  curved_arrow(0.90, 0.43, 0.10, 0.43, curvature = -0.24)
-  rect_box(0.5, 0.20, 0.52, 0.14, colors$soft, colors$line, lwd = 3)
-  label("Human judgment remains the gate", 0.5, 0.22, 16, colors$blue, "bold")
-  label("AI output remains a proposal until checked.", 0.5, 0.17, 12, colors$ink)
-  close_png()
-}
-
 make_orderly_framework()
-make_template_concept()
-make_toolchain_map()
 make_folder_map()
 make_code_stages()
-make_run_order()
-make_ai_working_loop()
