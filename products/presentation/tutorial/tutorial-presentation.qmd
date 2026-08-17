@@ -39,9 +39,23 @@ csl: ../../../assets/american-journal-of-epidemiology.csl
 
 ## Motivation
 
-- Reproducibility is a hallmark of good science
-- A well-organized, reproducible project often makes work more efficient
-- AI-supported work is the ~~future~~ present
+::: {.motivation-layout}
+<div class="motivation-copy">
+<ul>
+<li>Reproducibility is a hallmark of good science</li>
+<li>A well-organized, reproducible project often makes work more efficient</li>
+<li>AI-supported work is the <del>future</del> present</li>
+</ul>
+</div>
+
+::: {.xkcd-figure}
+![](./media/xkcd-replication-crisis.png){fig-alt="An XKCD comic about reproducibility and the replication crisis."}
+:::
+:::
+
+::: {.notes}
+[Sources] Image file: media/xkcd-replication-crisis.png.
+:::
 
 
 ## Problems with "standard" workflows
@@ -100,11 +114,6 @@ csl: ../../../assets/american-journal-of-epidemiology.csl
 </div>
 <div class="flow-down-arrow">↓</div>
 <div class="flow-outcome"><strong>Reproducible</strong><span>bounded, inspectable, and project-owned</span></div>
-<div class="gate-strip">
-<div><strong>Science</strong><span>data, model, assumptions, interpretation</span></div>
-<div><strong>Governance</strong><span>approved data, documents, and systems</span></div>
-<div><strong>Acceptance</strong><span>working changes the owner can defend</span></div>
-</div>
 :::
 
 ::: {.notes}
@@ -120,7 +129,7 @@ AI can support judgment but cannot transfer accountability. Never send private o
 <div class="section-subtitle">A setup to support an AI-assisted ORDERly workflow</div>
 
 
-## ORDERly maps to the setup
+## An ORDERly project setup
 
 <p class="figure-lead">The setup combines template structure, text-based tools, version tracking, AI guardrails, and a reproducible workflow</p>
 
@@ -269,7 +278,6 @@ Processing creates processed data. Exploration checks it. Modeling and analysis 
 <p><strong>Others</strong> can understand and recreate the stated result</p>
 :::
 
-<div class="closing-mark">Make the workflow ORDERly. Let the template carry the structure</div>
 
 ::: {.notes}
 Return to the opening. The template helps implement an understandable, recorded, documented, executable workflow. AI can accelerate it when assistance remains bounded and reviewable.
@@ -283,7 +291,7 @@ Return to the opening. The template helps implement an understandable, recorded,
 <div><strong>Code</strong><span>Write, document, refactor, and debug project code</span></div>
 <div><strong>Literature</strong><span>Help search, summarize, and organize background material</span></div>
 <div><strong>Writing</strong><span>Draft or improve reports, manuscripts, and presentations</span></div>
-<div><strong>Consistency</strong><span>Keep code, outputs, and documentation aligned</span></div>
+<div><strong>Documentation</strong><span>Keep code, outputs, and documentation aligned</span></div>
 :::
 
 ::: {.notes}
@@ -312,11 +320,25 @@ Connect this back to ORDERly. AI is most useful when it helps maintain structure
 
 ## Getting started
 
-- Visit the template repository: [https://github.com/andreashandel/mds-project-template](https://github.com/andreashandel/mds-project-template)
-- Read the `readme` file on the main page
-- Follow the instructions provided in the `readme` and further documents
-- Update the guidelines as needed
-- Involve AI early on and make sure all is documented
+::: {.getting-started-layout}
+<div class="getting-started-copy">
+<ul>
+<li>Visit the template repository: <a href="https://github.com/andreashandel/mds-project-template">github.com/andreashandel/mds-project-template</a></li>
+<li>Read the <code>readme</code> file on the main page</li>
+<li>Follow the instructions provided in the <code>readme</code> and further documents</li>
+<li>Update the guidelines as needed</li>
+<li>Involve AI early on and make sure all is documented</li>
+</ul>
+</div>
+
+::: {.xkcd-figure}
+![](./media/xkcd-it-begins.png){fig-alt="An XKCD comic about the beginning of a new project."}
+:::
+:::
+
+::: {.notes}
+[Sources] Image file: media/xkcd-it-begins.png.
+:::
 
 
 
