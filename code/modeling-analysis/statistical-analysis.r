@@ -1,11 +1,21 @@
 ###############################
 # modeling / analysis script
 #
-# This script loads the processed, cleaned data, fits simple linear models,
-# and saves the model result objects as RDS files in results/output/.
-# It only computes and saves results; it does not create any figures or final
-# tables. Those are produced by the scripts in code/figures-tables/, which read
-# the results saved here.
+# Purpose:
+#   Load the processed, cleaned data and fit simple linear models with Height
+#   as the outcome. This script only computes and saves results; it does not
+#   create any figures or final tables. Those are produced by the scripts in
+#   code/figures-tables/, which read the results saved here.
+#
+# Inputs:
+#   data/processed-data/processed-data.rds
+#
+# Outputs:
+#   results/output/result-table-1.rds
+#   results/output/result-table-2.rds
+#
+# How to run:
+#   Rscript code/modeling-analysis/statistical-analysis.r
 ###############################
 
 #load needed packages. make sure they are installed.

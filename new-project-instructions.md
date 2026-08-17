@@ -9,7 +9,7 @@ well enough to make it clear how to use and adapt the template.
 This is a GitHub template repository. The best way to start a new project is to
 [create a repository from this template](https://help.github.com/en/articles/creating-a-repository-from-a-template).
 
-To do so, log into your GitHub account, then go the the main MDS template page at [https://github.com/andreashandel/mds-project-template](https://github.com/andreashandel/mds-project-template) and click the green 'use this template' button in the top right corner.
+To do so, log into your GitHub account, then go to the main MDS template page at [https://github.com/andreashandel/mds-project-template](https://github.com/andreashandel/mds-project-template) and click the green 'use this template' button in the top right corner.
 
 Choose, `create a repository`. Make sure the new repo lives in the location you want it to be. Give it a name that fits with your new project. For many projects, the safest default is to make the new repository private at first. A private repository can be made public later after
 the project team has checked the data, outputs, license, authorship, and sharing

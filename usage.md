@@ -14,7 +14,8 @@ make sure your working directory is the folder that contains `readme.md`,
 `usage.md`, and the main project folders.
 
 Install the example R packages listed in `readme.md` before running the example
-workflow.
+workflow. The example products render tables with `flextable`, so that package
+is needed for rendering as well as for running the scripts.
 
 Install Quarto if you want to render reports, manuscripts, presentations, or other Quarto products.
 
@@ -72,6 +73,20 @@ The supplementary material renders to PDF and may require a TeX installation:
 ```sh
 quarto render products/manuscript/supplement/supplementary-material.qmd
 ```
+
+The template also ships a tutorial presentation that introduces the template
+itself. It does not depend on the example results, so it only needs to be
+rerendered if you edit it:
+
+```sh
+quarto render products/presentation/tutorial/tutorial-presentation.qmd
+```
+
+The rendered products (`report.html`, `manuscript.docx`,
+`supplementary-material.pdf`, and the presentation HTML files) are committed to
+the repository so users can see the expected output without rendering
+everything first. Rerender and recommit them when the results or the product
+sources change.
 
 ## Review And Reproducibility Checks
 

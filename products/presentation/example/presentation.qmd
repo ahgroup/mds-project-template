@@ -1,7 +1,7 @@
 ---
 title: Example Quarto slides
 subtitle: "with some thoughts on how to set up things"
-date: 2025-01-01
+date: 2026-01-01
 author: "NAME"
 format:
   revealjs:
@@ -15,8 +15,8 @@ format:
     show-slide-number: all
     auto-stretch: true
     smaller: false
-bibliography: ../../assets/dataanalysis-references.bib
-csl: ../../assets/american-journal-of-epidemiology.csl
+bibliography: ../../../assets/dataanalysis-references.bib
+csl: ../../../assets/american-journal-of-epidemiology.csl
 ---
 
 ## Overview
@@ -35,7 +35,7 @@ You could also pull it from the `results` folder, but the advantage of copying t
 
 ## Example slide
 
-This shows the summary table. It is pulled in from an RDS file and rendered as R chunk with the `kable` package. In general, we suggest more powerful/flexible table packages, such as `gt` or `flextable`, but for this example, `kable` is good enough.
+This shows the summary table. It is pulled in from an RDS file and rendered in an R chunk with the `flextable` package, which is the default table package for this template (see `code-guidelines.md`). Other good options are `gt`, or `knitr::kable()` when a plain, minimal table is all you need.
 
 Note that we could have loaded the data with `here()`, but if we ever want to copy this presentation to another folder outside the current project, you would have to adjust the path.
 
@@ -44,7 +44,10 @@ Note that we could have loaded the data with `here()`, but if we ever want to co
 #| tbl-cap: "Data summary table."
 #| echo: FALSE
 resulttable=readRDS("./media/summary-table.rds")
-knitr::kable(resulttable)
+flextable::flextable(resulttable) |>
+  # scale the table to the page/slide width instead of its natural width,
+  # so wide tables do not run off the page
+  flextable::set_table_properties(layout = "autofit", width = 1)
 ```
 
 ## Example slide
@@ -62,7 +65,10 @@ This shows the model fitting results as table.
 #| tbl-cap: "Linear model fit table."
 #| echo: FALSE
 result_table_2 = readRDS("./media/result-table-2.rds")
-knitr::kable(result_table_2)
+flextable::flextable(result_table_2) |>
+  # scale the table to the page/slide width instead of its natural width,
+  # so wide tables do not run off the page
+  flextable::set_table_properties(layout = "autofit", width = 1)
 ```
 
 ## Example slide with reference

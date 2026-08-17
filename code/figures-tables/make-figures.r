@@ -1,9 +1,10 @@
 ###############################
 # figure-generation script
 #
-# This script loads the processed data and creates the exploratory and result
-# figures saved in results/figures/. Products such as the report, manuscript,
-# and supplement load the figures from results/figures/.
+# Purpose:
+#   Load the processed data and create the exploratory and result figures saved
+#   in results/figures/. Products such as the report, manuscript, and supplement
+#   load the figures from results/figures/.
 #
 # The individual-level processed data is needed to draw these figures, so this
 # script reads data/processed-data/processed-data.rds directly. Summary results
@@ -17,6 +18,9 @@
 #   results/figures/weight-distribution.png
 #   results/figures/height-weight.png
 #   results/figures/height-weight-stratified.png
+#
+# How to run:
+#   Rscript code/figures-tables/make-figures.r
 ###############################
 
 #load needed packages. make sure they are installed.
@@ -42,7 +46,11 @@ figure_file = here::here("results", "figures", "weight-distribution.png")
 ggsave(filename = figure_file, plot=p2, width = 7, height = 7, units = "in")
 
 ## ---- fitfig1 --------
-p3 <- mydata %>% ggplot(aes(x=Height, y=Weight)) +
+# Height is the outcome in the models fit by
+# code/modeling-analysis/statistical-analysis.r (Height ~ Weight), so Height is
+# placed on the y axis here. Keeping the figure and the model consistent about
+# which variable is the outcome avoids misreading the fitted line.
+p3 <- mydata %>% ggplot(aes(x=Weight, y=Height)) +
   geom_point() +
   geom_smooth(method = "lm", se = FALSE, formula = y ~ x)
 if (interactive()) print(p3)
@@ -50,7 +58,9 @@ figure_file = here::here("results", "figures", "height-weight.png")
 ggsave(filename = figure_file, plot=p3, width = 7, height = 7, units = "in")
 
 ## ---- fitfig2 --------
-p4 <- mydata %>% ggplot(aes(x=Height, y=Weight, color = Gender)) +
+# Same orientation as above, now stratified by Gender to match the second model
+# (Height ~ Weight + Gender).
+p4 <- mydata %>% ggplot(aes(x=Weight, y=Height, color = Gender)) +
   geom_point() +
   geom_smooth(method = "lm", se = FALSE, formula = y ~ x)
 if (interactive()) print(p4)

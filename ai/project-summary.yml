@@ -20,7 +20,7 @@ project:
   primary_outputs:
     - "products/report/report.qmd"
     - "products/manuscript/manuscript.qmd"
-    - "products/presentation/presentation.qmd"
+    - "products/presentation/example/presentation.qmd"
 
 software:
   primary_language: "R"
@@ -34,6 +34,7 @@ software:
       required_packages:
         - "broom"
         - "dplyr"
+        - "flextable"
         - "ggplot2"
         - "here"
         - "knitr"

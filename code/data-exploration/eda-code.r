@@ -1,11 +1,20 @@
 ###############################
 # exploratory analysis script
 #
-# This script loads the processed, cleaned data and computes exploratory
-# summary results. It computes and saves results as an RDS file in
-# results/output/. It does not create any figures or final tables. Those are
-# produced by the scripts in code/figures-tables/, which read the results
-# saved here.
+# Purpose:
+#   Load the processed, cleaned data and compute exploratory summary results.
+#   This script only computes and saves results. It does not create any figures
+#   or final tables. Those are produced by the scripts in code/figures-tables/,
+#   which read the results saved here.
+#
+# Inputs:
+#   data/processed-data/processed-data.rds
+#
+# Outputs:
+#   results/output/summary-table.rds
+#
+# How to run:
+#   Rscript code/data-exploration/eda-code.r
 #
 # Note the ## ---- name ---- notation. It lets the labeled chunks be pulled
 # into the Quarto document eda-v2.qmd.

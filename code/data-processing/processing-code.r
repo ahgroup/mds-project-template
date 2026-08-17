@@ -1,8 +1,18 @@
 ###############################
 # processing script
 #
-#this script loads the raw data, processes and cleans it
-#and saves it as RDS file in the processed-data folder
+# Purpose:
+#   Load the raw example data, inspect it, clean the problematic entries, and
+#   save the processed analysis dataset.
+#
+# Inputs:
+#   data/raw-data/example-data.xlsx (sheets: data and Codebook)
+#
+# Outputs:
+#   data/processed-data/processed-data.rds
+#
+# How to run:
+#   Rscript code/data-processing/processing-code.r
 #
 # Note the ## ---- name ---- notation
 # This is done so one can pull in the chunks of code into the Quarto document
@@ -68,7 +78,10 @@ if (interactive()) hist(d1$Height)
 # that could be a typo, or someone mistakenly entered their height in feet.
 # If we don't know, we might need to remove this person.
 # But let's assume that we somehow know that this is meant to be 6 feet, so we can convert to centimeters.
-d2 <- d1 %>% dplyr::mutate( Height = replace(Height, Height=="6",round(6*30.48,0)) )
+# Height is numeric at this point, so we compare against the number 6, not the
+# string "6". Comparing a numeric column to a string works through silent
+# coercion, but being explicit about the type makes the intent clear.
+d2 <- d1 %>% dplyr::mutate( Height = replace(Height, Height == 6, round(6*30.48,0)) )
 #height values seem ok now
 skimr::skim(d2)
 

@@ -25,7 +25,10 @@
 *.pfx
 
 # knitr, R Markdown, and Quarto intermediate/cache files
-/*_cache/
+# These are created next to the source document, not at the project root, so
+# the patterns are deliberately not anchored with a leading slash.
+*_cache/
+*_files/
 /cache/
 .quarto/
 *.utf8.md
@@ -45,14 +48,22 @@ venv/
 __pycache__/
 .ipynb_checkpoints/
 
-# renv local package libraries/state, if a project enables renv later
+# renv local package libraries/state, if a project enables renv later.
+# Note that renv.lock itself belongs in the repository and is not ignored here.
 renv/library/
 renv/staging/
 renv/local/
 renv/cellar/
-renv/lock/
 renv/python/
 renv/sandbox/
+
+# Rendered versions of the Quarto files in code/
+# The code/ folder holds source, not deliverables. Rendering the example Quarto
+# files there is useful for checking them, but the rendered documents belong in
+# products/. Remove these lines if a project wants to track them.
+code/**/*.html
+code/**/*.docx
+code/**/*.pdf
 
 # Local/private data files
 # Commit readmes/placeholders, but keep private or large data local.

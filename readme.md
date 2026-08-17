@@ -16,12 +16,12 @@ It is also useful to have a word processor installed, such as MS Word or
 TeX distribution. TinyTeX is a good option; see the
 [Quarto PDF instructions](https://quarto.org/docs/output-formats/pdf-basics.html).
 
-The example files use these R packages: `broom`, `dplyr`, `ggplot2`, `here`,
-`knitr`, `readxl`, `rmarkdown`, `skimr`, and `tidyr`. Install them before running
-the example workflow:
+The example files use these R packages: `broom`, `dplyr`, `flextable`,
+`ggplot2`, `here`, `knitr`, `readxl`, `rmarkdown`, `skimr`, and `tidyr`. Install
+them before running the example workflow:
 
 ```r
-install.packages(c("broom", "dplyr", "ggplot2", "here", "knitr",
+install.packages(c("broom", "dplyr", "flextable", "ggplot2", "here", "knitr",
                    "readxl", "rmarkdown", "skimr", "tidyr"))
 ```
 
@@ -91,7 +91,7 @@ an IRB/DUA-approved storage plan. If the repository stays private because it
 contains or depends on restricted material, document what can be committed and
 what must stay local or in an approved storage location.
 
-To keep files out of Git and thus potentially making them public, list them in `.gitignore` before committing them. For
+To keep files out of Git, and thus avoid potentially making them public, list them in `.gitignore` before committing them. For
 example, this template already ignores the contents of `data/private-data/`, apart from the readme file, which is included.
 
 If a file has already been committed, adding it to `.gitignore` is not enough; it must also be removed from Git tracking while

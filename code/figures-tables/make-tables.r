@@ -1,9 +1,10 @@
 ###############################
 # table-generation script
 #
-# This script loads computed result objects from results/output/ and turns them
-# into finalized tables saved in results/tables/. Products such as the report,
-# manuscript, and supplement load the tables from results/tables/.
+# Purpose:
+#   Load computed result objects from results/output/ and turn them into
+#   finalized tables saved in results/tables/. Products such as the report,
+#   manuscript, and supplement load the tables from results/tables/.
 #
 # Inputs:
 #   results/output/summary-table.rds
@@ -14,6 +15,9 @@
 #   results/tables/summary-table.rds, results/tables/summary-table.csv
 #   results/tables/result-table-1.rds, results/tables/result-table-1.csv
 #   results/tables/result-table-2.rds, results/tables/result-table-2.csv
+#
+# How to run:
+#   Rscript code/figures-tables/make-tables.r
 ###############################
 
 #load needed packages. make sure they are installed.

@@ -13,7 +13,8 @@ csl: ../../../assets/vancouver-author-date.csl
 ```{r, echo=FALSE, message=FALSE}
 # load a few R packages
 library(here)
-library(knitr)
+library(knitr)     # for include_graphics()
+library(flextable) # for rendering tables, see code-guidelines.md
 ```
 
 
@@ -69,7 +70,10 @@ Show additional results here. Those can be some useful exploratory/descriptive f
 #| tbl-cap: "Another fit table."
 #| echo: FALSE
 result_table_1 = readRDS(here("results","tables","result-table-1.rds"))
-knitr::kable(result_table_1)
+flextable::flextable(result_table_1) |>
+  # scale the table to the page/slide width instead of its natural width,
+  # so wide tables do not run off the page
+  flextable::set_table_properties(layout = "autofit", width = 1)
 ```
 
 
@@ -79,7 +83,7 @@ knitr::kable(result_table_1)
 
 ```{r}
 #| label: fig-result2
-#| fig-cap: "Height and weight."
+#| fig-cap: "Height as a function of weight."
 #| echo: FALSE
 knitr::include_graphics(here("results","figures","height-weight.png"))
 ```

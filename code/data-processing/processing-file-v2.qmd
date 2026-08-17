@@ -1,7 +1,7 @@
 ---
 title: "An example cleaning script with code pulled in"
-author: "Andreas Handel"
-date: "2024-02-07"
+author: "NAME"
+date: "2026-01-01"
 format:
   html:
     embed-resources: true
@@ -64,7 +64,7 @@ Since we don't know how to fix this, we might decide to remove the person. This 
 ```{r, cleandata1}
 ```
 
-Now we see that there is one person with a height of 6. That could be a typo, or someone mistakenly entered their height in feet. Since we unfortunately don't know, we might need to remove this person, which we'll do here.
+Now we see that there is one person with a height of 6. That could be a typo, or someone mistakenly entered their height in feet. We assume that we know it was a mistaken entry as feet and convert to centimeters. Depending on your knowledge of the data, you might instead want to remove this person.
 
 ```{r, cleandata2}
 ```

@@ -1,7 +1,7 @@
 ---
 title: "An example cleaning script"
-author: "Andreas Handel"
-date: "2024-02-07"
+author: "NAME"
+date: "2026-01-01"
 format:
   html:
     embed-resources: true
@@ -83,7 +83,7 @@ hist(d1$Height)
 Now we see that there is one person with a height of 6. That could be a typo, or someone mistakenly entered their height in feet. We assume that we know it was a mistaken entry as feet and convert to centimeters. Depending on your knowledge of the data, you might instead want to remove this person.
 
 ```{r}
-d2 <- d1 %>% dplyr::mutate( Height = replace(Height, Height=="6",round(6*30.48,0)) )
+d2 <- d1 %>% dplyr::mutate( Height = replace(Height, Height == 6, round(6*30.48,0)) )
 skimr::skim(d2)
 ```
 
@@ -106,7 +106,7 @@ skimr::skim(d3)
 
 
 Now we see that there is another NA, but it's not `NA` from R, instead it was loaded as character and is now considered as a category.
-We'll proceed here by removing that individual with that NA entry. Since this keeps an empty category for Gender, I'm also using droplevels() to get rid of it.
+There is also an individual coded as "N", which the codebook does not allow. This could be a mistyped M or a mistyped NA. If we had a good guess, we could adjust it; since we don't, we remove both the NA and the N individual here. Since this keeps empty categories for Gender, I'm also using droplevels() to get rid of them.
 
 ```{r}
 d4 <- d3 %>% dplyr::filter( !(Gender %in% c("NA","N")) ) %>% droplevels()
