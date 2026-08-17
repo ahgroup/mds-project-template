@@ -264,3 +264,10 @@ The MIT License permits reuse, modification, distribution, and commercial use.
 That means users may use this template as a starting point for a wide range of
 projects, including work-related or commercial projects, as long as the license
 notice is included where required.
+
+That applies to the template's own content. Third-party files bundled with the
+template, or added to your project later, keep their own licenses, which may be
+more restrictive. Reference PDFs and images taken from the web are the two cases
+that most often cause trouble, because both are easy to add without checking
+whether they may be redistributed. See the "Third-Party Materials" section of
+`license.md` before committing material you did not create yourself.

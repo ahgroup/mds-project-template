@@ -12,17 +12,31 @@ Examples include:
 - PDFs of references;
 - other supporting files that need to travel with the project.
 
+Some of these are third-party material. Anything in this folder that you did not
+create yourself keeps its own license, and committing it means redistributing it
+to everyone who can see the repository. See the "Third-Party Materials" section
+of `../license.md`.
+
 The file `schematic-example.png` is an example static schematic generated for
 this template. It is meant as a placeholder that users can replace with a
 project-specific schematic or conceptual figure.
 
 You can organize this folder further if needed. For example, this template has a
-`references/` folder for reference PDFs.
+`references/` folder for reference PDFs. Read
+`references/readme-references.md` before committing a PDF there, since most
+published articles cannot simply be redistributed.
 
 The `.csl` files are used by Quarto documents to format citations and reference
 lists. Journals often require specific formats. While writing, it can be useful
 to use either an author-date style, such as `vancouver-author-date.csl`, or a
 numbered style, such as `american-journal-of-epidemiology.csl`.
 
-More reference style files are available from the
-[Zotero style repository](https://www.zotero.org/styles).
+Both `.csl` files included here come from the
+[Zotero style repository](https://www.zotero.org/styles), where more styles for
+almost any journal are available. They are contributed by the CSL community and
+are licensed under
+[Creative Commons Attribution-ShareAlike 3.0](http://creativecommons.org/licenses/by-sa/3.0/),
+as recorded in the `<rights>` element inside each file. That license is their
+own and is separate from the license of this project. Keep the `<rights>`
+element intact if you edit a style, and note the license if you redistribute a
+modified version.
