@@ -1,6 +1,6 @@
 ---
 title: "Reproducible, AI-assisted modeling and data science (MDS) projects"
-subtitle: ""
+subtitle: "[andreashandel.com](https://www.andreashandel.com/)"
 date: 2026-09-08
 author: "Andreas Handel"
 format:
@@ -25,34 +25,34 @@ csl: ../../../assets/american-journal-of-epidemiology.csl
 ## Overview
 
 ::: {.arc-list}
-<div><span>01</span><strong>Concept</strong><small>What makes a project organized, reproducible, and ready for responsible AI?</small></div>
-<div><span>02</span><strong>Implementation</strong><small>A setup that turns those ideas into a practical working environment.</small></div>
-<div><span>03</span><strong>Hands-on</strong><small>How do I use the setup, how do I start a new project?</small></div>
+<div data-step="01"><strong>Concept</strong> Organized, reproducible, and AI-ready projects</div>
+<div data-step="02"><strong>Implementation</strong> A setup/template that turns those ideas into a practical working environment</div>
+<div data-step="03"><strong>Hands-on</strong> Using the setup to start and implement your own project</div>
 :::
 
 
 ## Concept {.section-break}
 
 <div class="section-kicker">Part 1</div>
-<div class="section-title-text">Concepts of reproducible, AI-assited project workflows</div>
+<div class="section-title-text">Concepts of reproducible, AI-assisted project workflows</div>
 
 
 ## Motivation
 
 - Reproducibility is a hallmark of good science
 - A well-organized, reproducible project often makes work more efficient
-- AI supported work is the future (present)
+- AI-supported work is the ~~future~~ present
 
 
 ## Problems with "standard" workflows
 
 ::: {.problems-layout}
 ::: {.simple-list}
-<div><strong>Results drift from their code</strong><span>Copied tables and figures become hard to update or verify.</span></div>
-<div><strong>Files lose their roles</strong><span>Raw, processed, current, and obsolete versions become difficult to distinguish.</span></div>
-<div><strong>Decisions disappear</strong><span>Cleaning and modeling choices remain in memory or private conversations.</span></div>
-<div><strong>Sharing becomes risky</strong><span>Private data and unfinished material move into unsuitable places.</span></div>
-<div><strong>Reproducibility is hard</strong><span>Others (including your future self) will struggle reproducing your work.</span></div>
+<div><strong>Results drift from their code</strong><span>Copied tables and figures become hard to update or verify</span></div>
+<div><strong>Files lose their roles</strong><span>Raw, processed, current, and obsolete versions become difficult to distinguish</span></div>
+<div><strong>Decisions disappear</strong><span>Cleaning and modeling choices remain in memory or private conversations</span></div>
+<div><strong>Sharing becomes risky</strong><span>Private data and unfinished material move into unsuitable places</span></div>
+<div><strong>Reproducibility is hard</strong><span>Others (including your future self) will struggle reproducing your work</span></div>
 :::
 
 ::: {.problem-figure}
@@ -67,7 +67,7 @@ csl: ../../../assets/american-journal-of-epidemiology.csl
 
 ## The ORDERly concept
 
-<p class="figure-lead">Organized + Recorded + Documented + Executable = Reproducible (**ORDER**ly).</p>
+<p class="figure-lead"><strong>O</strong>rganized + <strong>R</strong>ecorded + <strong>D</strong>ocumented + <strong>E</strong>xecutable = <strong>R</strong>eproducible (<strong>ORDER</strong>ly)</p>
 
 ::: {.flow-figure .orderly-flow}
 <div class="flow-row">
@@ -84,24 +84,27 @@ csl: ../../../assets/american-journal-of-epidemiology.csl
 :::
 
 
-## AI support needs to be managed
+## ORDERly AI work
 
-- Organization
-- Restrictions
-- Documentation
-- Evaluation
+<p class="figure-lead"><strong>O</strong>rganized + <strong>R</strong>estricted + <strong>D</strong>ocumented + <strong>E</strong>valuated = <strong>R</strong>eproducible AI support</p>
 
-can preserve reproducibility.
-
-
-
-
-## Human judgment remains the gate
-
-::: {.simple-list .spacious}
-<div><strong>Science</strong><span>Are the data, model, assumptions, and interpretation appropriate?</span></div>
-<div><strong>Governance</strong><span>May these data, documents, and systems be used with this AI tool?</span></div>
-<div><strong>Acceptance</strong><span>Does the change work, and can the project owner explain and defend it?</span></div>
+::: {.flow-figure .ai-flow}
+<div class="flow-row">
+<div><strong>Organized</strong><span>clear project<br>context</span></div>
+<p>+</p>
+<div><strong>Restricted</strong><span>privacy and<br>scope limits</span></div>
+<p>+</p>
+<div><strong>Documented</strong><span>instructions<br>and logs</span></div>
+<p>+</p>
+<div><strong>Evaluated</strong><span>checks before<br>acceptance</span></div>
+</div>
+<div class="flow-down-arrow">↓</div>
+<div class="flow-outcome"><strong>Reproducible</strong><span>bounded, inspectable, and project-owned</span></div>
+<div class="gate-strip">
+<div><strong>Science</strong><span>data, model, assumptions, interpretation</span></div>
+<div><strong>Governance</strong><span>approved data, documents, and systems</span></div>
+<div><strong>Acceptance</strong><span>working changes the owner can defend</span></div>
+</div>
 :::
 
 ::: {.notes}
@@ -114,31 +117,36 @@ AI can support judgment but cannot transfer accountability. Never send private o
 
 <div class="section-kicker">Part 2</div>
 <div class="section-title-text">Implementation</div>
-<div class="section-subtitle">A setup to support an AI assisted ORDERly workflow.</div>
+<div class="section-subtitle">A setup to support an AI-assisted ORDERly workflow</div>
 
 
-## The components
+## ORDERly maps to the setup
 
-- A structured template (as GitHub repository)
-- A set of tools that support ORDERly workflows
-- Tools are largely interchangable, but text-based, easy to track tools are best (avoid Excel, Word, etc.)
+<p class="figure-lead">The setup combines template structure, text-based tools, version tracking, AI guardrails, and a reproducible workflow</p>
 
-
-## Specific tools
-
-- IDE, e.g. Positron, VS Code, RStudio
-- Coding language(s), e.g. R, Python, Julia
-- Authoring software, e.g. Quarto or Typist
-- Tracking tools, e.g. Git/GitHub
-- Agentic AI tools, e.g. ChatGPT Codex, Claude Code
+::: {.orderly-map}
+<div><strong>Organized</strong><span>The template repository gives <code>data/</code>, <code>code/</code>, <code>results/</code>, <code>products/</code>, <code>assets/</code>, and <code>ai/</code> distinct roles</span></div>
+<div><strong>Recorded</strong><span>Git/GitHub history, generated outputs, AI-use logs, and project notes preserve the path taken</span></div>
+<div><strong>Documented</strong><span>Markdown, YAML, Quarto files, folder READMEs, and AI policy explain what to do and why</span></div>
+<div><strong>Executable</strong><span>Scripts and Quarto files regenerate processed data, analyses, figures, tables, and products</span></div>
+<div><strong>Reproducible</strong><span>An accepted result can be traced from input data through code to final communication</span></div>
+:::
 
 
+## Specific tools (largely interchangeable)
 
+::: {.tool-matrix}
+<div><strong>Editor/IDE</strong><span><b>Positron</b>, VS Code, RStudio, JupyterLab</span></div>
+<div><strong>Coding language</strong><span><b>R</b>, Python, Julia</span></div>
+<div><strong>Authoring</strong><span><b>Quarto</b>, Typst, R Markdown, Jupyter Book</span></div>
+<div><strong>Tracking</strong><span><b>Git/GitHub</b>, GitLab, Bitbucket</span></div>
+<div><strong>Agentic AI</strong><span><b>ChatGPT Codex</b>, Claude Code, Gemini CLI</span></div>
+<div><strong>Workflow management (optional)</strong><span>renv, targets, Docker, Conda, Make</span></div>
+:::
 
+## The project structure gives each part a role
 
-## The repository structure gives each part a role
-
-<p class="figure-lead">The main path moves through data, code, results, and products; support folders provide stable inputs and guidance.</p>
+<p class="figure-lead">The main path moves through data, code, results, and products; support folders provide stable inputs and guidance</p>
 
 ::: {.flow-figure .repository-flow}
 <div class="flow-row primary-flow">
@@ -157,6 +165,10 @@ AI can support judgment but cannot transfer accountability. Never send private o
 </div>
 :::
 
+::: {.work-tree-strip}
+<span>work tree</span><code>data/</code><code>code/</code><code>results/</code><code>products/</code><code>assets/</code><code>ai/</code><code>readme.md</code><code>usage.md</code>
+:::
+
 ::: {.notes}
 Walk through the main path first. Then add assets for supporting materials and ai for policy, context, guidance, and meaningful-use records.
 
@@ -165,22 +177,32 @@ Walk through the main path first. Then add assets for supporting materials and a
 
 ## Separate raw, derived, private, and large data
 
+::: {.data-layout}
 ::: {.simple-list}
-<div><strong>raw-data/</strong><span>Original input; preserve it unchanged.</span></div>
-<div><strong>processed-data/</strong><span>Cleaned or transformed data generated by code.</span></div>
-<div><strong>private-data/</strong><span>Restricted material kept in an approved location.</span></div>
-<div><strong>large-files/</strong><span>Material too large for ordinary Git and GitHub use.</span></div>
+<div><strong>raw-data/</strong><span>Original input; preserve it unchanged</span></div>
+<div><strong>processed-data/</strong><span>Cleaned or transformed data generated by code</span></div>
+<div><strong>private-data/</strong><span>Restricted material kept in an approved location</span></div>
+<div><strong>large-files/</strong><span>Material too large for ordinary Git and GitHub use</span></div>
+:::
+
+::: {.data-figure}
+![](./media/phd_dataisorare.gif){fig-alt="A PhD Comics cartoon about data being rare."}
+:::
+:::
+
+::: {.work-tree-strip}
+<span>work tree</span><code>data/raw-data/</code><code>data/processed-data/</code><code>data/private-data/</code><code>data/large-files/</code><code>data/readme-data.md</code>
 :::
 
 ::: {.notes}
 If raw data are inconvenient, write code that produces a processed version. The data README should document source, sensitivity, access limits, and AI inspection rules.
 
-[Sources] Local template: data/readme-data.md; readme.md; usage.md; agents.md.
+[Sources] Local template: data/readme-data.md; readme.md; usage.md; agents.md. Cartoon supplied by the project owner: media/phd_dataisorare.gif.
 :::
 
 ## Code follows the stages of the analysis
 
-<p class="figure-lead">Each stage should have recognizable inputs, outputs, and instructions.</p>
+<p class="figure-lead">Each stage should have recognizable inputs, outputs, and instructions</p>
 
 ::: {.flow-figure .code-flow}
 <div class="flow-row primary-flow">
@@ -195,6 +217,10 @@ If raw data are inconvenient, write code that produces a processed version. The 
 <div class="utility-strip"><strong>utilities/</strong><span>is optional support for repeated helper logic</span></div>
 :::
 
+::: {.work-tree-strip}
+<span>work tree</span><code>code/data-processing/</code><code>code/data-exploration/</code><code>code/modeling-analysis/</code><code>code/figures-tables/</code><code>code/utilities/</code>
+:::
+
 ::: {.notes}
 Processing creates processed data. Exploration checks it. Modeling and analysis compute results. Figures and tables prepare communication-ready artifacts. Utilities hold reusable helpers.
 
@@ -204,16 +230,14 @@ Processing creates processed data. Exploration checks it. Modeling and analysis 
 ## Keep generated outputs separate from supporting inputs
 
 ::: {.simple-list}
-<div><strong>results/</strong><span>Code-generated model objects, intermediate outputs, figures, and tables.</span></div>
-<div><strong>products/</strong><span>Reports, manuscripts, supplements, presentations, posters, and apps.</span></div>
-<div><strong>assets/</strong><span>References, PDFs, schematics, and other stable supporting material.</span></div>
-<div><strong>ai/</strong><span>AI policy, project context, guidance, and meaningful-use records.</span></div>
+<div><strong>results/</strong><span>Code-generated model objects, intermediate outputs, figures, and tables</span></div>
+<div><strong>products/</strong><span>Reports, manuscripts, supplements, presentations, posters, and apps</span></div>
+<div><strong>assets/</strong><span>References, PDFs, schematics, and other stable supporting material</span></div>
+<div><strong>ai/</strong><span>AI policy, project context, guidance, and meaningful-use records</span></div>
 :::
 
-::: {.notes}
-Do not place manually edited results in results. Put manually created supporting files in assets and document their source.
-
-[Sources] Local template: readme.md; assets/readme-assets.md; ai/readme-ai.md; agents.md.
+::: {.work-tree-strip}
+<span>work tree</span><code>results/figures/</code><code>results/tables/</code><code>results/output/</code><code>products/report/</code><code>products/manuscript/</code><code>products/presentation/</code><code>assets/</code><code>ai/</code>
 :::
 
 
@@ -225,72 +249,81 @@ Do not place manually edited results in results. Put manually created supporting
 <div><span>2</span><strong>Explore</strong><small>checks + summaries</small></div>
 <div><span>3</span><strong>Analyze</strong><small>models + results</small></div>
 <div><span>4</span><strong>Prepare</strong><small>figures + tables</small></div>
-<div><span>5</span><strong>Render</strong><small>reports + slides</small></div>
+<div><span>5</span><strong>Generate</strong><small>reports + slides</small></div>
 :::
 
-<p class="closing-line">Regenerate results before updating the products that use them.</p>
+<p class="closing-line">Regenerate results before updating the products that use them</p>
 
-::: {.notes}
-The example uses a documented semi-automated workflow rather than one giant pipeline. Run affected scripts before rendering the product that consumes their outputs.
-
-[Sources] Local template: usage.md; code/readme-code.md.
+::: {.work-tree-strip}
+<span>work tree</span><code>usage.md</code><code>code/data-processing/processing-code.r</code><code>code/data-exploration/eda-code.r</code><code>code/modeling-analysis/statistical-analysis.r</code><code>code/figures-tables/</code><code>products/*/*.qmd</code>
 :::
 
-## Check the project before accepting or sharing it
 
-::: {.simple-list}
-<div><strong>Inputs</strong><span>Was raw data preserved and sensitive material kept in approved locations?</span></div>
-<div><strong>Traceability</strong><span>Can each important output be connected to code and documented inputs?</span></div>
-<div><strong>Execution</strong><span>Does the workflow run from a fresh session or clean copy?</span></div>
-<div><strong>Communication</strong><span>Do instructions, paths, figures, tables, and interpretations match?</span></div>
-:::
-
-::: {.notes}
-A clean run exposes hidden objects, absolute paths, missing packages, stale documentation, and manual steps. Compare outputs using criteria appropriate to the claim.
-
-[Sources] Local template: usage.md; agents.md. ORDERly course: courses/orderly-workflows/reproducibility/reproducibility.qmd.
-:::
-
-## A useful project is easy to continue
+## An ORDERly project is easy to work with
 
 ::: {.closing-composition}
-<p><strong>Current you</strong> can work efficiently.</p>
-<p><strong>Future you</strong> can recover the reasoning.</p>
-<p><strong>Collaborators</strong> can review and extend the work.</p>
-<p><strong>Others</strong> can understand and recreate the stated result.</p>
+<p><strong>Current you</strong> can work efficiently</p>
+<p><strong>Future you</strong> can recover the reasoning</p>
+<p><strong>Collaborators</strong> can inspect and extend the work</p>
+<p><strong>AI</strong> can assist appropriately</p>
+<p><strong>Others</strong> can understand and recreate the stated result</p>
 :::
 
-<div class="closing-mark">Make the workflow ORDERly. Let the template carry the structure.</div>
+<div class="closing-mark">Make the workflow ORDERly. Let the template carry the structure</div>
 
 ::: {.notes}
 Return to the opening. The template helps implement an understandable, recorded, documented, executable workflow. AI can accelerate it when assistance remains bounded and reviewable.
 
-[Sources] Local template: readme.md; usage.md; ai/ai-use-policy.md. ORDERly course: courses/orderly-workflows/why-orderly/why-orderly.qmd.
+[Sources] Local template: readme.md; usage.md; ai/ai-use-policy.md.
+:::
+
+## AI can support project work
+
+::: {.ai-support-grid}
+<div><strong>Code</strong><span>Write, document, refactor, and debug project code</span></div>
+<div><strong>Literature</strong><span>Help search, summarize, and organize background material</span></div>
+<div><strong>Writing</strong><span>Draft or improve reports, manuscripts, and presentations</span></div>
+<div><strong>Consistency</strong><span>Keep code, outputs, and documentation aligned</span></div>
+:::
+
+::: {.notes}
+Use this slide to separate useful AI assistance from automatic acceptance. AI can speed up many project tasks, but the project owner remains responsible for scientific and technical decisions.
+:::
+
+## AI can support ORDERly habits
+
+::: {.ai-orderly-support}
+<div><strong>Organized</strong><span>Check that files live in the right folders</span></div>
+<div><strong>Recorded</strong><span>Summarize decisions, changes, and AI contributions</span></div>
+<div><strong>Documented</strong><span>Update READMEs, usage notes, and project guidance</span></div>
+<div><strong>Executable</strong><span>Make scripts and Quarto products easier to rerun</span></div>
+<div><strong>Reproducible</strong><span>Trace results from data through code to products</span></div>
+:::
+
+::: {.notes}
+Connect this back to ORDERly. AI is most useful when it helps maintain structure, records, documentation, executability, and reproducibility rather than bypassing them.
 :::
 
 ## Hands-on {.section-break}
 
 <div class="section-kicker">Part 3</div>
-<div class="section-title-text">Getting started and using the setup/template.</div>
+<div class="section-title-text">Getting started and using the setup/template</div>
 
 
 ## Getting started
 
 - Visit the template repository: [https://github.com/andreashandel/mds-project-template](https://github.com/andreashandel/mds-project-template)
-- Read the 'Readme' file on the main page.
-- Follow the instructions provided in the `Readme` and further documents.
-- Update the guidelines as needed.
-- Involve AI early on, make sure all is documented.
+- Read the `readme` file on the main page
+- Follow the instructions provided in the `readme` and further documents
+- Update the guidelines as needed
+- Involve AI early on and make sure all is documented
 
 
-## Further Extensions
-
-- Include more sophisticated package or workflow management (e.g. 'renv', 'Docker','targets')
 
 
 ## Continue learning
 
 ::: {.resource-list}
-<div><strong>MDS tools mini-courses</strong><a href="https://andreashandel.github.io/mds-tools/">andreashandel.github.io/mds-tools/</a></div>
 <div><strong>Inside the template</strong><span><code>readme.md</code> · <code>usage.md</code> · <code>new-project-instructions.md</code></span></div>
+<div><strong>MDS tools mini-courses</strong><a href="https://andreashandel.github.io/mds-tools/">andreashandel.github.io/mds-tools/</a></div>
 :::
