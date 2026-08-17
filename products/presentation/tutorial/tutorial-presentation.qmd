@@ -1,5 +1,6 @@
 ---
-title: "MDS projects: organized, reproducible, AI-assisted"
+title: "Reproducible, AI-assisted modeling and data science (MDS) projects"
+subtitle: ""
 date: 2026-09-08
 author: "Andreas Handel"
 format:
@@ -24,97 +25,66 @@ csl: ../../../assets/american-journal-of-epidemiology.csl
 ## Overview
 
 ::: {.arc-list}
-<div><span>01</span><strong>Concept</strong><small>Why organized, reproducible work matters—and how AI fits responsibly.</small></div>
-<div><span>02</span><strong>Implementation</strong><small>A practical project structure and workflow that make the work easier to continue.</small></div>
-<div><span>03</span><strong>Hands-on</strong><small>How to start from the template and adapt it to your own project.</small></div>
+<div><span>01</span><strong>Concept</strong><small>What makes a project organized, reproducible, and ready for responsible AI?</small></div>
+<div><span>02</span><strong>Implementation</strong><small>A setup that turns those ideas into a practical working environment.</small></div>
+<div><span>03</span><strong>Hands-on</strong><small>How do I use the setup, how do I start a new project?</small></div>
 :::
+
 
 ## Concept {.section-break}
 
 <div class="section-kicker">Part 1</div>
-<div class="section-title-text">A reproducible workflow is a better way to work now—not just a promise for later.</div>
+<div class="section-title-text">Concepts of reproducible, AI-assited project workflows</div>
 
-## Organized work makes science easier to sustain
 
-::: {.split-layout .image-right}
-::: {.copy-column}
-<p class="eyebrow">A working habit, not a final audit</p>
+## Motivation
 
-<div class="key-points">
-<p><strong>Reliable</strong><span>Important results can be regenerated and checked.</span></p>
-<p><strong>Efficient</strong><span>Updates start from code and documented inputs, not from memory.</span></p>
-<p><strong>Collaborative</strong><span>Others can find, review, and extend the work.</span></p>
-</div>
-:::
-::: {.visual-column}
-![](./media/workflow-transformation.png){fig-alt="An illustration contrasting a cluttered desk with an organized digital research workspace."}
-:::
-:::
+- Reproducibility is a hallmark of good science
+- A well-organized, reproducible project often makes work more efficient
+- AI supported work is the future (present)
 
-::: {.notes}
-Open by framing reproducibility as everyday project hygiene. It reduces the friction of revisiting a result, sharing work, or making a small revision months later.
 
-[Sources] Local template: readme.md; usage.md; code-guidelines.md.
-:::
+## Problems with "standard" workflows
 
-## Without structure, a project becomes harder to trust
-
-::: {.split-layout .cartoon-right}
-::: {.copy-column}
-::: {.simple-list .compact-list}
+::: {.simple-list}
 <div><strong>Results drift from their code</strong><span>Copied tables and figures become hard to update or verify.</span></div>
-<div><strong>Files lose their roles</strong><span>Raw, processed, current, and obsolete versions blur together.</span></div>
-<div><strong>Decisions disappear</strong><span>Cleaning and modeling choices remain in private conversations or memory.</span></div>
+<div><strong>Files lose their roles</strong><span>Raw, processed, current, and obsolete versions become difficult to distinguish.</span></div>
+<div><strong>Decisions disappear</strong><span>Cleaning and modeling choices remain in memory or private conversations.</span></div>
 <div><strong>Sharing becomes risky</strong><span>Private data and unfinished material move into unsuitable places.</span></div>
-:::
-:::
-::: {.cartoon-column}
-![](./media/calvin-hobbes-rules-rules.gif){fig-alt="A four-panel Calvin and Hobbes comic about rules."}
-<p class="image-credit">Rules should make the work easier, not harder.</p>
-:::
+<div><strong>Reproducibility is hard</strong><span>Others (including your future self) will struggle reproducing your work.</span></div>
 :::
 
-::: {.notes}
-The goal is not bureaucracy. The goal is just enough shared structure that files, decisions, and outputs remain understandable.
 
-[Sources] Local template: readme.md; usage.md; agents.md. Cartoon: Bill Watterson, *Calvin and Hobbes*, October 1, 1991; from the presenter's local cartoon collection.
-:::
+## The ORDERly concept
 
-## ORDERly names the essential habits
+<p class="figure-lead">Organized + Recorded + Documented + Executable = Reproducible (**ORDER**ly).</p>
 
-<p class="figure-lead">Organized + Recorded + Documented + Executable = Reproducible.</p>
-
-::: {.full-figure .framework-figure}
-![](./media/orderly-framework.png){fig-alt="A framework showing Organized, Recorded, Documented, and Executable as components of reproducible work."}
-:::
-
-::: {.notes}
-Use the four words as a diagnostic. A project can be organized but poorly documented, or well documented but impossible to rerun. Reproducibility needs all four habits working together.
-
-[Sources] ORDERly framework; local template: readme.md; usage.md.
-:::
-
-## AI assistance needs guardrails before it needs prompts
-
-::: {.split-layout .image-right}
-::: {.copy-column}
-<div class="key-points">
-<p><strong>Organize</strong><span>Give the tool clear project context and bounded tasks.</span></p>
-<p><strong>Restrict</strong><span>Protect private, regulated, and otherwise sensitive material.</span></p>
-<p><strong>Document</strong><span>Record meaningful AI-supported changes and decisions.</span></p>
-<p><strong>Evaluate</strong><span>Check claims, code, outputs, and limitations before acceptance.</span></p>
+::: {.flow-figure .orderly-flow}
+<div class="flow-row">
+<div><strong>Organized</strong><span>predictable<br>places</span></div>
+<p>+</p>
+<div><strong>Recorded</strong><span>changes<br>and decisions</span></div>
+<p>+</p>
+<div><strong>Documented</strong><span>purpose<br>and instructions</span></div>
+<p>+</p>
+<div><strong>Executable</strong><span>saved steps<br>that run</span></div>
 </div>
-:::
-::: {.visual-column}
-![](./media/orderly-ai-review.png){fig-alt="An illustration of a researcher reviewing AI-assisted work with a checklist."}
-:::
+<div class="flow-down-arrow">↓</div>
+<div class="flow-outcome"><strong>Reproducible</strong><span>a stated result can be recreated</span></div>
 :::
 
-::: {.notes}
-AI can speed up drafting, coding, and review. It does not remove the need to decide what may be shared, what claims are defensible, or whether a result is fit for use.
 
-[Sources] Local template: ai/ai-use-policy.md; data/readme-data.md; agents.md.
-:::
+## AI support needs to be managed
+
+- Organization
+- Restrictions
+- Documentation
+- Evaluation
+
+can preserve reproducibility.
+
+
+
 
 ## Human judgment remains the gate
 
@@ -124,10 +94,8 @@ AI can speed up drafting, coding, and review. It does not remove the need to dec
 <div><strong>Acceptance</strong><span>Does the change work, and can the project owner explain and defend it?</span></div>
 :::
 
-<p class="caution-line">AI can support judgment; it cannot transfer accountability.</p>
-
 ::: {.notes}
-Never send private or restricted material to an AI tool unless that use is explicitly approved. The project owner remains responsible for the scientific and governance decisions.
+AI can support judgment but cannot transfer accountability. Never send private or restricted material to an AI tool unless that use is explicitly approved.
 
 [Sources] Local template: ai/ai-use-policy.md; data/readme-data.md; agents.md.
 :::
@@ -135,52 +103,48 @@ Never send private or restricted material to an AI tool unless that use is expli
 ## Implementation {.section-break}
 
 <div class="section-kicker">Part 2</div>
-<div class="section-title-text">A template turns good intentions into a working environment.</div>
-<div class="section-subtitle">Start with a small, legible structure. Add complexity only when the project needs it.</div>
+<div class="section-title-text">Implementation</div>
+<div class="section-subtitle">A setup to support an AI assisted ORDERly workflow.</div>
 
-## The template gives every project component a home
 
-::: {.split-layout .image-right}
-::: {.copy-column}
-<div class="key-points">
-<p><strong>Structure</strong><span>Folders distinguish code, data, results, products, and supporting assets.</span></p>
-<p><strong>Guidance</strong><span>Human-readable instructions explain how the pieces fit together.</span></p>
-<p><strong>Boundaries</strong><span>Rules protect raw data, private material, and generated outputs.</span></p>
-</div>
-:::
-::: {.visual-column}
-![](./media/template-scaffold.png){fig-alt="An illustration of an organized work kit containing protected data, code, analyses, documents, and AI tools."}
-:::
-:::
+## The components
 
-::: {.notes}
-The template is a starting structure, not a rigid prescription. Its main job is to make the usual project decisions visible early.
+- A structured template (as GitHub repository)
+- A set of tools that support ORDERly workflows
+- Tools are largely interchangable, but text-based, easy to track tools are best (avoid Excel, Word, etc.)
 
-[Sources] Local template: readme.md; usage.md; agents.md.
-:::
 
-## Tools serve the workflow—not the other way around
+## Specific tools
 
-::: {.tool-rows}
-<div><strong>Work environment</strong><span>Positron, VS Code, or RStudio</span></div>
-<div><strong>Analysis and authoring</strong><span>R, Python, Julia, Quarto, Typst, or comparable text-based tools</span></div>
-<div><strong>Versioning and collaboration</strong><span>Git, GitHub, and an approved AI coding assistant</span></div>
-:::
+- IDE, e.g. Positron, VS Code, RStudio
+- Coding language(s), e.g. R, Python, Julia
+- Authoring software, e.g. Quarto or Typist
+- Tracking tools, e.g. Git/GitHub
+- Agentic AI tools, e.g. ChatGPT Codex, Claude Code
 
-<p class="closing-line">Choose tools that leave a readable, trackable record of what changed and why.</p>
 
-::: {.notes}
-These examples are interchangeable. The important properties are transparent project files, reproducible execution, and a practical history of changes—not loyalty to a particular application.
 
-[Sources] Local template: readme.md; usage.md; code-guidelines.md.
-:::
+
 
 ## The repository structure gives each part a role
 
 <p class="figure-lead">The main path moves through data, code, results, and products; support folders provide stable inputs and guidance.</p>
 
-::: {.full-figure .map-figure}
-![](./media/folder-map.png){fig-alt="A map of the project repository folders and their roles."}
+::: {.flow-figure .repository-flow}
+<div class="flow-row primary-flow">
+<div><strong>data/</strong><span>inputs<br>derived data</span></div>
+<p>→</p>
+<div><strong>code/</strong><span>workflow<br>stages</span></div>
+<p>→</p>
+<div><strong>results/</strong><span>generated<br>outputs</span></div>
+<p>→</p>
+<div><strong>products/</strong><span>deliverables<br>for audience</span></div>
+</div>
+<div class="support-row">
+<div><strong>assets/</strong><span>stable<br>support</span></div>
+<div><strong>docs</strong><span>readme<br>usage</span></div>
+<div><strong>ai/</strong><span>policy<br>summary<br>log</span></div>
+</div>
 :::
 
 ::: {.notes}
@@ -189,7 +153,7 @@ Walk through the main path first. Then add assets for supporting materials and a
 [Sources] Local template: readme.md; usage.md.
 :::
 
-## Data status determines where it belongs
+## Separate raw, derived, private, and large data
 
 ::: {.simple-list}
 <div><strong>raw-data/</strong><span>Original input; preserve it unchanged.</span></div>
@@ -208,8 +172,17 @@ If raw data are inconvenient, write code that produces a processed version. The 
 
 <p class="figure-lead">Each stage should have recognizable inputs, outputs, and instructions.</p>
 
-::: {.full-figure .code-figure}
-![](./media/code-stages.png){fig-alt="The staged analysis-code folders: data processing, exploration, modeling and analysis, and figures and tables."}
+::: {.flow-figure .code-flow}
+<div class="flow-row primary-flow">
+<div><strong>data-processing</strong><span>raw to<br>processed</span></div>
+<p>→</p>
+<div><strong>data-exploration</strong><span>checks<br>summaries</span></div>
+<p>→</p>
+<div><strong>modeling-analysis</strong><span>models<br>results</span></div>
+<p>→</p>
+<div><strong>figures-tables</strong><span>final<br>outputs</span></div>
+</div>
+<div class="utility-strip"><strong>utilities/</strong><span>is optional support for repeated helper logic</span></div>
 :::
 
 ::: {.notes}
@@ -233,25 +206,27 @@ Do not place manually edited results in results. Put manually created supporting
 [Sources] Local template: readme.md; assets/readme-assets.md; ai/readme-ai.md; agents.md.
 :::
 
-## A staged workflow removes ambiguity
+
+
+## A modular, staged workflow
 
 ::: {.run-sequence}
-<div><span>1</span><strong>Process</strong><small>raw to processed</small></div>
-<div><span>2</span><strong>Explore</strong><small>checks and summaries</small></div>
-<div><span>3</span><strong>Analyze</strong><small>models and results</small></div>
-<div><span>4</span><strong>Prepare</strong><small>figures and tables</small></div>
-<div><span>5</span><strong>Render</strong><small>reports and slides</small></div>
+<div><span>1</span><strong>Process</strong><small>raw → processed</small></div>
+<div><span>2</span><strong>Explore</strong><small>checks + summaries</small></div>
+<div><span>3</span><strong>Analyze</strong><small>models + results</small></div>
+<div><span>4</span><strong>Prepare</strong><small>figures + tables</small></div>
+<div><span>5</span><strong>Render</strong><small>reports + slides</small></div>
 :::
 
 <p class="closing-line">Regenerate results before updating the products that use them.</p>
 
 ::: {.notes}
-The example uses a documented, semi-automated workflow rather than one giant pipeline. Run affected scripts before rendering the product that consumes their outputs.
+The example uses a documented semi-automated workflow rather than one giant pipeline. Run affected scripts before rendering the product that consumes their outputs.
 
 [Sources] Local template: usage.md; code/readme-code.md.
 :::
 
-## Check before accepting or sharing
+## Check the project before accepting or sharing it
 
 ::: {.simple-list}
 <div><strong>Inputs</strong><span>Was raw data preserved and sensitive material kept in approved locations?</span></div>
@@ -286,68 +261,26 @@ Return to the opening. The template helps implement an understandable, recorded,
 ## Hands-on {.section-break}
 
 <div class="section-kicker">Part 3</div>
-<div class="section-title-text">Start with the template. Then make it your project.</div>
+<div class="section-title-text">Getting started and using the setup/template.</div>
 
-## Start with a small, complete workflow
 
-::: {.split-layout .image-right}
-::: {.copy-column}
-<div class="key-points">
-<p><strong>1. Create a copy</strong><span>Start from the template repository rather than a blank folder.</span></p>
-<p><strong>2. Read the guidance</strong><span>Use the README and project instructions before reorganizing anything.</span></p>
-<p><strong>3. Adapt intentionally</strong><span>Rename, remove, or extend pieces only when the project needs them.</span></p>
-</div>
-:::
-::: {.visual-column}
-![](./media/getting-started-journey.png){fig-alt="An illustration of a person following a path toward a reproducible research workspace."}
-:::
-:::
+## Getting started
 
-::: {.notes}
-Start with the structure, then tailor it. The template is deliberately lightweight; it gives a new project a clear first path without forcing an advanced workflow.
+- Visit the template repository: [https://github.com/andreashandel/mds-project-template](https://github.com/andreashandel/mds-project-template)
+- Read the 'Readme' file on the main page.
+- Follow the instructions provided in the `Readme` and further documents.
+- Update the guidelines as needed.
+- Involve AI early on, make sure all is documented.
 
-[Sources] Template repository: https://github.com/andreashandel/mds-project-template; local template: new-project-instructions.md; usage.md.
-:::
 
-## In your first session, make the project legible
+## Further Extensions
 
-::: {.steps-list}
-<div><span>1</span><p><strong>Define the project</strong><br>Update the README and basic project metadata.</p></div>
-<div><span>2</span><p><strong>Describe the data</strong><br>Record source, sensitivity, access, and AI-use boundaries.</p></div>
-<div><span>3</span><p><strong>Map the workflow</strong><br>Decide what code produces each important result and product.</p></div>
-<div><span>4</span><p><strong>Set review points</strong><br>Decide what needs human checking before it is accepted or shared.</p></div>
-:::
+- Include more sophisticated package or workflow management (e.g. 'renv', 'Docker','targets')
 
-::: {.notes}
-You do not need all analytic decisions on day one. You do need enough context that a collaborator—or future you—can understand the starting point.
-
-[Sources] Local template: new-project-instructions.md; data/readme-data.md; ai/ai-use-policy.md; usage.md.
-:::
-
-## Add complexity only when it earns its place
-
-::: {.simple-list .compact-list}
-<div><strong>More packages</strong><span>Use a package manager such as renv when exact versions materially affect a longer-lived project.</span></div>
-<div><strong>More automation</strong><span>Add targets, containers, or continuous integration when repeated workflows and collaboration justify them.</span></div>
-<div><strong>More documentation</strong><span>Extend project guidance when new data, collaborators, or governance constraints make it necessary.</span></div>
-:::
-
-::: {.notes}
-The template’s default is deliberately lightweight. Add dependency management and automation because they solve an identified problem, not because they are fashionable.
-
-[Sources] Local template: agents.md; readme.md; usage.md.
-:::
 
 ## Continue learning
 
 ::: {.resource-list}
 <div><strong>MDS tools mini-courses</strong><a href="https://andreashandel.github.io/mds-tools/">andreashandel.github.io/mds-tools/</a></div>
 <div><strong>Inside the template</strong><span><code>readme.md</code> · <code>usage.md</code> · <code>new-project-instructions.md</code></span></div>
-<div><strong>Next step</strong><span>Create a project copy, read the guidance, and make one small change you can trace from input to product.</span></div>
-:::
-
-::: {.notes}
-Close with a concrete next step: use the template for one small project or one well-defined piece of a larger project. Learn the structure by using it.
-
-[Sources] Template repository: https://github.com/andreashandel/mds-project-template; MDS tools mini-courses: https://andreashandel.github.io/mds-tools/.
 :::
