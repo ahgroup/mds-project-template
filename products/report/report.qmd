@@ -28,9 +28,13 @@ library(flextable) # for rendering tables, see code-guidelines.md
 ```
 
 
-**Authors**  
+_Placeholder: the author names, affiliations, ORCID, and corresponding-author
+email below are template examples, not real people. Replace all of them with
+real project information, and delete this note._
 
-* First Author$^{1,2,*}$ (ORCID: 0000-0000-1234-5678) 
+**Authors**
+
+* First Author$^{1,2,*}$ (ORCID: 0000-0000-1234-5678)
 * Second Author$^{3, *}$
 * Third Author$^{3, \dagger}$
 * Last Author$^{1, 2, \land}$ 

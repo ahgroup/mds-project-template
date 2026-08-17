@@ -111,6 +111,19 @@ Do not silently convert unexpected values to `NA`, drop records, change factor
 levels, or continue after a failed check unless that behavior is explicitly part
 of the documented analysis plan.
 
+The example scripts show this pattern. `code/data-processing/processing-code.r`
+checks that its packages are installed, that the raw data file and its codebook
+sheet exist, that the expected columns are present, and that cleaning removed
+exactly the number of rows it should. The later scripts each check that their
+input file exists and name the script that produces it. The row-count check is
+worth copying into your own processing code: it is the one that catches a
+cleaning step quietly dropping the wrong records, which is easy to do and hard
+to spot.
+
+Checks should stay proportionate. A handful of well-placed checks at the points
+where the workflow could silently go wrong is more useful than validating every
+intermediate object.
+
 ## Simplicity And Structure
 
 Code should be as simple as possible. Ruthlessly remove anything that is not

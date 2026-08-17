@@ -14,6 +14,9 @@ The example uses two R scripts:
 - `make-tables.r` loads the computed result objects from `results/output/`
   (`summary-table.rds`, `result-table-1.rds`, `result-table-2.rds`) and writes
   finalized tables to `results/tables/` as RDS files with CSV companions.
+  "Finalized" is meant literally: the data summary arrives as a wide `skimr`
+  object with a mini-histogram column that cannot be placed in a document, and
+  leaves as a compact table with plain column names.
 - `make-figures.r` loads the processed data from
   `data/processed-data/processed-data.rds` and writes the exploratory and result
   figures to `results/figures/` as PNG files. The figures need individual-level

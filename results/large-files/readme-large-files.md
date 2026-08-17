@@ -15,6 +15,10 @@ repository, but other files placed here are not committed.
 If files in this folder are needed to reproduce the project, document where they
 are stored and how approved users can obtain them.
 
-- Link to large result files: LINK-GOES-HERE
+The two entries below are **template placeholders**. They ship with the template
+on purpose, as a reminder of what to record. Replace them with real project
+information, or delete them if your project has no large result files.
+
+- Link to large result files: `LINK-GOES-HERE` (placeholder)
 - Instructions for obtaining large result files: email, shared drive, or other
-  project-specific instructions.
+  project-specific instructions (placeholder)

@@ -30,6 +30,13 @@ library(skimr) #for a quick data summary
 ## ---- loaddata --------
 #Path to data. Note the use of the here() package and not absolute paths
 data_location <- here::here("data","processed-data","processed-data.rds")
+# Stop early if the input is missing, and name the script that creates it.
+# Each stage of the workflow depends on the previous one, so a missing input
+# usually means an earlier step has not been run yet.
+if (!file.exists(data_location)) {
+  stop("Processed data not found at:\n  ", data_location,
+       "\nRun code/data-processing/processing-code.r first. See usage.md.")
+}
 #load data
 mydata <- readRDS(data_location)
 

@@ -65,7 +65,7 @@ After the results have been regenerated, render the products you need.
 ```sh
 quarto render products/report/report.qmd
 quarto render products/manuscript/manuscript.qmd
-quarto render products/presentation/example/presentation.qmd
+quarto render products/presentation/presentation.qmd
 ```
 
 The supplementary material renders to PDF and may require a TeX installation:
@@ -74,19 +74,11 @@ The supplementary material renders to PDF and may require a TeX installation:
 quarto render products/manuscript/supplement/supplementary-material.qmd
 ```
 
-The template also ships a tutorial presentation that introduces the template
-itself. It does not depend on the example results, so it only needs to be
-rerendered if you edit it:
-
-```sh
-quarto render products/presentation/tutorial/tutorial-presentation.qmd
-```
-
 The rendered products (`report.html`, `manuscript.docx`,
-`supplementary-material.pdf`, and the presentation HTML files) are committed to
-the repository so users can see the expected output without rendering
-everything first. Rerender and recommit them when the results or the product
-sources change.
+`supplementary-material.pdf`, and `presentation.html`) are committed to the
+repository by default. See the "Generated Outputs And What Gets Committed"
+section in `readme.md` for why, and for how to change that if your project
+should not track them.
 
 ## Review And Reproducibility Checks
 
@@ -115,9 +107,13 @@ manually:
   `ai/ai-use-policy.md`. The AI tool should update `ai/ai-use-log.md`; see
   `ai/readme-ai.md` for when logging applies. Human users may read that log as
   needed.
-- Check for unresolved template placeholders such as `NAME`, `LINK-GOES-HERE`,
-  sample email addresses, and example author details. Replace them with
-  project-specific information or document why they remain.
+- Check for unresolved template placeholders. A fresh copy of the template ships
+  with these on purpose, and each is labeled as a placeholder where it appears:
+  `NAME` and the `2026-01-01` date in the example Quarto files;
+  `LINK-GOES-HERE` in `results/large-files/readme-large-files.md`; and the
+  example author names, affiliations, ORCID, and
+  `corresponding-author@example.com` address in the report and manuscript.
+  Replace them with project-specific information, or document why they remain.
 
 
 ## Adding Another Language

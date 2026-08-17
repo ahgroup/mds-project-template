@@ -80,7 +80,9 @@ The example code files are organized by workflow stage.
 - `code/figures-tables/make-tables.r` loads the computed results from
   `results/output/` and writes finalized tables to `results/tables/` as RDS
   files with CSV companions (`summary-table.*`, `result-table-1.*`,
-  `result-table-2.*`).
+  `result-table-2.*`). For the data summary this means real work: the raw
+  `skimr` object is reduced to the columns a reader needs, with plain column
+  names, instead of being passed through unchanged.
 - `code/figures-tables/make-figures.r` loads
   `data/processed-data/processed-data.rds` and writes the exploratory and result
   figures to `results/figures/` (`height-distribution.png`,

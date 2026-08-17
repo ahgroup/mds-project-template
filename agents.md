@@ -35,8 +35,7 @@ human users who want to understand how AI tools should work here.
   supplements, presentations, posters, and apps.
 - `results/`: code-generated outputs such as figures, tables, model objects, and
   intermediate analysis outputs.
-- `ai/`: AI workflow notes, an AI-use policy, an AI-use log, and an AI-oriented
-  project summary.
+- `ai/`: AI workflow notes, an AI-use policy, and an AI-use log.
 
 ## Core Rules
 
@@ -46,8 +45,8 @@ human users who want to understand how AI tools should work here.
   is needed, place it in `assets/` and document its source.
 - Use project-relative paths. Prefer `here::here()` in R code and comparable
   project-root helpers in other languages.
-- Keep code and outputs synchronized. If code changes generated results, rerun
-  the affected scripts and update generated outputs when appropriate.
+- Do not run code or render Quarto documents on your own initiative. See
+  "Running Code And Rendering Products" below.
 - Keep edits scoped to the task. Avoid unrelated cleanup in template files.
 - Fix obvious small typos or mistakes you encounter and report what you fixed.
   If a possible issue is unclear, scientific, statistical, or larger in scope,
@@ -57,9 +56,12 @@ human users who want to understand how AI tools should work here.
 - Follow `code-guidelines.md` for code written or edited in this project.
 - Do not introduce hidden dependencies on a local R session, local file paths, or
   private environment variables.
-- Check for unresolved template placeholders such as `NAME`, `LINK-GOES-HERE`,
-  sample email addresses, and example author details when reviewing a project.
-  Report them rather than silently guessing replacements.
+- Check for unresolved template placeholders when reviewing a project: `NAME`,
+  the `2026-01-01` example date, `LINK-GOES-HERE`, sample email addresses, and
+  example author details. These ship with the template on purpose and are
+  labeled as placeholders where they appear, so in an unmodified template they
+  are expected rather than defects. In a renamed project they should have been
+  replaced. Report them rather than silently guessing replacements.
 
 ## Privacy and Sensitive Data
 
@@ -110,6 +112,30 @@ For the example project, the intended order is:
 If required software or packages are missing, report that clearly. Do not
 silently install packages.
 
+## Running Code And Rendering Products
+
+Do not run scripts and do not render Quarto documents unless the user explicitly
+asks for it, or unless the request clearly requires it. A request such as "add
+the supplement PDF to the repository" or "regenerate the figures" clearly
+requires it. A request such as "fix this axis label" does not.
+
+Running code overwrites generated results and products, and it can take a long
+time. That decision belongs to the user.
+
+This means edits to analysis code will often leave the saved results and the
+rendered products out of date. That is expected. When it happens, do not quietly
+leave the user to discover it. Report it, specifically:
+
+- which scripts need to be rerun, in what order;
+- which products need to be rerendered;
+- what is likely to change as a result.
+
+Then wait for the user to decide. If the user asks for the rerun, do it and
+report what was run and what changed.
+
+If you cannot verify a change because running code would be needed, say so
+plainly rather than implying the change was tested.
+
 ## Dependency Policy
 
 The template does not enable `renv`, virtual environments, Conda, Poetry, Julia
@@ -143,10 +169,6 @@ Figures and Tables should in general be placed into the document close to the te
 
 AI-related files have different expected readers and writers:
 
-- `ai/project-summary.yml`: a concise summary file for AI tools to read and
-  write. Human users are not expected to read, write, or maintain it. It is not
-  authoritative; if it disagrees with human-facing documentation, follow the
-  human-facing documentation and update the summary when maintaining the repo.
 - `ai/readme-ai.md` and `ai/ai-use-policy.md`: human-facing AI guidance files
   that may be edited when project policy changes.
 - `ai/ai-use-log.md`: a transparency record written by AI tools. AI tools may
@@ -177,8 +199,8 @@ Before handing work back to a human user:
 - Verify that generated outputs are traceable to code.
 - Verify that no obvious secrets, local paths, or private data were added.
 - Update all relevant documentation files to reflect the updates that were made.
-- Do not render any Quarto files that changed unless instructed to do so. 
-- Do not run any code unless instructed to do so.
+- Follow "Running Code And Rendering Products" above. If the changes left results
+  or products out of date, list what needs to be rerun or rerendered.
 - Provide the user with a clear list of what has changed, a summary on how, and what was and was not run after the changes were made.
 - Mention any checks that could not be run.
 

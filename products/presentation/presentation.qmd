@@ -15,8 +15,8 @@ format:
     show-slide-number: all
     auto-stretch: true
     smaller: false
-bibliography: ../../../assets/dataanalysis-references.bib
-csl: ../../../assets/american-journal-of-epidemiology.csl
+bibliography: ../../assets/dataanalysis-references.bib
+csl: ../../assets/american-journal-of-epidemiology.csl
 ---
 
 ## Overview

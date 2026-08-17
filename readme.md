@@ -36,8 +36,8 @@ The template comes with a folder structure and example files to show the kinds
 of content you would place in each folder. See the folder-specific readme files
 for more detail.
 
-- `ai/`: AI workflow notes, an AI-use policy, an AI-use log, and an AI-oriented
-  project summary. See `ai/readme-ai.md`.
+- `ai/`: AI workflow notes, an AI-use policy, and an AI-use log. See
+  `ai/readme-ai.md`.
 - `assets/`: static non-code materials such as references, reference style files, PDFs,
   and manually created figures. See `assets/readme-assets.md`.
 - `code/`: code organized by workflow stage. See `code/readme-code.md`.
@@ -109,6 +109,50 @@ In general, any raw or processed data is likely the potentially most sensitive p
 This project template is set up to allow for large files, with currently the folders `data/large-files/`, and `results/large-files/` being ignored by Git/GitHub, while keeping small readme or placeholder files in those folders. 
 
 
+## Generated Outputs And What Gets Committed
+
+By default, this template commits the outputs that code generates. That includes
+the computed results, figures, and tables in `results/`, the processed data in
+`data/processed-data/`, and the rendered products such as `report.html`,
+`manuscript.docx`, `supplementary-material.pdf`, and `presentation.html`.
+
+The reason is convenience for readers. Someone who opens the repository can see
+the expected results and read the finished products without installing the
+software and rebuilding everything first. It also makes it easy to notice when a
+rerun changes a result unexpectedly.
+
+There are two costs to be aware of. Binary outputs such as `.docx`, `.pdf`,
+`.rds`, and `.png` files usually record a new version in the project history
+every time they are regenerated, even when nothing meaningful changed, so the
+repository grows over time. And a generated output can be sensitive even when the
+code is not, so outputs need the same privacy check as data.
+
+The exceptions are described elsewhere in this file and in
+`results/readme-results.md`: do not commit large outputs, and do not commit
+outputs containing sensitive, private, regulated, identifiable, or otherwise
+restricted information.
+
+If you would rather not track generated outputs in your project, add the
+relevant patterns to `.gitignore`. For example, to stop tracking rendered
+products and generated figures:
+
+```text
+products/**/*.html
+products/**/*.docx
+products/**/*.pdf
+results/figures/*.png
+```
+
+Adding a pattern only prevents future commits. Files that are already committed
+must also be removed from Git tracking, while keeping your local copy:
+
+```sh
+git rm --cached products/report/report.html
+```
+
+If you do stop committing generated outputs, say so in `usage.md`, so users know
+they need to run the workflow themselves before anything is available.
+
 ## Software And Package Management
 
 Document the software and package/library setup your project needs. The default example
@@ -163,14 +207,10 @@ When using AI tools:
 
 - Use AI tools in agentic mode, such that they can read/write files inside the repo, and run commands on your computer (either in a sandboxed environment, or directly on your machine - the latter tends to be more powerful but also riskier). 
 - Tell the AI to start by reviewing the project and the files. Most importantly, point the tool to `readme.md`, `usage.md`, `agents.md`, `code-guidelines.md`, and relevant files in `ai/`.
-- AI tools may read and update `ai/project-summary.yml` as a concise orientation
-  aid. It is a convenience file for AI tools, not human-facing documentation and
-  not the source of truth.
 - Do not paste sensitive, private, regulated, or identifiable data into
   external AI tools unless the project owner has explicitly approved that
   workflow.
 - Ask for small, reviewable changes.
-- Rerun affected scripts or rerender affected products after meaningful changes.
 - Follow `ai/ai-use-policy.md` for AI-use expectations.
 - AI tools should write concise entries to `ai/ai-use-log.md` for meaningful
   project-specific AI-assisted work. Logging is enabled by default once the
@@ -178,6 +218,21 @@ When using AI tools:
   turn it off. Human users may read the log as needed, but are not expected to
   write or edit it.
 
+
+### Running code and rendering products
+
+AI tools working in this project do not run scripts or render Quarto documents
+on their own. They only do so when you ask for it, or when your request clearly
+requires it.
+
+This is deliberate. Running code can overwrite generated results and products,
+and can take a long time. You should be the one deciding when that happens.
+
+The practical consequence is that a change to analysis code can leave the saved
+results and rendered products out of date. When that is the case, the AI tool
+should tell you which scripts need to be rerun and which products need to be
+rerendered, and then wait for you to ask. The instructions that produce this
+behavior live in `agents.md`.
 
 ### AI-related files and expected readers/writers
 

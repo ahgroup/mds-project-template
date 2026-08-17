@@ -3,7 +3,9 @@
 This folder contains slide presentations using Quarto and the
 `revealjs` output format.
 
-There is an example presentation in `example` related to the example data analysis project, and one presentation in `tutorial` that represents an introduction to and tutorial of the project template. 
+`presentation.qmd` is an example presentation for the example data analysis
+project. If your project needs more than one presentation, give each its own
+sub-folder with its own `media/` folder.
 
 The general suggestion is to place figures, tables, RDS files, and other files
 used in the presentation in a `media/` sub-folder.

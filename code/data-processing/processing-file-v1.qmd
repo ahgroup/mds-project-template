@@ -19,9 +19,20 @@ See the other Quarto file for my currently preferred approach of pulling code fr
 
 # Setup
 
-Load needed packages. make sure they are installed.
+Load needed packages. We first check that they are all available and stop with
+an actionable message if one is missing. We only check, never install, since
+installing packages from inside an analysis script would silently change the
+environment the results were produced in.
 
 ```{r}
+required_packages <- c("readxl", "dplyr", "tidyr", "skimr", "here")
+for (pkg in required_packages) {
+  if (!requireNamespace(pkg, quietly = TRUE)) {
+    stop("Required package '", pkg, "' is not installed.\n",
+         "Install it with install.packages(\"", pkg, "\") and rerun this script.")
+  }
+}
+
 library(readxl) #for loading Excel files
 library(dplyr) #for data processing/cleaning
 library(tidyr) #for data processing/cleaning
@@ -36,11 +47,31 @@ Note that for functions that come from specific packages (instead of base R), I 
 package::function() that's not required one could just call the function specifying the package makes it clearer where the function "lives",
 but it adds typing. You can do it either way.
 
+We stop early if the raw data is not where we expect it, or if it does not have
+the columns the cleaning steps below rely on. A clear message here is much
+easier to act on than an error from deep inside a later step.
+
 ```{r}
 # path to data
 # note the use of the here() package and not absolute paths
 data_location <- here::here("data","raw-data","example-data.xlsx")
+
+if (!file.exists(data_location)) {
+  stop("Raw data file not found at:\n  ", data_location,
+       "\nCheck that you are working from the project root folder.")
+}
+if (!"Codebook" %in% readxl::excel_sheets(data_location)) {
+  stop("The raw data file has no 'Codebook' sheet. Found: ",
+       paste(readxl::excel_sheets(data_location), collapse = ", "))
+}
+
 rawdata <- readxl::read_excel(data_location)
+
+required_columns <- c("Height", "Weight", "Gender")
+if (!all(required_columns %in% names(rawdata))) {
+  stop("Raw data is missing required column(s): ",
+       paste(setdiff(required_columns, names(rawdata)), collapse = ", "))
+}
 ```
 
 
@@ -120,6 +151,24 @@ Let's assign at the end to some final variable, this makes it easier to add furt
 
 ```{r}
 processeddata <- d4
+```
+
+Before saving, we check that cleaning removed exactly the individuals we expect
+it to. This is the most important check here. Every step above removes rows, and
+dropping the wrong rows is an easy mistake to make and a hard one to notice. We
+know which 5 individuals should go: one with Height "sixty", one with Weight
+7000, one with missing Weight, one with Gender "NA", and one with Gender "N".
+If that number ever changes, the data or the cleaning logic changed, and we want
+to stop and look rather than analyze a different sample by accident.
+
+```{r}
+expected_removed <- 5
+actually_removed <- nrow(rawdata) - nrow(processeddata)
+if (actually_removed != expected_removed) {
+  stop("Cleaning removed ", actually_removed, " rows, but ", expected_removed,
+       " were expected.\n",
+       "Review the raw data and the cleaning steps before using these results.")
+}
 ```
 
 

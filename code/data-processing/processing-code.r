@@ -21,7 +21,19 @@
 
 
 ## ---- packages --------
-#load needed packages. make sure they are installed.
+# Check that the packages this script needs are available, and stop with an
+# actionable message if one is missing. This is friendlier than discovering a
+# missing package halfway through a run. Note that we only check; we never
+# install. Installing packages from inside an analysis script would silently
+# change the environment the results were produced in.
+required_packages <- c("readxl", "dplyr", "tidyr", "skimr", "here")
+for (pkg in required_packages) {
+  if (!requireNamespace(pkg, quietly = TRUE)) {
+    stop("Required package '", pkg, "' is not installed.\n",
+         "Install it with install.packages(\"", pkg, "\") and rerun this script.")
+  }
+}
+
 library(readxl) #for loading Excel files
 library(dplyr) #for data processing/cleaning
 library(tidyr) #for data processing/cleaning
@@ -39,9 +51,32 @@ data_location <- here::here("data","raw-data","example-data.xlsx")
 #package::function() that's not required one could just call the function
 #specifying the package makes it clearer where the function "lives",
 #but it adds typing. You can do it either way.
+
+# Stop early if the raw data is not where we expect it. A clear message here is
+# much easier to act on than an error from deep inside a later step.
+if (!file.exists(data_location)) {
+  stop("Raw data file not found at:\n  ", data_location,
+       "\nCheck that you are working from the project root folder.")
+}
+# The codebook lives in a second sheet. Check it exists before reading it, so a
+# restructured Excel file fails loudly instead of quietly losing the metadata.
+if (!"Codebook" %in% readxl::excel_sheets(data_location)) {
+  stop("The raw data file has no 'Codebook' sheet. Found: ",
+       paste(readxl::excel_sheets(data_location), collapse = ", "))
+}
+
 rawdata <- readxl::read_excel(data_location)
 # We might also want to load the codebook to look at it
 codebook <- readxl::read_excel(data_location, sheet ="Codebook")
+
+# Check that the variables the cleaning steps below rely on are actually
+# present. If the raw data is ever replaced or restructured, this fails here
+# rather than producing a confusing error further down.
+required_columns <- c("Height", "Weight", "Gender")
+if (!all(required_columns %in% names(rawdata))) {
+  stop("Raw data is missing required column(s): ",
+       paste(setdiff(required_columns, names(rawdata)), collapse = ", "))
+}
 
 
 ## ---- exploredata --------
@@ -125,6 +160,22 @@ skimr::skim(d4)
 # Let's assign at the end to some final variable
 # makes it easier to add steps above
 processeddata <- d4
+
+# This is the most important check in the script. Every cleaning step above
+# removes rows, and dropping the wrong rows is an easy mistake to make and a
+# hard one to notice. We know exactly which 5 individuals should be removed:
+#   1 with Height "sixty", 1 with Weight 7000, 1 with missing Weight,
+#   1 with Gender "NA", and 1 with Gender "N".
+# If that number ever changes, the data or the cleaning logic changed, and we
+# want to stop and look rather than analyze a different sample by accident.
+expected_removed <- 5
+actually_removed <- nrow(rawdata) - nrow(processeddata)
+if (actually_removed != expected_removed) {
+  stop("Cleaning removed ", actually_removed, " rows, but ", expected_removed,
+       " were expected.\n",
+       "Review the raw data and the cleaning steps before using these results.")
+}
+
 # location to save file
 save_data_location <- here::here("data","processed-data","processed-data.rds")
 saveRDS(processeddata, file = save_data_location)

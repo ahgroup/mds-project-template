@@ -55,24 +55,26 @@ Different files in this folder have different expected readers and writers:
 - Local AI/tool state folders such as `.ai-local/`, `.ai-cache/`, `.codex/`, and
   local Claude settings are not committed. AI tools may read and write those
   files for their own operation, and humans usually do not need to inspect them. Anything of importance to the project and its state should not be logged in these folders, but instead some of the existing documentation markdown files.
-- `project-summary.yml`: a concise summary file for AI tools to read and write.
-  Human users are not expected to read, write, or maintain it. It is not
-  authoritative; if it disagrees with human-facing documentation, follow the
-  human-facing documentation.
+
+There is no separate machine-readable project summary file. The human-facing
+documentation is the only source of truth, so it cannot drift out of sync with a
+second copy.
 
 
 ## Suggested Workflow
 
 1. Read `../readme.md`, `../usage.md`, `../agents.md`,
    `../code-guidelines.md`, and `../data/readme-data.md`.
-2. AI tools may read `project-summary.yml` for a concise orientation summary, but
-   should treat it as secondary to the human-facing documentation.
-3. Check data-use limits before exposing data to an AI tool.
-4. Ask for small, reviewable changes.
-5. Rerun affected scripts or rerender affected products.
-6. Confirm generated outputs are traceable to code.
-7. Check whether generated outputs should be committed, ignored as large files,
+2. Check data-use limits before exposing data to an AI tool.
+3. Ask for small, reviewable changes.
+4. When a change makes saved results or rendered products out of date, expect the
+   AI tool to say which scripts need rerunning and which products need
+   rerendering, then decide yourself when that should happen. AI tools in this
+   project do not run code or render on their own; see the "Running Code And
+   Rendering Products" section of `../agents.md`.
+5. Confirm generated outputs are traceable to code.
+6. Check whether generated outputs should be committed, ignored as large files,
    or kept private because they contain sensitive information.
-8. Review the changes manually.
-9. When meaningful AI-assisted project-specific work occurred, the AI tool should
+7. Review the changes manually.
+8. When meaningful AI-assisted project-specific work occurred, the AI tool should
    add a concise text entry to `ai-use-log.md`.
