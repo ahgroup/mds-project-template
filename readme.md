@@ -27,7 +27,7 @@ install.packages(c("broom", "dplyr", "ggplot2", "here", "knitr",
 
 ## Getting Started
 
-See `new-project-instructions.md` for a brief getting started guide.
+See [new-project-instructions.md](new-project-instructions.md) for a brief getting started guide.
 
 
 ## Template Structure

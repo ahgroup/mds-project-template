@@ -1,7 +1,7 @@
 ---
-title: "AI-assisted modeling and data science (MDS) projects"
-subtitle: "Organized, reproducible workflows with the MDS project template"
-date: 2026-08-03
+title: "Reproducible, AI-assisted modeling and data science (MDS) projects"
+subtitle: ""
+date: 2026-09-08
 author: "Andreas Handel"
 format:
   revealjs:
@@ -22,134 +22,60 @@ bibliography: ../../../assets/dataanalysis-references.bib
 csl: ../../../assets/american-journal-of-epidemiology.csl
 ---
 
-## Three layers of an ORDERly project
+## Overview
 
 ::: {.arc-list}
-<div><span>01</span><strong>Concept</strong><small>What makes a workflow organized, reproducible, and ready for responsible AI?</small></div>
-<div><span>02</span><strong>Implementation</strong><small>How does the template turn those ideas into a practical working environment?</small></div>
-<div><span>03</span><strong>Details</strong><small>Where does everything go, and what should a new project do first?</small></div>
+<div><span>01</span><strong>Concept</strong><small>What makes a project organized, reproducible, and ready for responsible AI?</small></div>
+<div><span>02</span><strong>Implementation</strong><small>A setup that turn those ideas into a practical working environment.</small></div>
+<div><span>03</span><strong>Details</strong><small>How does the template work, and what should a new project do first?</small></div>
 :::
 
-::: {.notes}
-The deck moves from principles to implementation and then practical details. The template is a way to implement a good workflow, not the reason reproducibility matters.
-
-[Sources] Local template: readme.md; usage.md. ORDERly course: courses/orderly-workflows/order-framework/order-framework.qmd.
-:::
 
 ## Concept {.section-break}
 
 <div class="section-kicker">Part 1</div>
-<div class="section-title-text">Introduction to reproducible workflows</div>
-<div class="section-subtitle">First make the work understandable and rerunnable. Then choose structures and tools that support it.</div>
+<div class="section-title-text">Concepts of reproducible project workflows</div>
 
-::: {.notes}
-Open with workflow rather than software. Reproducibility depends on how work is organized, recorded, documented, executed, and checked.
 
-[Sources] ORDERly course: courses/orderly-workflows/why-orderly/why-orderly.qmd; courses/orderly-workflows/reproducibility/reproducibility.qmd.
-:::
+## Motivation
 
-## Good workflows turn activity into a project
+- Reproducibility is a hallmark of good science
+- A well-organized, reproducible project often makes work more efficient
+- AI supported work is the future (present)
 
-<p class="figure-lead">The goal is a clear path from source material to a result someone can inspect and recreate.</p>
 
-::: {.illustration-wide}
-![](./media/workflow-transformation.png)
-:::
-
-::: {.notes}
-A good workflow keeps inputs, decisions, code, results, and communication connected. It helps current you, future you, collaborators, and reviewers.
-
-[Sources] ORDERly course: courses/orderly-workflows/why-orderly/why-orderly.qmd. Illustration generated for this deck; prompt recorded in media/illustration-prompts.txt.
-:::
-
-## Small shortcuts create long-term friction
+## Problems with "standard" workflows
 
 ::: {.simple-list}
 <div><strong>Results drift from their code</strong><span>Copied tables and figures become hard to update or verify.</span></div>
 <div><strong>Files lose their roles</strong><span>Raw, processed, current, and obsolete versions become difficult to distinguish.</span></div>
 <div><strong>Decisions disappear</strong><span>Cleaning and modeling choices remain in memory or private conversations.</span></div>
 <div><strong>Sharing becomes risky</strong><span>Private data and unfinished material move into unsuitable places.</span></div>
+<div><strong>Reproducibility is hard</strong><span>Others (including your future self) will struggle reproducing your work.</span></div>
 :::
 
-::: {.notes}
-Projects usually become fragile through ordinary shortcuts rather than one dramatic failure. A workflow prevents these small problems from accumulating.
 
-[Sources] Local template: readme.md; usage.md; data/readme-data.md; code-guidelines.md. ORDERly course: courses/orderly-workflows/why-orderly/why-orderly.qmd.
-:::
+## The ORDERly concept 
 
-## Reproducibility is a testable claim
-
-::: {.statement}
-Can someone use the stated inputs, instructions, and software to recreate an important result?
-
-**A repeatable mistake is still a mistake.** Reproducibility makes the work visible enough to inspect and improve.
-:::
-
-::: {.notes}
-Reproducibility asks whether a specified result can be recreated. Correctness asks whether the analysis is sound. Replication asks whether a similar conclusion holds with new data.
-
-[Sources] ORDERly course: courses/orderly-workflows/reproducibility/reproducibility.qmd.
-:::
-
-## ORDERly makes reproducibility practical
-
-<p class="figure-lead">Organized + Recorded + Documented + Executable support a reproducible result.</p>
+<p class="figure-lead">Organized + Recorded + Documented + Executable = Reproducible (**ORDER**ly).</p>
 
 ::: {.full-figure .framework-figure}
 ![](./media/orderly-framework.png)
 :::
 
-::: {.notes}
-Organized means sensible homes and names. Recorded means changes and decisions leave a trail. Documented means another person can understand purpose and instructions. Executable means the important path runs without remembered clicks. Reproducible is the demonstrated outcome.
 
-[Sources] ORDERly course: courses/orderly-workflows/order-framework/order-framework.qmd.
-:::
 
-## The ORDERly habits reinforce one another
+## AI support needs to be managed
 
-::: {.principle-strip}
-<div><strong>Organized</strong><span>Locations and roles</span></div>
-<div><strong>Recorded</strong><span>History and provenance</span></div>
-<div><strong>Documented</strong><span>Meaning and instructions</span></div>
-<div><strong>Executable</strong><span>Runnable work</span></div>
-<div class="outcome"><strong>Reproducible</strong><span>Demonstrated result</span></div>
-:::
+- Organization
+- Restrictions
+- Documentation
+- Evaluation
 
-<p class="closing-line">No single habit is enough—and none needs to be elaborate.</p>
+can preserve reproducibility.
 
-::: {.notes}
-The letters are not independent boxes. Organization makes execution easier; recording makes results traceable; documentation ties the pieces together.
 
-[Sources] ORDERly course: courses/orderly-workflows/order-framework/order-framework.qmd.
-:::
 
-## AI increases both speed and responsibility
-
-::: {.contrast-lines}
-<div><strong>Faster</strong><span>Draft code, explain errors, improve documentation, and review structure.</span></div>
-<div><strong>Wider</strong><span>Work across code, prose, files, version control, and products.</span></div>
-<div><strong>Riskier</strong><span>Confident mistakes, data exposure, and changes that are difficult to evaluate.</span></div>
-:::
-
-::: {.notes}
-AI can touch many parts of a project. That makes workflow quality and review boundaries more important, not less important.
-
-[Sources] Local template: ai/ai-use-policy.md; agents.md. ORDERly course: courses/orderly-workflows/ai-workflow/ai-workflow.qmd.
-:::
-
-## ORDERly AI workflows keep assistance reviewable
-
-<p class="figure-lead">Give AI context and a bounded task; inspect the change; run the work; keep the human decision visible.</p>
-
-::: {.illustration-wide}
-![](./media/orderly-ai-review.png)
-:::
-
-::: {.notes}
-Orient to the project, ask for a bounded change, inspect the proposal, run the affected work, check the output, and record meaningful assistance. AI output remains a proposal until evaluated.
-
-[Sources] Local template: ai/ai-use-policy.md; agents.md. ORDERly course: courses/orderly-workflows/ai-workflow/ai-workflow.qmd. Illustration generated for this deck; prompt recorded in media/illustration-prompts.txt.
-:::
 
 ## Human judgment remains the gate
 
@@ -168,101 +94,32 @@ AI can support judgment but cannot transfer accountability. Never send private o
 ## Implementation {.section-break}
 
 <div class="section-kicker">Part 2</div>
-<div class="section-title-text">From concept to implementation</div>
-<div class="section-subtitle">The MDS project template gives ORDERly work a practical starting structure; tools then operate within it.</div>
+<div class="section-title-text">Implementation</div>
+<div class="section-subtitle">Tools to support an AI assisted ORDERly workflow.</div>
 
-::: {.notes}
-Present the template first because it supplies the shared structure that makes the tools work together coherently.
 
-[Sources] Local template: readme.md; usage.md; new-project-instructions.md.
-:::
+## The components
 
-## The template is a scaffold, not a recipe
+- A structured template (as GitHub repository) 
+- A set of tools that support ORDERly workflows
+- Tools are largely interchangable, but text-based, easy to track tools are best (avoid Excel, Word, etc.)
 
-<p class="figure-lead">It provides clear homes and connections while leaving language, analysis, and automation adaptable.</p>
 
-::: {.illustration-wide}
-![](./media/template-scaffold.png)
-:::
+## Specific tools
 
-::: {.notes}
-R is the default example, but Python, Julia, or mixed-language projects can use the same structure. Adapt the template to the project rather than following it mechanically.
+- IDE, e.g. Positron, VS Code, RStudio
+- Coding language(s), e.g. R, Python, Julia
+- Authoring software, e.g. Quarto or Typist
+- Tracking tools, e.g. Git/GitHub
+- agentic AI tools, e.g. ChatGPT Codex, Claude Code
 
-[Sources] Local template: readme.md; agents.md. Illustration generated for this deck; prompt recorded in media/illustration-prompts.txt.
-:::
 
-## The template connects a complete project
-
-::: {.project-path}
-<div><strong>Inputs</strong><span>data + assets</span></div>
-<div><strong>Work</strong><span>code</span></div>
-<div><strong>Evidence</strong><span>results</span></div>
-<div><strong>Communication</strong><span>products</span></div>
-:::
-
-<p class="closing-line">Documentation, version history, and AI guidance keep the path understandable.</p>
-
-::: {.notes}
-The main path is data to code to results to products. Assets provide stable inputs. Documentation explains purpose and run order. Git records changes. The ai folder makes policy and context visible.
-
-[Sources] Local template: readme.md; usage.md; ai/readme-ai.md.
-:::
-
-## Start with the project, then choose the tools
-
-::: {.statement}
-A tool can edit a file.
-
-**A project structure explains what that file is for, what it depends on, and what should happen next.**
-:::
-
-::: {.notes}
-The project folder is the shared map. Different teams can choose different tools while preserving the same roles and traceable path.
-
-[Sources] Local template: readme.md; code-guidelines.md. MDS tools: https://andreashandel.github.io/mds-tools/
-:::
-
-## Create, compute, and publish
-
-::: {.tool-rows}
-<div><strong>IDE</strong><span>The workbench for files, code, terminals, output, and version control.</span></div>
-<div><strong>R, Python, or Julia</strong><span>Process data, explore patterns, fit models, and save results.</span></div>
-<div><strong>Quarto</strong><span>Turn source into reports, manuscripts, slides, and websites.</span></div>
-:::
-
-::: {.notes}
-Positron is recommended, but other IDEs can support the same workflow. R is the default example language, not a restriction. Quarto renders source into a finished product that can be regenerated.
-
-[Sources] Local template: readme.md; usage.md; code-guidelines.md. MDS tools: https://andreashandel.github.io/mds-tools/
-:::
-
-## Record, share, and assist
-
-::: {.tool-rows}
-<div><strong>Git</strong><span>Records snapshots, compares changes, and supports return to an earlier state.</span></div>
-<div><strong>GitHub</strong><span>Hosts a remote repository for sharing, collaboration, and review.</span></div>
-<div><strong>AI tools</strong><span>Help with bounded drafting, explanation, review, and implementation.</span></div>
-:::
-
-<p class="caution-line">A private GitHub repository is not approved secure storage for sensitive data.</p>
-
-::: {.notes}
-Git is version control; GitHub is a hosting service. AI tools assist within the workflow but do not own decisions. Storage and sharing must follow project-specific requirements.
-
-[Sources] Local template: readme.md; new-project-instructions.md; data/readme-data.md; ai/ai-use-policy.md.
-:::
 
 ## Details {.section-break}
 
 <div class="section-kicker">Part 3</div>
 <div class="section-title-text">Template details and first steps</div>
-<div class="section-subtitle">Use the repository map to place material correctly, then establish a small working checkpoint.</div>
 
-::: {.notes}
-Turn the concepts into concrete folder roles and an attainable startup sequence.
-
-[Sources] Local template: readme.md; usage.md; new-project-instructions.md.
-:::
 
 ## The repository map gives each part a role
 
@@ -322,34 +179,7 @@ Do not place manually edited results in results. Put manually created supporting
 [Sources] Local template: readme.md; assets/readme-assets.md; ai/readme-ai.md; agents.md.
 :::
 
-## Getting started is a sequence, not a leap
 
-<p class="figure-lead">Establish identity and data rules, connect the workflow, then produce one reviewed working checkpoint.</p>
-
-::: {.illustration-wide}
-![](./media/getting-started-journey.png)
-:::
-
-::: {.notes}
-Beginners do not need to configure everything at once. First create a safe, understandable project with one working path from an input through code to an output and product.
-
-[Sources] Local template: new-project-instructions.md; usage.md. Illustration generated for this deck; prompt recorded in media/illustration-prompts.txt.
-:::
-
-## Start with identity and ground rules
-
-::: {.steps-list}
-<div><span>1</span><p><strong>Create from the template</strong><br>Start private unless sharing is already cleared.</p></div>
-<div><span>2</span><p><strong>Rename and describe the project</strong><br>Replace placeholders with identity, purpose, and authorship.</p></div>
-<div><span>3</span><p><strong>Classify the data</strong><br>Decide what can be committed and what stays elsewhere.</p></div>
-<div><span>4</span><p><strong>Document the software</strong><br>List the tools and packages the workflow requires.</p></div>
-:::
-
-::: {.notes}
-Keep dependency management lightweight by default. Add lockfiles, environments, continuous integration, or containers only when the project justifies them.
-
-[Sources] Local template: new-project-instructions.md; data/readme-data.md; readme.md; agents.md.
-:::
 
 ## Run the workflow in clear stages
 
@@ -401,17 +231,23 @@ Return to the opening. The template helps implement an understandable, recorded,
 [Sources] Local template: readme.md; usage.md; ai/ai-use-policy.md. ORDERly course: courses/orderly-workflows/why-orderly/why-orderly.qmd.
 :::
 
+## Getting started
+
+- Visit the template repository: [https://github.com/andreashandel/mds-project-template](https://github.com/andreashandel/mds-project-template)
+- Read the 'Readme' file on the main page.
+- Follow the instructions provided in the `Readme` and further documents.
+- Update the guidelines as needed.
+- Involve AI early on, make sure all is documented.
+
+
+## Further Extensions
+
+- Include more sophisticated package or workflow management (e.g. 'renv', 'Docker','targets')
+
+
 ## Continue learning
 
 ::: {.resource-list}
-<div><strong>MDS project template</strong><a href="https://github.com/andreashandel/mds-project-template">github.com/andreashandel/mds-project-template</a></div>
-<div><strong>ORDERly AI workflows course</strong><span>Concepts, examples, practice, and a continuing project.</span></div>
 <div><strong>MDS tools mini-courses</strong><a href="https://andreashandel.github.io/mds-tools/">andreashandel.github.io/mds-tools/</a></div>
 <div><strong>Inside the template</strong><span><code>readme.md</code> · <code>usage.md</code> · <code>new-project-instructions.md</code></span></div>
-:::
-
-::: {.notes}
-Use the template for implementation, the ORDERly course for workflow concepts and practice, and MDS tools for software introductions.
-
-[Sources] Local template: readme.md; usage.md; new-project-instructions.md. ORDERly course repository: C:/Data/GitHub/andreashandel/ORDERly-AI-workflow-course. MDS tools: https://andreashandel.github.io/mds-tools/
 :::
