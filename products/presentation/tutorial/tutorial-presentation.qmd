@@ -18,8 +18,6 @@ format:
     width: 1280
     height: 720
     margin: 0.06
-bibliography: ../../../assets/dataanalysis-references.bib
-csl: ../../../assets/american-journal-of-epidemiology.csl
 ---
 
 ## Overview
@@ -50,11 +48,8 @@ csl: ../../../assets/american-journal-of-epidemiology.csl
 
 ::: {.xkcd-figure}
 ![](./media/xkcd-replication-crisis.png){fig-alt="An XKCD comic about reproducibility and the replication crisis."}
+<p class="figure-credit">xkcd.com · CC BY-NC 2.5</p>
 :::
-:::
-
-::: {.notes}
-[Sources] Image file: media/xkcd-replication-crisis.png.
 :::
 
 
@@ -71,56 +66,48 @@ csl: ../../../assets/american-journal-of-epidemiology.csl
 
 ::: {.problem-figure}
 ![](./media/amiracleoccurs.gif){fig-alt="A black-and-white cartoon showing an unexplained step labeled 'Then a miracle occurs' in a mathematical derivation."}
+<p class="figure-credit">Sidney Harris · ScienceCartoonsPlus.com</p>
 :::
-:::
-
-::: {.notes}
-[Sources] Cartoon supplied by the project owner: media/amiracleoccurs.gif.
 :::
 
 
 ## The ORDERly concept
 
-<p class="figure-lead"><strong>O</strong>rganized + <strong>R</strong>ecorded + <strong>D</strong>ocumented + <strong>E</strong>xecutable = <strong>R</strong>eproducible (<strong>ORDER</strong>ly)</p>
+<p class="figure-lead"><span class="w-org"><b>O</b>rganized</span> + <span class="w-rec"><b>R</b>ecorded</span> + <span class="w-doc"><b>D</b>ocumented</span> + <span class="w-exe"><b>E</b>xecutable</span> = <span class="w-rep"><b>R</b>eproducible</span></p>
 
 ::: {.flow-figure .orderly-flow}
 <div class="flow-row">
-<div><strong>Organized</strong><span>predictable<br>places</span></div>
+<div class="w-org"><strong>Organized</strong><span>predictable<br>places</span></div>
 <p>+</p>
-<div><strong>Recorded</strong><span>changes<br>and decisions</span></div>
+<div class="w-rec"><strong>Recorded</strong><span>changes<br>and decisions</span></div>
 <p>+</p>
-<div><strong>Documented</strong><span>purpose<br>and instructions</span></div>
+<div class="w-doc"><strong>Documented</strong><span>purpose<br>and instructions</span></div>
 <p>+</p>
-<div><strong>Executable</strong><span>saved steps<br>that run</span></div>
+<div class="w-exe"><strong>Executable</strong><span>saved steps<br>that run</span></div>
 </div>
 <div class="flow-down-arrow">↓</div>
-<div class="flow-outcome"><strong>Reproducible</strong><span>a stated result can be recreated</span></div>
+<div class="flow-outcome w-rep"><strong>Reproducible</strong><span>a stated result can be recreated</span></div>
 :::
 
 
 ## ORDERly AI work
 
-<p class="figure-lead"><strong>O</strong>rganized + <strong>R</strong>estricted + <strong>D</strong>ocumented + <strong>E</strong>valuated = <strong>R</strong>eproducible AI support</p>
+<p class="figure-lead"><span class="w-org"><b>O</b>rganized</span> + <span class="w-res changed"><b>R</b>estricted</span> + <span class="w-doc"><b>D</b>ocumented</span> + <span class="w-eva changed"><b>E</b>valuated</span> = <span class="w-rep"><b>R</b>eproducible</span> AI support</p>
 
 ::: {.flow-figure .ai-flow}
 <div class="flow-row">
-<div><strong>Organized</strong><span>clear project<br>context</span></div>
+<div class="w-org"><strong>Organized</strong><span>clear project<br>context</span></div>
 <p>+</p>
-<div><strong>Restricted</strong><span>privacy and<br>scope limits</span></div>
+<div class="w-res swapped"><strong>Restricted</strong><span>privacy and<br>scope limits</span></div>
 <p>+</p>
-<div><strong>Documented</strong><span>instructions<br>and logs</span></div>
+<div class="w-doc"><strong>Documented</strong><span>instructions<br>and logs</span></div>
 <p>+</p>
-<div><strong>Evaluated</strong><span>checks before<br>acceptance</span></div>
+<div class="w-eva swapped"><strong>Evaluated</strong><span>checks before<br>acceptance</span></div>
 </div>
 <div class="flow-down-arrow">↓</div>
-<div class="flow-outcome"><strong>Reproducible</strong><span>bounded, inspectable, and project-owned</span></div>
+<div class="flow-outcome w-rep"><strong>Reproducible</strong><span>bounded, inspectable, and project-owned</span></div>
 :::
 
-::: {.notes}
-AI can support judgment but cannot transfer accountability. Never send private or restricted material to an AI tool unless that use is explicitly approved.
-
-[Sources] Local template: ai/ai-use-policy.md; data/readme-data.md; agents.md.
-:::
 
 ## Implementation {.section-break}
 
@@ -133,12 +120,12 @@ AI can support judgment but cannot transfer accountability. Never send private o
 
 <p class="figure-lead">The setup combines template structure, text-based tools, version tracking, AI guardrails, and a reproducible workflow</p>
 
-::: {.orderly-map}
-<div><strong>Organized</strong><span>The template repository gives <code>data/</code>, <code>code/</code>, <code>results/</code>, <code>products/</code>, <code>assets/</code>, and <code>ai/</code> distinct roles</span></div>
-<div><strong>Recorded</strong><span>Git/GitHub history, generated outputs, AI-use logs, and project notes preserve the path taken</span></div>
-<div><strong>Documented</strong><span>Markdown, YAML, Quarto files, folder READMEs, and AI policy explain what to do and why</span></div>
-<div><strong>Executable</strong><span>Scripts and Quarto files regenerate processed data, analyses, figures, tables, and products</span></div>
-<div><strong>Reproducible</strong><span>An accepted result can be traced from input data through code to final communication</span></div>
+::: {.orderly-spine}
+<div class="w-org"><b>O</b><strong>Organized</strong><span>The template repository gives <code>data/</code>, <code>code/</code>, <code>results/</code>, <code>products/</code>, <code>assets/</code>, and <code>ai/</code> distinct roles</span></div>
+<div class="w-rec"><b>R</b><strong>Recorded</strong><span>Git/GitHub history, generated outputs, AI-use logs, and project notes preserve the path taken</span></div>
+<div class="w-doc"><b>D</b><strong>Documented</strong><span>Markdown, YAML, Quarto files, folder READMEs, and AI policy explain what to do and why</span></div>
+<div class="w-exe"><b>E</b><strong>Executable</strong><span>Scripts and Quarto files regenerate processed data, analyses, figures, tables, and products</span></div>
+<div class="w-rep"><b>R</b><strong>Reproducible</strong><span>An accepted result can be traced from input data through code to final communication</span></div>
 :::
 
 
@@ -153,9 +140,10 @@ AI can support judgment but cannot transfer accountability. Never send private o
 <div><strong>Workflow management (optional)</strong><span>renv, targets, Docker, Conda, Make</span></div>
 :::
 
+
 ## The project structure gives each part a role
 
-<p class="figure-lead">The main path moves through data, code, results, and products; support folders provide stable inputs and guidance</p>
+<p class="figure-lead">The main path moves through data, code, results, and products; support folders and root files provide stable inputs and guidance</p>
 
 ::: {.flow-figure .repository-flow}
 <div class="flow-row primary-flow">
@@ -169,8 +157,8 @@ AI can support judgment but cannot transfer accountability. Never send private o
 </div>
 <div class="support-row">
 <div><strong>assets/</strong><span>stable<br>support</span></div>
-<div><strong>docs</strong><span>readme<br>usage</span></div>
 <div><strong>ai/</strong><span>policy<br>summary<br>log</span></div>
+<div><strong>root files</strong><span>readme.md<br>usage.md</span></div>
 </div>
 :::
 
@@ -178,11 +166,6 @@ AI can support judgment but cannot transfer accountability. Never send private o
 <span>work tree</span><code>data/</code><code>code/</code><code>results/</code><code>products/</code><code>assets/</code><code>ai/</code><code>readme.md</code><code>usage.md</code>
 :::
 
-::: {.notes}
-Walk through the main path first. Then add assets for supporting materials and ai for policy, context, guidance, and meaningful-use records.
-
-[Sources] Local template: readme.md; usage.md.
-:::
 
 ## Separate raw, derived, private, and large data
 
@@ -195,7 +178,8 @@ Walk through the main path first. Then add assets for supporting materials and a
 :::
 
 ::: {.data-figure}
-![](./media/phd_dataisorare.gif){fig-alt="A PhD Comics cartoon about data being rare."}
+![](./media/phd_dataisorare.gif){fig-alt="A PhD Comics cartoon about whether data is singular or plural."}
+<p class="figure-credit">Jorge Cham · phdcomics.com</p>
 :::
 :::
 
@@ -203,11 +187,26 @@ Walk through the main path first. Then add assets for supporting materials and a
 <span>work tree</span><code>data/raw-data/</code><code>data/processed-data/</code><code>data/private-data/</code><code>data/large-files/</code><code>data/readme-data.md</code>
 :::
 
-::: {.notes}
-If raw data are inconvenient, write code that produces a processed version. The data README should document source, sensitivity, access limits, and AI inspection rules.
 
-[Sources] Local template: data/readme-data.md; readme.md; usage.md; agents.md. Cartoon supplied by the project owner: media/phd_dataisorare.gif.
+## Track changes with Git, guard what you share
+
+::: {.git-layout}
+<div class="git-copy">
+<ul>
+<li>Commit small, meaningful changes; push to back up and to share</li>
+<li>Start <strong>private</strong>; go public later after checking data, outputs, license, and authorship</li>
+<li>Once something is pushed, it is hard to remove from history — decide before you commit</li>
+<li>Keep sensitive data out via <code>.gitignore</code>; <code>data/private-data/</code> is ignored by default</li>
+<li>Nothing above roughly <strong>20 MB</strong>; use the ignored <code>large-files/</code> folders instead</li>
+</ul>
+</div>
+
+::: {.xkcd-figure}
+![](./media/xkcd-git.png){fig-alt="An XKCD comic in which someone explains that the way to use Git is to memorize shell commands and start over when errors appear."}
+<p class="figure-credit">xkcd.com · CC BY-NC 2.5</p>
 :::
+:::
+
 
 ## Code follows the stages of the analysis
 
@@ -230,13 +229,8 @@ If raw data are inconvenient, write code that produces a processed version. The 
 <span>work tree</span><code>code/data-processing/</code><code>code/data-exploration/</code><code>code/modeling-analysis/</code><code>code/figures-tables/</code><code>code/utilities/</code>
 :::
 
-::: {.notes}
-Processing creates processed data. Exploration checks it. Modeling and analysis compute results. Figures and tables prepare communication-ready artifacts. Utilities hold reusable helpers.
 
-[Sources] Local template: usage.md; code/readme-code.md; code-guidelines.md.
-:::
-
-## Keep generated outputs separate from supporting inputs
+## Keep generated outputs separate from everything else
 
 ::: {.simple-list}
 <div><strong>results/</strong><span>Code-generated model objects, intermediate outputs, figures, and tables</span></div>
@@ -250,21 +244,75 @@ Processing creates processed data. Exploration checks it. Modeling and analysis 
 :::
 
 
+## Running the workflow
 
-## A modular, staged workflow
+::: {.run-order}
+<div><span>1</span><code>code/data-processing/processing-code.r</code><em>writes <code>data/processed-data/</code></em></div>
+<div><span>2</span><code>code/data-exploration/eda-code.r</code><em>writes <code>results/output/</code></em></div>
+<div><span>3</span><code>code/modeling-analysis/statistical-analysis.r</code><em>writes <code>results/output/</code></em></div>
+<div><span>4</span><code>code/figures-tables/make-tables.r</code><em>writes <code>results/tables/</code></em></div>
+<div><span>5</span><code>code/figures-tables/make-figures.r</code><em>writes <code>results/figures/</code></em></div>
+<div><span>6</span><b><code>quarto render</code> the products you need</b><em>writes <code>products/</code></em></div>
+:::
 
-::: {.run-sequence}
-<div><span>1</span><strong>Process</strong><small>raw → processed</small></div>
-<div><span>2</span><strong>Explore</strong><small>checks + summaries</small></div>
-<div><span>3</span><strong>Analyze</strong><small>models + results</small></div>
-<div><span>4</span><strong>Prepare</strong><small>figures + tables</small></div>
-<div><span>5</span><strong>Generate</strong><small>reports + slides</small></div>
+::: {.rule-list}
+<div>Steps 4 and 5 may run in either order, but both come after steps 1–3</div>
+<div>Never hand-edit raw data, generated tables, or figures — change the code and rerun</div>
 :::
 
 <p class="closing-line">Regenerate results before updating the products that use them</p>
 
+
+## The template ships a working example
+
+<p class="figure-lead">Run it end to end once, then replace it piece by piece with your own project</p>
+
+::: {.example-grid}
+<div><strong>Data and code</strong><span><code>data/raw-data/example-data.xlsx</code> and five short R scripts, one per workflow stage</span></div>
+<div><strong>Generated results</strong><span><code>results/output/</code>, <code>results/tables/</code>, and <code>results/figures/</code>, all rebuilt from code</span></div>
+<div><strong>Finished products</strong><span><code>report.qmd</code>, <code>manuscript.qmd</code> with supplement, an example presentation, and a poster stub</span></div>
+:::
+
+<p class="closing-line">Every number and figure in those products can be traced back to a script</p>
+
+
+## AI can support project work
+
+::: {.ai-support-grid}
+<div><strong>Code</strong><span>Write, document, refactor, and debug project code</span></div>
+<div><strong>Literature</strong><span>Help search, summarize, and organize background material</span></div>
+<div><strong>Writing</strong><span>Draft or improve reports, manuscripts, and presentations</span></div>
+<div><strong>Documentation</strong><span>Keep code, outputs, and documentation aligned</span></div>
+:::
+
+
+## How AI plugs into this project
+
+::: {.simple-list}
+<div><strong>Run it inside the repository</strong><span>Use an agentic tool that can read and write project files and run code</span></div>
+<div><strong>Point it at the documents first</strong><span><code>readme.md</code>, <code>usage.md</code>, <code>agents.md</code>, and <code>code-guidelines.md</code> carry the project rules</span></div>
+<div><strong>Bound what it may do</strong><span><code>ai/ai-use-policy.md</code> states what AI may touch, and what must never leave the project</span></div>
+<div><strong>Let it record its work</strong><span><code>ai/ai-use-log.md</code> is written by the AI; <code>ai/project-summary.yml</code> keeps it oriented</span></div>
+<div><strong>Keep changes reviewable</strong><span>Ask for small steps, then rerun affected scripts and re-render affected products</span></div>
+:::
+
 ::: {.work-tree-strip}
-<span>work tree</span><code>usage.md</code><code>code/data-processing/processing-code.r</code><code>code/data-exploration/eda-code.r</code><code>code/modeling-analysis/statistical-analysis.r</code><code>code/figures-tables/</code><code>products/*/*.qmd</code>
+<span>work tree</span><code>agents.md</code><code>code-guidelines.md</code><code>ai/ai-use-policy.md</code><code>ai/ai-use-log.md</code><code>ai/project-summary.yml</code>
+:::
+
+
+
+
+## AI can support ORDERly habits
+
+<p class="figure-lead">Things worth asking your assistant to do</p>
+
+::: {.ai-asks}
+<div class="w-org"><strong>Organized</strong><em>"Check that every file sits in the folder its role calls for."</em></div>
+<div class="w-rec"><strong>Recorded</strong><em>"Summarize what changed today and why, and log your own contribution."</em></div>
+<div class="w-doc"><strong>Documented</strong><em>"Update the READMEs and usage notes to match what the code now does."</em></div>
+<div class="w-exe"><strong>Executable</strong><em>"Run this script in a clean session and fix what breaks."</em></div>
+<div class="w-rep"><strong>Reproducible</strong><em>"Trace this figure back to the data it came from and show me the path."</em></div>
 :::
 
 
@@ -278,39 +326,6 @@ Processing creates processed data. Exploration checks it. Modeling and analysis 
 <p><strong>Others</strong> can understand and recreate the stated result</p>
 :::
 
-
-::: {.notes}
-Return to the opening. The template helps implement an understandable, recorded, documented, executable workflow. AI can accelerate it when assistance remains bounded and reviewable.
-
-[Sources] Local template: readme.md; usage.md; ai/ai-use-policy.md.
-:::
-
-## AI can support project work
-
-::: {.ai-support-grid}
-<div><strong>Code</strong><span>Write, document, refactor, and debug project code</span></div>
-<div><strong>Literature</strong><span>Help search, summarize, and organize background material</span></div>
-<div><strong>Writing</strong><span>Draft or improve reports, manuscripts, and presentations</span></div>
-<div><strong>Documentation</strong><span>Keep code, outputs, and documentation aligned</span></div>
-:::
-
-::: {.notes}
-Use this slide to separate useful AI assistance from automatic acceptance. AI can speed up many project tasks, but the project owner remains responsible for scientific and technical decisions.
-:::
-
-## AI can support ORDERly habits
-
-::: {.ai-orderly-support}
-<div><strong>Organized</strong><span>Check that files live in the right folders</span></div>
-<div><strong>Recorded</strong><span>Summarize decisions, changes, and AI contributions</span></div>
-<div><strong>Documented</strong><span>Update READMEs, usage notes, and project guidance</span></div>
-<div><strong>Executable</strong><span>Make scripts and Quarto products easier to rerun</span></div>
-<div><strong>Reproducible</strong><span>Trace results from data through code to products</span></div>
-:::
-
-::: {.notes}
-Connect this back to ORDERly. AI is most useful when it helps maintain structure, records, documentation, executability, and reproducibility rather than bypassing them.
-:::
 
 ## Hands-on {.section-break}
 
@@ -333,19 +348,16 @@ Connect this back to ORDERly. AI is most useful when it helps maintain structure
 
 ::: {.xkcd-figure}
 ![](./media/xkcd-it-begins.png){fig-alt="An XKCD comic about the beginning of a new project."}
+<p class="figure-credit">xkcd.com · CC BY-NC 2.5</p>
 :::
 :::
 
-::: {.notes}
-[Sources] Image file: media/xkcd-it-begins.png.
-:::
 
+## More information
 
-
-
-## Continue learning
 
 ::: {.resource-list}
 <div><strong>Inside the template</strong><span><code>readme.md</code> · <code>usage.md</code> · <code>new-project-instructions.md</code></span></div>
 <div><strong>MDS tools mini-courses</strong><a href="https://andreashandel.github.io/mds-tools/">andreashandel.github.io/mds-tools/</a></div>
+<div><strong>Questions and contact</strong><a href="https://www.andreashandel.com/">andreashandel.com</a></div>
 :::

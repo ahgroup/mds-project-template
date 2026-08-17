@@ -64,7 +64,7 @@ After the results have been regenerated, render the products you need.
 ```sh
 quarto render products/report/report.qmd
 quarto render products/manuscript/manuscript.qmd
-quarto render products/presentation/presentation.qmd
+quarto render products/presentation/example/presentation.qmd
 ```
 
 The supplementary material renders to PDF and may require a TeX installation:
