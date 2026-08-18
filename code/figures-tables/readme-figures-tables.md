@@ -16,7 +16,9 @@ The example uses two R scripts:
   finalized tables to `results/tables/` as RDS files with CSV companions.
   "Finalized" is meant literally: the data summary arrives as a wide `skimr`
   object with a mini-histogram column that cannot be placed in a document, and
-  leaves as a compact table with plain column names.
+  leaves as a compact table with plain column names. Model results are labeled,
+  rounded, and presented with confidence intervals, standard errors, and
+  p-values; the unformatted computational results remain in `results/output/`.
 - `make-figures.r` loads the processed data from
   `data/processed-data/processed-data.rds` and writes the exploratory and result
   figures to `results/figures/` as PNG files. The figures need individual-level

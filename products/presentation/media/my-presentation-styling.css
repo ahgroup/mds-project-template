@@ -1,163 +1,97 @@
-/* Handel slide template 
- * Last Modified: 2020-07-06
--------------------------------------------------------------------------------- */
+/* Simple Reveal.js styling for the example Quarto presentation. */
 
-
-
-#mytextbox
-{
-	border: 10px solid #cfd7e0; 
-	color: black;  
-	font-weight: normal;
+:root {
+  --mds-blue: #123c66;
+  --mds-border: #cfd7e0;
 }
 
-#bigfont
-{
-	font-size: 300%;
-	font-weight: bold;
+.reveal {
+  color: #111;
 }
 
-#myimage
-{
-	max-height: 10%;
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  color: var(--mds-blue);
 }
 
-#verysmall
-{
-	font-size: 50%;
+/* Leave normal space below slide titles so headings cannot overlap content. */
+.reveal h2 {
+  margin-bottom: 0.6em;
 }
 
-.verysmall
-{
-	font-size: 50%;
+.reveal img {
+  max-width: 100%;
+  max-height: 72vh;
+  object-fit: contain;
 }
 
+.reveal .figure,
+.reveal figure {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
 
-.small { font-size: 70% }
+.reveal figcaption,
+.reveal .caption {
+  margin: 0.25em auto 0;
+}
 
+.reveal iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reveal li:not(:last-child) {
+  margin-bottom: 0.2em;
+}
+
+/* Optional utility styles that can be used in future example slides. */
+#mytextbox {
+  border: 0.2em solid var(--mds-border);
+  padding: 0.5em;
+  color: #111;
+  font-weight: normal;
+}
+
+#bigfont {
+  font-size: 300%;
+  font-weight: bold;
+}
+
+#myimage {
+  max-height: 60vh;
+}
+
+#verysmall,
+.verysmall {
+  font-size: 55%;
+}
+
+.small {
+  font-size: 70%;
+}
 
 .smallfont pre {
-    font-size: 50%;
+  font-size: 55%;
 }
 
-
-
-/* Remove slide numbering if using xaringan */
-.remark-slide-number {
-  display: none;
+#classname {
+  color: var(--mds-blue);
+  font-size: 120%;
+  font-weight: bold;
+  text-align: center;
 }
 
-
-html {
-  /* Box-model */
-	margin: 0;
-	padding: 0; 
-	border: 0;
-
-  /* Visual */
-	background-color: #fff; /* white */  
-	color: black;   /* dark grey */
+#classauthor {
+  color: #111;
+  font-weight: normal;
+  text-align: center;
 }
 
-
-/* Image
----------------*/
-img {
-	max-width: 100%;
-	max-height: 80%;
-	padding: 3px;
-	
+#mylicense {
+  font-size: 70%;
+  text-align: center;
 }
-.image {
-	display: inline-block;
-	margin-left: 0;
-	margin-right: 0;
-	padding: 0;  
-	text-align: center;
-  
-  /* Visual */
-	border-radius: 1px;
-	border: 0 solid #ccc;  /* light grey */
-}
-.figure {
-	margin-left:  0;
-	margin-right: 0;
-	padding: 0;  
-	text-align: center;
-  
-  /* Visual */
-	border-radius: 1px;
-	border: 0 solid #ccc;  /* light grey */
-}
-.caption {
-	padding: 0;
-	margin: auto;
-	margin-bottom: 3px;
-}
-
-
-/* Change color of regular text and h2
-also change spacing between heading and main text
--------------------- */
-slides > slide {
-	color: black;
-}
-
-h2 {
-	color: #123c66;  /* dark blue */
-	margin-bottom: -30px;
-}
-
-
-/* Turn off page count in footer */
-slides > slide:not(.nobackground):after {
-  content: '';
-}  
-
-
-/* Keep text off left side of screen
--------------------- */
-p {
-	margin-right: 0;
-}
-
-
-/* My additions
--------------------- */
-
-#classname
-{
-	color: #123c66;  
-	font-weight: bold;
-	text-align: center;
-	font-size: 120%;
-}
-
-#classauthor
-{
-	color: black;  
-	font-weight: normal;
-	text-align: center;
-	
-}
-
-#mylicense
-{
-	text-align: center;
-	font-size: 70%;
-	
-}
-
-iframe {
-	display: block;
-	margin-left: auto;
-    margin-right: auto;
-}
-
-
-/* Change vertical spacing for lists */
-li:not(:last-child) {
-    margin-bottom: 5px;
-}
-
-

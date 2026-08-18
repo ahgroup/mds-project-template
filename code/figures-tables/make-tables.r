@@ -78,15 +78,49 @@ utils::write.csv(summary_table,
                  row.names = FALSE)
 
 ## ---- result-tables --------
-# The model results from broom::tidy() are already in a tidy, readable shape,
-# so they only need to be written out in both formats.
+# The model results from broom::tidy() are useful computational outputs, but
+# their default column names and full numerical precision are not ideal for a
+# report. Keep those raw values in results/output/ and make compact,
+# reader-facing versions here.
+format_model_table <- function(model_result) {
+  required_columns <- c(
+    "term", "estimate", "std.error", "p.value", "conf.low", "conf.high"
+  )
+  missing_columns <- setdiff(required_columns, names(model_result))
+  if (length(missing_columns) > 0) {
+    stop(
+      "Model result is missing required column(s): ",
+      paste(missing_columns, collapse = ", "),
+      "\nRerun code/modeling-analysis/statistical-analysis.r first."
+    )
+  }
+
+  model_result %>%
+    dplyr::transmute(
+      Term = dplyr::recode(
+        term,
+        "(Intercept)" = "Intercept",
+        "Weight" = "Weight (per kg)",
+        "GenderM" = "Gender: M vs F",
+        "GenderO" = "Gender: O vs F",
+        .default = term
+      ),
+      Estimate = round(estimate, 2),
+      `95% CI` = sprintf("%.2f to %.2f", conf.low, conf.high),
+      `Standard error` = round(std.error, 2),
+      `p-value` = format.pval(p.value, digits = 3, eps = 0.001)
+    )
+}
+
 result_table_1 = readRDS(input_files[["result_1"]])
+result_table_1 = format_model_table(result_table_1)
 saveRDS(result_table_1, file = here::here("results", "tables", "result-table-1.rds"))
 utils::write.csv(result_table_1,
                  file = here::here("results", "tables", "result-table-1.csv"),
                  row.names = FALSE)
 
 result_table_2 = readRDS(input_files[["result_2"]])
+result_table_2 = format_model_table(result_table_2)
 saveRDS(result_table_2, file = here::here("results", "tables", "result-table-2.rds"))
 utils::write.csv(result_table_2,
                  file = here::here("results", "tables", "result-table-2.csv"),

@@ -49,8 +49,9 @@ Two categories deserve particular care, because both are easy to add without
 thinking about licensing:
 
 - **Reference PDFs.** Most published articles may not be redistributed, in some
-  cases not even by their own authors. See
-  `assets/references/readme-references.md`.
+  cases not even by their own authors. Commit a PDF only when its license permits
+  redistribution; otherwise, keep the citation in the BibTeX file and link to
+  the article or store a local copy in an ignored folder.
 - **Images and figures from the web.** Comics, photographs, and illustrations
   are copyrighted by default. A license that permits non-commercial use only,
   such as CC BY-NC, conflicts with the commercial use that MIT otherwise

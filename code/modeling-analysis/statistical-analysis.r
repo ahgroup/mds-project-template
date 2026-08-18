@@ -46,8 +46,10 @@ mydata <- readRDS(data_location)
 
 lmfit1 <- lm(Height ~ Weight, mydata)
 
-# place results from fit into a data frame with the tidy function
-lmtable1 <- broom::tidy(lmfit1)
+# Place results from the fit into a data frame. Confidence intervals are saved
+# here with the computed results so the table-generation stage can present them
+# without refitting the model.
+lmtable1 <- broom::tidy(lmfit1, conf.int = TRUE)
 
 #look at fit results
 print(lmtable1)
@@ -62,8 +64,8 @@ saveRDS(lmtable1, file = result_file1)
 
 lmfit2 <- lm(Height ~ Weight + Gender, mydata)
 
-# place results from fit into a data frame with the tidy function
-lmtable2 <- broom::tidy(lmfit2)
+# Include confidence intervals for the same reason as in the first model.
+lmtable2 <- broom::tidy(lmfit2, conf.int = TRUE)
 
 #look at fit results
 print(lmtable2)

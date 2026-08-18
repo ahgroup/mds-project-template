@@ -58,7 +58,8 @@ Important project-level files:
 - `code-guidelines.md`: coding guidelines for scientific and reproducible projects,
   including documentation, failure behavior, simplicity, packages, and
   AI-assisted coding expectations.
-- `agents.md`: extra instructions for AI coding assistants.
+- `agents.md`: the main repository-level instructions for AI coding assistants;
+  AI agents should read this file before working in the project.
 - `license.md`: the license for this template, or later for your project.
 
 ## Naming Conventions

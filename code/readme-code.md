@@ -82,7 +82,9 @@ The example code files are organized by workflow stage.
   files with CSV companions (`summary-table.*`, `result-table-1.*`,
   `result-table-2.*`). For the data summary this means real work: the raw
   `skimr` object is reduced to the columns a reader needs, with plain column
-  names, instead of being passed through unchanged.
+  names, instead of being passed through unchanged. Model results receive clear
+  term labels, sensible rounding, and confidence intervals while the raw
+  numerical output remains in `results/output/`.
 - `code/figures-tables/make-figures.r` loads
   `data/processed-data/processed-data.rds` and writes the exploratory and result
   figures to `results/figures/` (`height-distribution.png`,

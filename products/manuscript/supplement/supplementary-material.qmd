@@ -10,7 +10,7 @@ csl: ../../../assets/vancouver-author-date.csl
 ---
 
 
-```{r, echo=FALSE, message=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 # load a few R packages
 library(here)
 library(knitr)     # for include_graphics()
@@ -67,7 +67,7 @@ Show additional results here. Those can be some useful exploratory/descriptive f
 
 ```{r}
 #| label: tbl-result-table-1
-#| tbl-cap: "Another fit table."
+#| tbl-cap: "Linear model of height (cm) by weight (kg)."
 #| echo: FALSE
 result_table_1 = readRDS(here("results","tables","result-table-1.rds"))
 flextable::flextable(result_table_1) |>
@@ -83,7 +83,7 @@ flextable::flextable(result_table_1) |>
 
 ```{r}
 #| label: fig-result2
-#| fig-cap: "Height as a function of weight."
+#| fig-cap: "Observed height (cm) versus weight (kg) with a fitted linear trend."
 #| echo: FALSE
 knitr::include_graphics(here("results","figures","height-weight.png"))
 ```
