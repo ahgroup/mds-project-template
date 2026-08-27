@@ -18,6 +18,14 @@ The file `schematic-example.png` is an example static schematic generated for
 this template. It is meant as a placeholder that users can replace with a
 project-specific schematic or conceptual figure.
 
+The files `logo.png`, `logo-small.png`, and `logo.svg` are the logo/icon for
+this template. They are drawn by `make-logo.r`, which only needs the `here`
+package and base R graphics. Rerun it with `Rscript assets/make-logo.r` after
+changing the design. The logo is a hand-made static asset rather than an
+analysis output, which is why it and its script live here instead of in `code/`
+and `results/`. For your own project, you can either replace the logo or delete
+the logo files and `make-logo.r`.
+
 The `.csl` files are used by Quarto documents to format citations and reference
 lists. Journals often require specific formats. While writing, it can be useful
 to use either an author-date style, such as `vancouver-author-date.csl`, or a

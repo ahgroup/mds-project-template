@@ -1,6 +1,8 @@
+# Modeling and Data Science (MDS) project template
+
 ## Overview
 
-This repository is a template for a reproducible modeling or data science (MDS) project. It is set up to facilitate reproducible and robust workflows that include AI support.
+This repository contains a template for a reproducible modeling or data science (MDS) project. It is set up to facilitate reproducible and robust workflows that include AI support.
 
 The default tools to use this template for any MDS project are R, Quarto, Git/GitHub, an IDE (e.g. Positron) and an agentic AI tool. The template structure is workflow-first, so projects can add Python, Julia, shell scripts, or other tools without major reorganization.
 
